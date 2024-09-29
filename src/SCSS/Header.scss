@@ -1,0 +1,29 @@
+@import './Variable.scss';
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $bleu;
+
+    .logo  {
+        width: 50px;
+        padding-left: 20px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly ;
+
+        width:500px;
+
+        a {
+            text-decoration: none;
+            color: $beige;
+        }
+    }
+}   
+
