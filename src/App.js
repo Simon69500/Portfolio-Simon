@@ -1,12 +1,17 @@
 import Home from './Pages/Home';
 import Header from './Component/Header';
+import { ThemeProvider } from './Component/Ligth/Dark/ThemeContext.jsx'; // Importation du ThemeProvider (nommé)
+import ThemeToggle from './Component/Ligth/Dark/ThemeToggle.jsx';
 
 function App() {
   return (
-    <div className="App">
+    <ThemeProvider>
+      <div className="App">
+        <ThemeToggle/>
       <Header/>
       <Home/>
     </div>
+    </ThemeProvider>
   );
 }
 

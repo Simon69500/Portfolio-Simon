@@ -1,10 +1,15 @@
+import { useContext } from "react";
 import Logo192 from "../asset/logo192.png";
 import "../SCSS/Header.scss";
+import { ThemeContext } from "../Component/Ligth/Dark/ThemeContext";
 
 const Header = () => {
+
+    const {isDarkMode} = useContext(ThemeContext);
+
     return (
         <>
-            <div id="header">
+            <div className={isDarkMode ? 'dark-header' : 'light-header'}>
                 <div className="img">
                 <img src={Logo192} alt="logo" className="logo"/>
                 </div>

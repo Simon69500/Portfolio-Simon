@@ -1,0 +1,71 @@
+// Importation de la palette Indigo de Radix Colors
+@import "~@radix-ui/colors/indigo.css";
+
+// Variables de couleurs pour chaque niveau de la palette
+$indigo-1: var(--indigo-1);    // Backgrounds
+$indigo-2: var(--indigo-2);    // Backgrounds
+$indigo-3: var(--indigo-3);    // Interactive components
+$indigo-4: var(--indigo-4);    // Interactive components
+$indigo-5: var(--indigo-5);    // Interactive components
+$indigo-6: var(--indigo-6);    // Borders and separators
+$indigo-7: var(--indigo-7);    // Borders and separators
+$indigo-8: var(--indigo-8);    // Borders and separators
+$indigo-9: var(--indigo-9);    // Solid colors
+$indigo-10: var(--indigo-10);  //Solid colors
+$indigo-11: var(--indigo-11);  // Accessible text
+$indigo-12: var(--indigo-12);  // Accessible text
+
+// Styles de backgrounds
+.background-primary {
+  background-color: $indigo-1;
+}
+.background-secondary {
+  background-color: $indigo-2;
+}
+.background-header {
+  background-color: $indigo-11;
+}
+
+// Composants interactifs
+.button {
+  background-color: $indigo-3;
+  color: $indigo-12;
+  border: 2px solid $indigo-6;
+
+  &:hover {
+    background-color: $indigo-7;
+  }
+  &:active {
+    border: 2px solid $indigo-8;
+  }
+}
+
+// Bordures et séparateurs
+.border-light {
+  border: 1px solid $indigo-6;
+}
+.border-medium {
+  border: 1px solid $indigo-7;
+}
+.border-dark {
+  border: 1px solid $indigo-8;
+}
+
+// Couleurs pleines pour textes et éléments visuels
+.text-primary {
+  color: $indigo-8;
+}
+.text-secondary {
+  color: $indigo-9;
+}
+.text-accent {
+  color: $indigo-10;
+}
+
+// Accessibilité des textes
+.text-accessible {
+  color: $indigo-12; // Couleur la plus contrastée
+}
+.text-muted {
+  color: $indigo-11;
+}

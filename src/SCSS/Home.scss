@@ -1,194 +1,93 @@
-@import './Variable.scss';
+@import './theme-light.scss';
+@import './theme-dark.scss';
 
-#body {
-    
-    .title_principal {
-        color: $beige;
-        margin-bottom: 5px;
-    }
-    .title_second {
-        color: $marron;
-        margin: 0px;
-    }
-
+     
     .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        .about {
+        margin: 0px;
+        @extend .background-primary;
+    
+        button {
+            background-color: var(--indigo-4);
+            color: var(--indigo-12);
+            border: 2px solid var(--indigo-6);
+            
+            &:hover {
+              background-color: var(--indigo-5);
+            }
+          
+            &.dark {
+              background-color: var(--mauve-dark-4);
+              color: var(--mauve-dark-12);
+            }
+          }
+
+        .presentation {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
-            background-color: $vert;
+            position: relative;
+            background-size: cover ;
+            background-position: center ;
+            
+            
             height: 300px;
+            width: 100%;
 
-            .button {
-                background-color: $bleu;
-                color:$beige ;
+            .title_name {
+                @extend .text-primary;
+                margin-bottom: 5px;
+                
+            }
 
-                border: 2px solid $bleu;
+            .title_profession {
+                @extend .text-secondary ;
+                margin: 0px;
+                text-align: center;
+            }
+            .button-present {
+                @extend .button;
                 border-radius: 20px;
                 margin-top: 50px;
                 padding: 10px;
-            }
-        }
-
-        .about_detail {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            background-color: $vert;
-
-            .contenair_about {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                background-color: $vertClair ;
-                border-radius: 10px;
-
-                width: 60%;
-                height: 150px;
-
-                .text_about {
-                    padding: 10px 10px;
-                }
-
-            }
-            
-            h2 {
-                color: $bleu;
-                padding: 20px;
             }
         }
         
         .Actual {
             display: flex;
             flex-direction: column;
+            align-items: center;
             justify-content: center;
-            align-items: center ;
 
-            background-color: $vert;
+            @extend .background-secondary;
+            @extend .border-medium;
+            margin: 30px ;
+            width: 100%;          
 
-            h3 {
-                color: $bleu;
+            .title-actual {
+                @extend .text-secondary;
                 font-size: x-large;
                 margin-bottom: 0px;
-                padding-top: 50px;
             }
 
             p {
-                color: $beige;
+                @extend .text-muted;
                 font-size: large;
-            }
-        }
-
-        .skill_contenair {
-            background-color: $vert;
-
-            h3 {
-                padding-top: 50px;
-                margin: 0px;
-                padding-bottom: 50px;
-
-                font-size: x-large;
-                color: $bleu;
                 text-align: center;
             }
         }
-        .skill {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: start;
 
-            background-color: $vert;
-
-            .skill_detail {
-                display: flex;
-                flex-direction: column;
-
-                background-color: $beige;
-                border-radius: 10px;
-                width: 40%;
-                margin-left: 20px;
-                
-                h4 {
-                    font-size: large;
-                    font-weight: bold;
-                    color: $vert;
-                    text-align: center;
-                    margin:0px;
-                    padding-top: 10px;
-                }
-                .skill_name {
-                    color: $bleu;
-                    font-weight: bold;
-                    margin: 0px;
-                    padding-top: 10px;
-                    padding-left: 10px;
-                }
-
-                .skill_barre {
-                    background-color: $ebonit ;
-                    border: 1px solid $ebonit;
-                    border-radius: 20px;
-                    padding: 0px 15px;
-
-                    width: 90%;
-                    text-align: right;
-                }
-            }
-
-            .CV {
-                background-color: $beige;
-                background-color: $beige;
-                border-radius: 10px;
-                width: 40%;
-                margin-left: 20px;
-            }
-        }
-
-        .portfolio {
-            background-color: $vert;
-
-            h3 {
-                padding-top: 50px;
-                margin: 0px;
-                padding-bottom: 50px;
-
-                font-size: x-large;
-                color: $bleu;
-                text-align: center;
-            }
-
-            .card_contenair {
-
-                .cards {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-evenly;
-                    align-items: center;
-
-                    .card {
-                        background-color: $beige;
-                        width: 200px;
-                        height: 100px;
-                    }
-
-                }
-            }
-        }
 
         .formulaire {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
-            background-color: $vert;
             height: 500px;
 
             .form {
@@ -206,4 +105,3 @@
             }
         }
     }
-}

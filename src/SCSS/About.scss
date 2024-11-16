@@ -1,0 +1,54 @@
+@import './theme-light.scss';
+@import './theme-dark.scss';
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    @extend .background-secondary;
+    @extend .border-medium;
+
+    width: 100%;
+    margin-top: 20px;
+    
+
+    .about_article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $indigo-3;
+        border-radius: 10px;
+
+        width: 60%;
+        height: 150px;
+
+        .text_about {
+            padding: 10px 10px;
+        }
+
+    }
+    
+    h2 {
+        @extend .text-secondary;
+        padding: 20px;
+    }
+
+    .card-comp {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        width: 50%;
+
+        .card-comp-detail {
+            @extend .border-dark;
+            border-radius: 30px;
+            padding: 5px;
+        }
+    }
+}

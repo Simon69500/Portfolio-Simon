@@ -1,0 +1,33 @@
+@import './theme-light.scss';
+@import './theme-dark.scss';
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    margin: 30px;
+
+    @extend .background-secondary;
+    @extend .border-medium;
+
+    .title-portfolio {
+        @extend .text-secondary;
+            text-align: center;
+            font-size: x-large;
+    }
+
+    .contenair-portfolio {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        width: 50%;
+      
+        .cards {
+            @extend .border-light;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import './theme-light.scss';
+@import './theme-dark.scss';
+
+.contenair-skills {
+    height:100%;
+    width: 15%;
+    margin: 0 ;
+    padding: 10px;
+    text-align: left;
+    
+    background-color: $indigo-7;
+    border-radius: 30px;
+    border: 5px dotted $indigo-2 ;
+    box-shadow: 10px 5px 5px $indigo-11 ;
+
+}
+
+.skill-title-1{
+    @extend .text-secondary;
+    text-align: center;
+    font-size: x-large;
+}
+
+.skill-title-2 {
+    color: $indigo-1;
+    text-align: center;
+    font-size: large;
+    border-top: solid $indigo-8 ;
+    padding-top: 5px;
+}
+
+.skill-bar {
+    margin-bottom: 20px;
+    width: 200px;
+
+    .skill-name {
+        font-weight:  bold;
+        font-size: normal ;
+        @extend .text-secondary;
+        margin-bottom: 5px;
+    }
+  
+    .skill-level {
+        color: $indigo-1;
+    }
+
+    .skill-bar-level {
+        width: 100%;
+    }
+}

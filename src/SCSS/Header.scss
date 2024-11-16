@@ -1,12 +1,14 @@
-@import './Variable.scss';
+@import './theme-light.scss';
+@import './theme-dark.scss';
 
-#header {
+
+.light-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    background-color: $bleu;
+    @extend .background-header;
 
     .logo  {
         width: 50px;
@@ -22,8 +24,34 @@
 
         a {
             text-decoration: none;
-            color: $beige;
+            @extend .text-accessible;
         }
     }
 }   
 
+.dark-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @extend .background-header-dark;
+
+    .logo  {
+        width: 50px;
+        padding-left: 20px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly ;
+
+        width:500px;
+
+        a {
+            text-decoration: none;
+            @extend .text-accessible-dark;
+        }
+    }
+} 
