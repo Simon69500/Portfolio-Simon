@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Modal from './Modal';
 import ProjetsModal from './ProjetsModal';
+import '../../SCSS/Modal/PortfolioModal.scss';
 
 let Projets = ProjetsModal;
 
@@ -15,30 +16,32 @@ function PortfolioModal() {
     };
 
     return (
-        <div>
-            <h1>Mon Portfolio</h1>
-            <ul>
+        <div className='portfolio-contenair'>
+            <h1 className='title-portfolio'>Mon Portfolio</h1>
+            <ul className='list-portfolio'>
                 {Projets.map((projet) => (
-                    <li key={projet.id}>
+                    <li  className='list-detail-portfolio'  key={projet.id}>
                         {/* Passer le projet spécifique à handleOpenModal */}
-                        <button onClick={() => handleOpenModal(projet)}>
+                        <button className='buton-projet-portfolio' onClick={() => handleOpenModal(projet)}>
                             Voir le {projet.titre}
                         </button>
+                        <img className={`imagePort-id-${projet.id}`} src={projet.imageLogo} alt='' />
                     </li>
                 ))}
             </ul>
 
-            <Modal show={isModalOpen} onClose={() => setIsModalOpen(false)}>
+            <Modal show={isModalOpen} onClose={() => setIsModalOpen(false)} projectId={selectProjet ? selectProjet.id : null}>
                 {selectProjet && (
-                    <>
-                        <h2>{selectProjet.titre}</h2>
-                        <img src={selectProjet.image} alt={selectProjet.titre} />
-                        <p>{selectProjet.description}</p>
-                        <p>{selectProjet.technologie}</p>
-                        <a href={selectProjet.link} target='_blank' rel='noopener noreferrer'>
+                    <div className="card-modal">
+                         <h2 className='title-modal'>{selectProjet.titre}</h2>
+                        <img className={`image-id-${selectProjet.id}`} src={selectProjet.image} alt={selectProjet.titre} />
+                        <p className='dpn-modal'>{selectProjet.description}</p>
+                        <p className='tech-modal'>{selectProjet.technologie}</p>
+                        <a className='link-modal' href={selectProjet.link} target='_blank' rel='noopener noreferrer'>
                             Voir le projet sur GitHub !
                         </a>
-                    </>
+                    </div>
+                       
                 )}
             </Modal>    
 
