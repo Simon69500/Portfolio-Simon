@@ -10,7 +10,7 @@
         margin: 0px;
         @extend .background-primary;
     
-        button {
+        .button-present {
             background-color: var(--indigo-4);
             color: var(--indigo-12);
             border: 2px solid var(--indigo-6);

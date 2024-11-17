@@ -1,0 +1,82 @@
+@import '../theme-light.scss';
+@import '../theme-dark.scss';
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    @extend .trans-4;
+
+    .modal-content-1 {
+       background-color: $indigo-5;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+      
+       width: 60%; 
+       height: 80%;
+       padding: 20px; 
+       overflow-y: auto; /* Ajoute une barre de défilement si le contenu dépasse la taille de l'écran */
+       box-shadow: 0 0 10px rgba(31, 45, 92, 0.3);
+
+        .button-close-modal {
+            @extend .button ;
+            width: 15px;
+            height: 20px;
+            padding: 0;
+            align-self: self-end;
+        }
+    }
+
+    .modal-content-2 {
+        background-color: $indigo-5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+        width: 60%; 
+        height: 80%;
+        padding: 20px; 
+        overflow-y: auto; /* Ajoute une barre de défilement si le contenu dépasse la taille de l'écran */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+ 
+         .button-close-modal {
+             @extend .button ;
+             width: 15px;
+             height: 20px;
+             padding: 0;
+             align-self: self-end;
+         }
+     }
+
+     .modal-content-3 {
+        background-color: $indigo-5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+        width: 40%; 
+        height: 80%;
+        padding: 20px; 
+        overflow-y: auto; /* Ajoute une barre de défilement si le contenu dépasse la taille de l'écran */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+ 
+         .button-close-modal {
+             @extend .button ;
+             width: 15px;
+             height: 20px;
+             padding: 0;
+             align-self: self-end;
+         }
+     }
+}

@@ -1,0 +1,85 @@
+@import '../theme-light.scss';
+@import '../theme-dark.scss';
+
+
+// partie Portfolio
+.portfolio-contenair {
+    width: 100%;
+
+    .title-portfolio {
+        @extend .text-secondary;
+        text-align: center;
+        font-size: x-large;
+    }
+
+    .list-portfolio {
+        display: flex;
+        flex-direction: row ;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0px;
+        list-style-type: none; 
+
+        .list-detail-portfolio {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          width: 50%;
+          height: 300px;
+
+            .buton-projet-portfolio {
+                @extend .button2;
+                border-radius: 30px;
+                height: 30px;
+            }
+
+            .imagePort-id-1 {
+                width: 20%;
+                height: 20%;
+                object-fit: cover ;
+            }
+            .imagePort-id-2 {
+                width: 20%;
+                height: 20%;
+            }
+            .imagePort-id-3 {
+                width: 20%;
+                height: 20%;
+            }
+        }
+    }
+}
+
+
+// Balise Modal
+.card-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: $indigo-5;
+
+    .title-modal {
+        color: $indigo-2;
+    }
+
+    .image-id-1 {
+        height: 500px;
+        width:  800px;
+    }
+    
+    .image-id-2 {
+        height: 500px;
+        width:  800px;
+
+    }
+
+    .image-id-3 {
+        height: 500px;
+        width: 250px;
+
+    }
+}
+
