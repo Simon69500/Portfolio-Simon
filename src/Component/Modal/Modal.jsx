@@ -1,6 +1,6 @@
 import '../../SCSS/Modal/Modal.scss';
 
-import React from 'react';
+import * as React from 'react';
 
 
 const Modal = ({show , onClose, children, projectId}) => {
@@ -25,3 +25,4 @@ const Modal = ({show , onClose, children, projectId}) => {
 };
 
 export default Modal;
+

@@ -4,7 +4,7 @@ import '../SCSS/Portfolio.scss';
 const Portfolio = () => {
     return (
         <>
-            <div className='portfolio'>
+            <div id='Portfolio'>
                 <PortfolioModal/>
             </div>  
         </>

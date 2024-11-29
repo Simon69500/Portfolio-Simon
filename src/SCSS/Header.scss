@@ -2,11 +2,18 @@
 @import './theme-dark.scss';
 
 
-.light-header {
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%; 
+    top: 0;
+    left: 0;  /* Assurez-vous que l'élément soit fixé à gauche */
+    right: 0; /* Assurez-vous que l'élément soit fixé à droite */
+    width: 100%;
+    z-index: 1000;
 
     @extend .background-header;
 
@@ -15,43 +22,4 @@
         padding-left: 20px;
     }
 
-    .menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly ;
-
-        width:500px;
-
-        a {
-            text-decoration: none;
-            @extend .text-accessible;
-        }
-    }
-}   
-
-.dark-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    @extend .background-header-dark;
-
-    .logo  {
-        width: 50px;
-        padding-left: 20px;
-    }
-
-    .menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly ;
-
-        width:500px;
-
-        a {
-            text-decoration: none;
-            @extend .text-accessible-dark;
-        }
-    }
 } 

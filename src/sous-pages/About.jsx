@@ -4,7 +4,7 @@ const About = () => {
 
     return (
         <>
-        <div className='about'>
+        <div id='about'>
             <h2 className='title_second'>A propos de moi</h2>
             <article className='about_article'>
                 <p className='text_about'>Bonjour, <br/>Je suis un <strong>developpeur Mobile &  Web </strong>formé avec le centre de formation CEF (lien) et vis actuellement sur Lyon . J’ai une expérience professionel diverse qui m’a enrechi et donner des compétences utiles et variés .
