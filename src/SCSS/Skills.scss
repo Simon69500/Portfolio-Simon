@@ -3,14 +3,14 @@
 
 .contenair-skills {
     height:100%;
-    width: 15%;
+    width: 30%;
     margin: 0 ;
     padding: 10px;
     text-align: left;
     
     background-color: $indigo-7;
     border-radius: 30px;
-    border: 5px dotted $indigo-2 ;
+    border: 5px solid $indigo-2 ;
     box-shadow: 10px 5px 5px $indigo-11 ;
 
 }
@@ -30,18 +30,33 @@
 }
 
 .skill-bar {
-    margin-bottom: 20px;
-    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 
-    .skill-name {
-        font-weight:  bold;
-        font-size: normal ;
-        @extend .text-secondary;
-        margin-bottom: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+
+    .card-logo {
+        text-align: center;
+        
+        .skill-name {
+            font-weight:  bold;
+            font-size: normal ;
+            @extend .text-secondary;
+        }
+        
+        .skill-img {
+            height: 50px;
+            width: 50px;
+            padding: 10px;
+        }
     }
-  
+    
     .skill-level {
         color: $indigo-1;
+        width: 300px;
     }
 
     .skill-bar-level {

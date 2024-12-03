@@ -31,8 +31,9 @@
             background-position: center ;
             
             
-            height: 300px;
+            height: 500px;
             width: 100%;
+            margin-top: 50px;
 
             .title_name {
                 @extend .text-primary;
@@ -53,7 +54,7 @@
             }
         }
         
-        .Actual {
+        #Actual {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -61,18 +62,21 @@
 
             @extend .background-secondary;
             @extend .border-medium;
-            margin: 30px ;
-            width: 100%;          
+            
+            width: 100%;
+            height: 200px;
+            margin: 20px;
+        
 
             .title-actual {
                 @extend .text-secondary;
-                font-size: x-large;
+                font-size: xx-large;
                 margin-bottom: 0px;
             }
 
             p {
                 @extend .text-muted;
-                font-size: large;
+                font-size: x-large;
                 text-align: center;
             }
         }
