@@ -26,11 +26,15 @@ const Competences = () => {
         <div id="Competences">
         <h2 className="title_divers">Mes compétences</h2>
             <div className="card-cpts">
+
+                    {/* Partie Skills */}
                     <Skills/>
             
+                {/* Partie CV */}
                 <div className="contenair-cv">
                     <h3 className="cv-title">Mon CV</h3>
                     <img className="cv-img" src={CV} alt="" />
+
                     <Button
                         component="label"
                         role={undefined}
@@ -50,6 +54,7 @@ const Competences = () => {
                     multiple
                     />
                     </Button>
+                    
                 </div>
             </div>
                         
