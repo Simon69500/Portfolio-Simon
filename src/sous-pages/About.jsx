@@ -10,10 +10,17 @@ const About = () => {
             <h2 className='title-about'>A propos de moi</h2>
             <article className='about_article'>
                 <img src={Icones.profil2} alt="Simon Badin" className="photo-about"/>
-                <p className='text_about'>Bonjour, <br/>Je suis un <strong>developpeur Mobile &  Web </strong>formé avec le centre de formation CEF (lien) et vis actuellement sur Lyon . J’ai une expérience professionel diverse qui m’a enrechi et donner des compétences utiles et variés .
-                             Fraîchement diplômé , je recherche actuellement à aquerir plus d’experience avec des stages et une alternance afin de monter en compétence technique.
-                             Passionné par les technologies , la montagne et la lecture , je suis ouvert à tous types de secteurs et pourrait faire profiter de mon expérience aquis et des mes qualités d’organisation .
-                 </p>
+                <p className='text_about'>
+  Bonjour, <br/>
+  Je suis <strong>Simon Badin</strong>, actuellement en formation pour devenir <strong>développeur full-stack</strong>, après une réorientation professionnelle. 
+  Avec des bases solides en <strong>front-end</strong> (<em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, <em>React</em>), je suis passionné par le développement web et cherche activement une <strong>alternance</strong> 
+  pour compléter ma formation et acquérir une expérience concrète en entreprise.
+  <br/><br/>
+  Mon parcours dans des secteurs variés tels que la <strong>vente</strong>, l’<strong>armée</strong> et la <strong>plomberie</strong> m’a permis de développer des compétences clés comme la <strong>rigueur</strong>, 
+  l’esprit d’équipe et la résolution de problèmes complexes. Ces qualités, associées à ma volonté d'<em>apprendre</em> et de m’adapter, font de moi un candidat motivé, prêt à contribuer à vos projets 
+  tout en progressant dans le développement web.
+</p>
+
             </article>
             <div className="card-icon">
                 <img className="icon" src={Icones.github} alt="icon de GitHub" />

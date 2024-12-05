@@ -13,7 +13,6 @@
     top: 0;
     left: 0;  /* Assurez-vous que l'élément soit fixé à gauche */
     right: 0; /* Assurez-vous que l'élément soit fixé à droite */
-    width: 100%;
     z-index: 1000;
 
     @extend .background-header;

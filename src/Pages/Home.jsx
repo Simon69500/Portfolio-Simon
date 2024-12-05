@@ -5,7 +5,9 @@ import Competences from '../sous-pages/Competences';
 import Portfolio from '../sous-pages/Portfolio';
 import Formulaire from '../Component/Formulaire/Formulaire';
 import Footer from '../Component/Footer';
-
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 const Home = () => {
 
@@ -18,7 +20,11 @@ const Home = () => {
                     <div className='presentation' style={{backgroundImage: `url(${Banniere})`}}>
                     <h1 className='title_name'>Simon Badin-Sola</h1>
                     <h2 className='title_profession'>Developpeur Mobile & Web - Fullstack</h2>
-                    <button className='button-present'>Plus d'info</button>                   
+                    <Stack sx={{padding:"10px"}} direction="row" spacing={2}>
+                        <Button variant="contained" href="https://www.linkedin.com/in/simon-badin-939594279/" target='_blank' rel="noopener noreferrer" >Linkedin</Button>
+                        <Button variant="contained" href="#Portfolio">Portfilio</Button>    
+                        <Button variant="contained" href="https://github.com/Simon69500" target='_blank' rel="noopener noreferrer" >GitHub</Button> 
+                    </Stack>                      
                     </div>
 
                     {/* Partie A propos*/}
