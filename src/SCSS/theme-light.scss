@@ -73,6 +73,14 @@ $indigo-12: var(--indigo-12);  // Accessible text
   background-color: $indigo-6;
 }
 
+.background-dark {
+  background-color: $indigo-11;
+}
+
+.background-xDark {
+  background-color: $indigo-12;
+}
+
 // Composants interactifs
 .button {
   background-color: $indigo-3;
@@ -109,6 +117,13 @@ $indigo-12: var(--indigo-12);  // Accessible text
 }
 .border-dark {
   border: 1px solid $indigo-8;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(62, 99, 221, 0.842); 
+}
+.border-xLigth {
+  border: 2px solid $indigo-1;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(62, 99, 221, 0.842); 
 }
 
 // Couleurs pleines pour textes et éléments visuels
@@ -122,6 +137,13 @@ $indigo-12: var(--indigo-12);  // Accessible text
   color: $indigo-10;
 }
 
+.text-ligth {
+  color: $indigo-1;
+}
+
+.text-dark {
+  color: $indigo-12;
+}
 // Accessibilité des textes
 .text-accessible {
   color: $indigo-12; // Couleur la plus contrastée
