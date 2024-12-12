@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "./",
-
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.13.5",
@@ -12,17 +11,17 @@
     "@mui/material": "^6.1.8",
     "@mui/styled-engine-sc": "^6.1.8",
     "@radix-ui/colors": "^3.0.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router": "^6.28.0",
-    "react-router-dom": "^6.28.0",
-    "react-scripts": "5.0.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.0.2",
+    "react-router-dom": "^7.0.2",
+    "react-scripts": "^5.0.1",
     "styled-components": "^6.1.13",
     "swiper": "^11.1.15",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^4.2.4"
   },
 
   "scripts": {
