@@ -2,16 +2,20 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
-import ProjetsModal from '../Modal/ProjetsModal';
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../SCSS/Modal/swiper.scss";
 
-const ImageSlider = () => (
-    <div className="slide-container"> {/* Vous pouvez ajouter un container pour contrôler la mise en page */}
+const ImageSlider = ({ images, isMobile }) => {
+  if (!images || images.length === 0) {
+    return <p>Aucune image disponible pour ce projet.</p>; // Message si aucune image n'est fournie
+  }
+
+  return (
+    <div className="slide-container">
+      {/* Conteneur pour la mise en page */}
       <Swiper
         modules={[Pagination, Navigation]}
         pagination={{ clickable: true }}
@@ -19,20 +23,19 @@ const ImageSlider = () => (
         slidesPerView={1}
         className="swiper"
       >
-        {/* Boucle sur les projets */}
-        {ProjetsModal.map((projet) =>
-          projet.images.map((img, index) => (
-            <SwiperSlide key={`${projet.id}-${index}`} className="swiper-slide-item">
-              <img
-                src={img}
-                alt={`${projet.titre} - Image ${index + 1}`}
-                className="slide-image"
-              />
-            </SwiperSlide>
-          ))
-        )}
+        {/* Parcourt uniquement les images fournies */}
+        {images.map((img, index) => (
+          <SwiperSlide key={index} className="swiper-slide-item">
+            <img
+              src={img}
+              alt={`Slide ${index + 1}`}
+              className={`slide-image ${isMobile ? "mobile-image" : "desktop-image"}`}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
-  
-  export default ImageSlider;
+};
+
+export default ImageSlider;

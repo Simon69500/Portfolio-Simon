@@ -13,11 +13,13 @@ const About = () => {
                 <p className='text_about'>
   Bonjour, <br/>
   Je suis <strong>Simon Badin</strong>, actuellement en formation pour devenir <strong>développeur full-stack</strong>, après une réorientation professionnelle. 
-  Avec des bases solides en <strong>front-end</strong> (<em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, <em>React</em>), je suis passionné par le développement web et cherche activement une <strong>alternance</strong> 
-  pour compléter ma formation et acquérir une expérience concrète en entreprise.
+  Avec des bases solides en <strong>front-end</strong> (<em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, <em>React</em>), je suis passionné par le développement web et cherche activement une <strong>alternance </strong> 
+   pour compléter ma formation et acquérir une expérience concrète en entreprise.
   <br/><br/>
-  Mon parcours dans des secteurs variés tels que la <strong>vente</strong>, l’<strong>armée</strong> et la <strong>plomberie</strong> m’a permis de développer des compétences clés comme la <strong>rigueur</strong>, 
-  l’esprit d’équipe et la résolution de problèmes complexes. Ces qualités, associées à ma volonté d'<em>apprendre</em> et de m’adapter, font de moi un candidat motivé, prêt à contribuer à vos projets 
+  Mon parcours dans des secteurs variés tels que la <strong>vente</strong>, l’<strong>armée</strong> et la <strong>plomberie</strong> m’a permis de développer des compétences clés comme <span> la  rigueur </span>, 
+  <span> l’esprit d’équipe </span>  et <span>la résolution de problèmes complexes</span>. 
+  <br/><br/>
+  Ces qualités, associées à ma volonté <em>d'apprendre</em> et de m’adapter, font de moi un candidat motivé, prêt à contribuer à vos projets 
   tout en progressant dans le développement web.
 </p>
 
@@ -25,7 +27,7 @@ const About = () => {
             <div className="card-icon">
                 <img className="icon" src={Icones.github} alt="icon de GitHub" />
                 <img className="icon" src={Icones.scriptJava} alt="icon de JavaScript" />
-                <img className="icon" src={Icones.react} alt="icon de ReactJs" />
+                <img className="icon-react" src={Icones.react} alt="icon de ReactJs" />
             </div>
         </div>
         </>

@@ -15,13 +15,13 @@
     @extend .trans-4;
 
     .modal-content-1 {
-       background-color: $indigo-5;
+        @extend .background-primary-1;
        display: flex;
        flex-direction: column;
        align-items: center;
        justify-content: center;
       
-       width: 60%; 
+       width: 80%; 
        height: 80%;
        padding: 20px; 
        overflow-y: auto; /* Ajoute une barre de défilement si le contenu dépasse la taille de l'écran */
@@ -37,13 +37,14 @@
     }
 
     .modal-content-2 {
-        background-color: $indigo-5;
+        @extend .background-primary-1;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
        
-        width: 60%; 
+        width: 80%; 
         height: 80%;
         padding: 20px; 
         overflow-y: auto; /* Ajoute une barre de défilement si le contenu dépasse la taille de l'écran */
@@ -59,13 +60,13 @@
      }
 
      .modal-content-3 {
-        background-color: $indigo-5;
+        @extend .background-primary-1;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
        
-        width: 40%; 
+        width:80%; 
         height: 80%;
         padding: 20px; 
         overflow-y: auto; /* Ajoute une barre de défilement si le contenu dépasse la taille de l'écran */

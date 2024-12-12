@@ -5,6 +5,7 @@ import CV from '../asset/CV.jpg';
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
 const Competences = () => {
@@ -33,10 +34,21 @@ const Competences = () => {
                 {/* Partie CV */}
                 <div className="contenair-cv">
                     <h3 className="cv-title">Mon CV</h3>
-                    <img className="cv-img" src={CV} alt="" />
+                    <a href="/CV-BADIN-Simon.pdf" target="_blank" rel="noopener noreferrer">
+                        <img className="cv-img" src={CV} alt="image du CV" />
+                    </a>
 
+                    
+                    <Box 
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignContent: 'center',
+                            justifyContent: 'space-evenly'
+                        }}
+                    >
                     <Button
-                        component="label"
+                        component="a"
                         role={undefined}
                         variant="contained"
                         tabIndex={-1}
@@ -46,15 +58,59 @@ const Competences = () => {
                             color: "#1f2d5c",
                             margin: '10px',                         
                         }}
+                        href="../Download/CV-BADIN-Simon.pdf"
+                        download="CV-BADIN-Simon.pdf"
                     >
-                        Telecharger mon CV
+                        Mon CV
                     <VisuallyHiddenInput
                     type="file"
                     onChange={(event) => console.log(event.target.files)}
                     multiple
                     />
                     </Button>
-                    
+                    <Button
+                        component="a"
+                        role={undefined}
+                        variant="contained"
+                        tabIndex={-1}
+                        startIcon={<CloudUploadIcon />}
+                        sx={{
+                            background: "#fdfdfe",
+                            color: "#1f2d5c",
+                            margin: '10px',                         
+                        }}
+                        href="../Download/Lettre de motivation - Badin.pdf"
+                        download="Lettre de motivation - Badin.pdf"
+                    >
+                         Ma Lettre de Motivation
+                    <VisuallyHiddenInput
+                    type="file"
+                    onChange={(event) => console.log(event.target.files)}
+                    multiple
+                    />
+                    </Button>
+                    <Button
+                        component="a"
+                        role={undefined}
+                        variant="contained"
+                        tabIndex={-1}
+                        startIcon={<CloudUploadIcon />}
+                        sx={{
+                            background: "#fdfdfe",
+                            color: "#1f2d5c",
+                            margin: '10px',                         
+                        }}
+                        href="../Download/Le_Reacteur_Programme_Alternance.pdf"
+                        download="Le_Reacteur_Programme_Alternance.pdf"
+                    >
+                        Mon Programme de Formation
+                    <VisuallyHiddenInput
+                    type="file"
+                    onChange={(event) => console.log(event.target.files)}
+                    multiple
+                    />
+                    </Button>
+                    </Box>
                 </div>
             </div>
                         

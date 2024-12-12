@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
             <div className="footer-contact">
                 <p className=' text-contact'>📧 Email: <a href="mailto:simonsola67@gmail.com">me contacter</a></p>
-                <p className=' text-contact'>📞 Téléphone: 06 65 67 97 70</p>
+                <p className=' text-contact'>📞 Téléphone: <a href="tel:+33665679770">06 65 67 97 70</a></p>
             </div>
         </div>
     )

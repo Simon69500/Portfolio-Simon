@@ -1,11 +1,10 @@
 import '../../SCSS/Formulaire.scss';
-
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import TextArea from './TextArea';
 import Button from '@mui/material/Button';
+import emailjs from '@emailjs/browser';
 
 export default function BasicTextFields() {
 
@@ -17,7 +16,7 @@ export default function BasicTextFields() {
   const [phone, setPhone] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  
+
   // États pour les erreurs
   const [nameError, setNameError] = useState(false);
   const [lastNameError, setLastNameError] = useState(false);
@@ -27,202 +26,236 @@ export default function BasicTextFields() {
   const [subjectError, setSubjectError] = useState(false);
   const [messageError, setMessageError] = useState(false);
 
-  //  vérifier chaque champ pour s'assurer que les valeurs saisies sont correctes
-  const validateField = (name, value) => {
-    switch (name) {
-      case 'name':
-        setNameError(value === '');
-        break;
-      case 'lastName':
-        setLastNameError(value === '');
-        break;
-      case 'society':
-        setSocietyError(value === '');
-        break;
-      case 'email':
-        setEmailError(!/\S+@\S+\.\S+/.test(value));
-        break;
-      case 'phone':
-        setPhoneError(!/^\+?[0-9]{10,15}$/.test(value));
-        break;
-      case 'subject':
-        setSubjectError(value === '');
-        break;
-      case 'message':
-        setMessageError(value === '');
-        break;
-      default:
-        break;
-    }
+  // Gestion des erreur avec useEffect
+  useEffect(() => {
+    setNameError(name === '');
+    setLastNameError(lastName === '');
+    setSocietyError(false); // La société n'est plus obligatoire
+    setEmailError(!/\S+@\S+\.\S+/.test(email));
+    setPhoneError(!/^\+?[0-9]{10,15}$/.test(phone));
+    setSubjectError(subject === '');
+    setMessageError(message.trim() === ''); // Message n'est plus obligatoire
+  }, [name, lastName, society, email, phone, subject, message]);
+
+  // Référence du formulaire
+  const form = useRef();
+
+  // Validation globale
+  const validateForm = () => {
+    // Vérifie si l'une des erreurs est vraie, sauf pour société et message
+    return !(nameError || lastNameError || emailError || phoneError || subjectError);
   };
 
   // Gestion de la soumission du formulaire
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validateForm()){
-      alert('Formulaire soumis avec succès !');
 
-      // Réinitialisation des champs et erreurs
-      setName('');
-      setLastName('');
-      setEmail('');
-      setSociety('');
-      setPhone('');
-      setSubject('');
-      setMessage('');
-
-      setNameError(false);
-      setLastNameError(false);
-      setSocietyError(false);
-      setEmailError(false);
-      setPhoneError(false);
-      setSubjectError(false);
-      setMessageError(false);
+    if (validateForm()) {
+      sendEmail();
     } else {
       alert('Veuillez remplir correctement tous les champs !');
     }
   };
 
-  // Validation globale
-  const validateForm = () => {
-    return !nameError && !lastNameError && !societyError && !emailError && !phoneError && !subjectError && !messageError;
+  // Envoi du formulaire sur ton mail avec EmailJS
+  const sendEmail = () => {
+    emailjs
+      .sendForm('service_2t9fvbt', 'template_i8i418o', form.current, {
+        publicKey: '8y5D7R-Yfp_LWjhl8',
+      })
+      .then(
+        () => {
+          alert('Formulaire soumis avec succès !');
+          // Réinitialiser les champs du formulaire
+          form.current.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert('Une erreur est survenue, veuillez réessayer.');
+        }
+      );
   };
 
   return (
-    <div id='Contact' className="contenair-form">
-      <h2 className='titre-formulaire'>Formulaire</h2>
-      <div className='card-form'>
-      <h3 className='titre-formulaire-2'>Me contacter</h3>
-      <Box
-        component="form"
-        sx={{
-          '& > :not(style)': {
-            m:2,
-            width: '25ch',
-            display: 'flex',
-            flexDirection: 'column',
-          },
-        }}
-        noValidate
-        autoComplete="off"
-        onSubmit={handleSubmit}
-      >
-        
 
-        <TextField
+    <div id="Contact" className="contenair-form">
+      <h2 className="titre-formulaire">Me contacter</h2>
+
+      {/* Partie Formlulaire de contact */}
+      <div className="card-form">
+        <h3 className="titre-formulaire-2">Formulaire de contact</h3>
+        <Box
+          component="form"
+          ref={form} // Référence du formulaire
           sx={{
-            backgroundColor: '#e1e9ff',
+            '& > :not(style)': {
+              m: 2,
+              width: '800px',
+              display: 'flex',
+              flexDirection: 'row',
+            },
           }}
-          error={nameError}
-          id="outlined-basic"
-          label="Votre nom"
-          variant="outlined"
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-            validateField('name', e.target.value);  // Validation en temps réel
-          }}
-          helperText={nameError ? 'Mettez votre nom' : ''}
-        />
-        
-        <TextField
-        sx={{
-          backgroundColor: '#e1e9ff',
-        }}
-          error={lastNameError}
-          id="outlined-basic"
-          label="Votre prénom"
-          variant="outlined"
-          value={lastName}
-          onChange={(e) => {
-            setLastName(e.target.value);
-            validateField('lastName', e.target.value);  // Validation en temps réel
-          }}
-          helperText={lastNameError ? 'Mettez votre prénom' : ''}
-        />
+          noValidate
+          autoComplete="off"
+          onSubmit={handleSubmit}
+        >
+          <Box sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignContent: 'center',
+          }}>
+          <TextField
+  sx={{
+    backgroundColor: '#e1e9ff',
+    margin: '20px',
+  }}
+  error={nameError}
+  id="outlined-basic"
+  label="Votre nom"
+  variant="outlined"
+  name="from_name"
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+  helperText={nameError ? 'Mettez votre nom' : ''}
+/>
 
-        <TextField
-        sx={{
-          backgroundColor: '#e1e9ff',
-        }}
-          error={societyError}
-          id="filled-basic"
-          label="Société"
-          variant="outlined"
-          value={society}
-          onChange={(e) => {
-            setSociety(e.target.value);
-            validateField('society', e.target.value);  // Validation en temps réel
-          }}
-          helperText={societyError ? 'Ce champ est requis' : ''}
-        />
-        
-        <TextField
-        sx={{
-          backgroundColor: '#e1e9ff',
-        }}
-          error={emailError}
-          id="standard-basic"
-          label="Votre email"
-          variant="outlined"
-          value={email}
-          type="email"
-          onChange={(e) => {
-            setEmail(e.target.value);
-            validateField('email', e.target.value);  // Validation en temps réel
-          }}
-          helperText={emailError ? 'Email non valide' : ''}
-        />
-        
-        <TextField
-        sx={{
-          backgroundColor: '#e1e9ff',
-        }}
-          error={phoneError}
-          id="standard-basic"
-          label="Votre numéro"
-          variant="outlined"
-          value={phone}
-          onChange={(e) => {
-            setPhone(e.target.value);
-            validateField('phone', e.target.value);  // Validation en temps réel
-          }}
-          helperText={phoneError ? 'Votre numéro de téléphone ne fonctionne pas' : ''}
-        />
-        
-        <TextField
-        sx={{
-          backgroundColor: '#e1e9ff',
-        }}
+<TextField
+  sx={{
+    backgroundColor: '#e1e9ff',
+    margin: '20px',
+  }}
+  error={lastNameError}
+  id="outlined-basic"
+  label="Votre prénom"
+  variant="outlined"
+  name="from_last_name"
+  value={lastName}
+  onChange={(e) => setLastName(e.target.value)}
+  helperText={lastNameError ? 'Mettez votre prénom' : ''}
+/>
+</Box >
 
-          error={subjectError}
-          id="standard-basic"
-          label="Objet"
-          variant="outlined"
-          value={subject}
-          onChange={(e) => {
-            setSubject(e.target.value);
-            validateField('subject', e.target.value);  // Validation en temps réel
-          }}
-          helperText={subjectError ? 'Mettez votre Objet du message' : ''}
+<Box 
+  sx={{
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignContent: 'center',
+  }}
+>
+<TextField
+  sx={{
+    backgroundColor: '#e1e9ff',
+  }}
+  error={emailError}
+  id="standard-basic"
+  label="Votre email"
+  variant="outlined"
+  name="from_email"  
+  value={email}
+  type="email"
+  onChange={(e) => setEmail(e.target.value)}
+  helperText={emailError ? 'Email non valide' : ''}
+/>
+
+<TextField
+  sx={{
+    backgroundColor: '#e1e9ff',
+  }}
+  error={phoneError}
+  id="standard-basic"
+  label="Votre numéro"
+  variant="outlined"
+  name="from_phone" 
+  value={phone}
+  onChange={(e) => setPhone(e.target.value)}
+  helperText={phoneError ? 'Votre numéro de téléphone ne fonctionne pas' : ''}
+/>
+
+<TextField
+  sx={{
+    backgroundColor: '#e1e9ff',
+  }}
+  error={societyError}
+  id="filled-basic"
+  label="Société"
+  variant="outlined"
+  name="from_society" 
+  value={society}
+  onChange={(e) => setSociety(e.target.value)}
+/>
+</Box>
+
+<Box 
+sx={{
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'start',
+  alignContent: 'center',
+}}
+>
+<TextField
+  sx={{
+    backgroundColor: '#e1e9ff',
+    marginLeft: '100px',
+    width: '600px',
+  }}
+  error={subjectError}
+  id="standard-basic"
+  label="Objet"
+  variant="outlined"
+  name="subject"  
+  value={subject}
+  onChange={(e) => setSubject(e.target.value)}
+  helperText={subjectError ? 'Mettez l\'Objet du message' : ''}
+/>
+</Box>
+      <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        alignContent: 'center',
+      }}
+      >
+        <TextField
+  sx={{
+    backgroundColor: '#e1e9ff',
+    width: '600px',
+  }}
+  error={messageError}
+  id="outlined-multiline-static"
+  label="Votre message"
+  multiline
+  rows={4}
+  variant="outlined"
+  name="message"
+  value={message} // Lié à l'état
+  onChange={(e) => setMessage(e.target.value)}
+  helperText={messageError ? 'On a besoin de votre message' : ''}
         />
-        
-        <TextArea 
-          error={messageError} 
-          value={message} 
-          onChange={(e) => {
-            setMessage(e.target.value);
-            validateField('message', e.target.value);  // Validation en temps réel
-          }}
-          helperText={messageError ? 'On a besoin de votre message' : ''}
-        />
-        
-        <Button variant="contained" color="primary" type="submit">
-          Soumettre
-        </Button>
       </Box>
+      <Button variant="contained" color="primary" type="submit" value="Send" disabled={!validateForm()}>
+    Soumettre
+</Button>
+    </Box>
       </div>
-      
+
+      {/* Partie Localisation */}
+      <div className='card-loca'>
+          <h3 style={{textAlign: 'center'}} className="titre-formulaire-2">Ma localisation</h3>
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22278.237365320914!2d4.891016661527612!3d45.73551325301483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4c1763ee80817%3A0x408ab2ae4bb27c0!2s69500%20Bron!5e0!3m2!1sfr!2sfr!4v1734007451281!5m2!1sfr!2sfr"
+          width="650"
+          height="400"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>  
+      </div>   
+
     </div>
   );
 }
