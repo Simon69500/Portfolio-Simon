@@ -2,7 +2,8 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://simon69500.github.io/Portfolio-Simon/index.html",
+  "homepage": "https://simon69500.github.io/Portfolio-Simon",
+
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.13.5",
