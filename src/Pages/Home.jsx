@@ -1,25 +1,40 @@
 import '../SCSS/Home.scss';
-import Banniere from '../asset/banniere2.jpg';
+import Banniere from '../asset/bannière4.png';
 import About from '../sous-pages/About';
 import Competences from '../sous-pages/Competences';
 import Portfolio from '../sous-pages/Portfolio';
 import Formulaire from '../Component/Formulaire/Formulaire';
 import Footer from '../Component/Footer';
+
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import { styled } from '@mui/material/styles';
+
 
 const Home = () => {
 
-  
+    const VisuallyHiddenInput = styled('input')({
+        clip: 'rect(0 0 0 0)',
+        clipPath: 'inset(50%)',
+        height: 1,
+        overflow: 'hidden',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        whiteSpace: 'nowrap',
+        width: 1,
+      });
+
     return (
         <>
             
                 <main id='main'> 
                     {/* Partie Bannière */}
-                    <div className='presentation' style={{backgroundImage: `url(${Banniere})`}}>
-                    <h1 className='title_name'>Simon Badin-Sola</h1>
-                    <h2 className='title_profession'>Developpeur Mobile & Web - Fullstack</h2>
+                    <div className='presentation' style={{backgroundImage: `url(${Banniere})`, backgroundPosition: '0% 20%'}}>                    
+                        <h1 className='title_name'>Simon Badin</h1>
+                    <h2 className='title_profession'>Developpeur Mobile & Web</h2>
                     <Stack sx={{padding:"10px"}} direction="row" spacing={2}>
                         <Button variant="contained" href="https://www.linkedin.com/in/simon-badin-939594279/" target='_blank' rel="noopener noreferrer" >Linkedin</Button>
                         <Button variant="contained" href="#Portfolio">Portfilio</Button>    
@@ -33,7 +48,29 @@ const Home = () => {
                     {/* Partie Recherche Emploi */}
                     <div id='Actual'>    
                         <h3 className='title-actual'>Actuellement : </h3>
-                        <p>En recherche d'alternance </p>
+                        <p><a className='link-ecole' href="https://www.lereacteur.io/formation-alternance/concepteur-developpeur-applications/" target='_blanck'>Le Reacteur</a>  - Formation de Concepteur Développement d'Application "Début - 03 février 2025" - Recherche une Alternance </p>
+                        <Button
+                        component="a"
+                        role={undefined}
+                        variant="contained"
+                        tabIndex={-1}
+                        startIcon={<CloudUploadIcon />}
+                        sx={{
+                            background: "#fdfdfe",
+                            color: "#1f2d5c",
+                            margin: '10px',                         
+                        }}
+                        href="../Download/Le_Reacteur_Programme_Alternance.pdf"
+                        download="Le_Reacteur_Programme_Alternance.pdf"
+                    >
+                        Mon Programme de Formation
+                    <VisuallyHiddenInput
+                    type="file"
+                    onChange={(event) => console.log(event.target.files)}
+                    multiple
+                    />
+                    </Button>
+
                     </div>
 
                     {/* Partie Mes compétences + Skill */} 

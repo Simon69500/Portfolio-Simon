@@ -14,7 +14,6 @@
 
     width: 100%;
     height: 800px;
-    margin-top: 20px;
     
 
     .about_article {
@@ -32,12 +31,22 @@
             padding: 20px;
             width: 100%;   
 
-            font-family: 'Arial', sans-serif; /* Police sans serif */
-            font-size: 20px; /* Taille de la police */
+            @extend .text-dark;
             line-height: 1.6; /* Espacement entre les lignes */
-            color: #333; /* Couleur du texte */
             margin: 1em 0; /* Espacement autour du paragraphe */
             text-align: start; /* Alignement du texte */
+
+            strong {
+                color: $indigo-10;
+            }
+
+            em {
+                color: $indigo-9;
+            }
+
+            span {
+                color: $indigo-11;
+            }
         }
 
         .photo-about {
@@ -70,6 +79,13 @@
         .icon {
             height: 50px;
             width: 50px;
+        }
+
+        .icon-react {
+            height: 50px;
+            width: 50px;
+            background-color: $indigo-12;
+            border-radius: 30px;
         }
     }
 }

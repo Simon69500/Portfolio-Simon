@@ -37,6 +37,8 @@
     }
 
     .footer-contact {
+        @extend .text-dark;
+
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -48,6 +50,11 @@
         .text-contact {
             padding-left: 20px;
             margin: 0px;
+            
+            a {
+                text-decoration: none;
+                @extend .text-ligth;
+            }
         }
     }
 }

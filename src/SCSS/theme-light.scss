@@ -1,5 +1,6 @@
 // Importation de la palette Indigo(Light) de Radix Colors
 @import "~@radix-ui/colors/indigo.css";
+@import "./Fonts.scss";
 
 // Définition des couleurs Radix en RGB
 $indigo-1-rgb: 253, 253, 254; // #fdfdfe
@@ -64,13 +65,20 @@ $indigo-12: var(--indigo-12);  // Accessible text
 
 // Styles de backgrounds
 .background-primary {
-  background-color: $indigo-1;
+  background-color: $indigo-3;
+}
+.background-primary-1 {
+  background-color: $indigo-4;
 }
 .background-secondary {
-  background-color: $indigo-2;
+  background-color: $indigo-6;
+}
+
+.background-tertiary {
+  background-color: $indigo-7;
 }
 .background-header {
-  background-color: $indigo-6;
+  background-color: $indigo-8;
 }
 
 .background-dark {
@@ -96,12 +104,12 @@ $indigo-12: var(--indigo-12);  // Accessible text
 }
 
 .button2 {
-  background-color: $indigo-3;
+  background-color: $indigo-4;
   color: $indigo-12;
-  border: 2px solid $indigo-1;
+  border: 3px solid $indigo-11;
 
   &:hover {
-    background-color: $indigo-7;
+    background-color: $indigo-6;
   }
   &:active {
     border: 2px solid $indigo-8;
@@ -113,12 +121,12 @@ $indigo-12: var(--indigo-12);  // Accessible text
   border: 1px solid $indigo-6;
 }
 .border-medium {
-  border: 1px solid $indigo-7;
+  border: 2px solid $indigo-8;
 }
 .border-dark {
-  border: 1px solid $indigo-8;
+  border: 1px solid $indigo-9;
   border-radius: 30px;
-  box-shadow: 0 0 10px rgba(62, 99, 221, 0.842); 
+  box-shadow: 0 0 10px rgba(35, 83, 241, 0.842); 
 }
 .border-xLigth {
   border: 2px solid $indigo-1;
@@ -129,20 +137,39 @@ $indigo-12: var(--indigo-12);  // Accessible text
 // Couleurs pleines pour textes et éléments visuels
 .text-primary {
   color: $indigo-8;
+  @extend .titre-secondaire
+}
+.text-primary-1 {
+  color: $indigo-2;
+  @extend .titre-principaux
+}
+.text-primary-2 {
+  color: $indigo-12;
+  @extend .titre-principaux-1
 }
 .text-secondary {
   color: $indigo-9;
+  @extend .titre-principaux 
 }
+.text-secondary-2 {
+  color: $indigo-9;
+  @extend .titre-secondaire
+}
+
 .text-accent {
   color: $indigo-10;
+  @extend .text-paragraphe;
 }
 
 .text-ligth {
   color: $indigo-1;
+  @extend .text-paragraphe-1;
 }
 
 .text-dark {
   color: $indigo-12;
+  @extend .text-paragraphe;
+  
 }
 // Accessibilité des textes
 .text-accessible {
@@ -150,10 +177,16 @@ $indigo-12: var(--indigo-12);  // Accessible text
 }
 .text-muted {
   color: $indigo-11;
+  @extend .text-important ;
+}
+
+.text-muted-1 {
+  color: $indigo-9;
+  @extend .text-important ;
 }
 
 // Couleurs Transparente 
 .trans-4 {
-  background-color: rgba(225, 233, 255, 0.9); // Applique la transparence à l'arrière-plan
+  background-color: rgba(225, 233, 255, 0.5); // Applique la transparence à l'arrière-plan
 }
 

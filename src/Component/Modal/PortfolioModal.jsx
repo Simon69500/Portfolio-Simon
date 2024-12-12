@@ -33,11 +33,12 @@ function PortfolioModal() {
                         {/* Passer le projet spécifique à handleOpenModal */}
                         <button style={{
                             fontSize:"x-large",
-                            padding:"20px"
+                            padding:"20px",
+                            cursor: 'pointer'
                         }} 
                         className='buton-projet-portfolio' 
                         onClick={() => handleOpenModal(projet)}>
-                            Voir le {projet.titre}
+                            Voir le projet : {projet.titre}
                         </button>
 
                         <img className={`imagePort-id-${projet.id}`} src={projet.image} alt='projet du portfolio' />
@@ -86,7 +87,7 @@ function PortfolioModal() {
             </div>
             <span className='line-modal'></span>       
             {/* Slider d'images */}
-            <ImageSlider images={selectProjet.images} />
+            <ImageSlider images={selectProjet.images || []} className={selectProjet.id === 3 ? "mobile-image" : "desktop-image"} />
             <div className='line-modal'></div>        
             {/* Lien vers GitHub */}
             <Button className="link-modal" href={selectProjet.link} target="_blank" rel="noopener noreferrer">

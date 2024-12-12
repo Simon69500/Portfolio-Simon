@@ -1,15 +1,15 @@
-import css3 from '../../img/css3.png';
-import html5 from '../../img/html5.png';
-import react from '../../img/react.png';
-import scriptJava from '../../img/scriptJava.png';
-import wordpress from '../../img/wordpress.png';
-import github from '../../img/github.png';
-import figma from '../../img/figma.png';
-import profil from '../../img/Profil.png';
-import profil2 from '../../img/Profil2.png';
-import vue from '../../img/vuejs.png';
-import angular from '../../img/angular.png';
-import linkedin from '../../img/linkedin.png';
+import css3 from '../../asset/img-logo/css3.png';
+import html5 from '../../asset/img-logo/html5.png';
+import react from '../../asset/img-logo/react.png';
+import scriptJava from '../../asset/img-logo/scriptJava.png';
+import wordpress from '../../asset/img-logo//wordpress.png';
+import github from '../../asset/img-logo//github.png';
+import figma from '../../asset/img-logo/figma.png';
+import profil from '../../asset/img-logo/Profil.png';
+import profil2 from '../../asset/img-logo/Profil2.png';
+import vue from '../../asset/img-logo/vuejs.png';
+import angular from '../../asset/img-logo/angular.png';
+import linkedin from '../../asset/img-logo/linkedin.png';
 
 // Utilisation d'un objet pour organiser les icônes
 export const Icones = {

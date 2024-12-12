@@ -13,9 +13,15 @@ const Modal = ({show , onClose, children, projectId}) => {
 
     const contentClass = projectId ? `modal-content-${projectId}` : 'modal-content-default';
 
+    const handleOverlayClick = (e) => {
+        if (e.target.classList.contains('modal-overlay')) {
+            onClose(); 
+        }
+    };
+
      // Structure du modal affiché quand `show` est `true`
     return (
-        <div className='modal-overlay'>
+        <div className='modal-overlay' onClick={handleOverlayClick}>
             <div className={contentClass}>
                 <button className='button-close-modal' onClick={onClose}>X</button>
                 {children}

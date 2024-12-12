@@ -16,7 +16,7 @@
             text-align: center;
             font-size: xx-large;
 
-            @extend  .text-accent ;
+            @extend  .text-secondary ;
         }
         
         .card-cpts {
@@ -45,7 +45,7 @@
             box-shadow: 10px 5px 5px $indigo-11 ;
     
             .cv-title{
-                @extend .text-secondary;
+                @extend .text-secondary-2;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;
