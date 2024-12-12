@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://simon69500.github.io/Portfolio-Simon",
+  "homepage": "https://simon69500.github.io/Portfolio-Simon/index.html",
 
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
