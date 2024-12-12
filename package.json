@@ -23,13 +23,15 @@
     "swiper": "^11.1.15",
     "web-vitals": "^4.2.4"
   },
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install": "npm install --legacy-peer-deps"
-  },
+  }, 
+
   "eslintConfig": {
     "extends": [
       "react-app",
