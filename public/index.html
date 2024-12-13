@@ -2,16 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- Remplacer %PUBLIC_URL% par le chemin relatif correct pour GitHub Pages -->
-    <link rel="icon" href="/Portfolio-Simon/favicon.ico" />
+    <!-- Utilisation correcte du chemin relatif avec %PUBLIC_URL% pour React -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="PortFolio - Developpeur Web & Mobile - Simon Badin - Portfolio pour mettre en avant les compétences d'un développeur en formation"
     />
-    <!-- Mise à jour du lien vers le manifest pour GitHub Pages -->
-    <link rel="manifest" href="/Portfolio-Simon/manifest.json" />
+    <!-- Ajout du cache-buster sur la feuille de style -->
+    <link href="%PUBLIC_URL%/static/css/main.css?v=1.1" rel="stylesheet" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>PortFolio - Simon Badin</title>
   </head>
   <body class="bodyHtml">
