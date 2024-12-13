@@ -1,7 +1,9 @@
 @import './theme-light.scss';
 @import './theme-dark.scss';
+@import './Theme-light-2.scss';
 
-
+// Très grand écran de bureau
+@media (min-width: 1601px){
 #about {
     display: flex;
     flex-direction: column;
@@ -9,8 +11,8 @@
     justify-content: space-around;
 
 
-    @extend .background-secondary;
-    @extend .border-medium;
+    @include background-secondary;
+    @include border-medium;
 
     width: 100%;
     height: 800px;
@@ -31,7 +33,7 @@
             padding: 20px;
             width: 100%;   
 
-            @extend .text-dark;
+            @include text-dark;
             line-height: 1.6; /* Espacement entre les lignes */
             margin: 1em 0; /* Espacement autour du paragraphe */
             text-align: start; /* Alignement du texte */
@@ -61,7 +63,7 @@
    
 
     .title-about {
-        @extend .text-secondary;
+        @include text-secondary;
         padding: 20px;
         font-size: xx-large;
     }
@@ -86,6 +88,189 @@
             width: 50px;
             background-color: $indigo-12;
             border-radius: 30px;
+        }
+    }
+}
+}
+
+//Grand écran de bureau
+@media (min-width: 1281px) and (max-width: 1600px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    
+    
+        @include background-secondary;
+        @include border-medium;
+    
+        width: 100%;
+        height: 800px;
+        
+    
+        .about_article {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            background-color: $indigo-3;
+            border-radius: 10px;
+    
+            width: 80%;
+            height: 500px;
+    
+            .text_about {
+                padding: 20px;
+                width: 100%;   
+    
+                @include text-dark;
+                line-height: 1.6; /* Espacement entre les lignes */
+                margin: 1em 0; /* Espacement autour du paragraphe */
+                text-align: start; /* Alignement du texte */
+    
+                strong {
+                    color: $indigo-10;
+                }
+    
+                em {
+                    color: $indigo-9;
+                }
+    
+                span {
+                    color: $indigo-11;
+                }
+            }
+    
+            .photo-about {
+                width: 300px;
+                height: 300px;
+                border-radius: 100px;
+                padding: 50px;
+    
+            }
+        }
+    
+       
+    
+        .title-about {
+            @include text-secondary;
+            padding: 20px;
+            font-size: xx-large;
+        }
+    
+        .card-icon {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+    
+            width: 50%;
+            padding: 20px;
+    
+    
+            .icon {
+                height: 50px;
+                width: 50px;
+            }
+    
+            .icon-react {
+                height: 50px;
+                width: 50px;
+                background-color: $indigo-12;
+                border-radius: 30px;
+            }
+        }
+    }
+}
+
+// Bureau de taille moyenne
+@media (min-width: 1025px) and (max-width: 1280px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    
+    
+        @include background-secondary;
+        @include border-medium;
+    
+        width: 100%;
+        height: 800px;
+        
+    
+        .about_article {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            background-color: $indigo-3;
+            border-radius: 10px;
+    
+            width: 90%;
+            height: 80%;
+    
+            .text_about {
+                padding: 20px;
+                width: 100%;   
+    
+                @include text-dark;
+                line-height: 1.6; /* Espacement entre les lignes */
+                margin: 1em 0; /* Espacement autour du paragraphe */
+                text-align: start; /* Alignement du texte */
+    
+                strong {
+                    color: $indigo-10;
+                }
+    
+                em {
+                    color: $indigo-9;
+                }
+    
+                span {
+                    color: $indigo-11;
+                }
+            }
+    
+            .photo-about {
+                width: 300px;
+                height: 300px;
+                border-radius: 100px;
+                padding: 50px;
+    
+            }
+        }
+    
+       
+    
+        .title-about {
+            @include text-secondary;
+            padding: 20px;
+            font-size: xx-large;
+        }
+    
+        .card-icon {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+    
+            width: 50%;
+            padding: 20px;
+    
+    
+            .icon {
+                height: 50px;
+                width: 50px;
+            }
+    
+            .icon-react {
+                height: 50px;
+                width: 50px;
+                background-color: $indigo-12;
+                border-radius: 30px;
+            }
         }
     }
 }

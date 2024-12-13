@@ -1,6 +1,9 @@
 @import './theme-light.scss';
 @import './theme-dark.scss';
+@import './Theme-light-2.scss';
 
+// Très grand écran de bureau
+@media (min-width: 1601px){
 .contenair-skills {
     height:100%;
     width: 30%;
@@ -16,7 +19,7 @@
 }
 
 .skill-title-1{
-    @extend .text-secondary-2;
+    @include text-secondary-2;
     text-align: center;
     font-size: x-large;
 }
@@ -44,7 +47,7 @@
         .skill-name {
             font-weight:  bold;
             font-size: normal ;
-            @extend .text-secondary;
+            @include text-secondary;
         }
         
         .skill-img {
@@ -61,5 +64,138 @@
 
     .skill-bar-level {
         width: 100%;
+    }
+}
+}
+
+// Grand écran de bureau
+@media (min-width: 1281px) and (max-width: 1600px) {
+    .contenair-skills {
+        height:100%;
+        width: 30%;
+        margin: 0 ;
+        padding: 10px;
+        text-align: left;
+        
+        background-color: $indigo-7;
+        border-radius: 30px;
+        border: 5px solid $indigo-2 ;
+        box-shadow: 10px 5px 5px $indigo-11 ;
+    
+    }
+    
+    .skill-title-1{
+        @include text-secondary-2;
+        text-align: center;
+        font-size: x-large;
+    }
+    
+    .skill-title-2 {
+        color: $indigo-1;
+        text-align: center;
+        font-size: large;
+        border-top: solid $indigo-8 ;
+        padding-top: 5px;
+    }
+    
+    .skill-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    
+        .card-logo {
+            text-align: center;
+            
+            .skill-name {
+                font-weight:  bold;
+                font-size: normal ;
+                @include text-secondary;
+            }
+            
+            .skill-img {
+                height: 50px;
+                width: 50px;
+                padding: 10px;
+            }
+        }
+        
+        .skill-level {
+            color: $indigo-1;
+            width: 300px;
+        }
+    
+        .skill-bar-level {
+            width: 100%;
+        }
+    }
+    }
+
+    // Bureau de taille moyenne
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .contenair-skills {
+        height:100%;
+        width: 40%;
+        margin: 0 ;
+        padding: 10px;
+        text-align: left;
+        
+        background-color: $indigo-7;
+        border-radius: 30px;
+        border: 5px solid $indigo-2 ;
+        box-shadow: 10px 5px 5px $indigo-11 ;
+    
+    }
+    
+    .skill-title-1{
+        @include text-secondary-2;
+        text-align: center;
+        font-size: x-large;
+    }
+    
+    .skill-title-2 {
+        color: $indigo-1;
+        text-align: center;
+        font-size: large;
+        border-top: solid $indigo-8 ;
+        padding-top: 5px;
+    }
+    
+    .skill-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+    
+        .card-logo {
+            text-align: center;
+            
+            .skill-name {
+                font-weight:  bold;
+                font-size: normal ;
+                @include text-secondary;
+            }
+            
+            .skill-img {
+                height: 30px;
+                width: 30px;
+                padding: 10px;
+            }
+        }
+        .skill-bar-card {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .skill-level {
+            color: $indigo-1;
+            width: 300px;
+        }
+    
+        .skill-bar-level {
+            width: 100%;
+        }
     }
 }

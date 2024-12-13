@@ -9,7 +9,7 @@ function SkillBar ({skill, level}) {
                     <img className='skill-img' src={skill.img} alt={skill.name} />
                     <div className="skill-name">{skill.name}</div>
                 </div>
-                <div>
+                <div className='skill-bar-card'>
                     <p className='skill-level'>{level}%</p>   
                     <progress className='skill-bar-level' value={level} max="100"></progress>
                 </div>

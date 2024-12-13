@@ -1,6 +1,10 @@
 @import '../theme-light.scss';
 @import '../theme-dark.scss';
+@import '../Theme-light-2.scss';
 
+
+// Très grand écran de bureau
+@media (min-width: 1601px){
 
 // partie Portfolio
 .portfolio-contenair {
@@ -13,7 +17,7 @@
     height: 700px;
 
     .title-portfolio {
-        @extend .text-secondary;
+        @include text-secondary;
         text-align: center;
         font-size: xx-large;
         padding: 20px;
@@ -40,8 +44,10 @@
           height: 400px;
 
             .buton-projet-portfolio {
-                @extend .button2;
+                @include button2;
 
+                font-size:x-large;
+                padding:20px;
                 border-radius: 30px;
             }
 
@@ -75,12 +81,12 @@
     align-items: center;
     justify-content: space-around;
 
-    @extend .background-primary-1;
+    @include background-primary-1;
     width: 100%;
     height: 100%;
 
     .title-principal-modal {
-        @extend .text-primary;
+        @include text-primary;
         font-size: xx-large;
         padding: 20px;
     }
@@ -99,7 +105,7 @@
 
 
         .title-modal {
-           @extend .text-secondary;
+           @include text-secondary;
             font-size: x-large;
             width: 30%;
             height: 100%;
@@ -107,9 +113,9 @@
         }
 
         .text-modal {
-            @extend .text-dark ;
-            @extend .border-dark;
-            @extend .background-tertiary ;
+            @include text-dark ;
+            @include border-dark;
+            @include background-tertiary ;
 
             width: 60%;
             height: 100%;
@@ -141,9 +147,9 @@
         width: 100%;
 
         .tech-item {
-            @extend .border-xLigth;
-            @extend .background-dark;
-            @extend .text-ligth ;
+            @include border-xLigth;
+            @include background-dark;
+            @include text-ligth ;
 
             padding: 10px;
 
@@ -158,8 +164,8 @@
         text-decoration: none;
         margin: 20px;
         
-        @extend .text-ligth;
-        @extend .background-dark;
+        @include text-ligth;
+        @include background-dark;
     }
 
     .image-id-1 {
@@ -179,4 +185,371 @@
 
     }
 }
+}
 
+//Grand écran de bureau
+@media (min-width: 1281px) and (max-width: 1600px) {
+
+    // partie Portfolio
+.portfolio-contenair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 700px;
+
+    .title-portfolio {
+        @include text-secondary;
+        text-align: center;
+        font-size: xx-large;
+        padding: 20px;
+    }
+
+    .list-portfolio {
+        display: flex;
+        flex-direction: row ;
+        justify-content: space-evenly;
+        align-items: center;
+
+        width: 100%;
+        height: 500px;
+        padding: 0px;
+        list-style-type: none; 
+
+        .list-detail-portfolio {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+
+          width: 50%;
+          height: 400px;
+
+            .buton-projet-portfolio {
+                @include button2;
+
+                font-size: large;
+                padding:10px;
+                border-radius: 30px;
+            }
+
+            .imagePort-id-1 {
+                width: 50%;
+                height: 40%;
+                object-fit: cover ;
+                border: 3px solid $indigo-5;
+            }
+            .imagePort-id-2 {
+                width: 50%;
+                height: 40%;
+                object-fit: cover ;
+                border: 3px solid $indigo-5;
+            }
+            .imagePort-id-3 {
+                width: 50%;
+                height: 40%;
+                object-fit: contain ;
+                border: 3px solid $indigo-5;
+            }
+        }
+    }
+}
+
+
+// Balise Modal
+.box-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @include background-primary-1;
+    width: 100%;
+    height: 100%;
+
+    .title-principal-modal {
+        @include text-primary;
+        font-size: xx-large;
+        padding: 20px;
+    }
+
+    .card-modal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+        color: $indigo-12;
+        margin: 20px;
+        padding-top: 10px;
+        text-align: center;
+
+
+        .title-modal {
+           @include text-secondary;
+            font-size: x-large;
+            width: 30%;
+            height: 100%;
+            align-content: center;
+        }
+
+        .text-modal {
+            @include text-dark ;
+            @include border-dark;
+            @include background-tertiary ;
+
+            width: 60%;
+            height: 100%;
+            padding: 10px;
+            margin: 0px;
+            
+            align-content: center;
+            font-size: 20px; /* Taille de la police */
+            line-height: 1.6; /* Espacement entre les lignes */
+            margin: 1em 0; /* Espacement autour du paragraphe */
+            text-align: center; /* Alignement du texte */
+        }
+
+    }
+
+    .line-modal {
+        border-top: 3px solid #fff7f7;
+        margin-top: 10px;
+        width: 70%;
+    }
+
+    .card-techno {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        
+        height: 50%;
+        width: 100%;
+
+        .tech-item {
+            @include border-xLigth;
+            @include background-dark;
+            @include text-ligth ;
+
+            padding: 10px;
+
+            
+        }
+        
+    }
+
+    .link-modal {
+        font-size: large;
+        padding: 20px;
+        text-decoration: none;
+        margin: 20px;
+        
+        @include text-ligth;
+        @include background-dark;
+    }
+
+    .image-id-1 {
+        height: 500px;
+        width:  800px;
+    }
+    
+    .image-id-2 {
+        height: 500px;
+        width:  800px;
+
+    }
+
+    .image-id-3 {
+        height: 500px;
+        width: 250px;
+
+    }
+}
+}
+
+//Bureau de taille moyenne
+@media (min-width: 1025px) and (max-width: 1280px)  {
+        // partie Portfolio
+.portfolio-contenair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 700px;
+
+    .title-portfolio {
+        @include text-secondary;
+        text-align: center;
+        font-size: xx-large;
+        padding: 20px;
+    }
+
+    .list-portfolio {
+        display: flex;
+        flex-direction: row ;
+        justify-content: space-evenly;
+        align-items: center;
+
+        width: 100%;
+        height: 500px;
+        padding: 0px;
+        list-style-type: none; 
+
+        .list-detail-portfolio {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+
+          width: 50%;
+          height: 400px;
+
+            .buton-projet-portfolio {
+                @include button2;
+
+                font-size: large;
+                padding:10px;
+                border-radius: 30px;
+            }
+
+            .imagePort-id-1 {
+                width: 50%;
+                height: 40%;
+                object-fit: cover ;
+                border: 3px solid $indigo-5;
+            }
+            .imagePort-id-2 {
+                width: 50%;
+                height: 40%;
+                object-fit: cover ;
+                border: 3px solid $indigo-5;
+            }
+            .imagePort-id-3 {
+                width: 50%;
+                height: 40%;
+                object-fit: contain ;
+                border: 3px solid $indigo-5;
+            }
+        }
+    }
+}
+
+
+// Balise Modal
+.box-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @include background-primary-1;
+    width: 100%;
+    height: 100%;
+
+    .title-principal-modal {
+        @include text-primary;
+        font-size: xx-large;
+        padding: 20px;
+    }
+
+    .card-modal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+        color: $indigo-12;
+        margin: 10px;
+        padding-top: 10px;
+        text-align: center;
+
+
+        .title-modal {
+           @include text-secondary;
+            font-size: large;
+            width: 30%;
+            height: 100%;
+            align-content: center;
+        }
+
+        .text-modal {
+            @include text-dark ;
+            @include border-dark;
+            @include background-tertiary ;
+
+            width: 100%;
+            height: 80%;
+            padding: 10px;
+            margin: 0px;
+            
+            align-content: center;
+            font-size: 15px; /* Taille de la police */
+            line-height: 1.6; /* Espacement entre les lignes */
+            margin: 1em 0; /* Espacement autour du paragraphe */
+            text-align: center; /* Alignement du texte */
+        }
+
+    }
+
+    .line-modal {
+        border-top: 3px solid #fff7f7;
+        margin-top: 10px;
+        width: 70%;
+    }
+
+    .card-techno {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        
+        height: 50%;
+        width: 100%;
+
+        .tech-item {
+            @include border-xLigth;
+            @include background-dark;
+            @include text-ligth ;
+
+            padding: 10px;
+
+            
+        }
+        
+    }
+
+    .link-modal {
+        font-size: large;
+        padding: 20px;
+        text-decoration: none;
+        margin: 20px;
+        
+        @include text-ligth;
+        @include background-dark;
+    }
+
+    .image-id-1 {
+        height: 500px;
+        width:  800px;
+    }
+    
+    .image-id-2 {
+        height: 500px;
+        width:  800px;
+
+    }
+
+    .image-id-3 {
+        height: 500px;
+        width: 250px;
+
+    }
+}
+}

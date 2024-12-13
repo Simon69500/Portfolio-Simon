@@ -32,8 +32,6 @@ function PortfolioModal() {
 
                         {/* Passer le projet spécifique à handleOpenModal */}
                         <button style={{
-                            fontSize:"x-large",
-                            padding:"20px",
                             cursor: 'pointer'
                         }} 
                         className='buton-projet-portfolio' 

@@ -2,6 +2,13 @@
 @import "~@radix-ui/colors/indigo.css";
 @import "./Fonts.scss";
 
+@media (max-width: 480px) { /* Petit écran mobile (portrait) */ }
+@media (min-width: 481px) and (max-width: 768px) { /* Tablette (portrait) */ }
+@media (min-width: 769px) and (max-width: 1024px) { /* Tablette (paysage) ou petit écran de bureau */ }
+@media (min-width: 1025px) and (max-width: 1280px) { /* Bureau de taille moyenne */ }
+@media (min-width: 1281px) and (max-width: 1600px) { /* Grand écran de bureau */ }
+@media (min-width: 1601px) { /* Très grand écran de bureau */ }
+
 // Définition des couleurs Radix en RGB
 $indigo-1-rgb: 253, 253, 254; // #fdfdfe
 $indigo-2-rgb: 247, 249, 255; // #f7f9ff
@@ -64,33 +71,36 @@ $indigo-12: var(--indigo-12);  // Accessible text
 
 
 // Styles de backgrounds
-.background-primary {
+@mixin background-primary {
   background-color: $indigo-3;
-}
-.background-primary-1 {
+};
+
+@mixin background-primary-1 {
   background-color: $indigo-4;
-}
-.background-secondary {
+};
+
+@mixin background-secondary {
   background-color: $indigo-6;
-}
+};
 
-.background-tertiary {
+@mixin background-tertiary {
   background-color: $indigo-7;
-}
-.background-header {
+};
+
+@mixin background-header {
   background-color: $indigo-8;
-}
+};
 
-.background-dark {
+@mixin background-dark {
   background-color: $indigo-11;
-}
+};
 
-.background-xDark {
+@mixin background-xDark {
   background-color: $indigo-12;
-}
+};
 
 // Composants interactifs
-.button {
+@mixin button {
   background-color: $indigo-3;
   color: $indigo-12;
   border: 2px solid $indigo-6;
@@ -101,9 +111,9 @@ $indigo-12: var(--indigo-12);  // Accessible text
   &:active {
     border: 2px solid $indigo-8;
   }
-}
+};
 
-.button2 {
+@mixin button2 {
   background-color: $indigo-4;
   color: $indigo-12;
   border: 3px solid $indigo-11;
@@ -114,79 +124,87 @@ $indigo-12: var(--indigo-12);  // Accessible text
   &:active {
     border: 2px solid $indigo-8;
   }
-}
+};
 
 // Bordures et séparateurs
-.border-light {
+@mixin border-light {
   border: 1px solid $indigo-6;
-}
-.border-medium {
+};
+
+@mixin border-medium {
   border: 2px solid $indigo-8;
-}
-.border-dark {
+};
+
+@mixin border-dark {
   border: 1px solid $indigo-9;
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(35, 83, 241, 0.842); 
-}
-.border-xLigth {
+};
+
+@mixin border-xLigth {
   border: 2px solid $indigo-1;
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(62, 99, 221, 0.842); 
-}
+};
 
 // Couleurs pleines pour textes et éléments visuels
-.text-primary {
+@mixin text-primary {
   color: $indigo-8;
   @include titre-secondaire
-}
-.text-primary-1 {
+};
+
+@mixin text-primary-1 {
   color: $indigo-2;
   @include titre-principaux
-}
-.text-primary-2 {
+};
+
+@mixin text-primary-2 {
   color: $indigo-12;
   @include titre-principaux-1
-}
-.text-secondary {
+};
+
+@mixin text-secondary {
   color: $indigo-9;
   @include titre-principaux 
-}
-.text-secondary-2 {
+};
+
+@mixin text-secondary-2 {
   color: $indigo-9;
   @include titre-secondaire
-}
+};
 
-.text-accent {
+@mixin text-accent {
   color: $indigo-10;
   @include text-paragraphe;
-}
+};
 
-.text-ligth {
+@mixin text-ligth {
   color: $indigo-1;
   @include text-paragraphe-1;
-}
+};
 
-.text-dark {
+@mixin text-dark {
   color: $indigo-12;
   @include text-paragraphe;
   
-}
+};
+
+
 // Accessibilité des textes
 .text-accessible {
   color: $indigo-12; // Couleur la plus contrastée
 }
-.text-muted {
+@mixin text-muted {
   color: $indigo-11;
   @include text-important ;
-}
+};
 
-.text-muted-1 {
+@mixin text-muted-1 {
   color: $indigo-9;
   @include text-important ;
-}
+};
 
 // Couleurs Transparente 
-.trans-4 {
+@mixin trans-4 {
   background-color: rgba(225, 233, 255, 0.5); // Applique la transparence à l'arrière-plan
-}
-
+};

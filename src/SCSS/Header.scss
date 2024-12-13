@@ -1,7 +1,9 @@
 @import './theme-light.scss';
 @import './theme-dark.scss';
+@import './Theme-light-2.scss';
 
-
+// Très grand écran de bureau
+@media (min-width: 1601px) {
 .header {
     display: flex;
     flex-direction: row;
@@ -15,9 +17,72 @@
     right: 0; /* Assurez-vous que l'élément soit fixé à droite */
     z-index: 1000;
 
-    @extend .background-header;
+    @include background-header;
 
     .icon-header  {
         padding: 10px;
         margin-left: 30px;
-    }} 
+    }
+
+    .box-menu {
+        width: 40% ;
+
+    }
+}
+}
+
+// Grand écran de bureau
+@media (min-width: 1281px) and (max-width: 1600px){
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        position: fixed;
+        width: 100%; 
+        height: 100px;
+        top: 0;
+        left: 0;  /* Assurez-vous que l'élément soit fixé à gauche */
+        right: 0; /* Assurez-vous que l'élément soit fixé à droite */
+        z-index: 1000;
+    
+        @include background-header;
+    
+        .icon-header  {
+            padding: 10px;
+            margin-right: 60px;            
+        }
+
+        .box-menu {
+            width: 40% ;
+
+        }
+    }
+}
+
+// Bureau de taille moyenne
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        position: fixed;
+        width: 1025px; 
+        height: 100px;
+        top: 0;
+        left: 0;  /* Assurez-vous que l'élément soit fixé à gauche */
+        right: 0; /* Assurez-vous que l'élément soit fixé à droite */
+        z-index: 1000;
+    
+        @include background-header;
+        
+        .icon-header  {
+            padding: 10px;
+        }
+
+        .box-menu {
+            width: 70%;
+        }
+    }
+    }

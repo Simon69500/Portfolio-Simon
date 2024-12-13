@@ -1,13 +1,127 @@
 @import './theme-light.scss';
 @import './theme-dark.scss';
+@import './Theme-light-2.scss';
 
+
+// Très grand écran de bureau
+@media (min-width: 1601px) {
+        #main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+    
+            @include background-primary;
+        
+            .button-present {
+                background-color: var(--indigo-4);
+                color: var(--indigo-12);
+                border: 2px solid var(--indigo-6);
+                
+                &:hover {
+                  background-color: var(--indigo-5);
+                }
+              
+              }
+    
+            .presentation {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+                position: relative;
+                background-size: cover ;
+                background-position: center ;
+                
+                
+                
+                height: 500px;
+                width: 100%;
+    
+                .title_name {
+                    @include text-primary-2;
+                    margin-bottom: 5px;
+                    
+                }
+    
+                .title_profession {
+                    @include text-primary-1 ;
+                    margin: 0px;
+                    text-align: center;
+                }
+                .button-present {
+                    @include button;
+                    border-radius: 20px;
+                    margin-top: 50px;
+                    padding: 10px;
+                }
+            }
+            
+            #Actual {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+    
+                @include background-tertiary;
+                @include border-medium;
+                
+                width: 100%;
+                height: 250px;
+            
+    
+                .title-actual {
+                    @include text-secondary;
+                    font-size: xx-large;
+                    margin-bottom: 0px;
+                }
+    
+                p {
+                    @include text-muted-1;
+                    text-align: center;
+    
+                    .link-ecole {
+                        text-decoration: none;
+                        @include text-secondary;
+                    }
+                }
+            }
+    
+    
+            .formulaire {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 500px;
+    
+                .form {
+                    display: flex;
+                    flex-direction: column;
+    
+                    input {
+                        margin: 10px 0px ;
+                    }
+    
+                    textarea {
+                        padding: 100px;
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+// Grand écran de bureau
+@media (min-width: 1281px) and (max-width: 1600px) {
     #main {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 50px;
 
-        @extend .background-primary;
+        @include background-primary;
     
         .button-present {
             background-color: var(--indigo-4);
@@ -36,18 +150,18 @@
             width: 100%;
 
             .title_name {
-                @extend .text-primary-2;
+                @include text-primary-2;
                 margin-bottom: 5px;
                 
             }
 
             .title_profession {
-                @extend .text-primary-1 ;
+                @include text-primary-1 ;
                 margin: 0px;
                 text-align: center;
             }
             .button-present {
-                @extend .button;
+                @include button;
                 border-radius: 20px;
                 margin-top: 50px;
                 padding: 10px;
@@ -60,26 +174,26 @@
             align-items: center;
             justify-content: center;
 
-            @extend .background-tertiary;
-            @extend .border-medium;
+            @include background-tertiary;
+            @include border-medium;
             
             width: 100%;
             height: 250px;
         
 
             .title-actual {
-                @extend .text-secondary;
+                @include text-secondary;
                 font-size: xx-large;
                 margin-bottom: 0px;
             }
 
             p {
-                @extend .text-muted-1;
+                @include text-muted-1;
                 text-align: center;
 
                 .link-ecole {
                     text-decoration: none;
-                    @extend .text-secondary;
+                    @include text-secondary;
                 }
             }
         }
@@ -107,3 +221,114 @@
             }
         }
     }
+}
+
+// Bureau de taille moyenne
+@media (min-width: 1025px) and (max-width: 1280px) {
+    #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+
+        @include background-primary;
+    
+        .button-present {
+            background-color: var(--indigo-4);
+            color: var(--indigo-12);
+            border: 2px solid var(--indigo-6);
+            
+            &:hover {
+              background-color: var(--indigo-5);
+            }
+          
+          }
+
+        .presentation {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+            background-size: cover ;
+            background-position: center ;
+            
+            
+            
+            height: 500px;
+            width: 100%;
+
+            .title_name {
+                @include text-primary-2;
+                margin-bottom: 5px;
+                
+            }
+
+            .title_profession {
+                @include text-primary-1 ;
+                margin: 0px;
+                text-align: center;
+            }
+            .button-present {
+                @include button;
+                border-radius: 20px;
+                margin-top: 50px;
+                padding: 10px;
+            }
+        }
+        
+        #Actual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @include background-tertiary;
+            @include border-medium;
+            
+            width: 100%;
+            height: 250px;
+        
+
+            .title-actual {
+                @include text-secondary;
+                font-size: xx-large;
+                margin-bottom: 0px;
+            }
+
+            p {
+                @include text-muted-1;
+                text-align: center;
+
+                .link-ecole {
+                    text-decoration: none;
+                    @include text-secondary;
+                }
+            }
+        }
+
+
+        .formulaire {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+
+            .form {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    margin: 10px 0px ;
+                }
+
+                textarea {
+                    padding: 100px;
+                }
+                
+            }
+        }
+    }
+}

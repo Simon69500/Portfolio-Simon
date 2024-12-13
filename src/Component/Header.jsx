@@ -27,8 +27,7 @@ const Header = () => {
                 <Avatar src={Icones.profil} alt="Simon Badin" sx={{ width: 56, height: 56}}/>
                 </Stack>
 
-                <Box className="box-menu"
-                sx={{ width: '40%' }}>
+                <Box className="box-menu">
 
                     <Tabs value={value}
                     onChange={handleChange}

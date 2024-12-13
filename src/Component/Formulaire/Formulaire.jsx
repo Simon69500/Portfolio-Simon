@@ -84,27 +84,21 @@ export default function BasicTextFields() {
       {/* Partie Formlulaire de contact */}
       <div className="card-form">
         <h3 className="titre-formulaire-2">Formulaire de contact</h3>
-        <Box
+        <Box className='Box-form'
           component="form"
           ref={form} // Référence du formulaire
           sx={{
             '& > :not(style)': {
               m: 2,
-              width: '800px',
               display: 'flex',
-              flexDirection: 'row',
+              flexDirection: 'column',
             },
           }}
           noValidate
           autoComplete="off"
           onSubmit={handleSubmit}
         >
-          <Box sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignContent: 'center',
-          }}>
+          <Box className='Box-card'>
           <TextField
   sx={{
     backgroundColor: '#e1e9ff',
@@ -136,14 +130,7 @@ export default function BasicTextFields() {
 />
 </Box >
 
-<Box 
-  sx={{
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    alignContent: 'center',
-  }}
->
+<Box className='Box-card-1'>
 <TextField
   sx={{
     backgroundColor: '#e1e9ff',
@@ -187,19 +174,11 @@ export default function BasicTextFields() {
 />
 </Box>
 
-<Box 
-sx={{
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'start',
-  alignContent: 'center',
-}}
->
+<Box className='Box-card-2'>
 <TextField
   sx={{
     backgroundColor: '#e1e9ff',
-    marginLeft: '100px',
-    width: '600px',
+    width: '500px',
   }}
   error={subjectError}
   id="standard-basic"
@@ -211,18 +190,10 @@ sx={{
   helperText={subjectError ? 'Mettez l\'Objet du message' : ''}
 />
 </Box>
-      <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        alignContent: 'center',
-      }}
-      >
+      <Box className='Box-card-3'>
         <TextField
   sx={{
     backgroundColor: '#e1e9ff',
-    width: '600px',
   }}
   error={messageError}
   id="outlined-multiline-static"
@@ -236,19 +207,20 @@ sx={{
   helperText={messageError ? 'On a besoin de votre message' : ''}
         />
       </Box>
-      <Button variant="contained" color="primary" type="submit" value="Send" disabled={!validateForm()}>
-    Soumettre
-</Button>
+      <Box className='Box-card-4'>
+        <Button variant="contained" color="primary" type="submit" value="Send" disabled={!validateForm()}>
+              Soumettre
+        </Button>
+      </Box>
+
     </Box>
       </div>
 
       {/* Partie Localisation */}
       <div className='card-loca'>
           <h3 style={{textAlign: 'center'}} className="titre-formulaire-2">Ma localisation</h3>
-          <iframe
+          <iframe className='map-google'
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22278.237365320914!2d4.891016661527612!3d45.73551325301483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4c1763ee80817%3A0x408ab2ae4bb27c0!2s69500%20Bron!5e0!3m2!1sfr!2sfr!4v1734007451281!5m2!1sfr!2sfr"
-          width="650"
-          height="400"
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"

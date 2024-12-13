@@ -1,29 +1,70 @@
 @import './theme-light.scss';
 @import './theme-dark.scss';
+@import './Theme-light-2.scss';
 
+//Très grand écran de bureau
+@media (min-width: 1601px){
 .contenair-form {
-    @extend .background-secondary;
-    @extend .border-medium;
+    @include background-secondary;
+    @include border-medium;
 
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-content: flex-start;
+    align-items: centerx-start;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding-bottom: 20px;
 
+    .Box-form {
+        width: 800px;
+
+        .Box-card {
+            display: flex ;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .Box-card-1{
+            display: flex ;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .Box-card-2{
+            display: flex ;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .Box-car-3{
+            display: flex ;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Box-card-4{
+            display: flex ;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
    .titre-formulaire {
-        @extend .text-secondary;
+        @include text-secondary;
     }
 
     .titre-formulaire-2 {
-        @extend .text-primary;
+        @include text-primary;
     }
 
     .card-form {
-        @extend .background-primary;
+        @include background-primary;
 
         width: 50%;
 
@@ -36,7 +77,7 @@
 }   
 
 .card-loca {
-    @extend .background-primary;
+    @include background-primary;
 
     width: 50%;
     height: 550px;
@@ -48,4 +89,205 @@
     border-radius: 15px;
     border: 1px solid #3358d4;
     margin: 20px;
+
+    .map-google {
+        width: 90%;
+        height: 90%;
+        margin: 10px;
+    }
+}
+}
+
+// Grand écran de bureau
+@media (min-width: 1281px) and (max-width: 1600px) {
+    .contenair-form {
+        @include background-secondary;
+        @include border-medium;
+    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: centerx-start;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 20px;
+        
+        .Box-form {
+            width: 100%;
+    
+            .Box-card {
+                display: flex ;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+    
+            .Box-card-1{
+                display: flex ;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+    
+            .Box-card-2{
+                display: flex ;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center ;
+            }
+    
+            .Box-car-3{
+                display: flex ;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .Box-card-4{
+                display: flex ;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+       .titre-formulaire {
+            @include text-secondary;
+        }
+    
+        .titre-formulaire-2 {
+            @include text-primary;
+        }
+    
+        .card-form {
+            @include background-primary;
+    
+            width: 70%;
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            border: 1px solid #3358d4;
+        }
+    }   
+    
+    .card-loca {
+        @include background-primary;
+    
+        width: 50%;
+        height: 550px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        border: 1px solid #3358d4;
+        margin: 20px;
+
+        .map-google {
+            width: 90%;
+            height: 90%;
+            margin: 10px;
+        }
+    }
+}
+
+//Bureau de taille moyenne
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .contenair-form {
+        @include background-secondary;
+        @include border-medium;
+    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: centerx-start;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 20px;
+        
+        .Box-form {
+            width: 100%;
+    
+            .Box-card {
+                display: flex ;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+    
+            .Box-card-1{
+                display: flex ;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+    
+            .Box-card-2{
+                display: flex ;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center ;
+            }
+    
+            .Box-car-3{
+                display: flex ;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .Box-card-4{
+                display: flex ;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+       .titre-formulaire {
+            @include text-secondary;
+        }
+    
+        .titre-formulaire-2 {
+            @include text-primary;
+        }
+    
+        .card-form {
+            @include background-primary;
+    
+            width: 70%;
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            border: 1px solid #3358d4;
+        }
+    }   
+    
+    .card-loca {
+        @include background-primary;
+    
+        width: 50%;
+        height: 550px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        border: 1px solid #3358d4;
+        margin: 20px;
+
+        .map-google {
+            width: 90%;
+            height: 90%;
+            margin: 10px;
+        }
+    }
 }
