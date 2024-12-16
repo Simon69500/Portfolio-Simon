@@ -17,7 +17,7 @@
     height: 700px;
 
     .title-portfolio {
-        @include text-secondary;
+        @include  text-secondary ;
         text-align: center;
         font-size: xx-large;
         padding: 20px;
@@ -55,19 +55,19 @@
                 width: 60%;
                 height: 70%;
                 object-fit: cover ;
-                border: 3px solid $indigo-5;
+                border: 3px solid $dark-11;
             }
             .imagePort-id-2 {
                 width: 60%;
                 height: 70%;
                 object-fit: cover ;
-                border: 3px solid $indigo-5;
+                border: 3px solid $dark-11;
             }
             .imagePort-id-3 {
                 width: 60%;
                 height: 70%;
                 object-fit: contain ;
-                border: 3px solid $indigo-5;
+                border: 3px solid $dark-11;
             }
         }
     }
@@ -81,12 +81,12 @@
     align-items: center;
     justify-content: space-around;
 
-    @include background-primary-1;
+    @include background-tertiary-1;
     width: 100%;
     height: 100%;
 
     .title-principal-modal {
-        @include text-primary;
+        @include text-primary-2;
         font-size: xx-large;
         padding: 20px;
     }
@@ -98,14 +98,14 @@
 
         width: 100%;
         height: 100%;
-        color: $indigo-12;
+        color: $dark-2;
         margin: 20px;
         padding-top: 10px;
         text-align: center;
 
 
         .title-modal {
-           @include text-secondary;
+           @include text-secondary-3;
             font-size: x-large;
             width: 30%;
             height: 100%;
@@ -115,7 +115,7 @@
         .text-modal {
             @include text-dark ;
             @include border-dark;
-            @include background-tertiary ;
+            @include background-header ;
 
             width: 60%;
             height: 100%;
@@ -132,7 +132,7 @@
     }
 
     .line-modal {
-        border-top: 3px solid #fff7f7;
+        border-top: 3px solid #D5E2FF;
         margin-top: 10px;
         width: 70%;
     }
@@ -148,12 +148,10 @@
 
         .tech-item {
             @include border-xLigth;
-            @include background-dark;
-            @include text-ligth ;
+            @include background-header;
+            @include text-dark;
 
-            padding: 10px;
-
-            
+            padding: 10px;            
         }
         
     }
@@ -201,7 +199,7 @@
     height: 700px;
 
     .title-portfolio {
-        @include text-secondary;
+        @include  text-secondary ;
         text-align: center;
         font-size: xx-large;
         padding: 20px;
@@ -239,19 +237,19 @@
                 width: 50%;
                 height: 40%;
                 object-fit: cover ;
-                border: 3px solid $indigo-5;
+                border: 3px solid $dark-11;
             }
             .imagePort-id-2 {
                 width: 50%;
                 height: 40%;
                 object-fit: cover ;
-                border: 3px solid $indigo-5;
+                border: 3px solid $dark-11;
             }
             .imagePort-id-3 {
                 width: 50%;
                 height: 40%;
                 object-fit: contain ;
-                border: 3px solid $indigo-5;
+                border: 3px solid $dark-11;
             }
         }
     }
@@ -265,12 +263,12 @@
     align-items: center;
     justify-content: space-around;
 
-    @include background-primary-1;
+    @include background-tertiary-1;
     width: 100%;
     height: 100%;
 
     .title-principal-modal {
-        @include text-primary;
+        @include text-secondary-3;
         font-size: xx-large;
         padding: 20px;
     }
@@ -282,14 +280,14 @@
 
         width: 100%;
         height: 100%;
-        color: $indigo-12;
+        color: $dark-12;
         margin: 20px;
         padding-top: 10px;
         text-align: center;
 
 
         .title-modal {
-           @include text-secondary;
+            @include text-primary-2;
             font-size: x-large;
             width: 30%;
             height: 100%;
@@ -299,7 +297,7 @@
         .text-modal {
             @include text-dark ;
             @include border-dark;
-            @include background-tertiary ;
+            @include background-header ;
 
             width: 60%;
             height: 100%;
@@ -316,7 +314,7 @@
     }
 
     .line-modal {
-        border-top: 3px solid #fff7f7;
+        border-top: 3px solid #D5E2FF;
         margin-top: 10px;
         width: 70%;
     }
@@ -332,8 +330,8 @@
 
         .tech-item {
             @include border-xLigth;
-            @include background-dark;
-            @include text-ligth ;
+            @include background-header;
+            @include text-dark;
 
             padding: 10px;
 
@@ -384,7 +382,7 @@
     height: 700px;
 
     .title-portfolio {
-        @include text-secondary;
+        @include  text-secondary ;
         text-align: center;
         font-size: xx-large;
         padding: 20px;
@@ -422,19 +420,19 @@
                 width: 50%;
                 height: 40%;
                 object-fit: cover ;
-                border: 3px solid $indigo-5;
+                border: 3px solid $dark-11;
             }
             .imagePort-id-2 {
                 width: 50%;
                 height: 40%;
                 object-fit: cover ;
-                border: 3px solid $indigo-5;
+                border: 3px solid $dark-11;
             }
             .imagePort-id-3 {
                 width: 50%;
                 height: 40%;
                 object-fit: contain ;
-                border: 3px solid $indigo-5;
+                border: 3px solid $dark-5;
             }
         }
     }
@@ -448,12 +446,12 @@
     align-items: center;
     justify-content: space-around;
 
-    @include background-primary-1;
+    @include background-tertiary-1;
     width: 100%;
     height: 100%;
 
     .title-principal-modal {
-        @include text-primary;
+       @include  text-secondary ;
         font-size: xx-large;
         padding: 20px;
     }
@@ -465,14 +463,14 @@
 
         width: 100%;
         height: 100%;
-        color: $indigo-12;
+        color: $dark-12;
         margin: 10px;
         padding-top: 10px;
         text-align: center;
 
 
         .title-modal {
-           @include text-secondary;
+            @include text-secondary-3;
             font-size: large;
             width: 30%;
             height: 100%;
@@ -482,7 +480,7 @@
         .text-modal {
             @include text-dark ;
             @include border-dark;
-            @include background-tertiary ;
+            @include background-header ;
 
             width: 100%;
             height: 80%;
@@ -499,7 +497,7 @@
     }
 
     .line-modal {
-        border-top: 3px solid #fff7f7;
+        border-top: 3px solid #D5E2FF;
         margin-top: 10px;
         width: 70%;
     }
@@ -515,8 +513,8 @@
 
         .tech-item {
             @include border-xLigth;
-            @include background-dark;
-            @include text-ligth ;
+            @include background-header;
+            @include text-dark;
 
             padding: 10px;
 

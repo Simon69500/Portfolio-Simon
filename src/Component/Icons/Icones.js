@@ -10,6 +10,8 @@ import profil2 from '../../asset/img-logo/Profil2.png';
 import vue from '../../asset/img-logo/vuejs.png';
 import angular from '../../asset/img-logo/angular.png';
 import linkedin from '../../asset/img-logo/linkedin.png';
+import github2 from '../../asset/img-logo/github2.png';
+import react2 from '../../asset/img-logo/react2.png';
 
 // Utilisation d'un objet pour organiser les icônes
 export const Icones = {
@@ -24,7 +26,9 @@ export const Icones = {
   profil2,
   vue,
   angular,
-  linkedin 
+  linkedin,
+  github2,
+  react2
 };
 
 

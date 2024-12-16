@@ -31,17 +31,15 @@ const Header = () => {
 
                     <Tabs value={value}
                     onChange={handleChange}
-                    textColor="secondary"
                     aria-label="menu navigation"
-                    sx={{color: '#3a5bc7' }}  
+                    sx={{color: '#D5E2FF' }}  
                     >
                     
                     <Tab value="one"
                     label="Accueil" 
                     href="#main"
                     onChange={handleChange}
-                    textColor="secondary"
-                    sx={{color: '#3a5bc7', fontSize:'medium', fontWeight: '600'}} 
+                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600'}} 
                     />
                     
 
@@ -49,32 +47,28 @@ const Header = () => {
                     label="A Propos" 
                     href="#about"
                     onChange={handleChange}
-                    textColor="secondary"
-                    sx={{color: '#3a5bc7', fontSize:'medium', fontWeight: '600'}} 
+                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600'}} 
                     />
                     
                     <Tab value="three"
                     label="Mes Compétences"
                     onChange={handleChange}
                     href="#Competences"
-                    textColor="secondary"
-                    sx={{color: '#3a5bc7', fontSize:'medium', fontWeight: '600'}}  
+                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600'}}  
                     />
                     
                     <Tab value="four"
                     label="Mon Portfolio" 
                     onChange={handleChange}
                     href="#Portfolio"
-                    textColor="secondary"
-                    sx={{color: '#3a5bc7', fontSize:'medium', fontWeight: '600'}}  
+                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600'}}  
                     />
                     
                     <Tab value="five"
                     label="Me Contacter" 
                     onChange={handleChange}
                     href="#Contact"
-                    textColor="secondary"
-                    sx={{color: '#3a5bc7', fontSize:'medium', fontWeight: '600'}} 
+                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600'}} 
                     />
 
                     </Tabs>

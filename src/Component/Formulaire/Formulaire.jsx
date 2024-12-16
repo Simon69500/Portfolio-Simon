@@ -101,13 +101,13 @@ export default function BasicTextFields() {
           <Box className='Box-card'>
           <TextField
   sx={{
-    backgroundColor: '#e1e9ff',
+    backgroundColor: '#D5E2FF',
     margin: '20px',
   }}
   error={nameError}
-  id="outlined-basic"
+  id="filled-basic"
   label="Votre nom"
-  variant="outlined"
+  variant="filled"
   name="from_name"
   value={name}
   onChange={(e) => setName(e.target.value)}
@@ -116,13 +116,13 @@ export default function BasicTextFields() {
 
 <TextField
   sx={{
-    backgroundColor: '#e1e9ff',
+    backgroundColor: '#D5E2FF',
     margin: '20px',
   }}
   error={lastNameError}
-  id="outlined-basic"
+  id="filled-basic"
   label="Votre prénom"
-  variant="outlined"
+  variant="filled"
   name="from_last_name"
   value={lastName}
   onChange={(e) => setLastName(e.target.value)}
@@ -133,12 +133,12 @@ export default function BasicTextFields() {
 <Box className='Box-card-1'>
 <TextField
   sx={{
-    backgroundColor: '#e1e9ff',
+    backgroundColor: '#D5E2FF',
   }}
   error={emailError}
   id="standard-basic"
   label="Votre email"
-  variant="outlined"
+  variant="filled"
   name="from_email"  
   value={email}
   type="email"
@@ -148,12 +148,12 @@ export default function BasicTextFields() {
 
 <TextField
   sx={{
-    backgroundColor: '#e1e9ff',
+    backgroundColor: '#D5E2FF',
   }}
   error={phoneError}
   id="standard-basic"
   label="Votre numéro"
-  variant="outlined"
+  variant="filled"
   name="from_phone" 
   value={phone}
   onChange={(e) => setPhone(e.target.value)}
@@ -162,12 +162,12 @@ export default function BasicTextFields() {
 
 <TextField
   sx={{
-    backgroundColor: '#e1e9ff',
+    backgroundColor: '#D5E2FF',
   }}
   error={societyError}
   id="filled-basic"
   label="Société"
-  variant="outlined"
+  variant="filled"
   name="from_society" 
   value={society}
   onChange={(e) => setSociety(e.target.value)}
@@ -177,13 +177,13 @@ export default function BasicTextFields() {
 <Box className='Box-card-2'>
 <TextField
   sx={{
-    backgroundColor: '#e1e9ff',
+    backgroundColor: '#D5E2FF',
     width: '500px',
   }}
   error={subjectError}
   id="standard-basic"
   label="Objet"
-  variant="outlined"
+  variant="filled"
   name="subject"  
   value={subject}
   onChange={(e) => setSubject(e.target.value)}
@@ -193,14 +193,14 @@ export default function BasicTextFields() {
       <Box className='Box-card-3'>
         <TextField
   sx={{
-    backgroundColor: '#e1e9ff',
+    backgroundColor: '#D5E2FF',
   }}
   error={messageError}
-  id="outlined-multiline-static"
+  id="filled-multiline-static"
   label="Votre message"
   multiline
   rows={4}
-  variant="outlined"
+  variant="filled"
   name="message"
   value={message} // Lié à l'état
   onChange={(e) => setMessage(e.target.value)}

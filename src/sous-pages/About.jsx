@@ -25,9 +25,9 @@ const About = () => {
 
             </article>
             <div className="card-icon">
-                <img className="icon" src={Icones.github} alt="icon de GitHub" />
+                <img className="icon" src={Icones.github2} alt="icon de GitHub" />
                 <img className="icon" src={Icones.scriptJava} alt="icon de JavaScript" />
-                <img className="icon-react" src={Icones.react} alt="icon de ReactJs" />
+                <img className="icon" src={Icones.react2} alt="icon de ReactJs" />
             </div>
         </div>
         </>

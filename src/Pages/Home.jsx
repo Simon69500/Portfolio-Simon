@@ -56,8 +56,8 @@ const Home = () => {
                         tabIndex={-1}
                         startIcon={<CloudUploadIcon />}
                         sx={{
-                            background: "#fdfdfe",
-                            color: "#1f2d5c",
+                            background: "#93B4FF",
+                            color: "#172448",
                             margin: '10px',                         
                         }}
                         href="../Download/Le_Reacteur_Programme_Alternance.pdf"

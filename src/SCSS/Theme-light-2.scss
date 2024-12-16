@@ -38,153 +38,148 @@ $indigo-10: var(--indigo-10);  //Solid colors
 $indigo-11: var(--indigo-11);  // Accessible text
 $indigo-12: var(--indigo-12);  // Accessible text
 
-// Theme Claire 
-.theme-light {
-    // Backgrounds
-  --background-color-1: var(--indigo-1);
-  --background-color-2: var(--indigo-2);
-  --background-color-3: var(--indigo-11);
+// Couleurs sombre
+// Variables de couleurs pour chaque niveau de la palette 
+$dark-1 :#0C111C ;   // Backgrounds
+$dark-2: #111725 ;   // Backgrounds
+$dark-3: #172448;    // Interactive components
+$dark-4: #1D2E61;    // Interactive components
+$dark-5: #243974;    // Interactive components
+$dark-6: #2D4484;    // Borders and separators
+$dark-7: #375098;    // Borders and separators
+$dark-8: #405EB2;    // Borders and separators
+$dark-9: #3D63DD;    // Solid colors
+$dark-10: #3F5CB0;  //Solid colors
+$dark-11: #93B4FF;  // Accessible text
+$dark-12: #D5E2FF;  // Accessible text
 
-  // Interactive components
-  --interactive-color-1: var(--indigo-3);
-  --interactive-color-2: var(--indigo-4);
-  --interactive-color-3: var(--indigo-5);
-
-  // Borders and separators
-  --border-color-1: var(--indigo-6);
-  --border-color-2: var(--indigo-7);
-  --border-color-3: var(--indigo-8);
-
-  // Solid colors
-  --solid-color-1: var(--indigo-9);
-  --solid-color-2: var(--indigo-10);
-
-  // Accessible text
-  --text-color-1: var(--indigo-11);
-  --text-color-2: var(--indigo-12);
-
-  //Bouton 
-  --button-background-1: var(--indigo-3);
-  --button-background-2: var(--indigo-7);
-
-}
-
-
+// Theme 
 // Styles de backgrounds
 @mixin background-primary {
-  background-color: $indigo-3;
+  background-color: $dark-5;
 };
 
 @mixin background-primary-1 {
-  background-color: $indigo-4;
+  background-color: $dark-2;
 };
 
 @mixin background-secondary {
-  background-color: $indigo-6;
+  background-color: $dark-2;
 };
 
 @mixin background-tertiary {
-  background-color: $indigo-7;
+  background-color: $dark-4;
 };
-
+@mixin background-tertiary-1 {
+  background-color: $dark-7;
+};
 @mixin background-header {
-  background-color: $indigo-8;
+  background-color: $dark-8;
 };
 
 @mixin background-dark {
-  background-color: $indigo-11;
+  background-color: $dark-11;
+};
+
+@mixin background-dark-1 {
+  background-color: $dark-8;
 };
 
 @mixin background-xDark {
-  background-color: $indigo-12;
+  background-color: $dark-12;
 };
 
 // Composants interactifs
 @mixin button {
-  background-color: $indigo-3;
-  color: $indigo-12;
-  border: 2px solid $indigo-6;
+  background-color:$dark-12;
+  color:$dark-1;
+  border: 2px solid$dark-10;
 
   &:hover {
-    background-color: $indigo-7;
+    background-color:$dark-7;
   }
   &:active {
-    border: 2px solid $indigo-8;
+    border: 2px solid$dark-8;
   }
 };
 
 @mixin button2 {
-  background-color: $indigo-4;
-  color: $indigo-12;
-  border: 3px solid $indigo-11;
+  background-color:$dark-7;
+  @include text-dark;
+  border: 3px solid$dark-11;
 
   &:hover {
-    background-color: $indigo-6;
+    background-color:$dark-6;
   }
   &:active {
-    border: 2px solid $indigo-8;
+    border: 2px solid$dark-8;
   }
 };
 
 // Bordures et séparateurs
 @mixin border-light {
-  border: 1px solid $indigo-6;
+  border: 1px solid$dark-6;
 };
 
 @mixin border-medium {
-  border: 2px solid $indigo-8;
+  border: 2px solid $dark-8;
 };
 
 @mixin border-dark {
-  border: 1px solid $indigo-9;
+  border: 1px solid $dark-11;
   border-radius: 30px;
-  box-shadow: 0 0 10px rgba(35, 83, 241, 0.842); 
+  box-shadow: 0 0 10px #d5e2ffab; 
 };
 
 @mixin border-xLigth {
-  border: 2px solid $indigo-1;
+  border: 2px solid $dark-9;
   border-radius: 30px;
-  box-shadow: 0 0 10px rgba(62, 99, 221, 0.842); 
+  box-shadow: 0 0 5px #d5e2ffab;
 };
 
 // Couleurs pleines pour textes et éléments visuels
 @mixin text-primary {
-  color: $indigo-8;
+  color: $dark-8;
   @include titre-secondaire
 };
 
 @mixin text-primary-1 {
-  color: $indigo-2;
+  color: $dark-2;
   @include titre-principaux
 };
 
 @mixin text-primary-2 {
-  color: $indigo-12;
+  color: $dark-12;
   @include titre-principaux-1
 };
 
 @mixin text-secondary {
-  color: $indigo-9;
+  color: $dark-9;
   @include titre-principaux 
 };
 
 @mixin text-secondary-2 {
-  color: $indigo-9;
+  color:$dark-9;
+  @include titre-secondaire
+};
+
+@mixin text-secondary-3 {
+  color:$dark-11;
   @include titre-secondaire
 };
 
 @mixin text-accent {
-  color: $indigo-10;
+  color:$dark-10;
   @include text-paragraphe;
 };
 
 @mixin text-ligth {
-  color: $indigo-1;
+  color:$dark-1;
   @include text-paragraphe-1;
 };
 
 @mixin text-dark {
-  color: $indigo-12;
+  color:$dark-12;
   @include text-paragraphe;
   
 };
@@ -192,15 +187,15 @@ $indigo-12: var(--indigo-12);  // Accessible text
 
 // Accessibilité des textes
 .text-accessible {
-  color: $indigo-12; // Couleur la plus contrastée
+  color:$dark-12; // Couleur la plus contrastée
 }
 @mixin text-muted {
-  color: $indigo-11;
+  color:$dark-11;
   @include text-important ;
 };
 
 @mixin text-muted-1 {
-  color: $indigo-9;
+  color:$dark-9;
   @include text-important ;
 };
 

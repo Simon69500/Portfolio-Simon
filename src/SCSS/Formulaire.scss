@@ -1,5 +1,4 @@
 @import './theme-light.scss';
-@import './theme-dark.scss';
 @import './Theme-light-2.scss';
 
 //Très grand écran de bureau
@@ -56,28 +55,31 @@
     }
 
    .titre-formulaire {
-        @include text-secondary;
+        @include  text-secondary ;
+        font-size: xx-large;
     }
 
     .titre-formulaire-2 {
-        @include text-primary;
+        @include text-secondary-3;
+        font-size: x-large ;
     }
 
     .card-form {
-        @include background-primary;
-
+        @include background-dark-1;
+        @include border-medium ;
         width: 50%;
 
         display: flex;
         flex-direction: column;
         align-items: center;
         border-radius: 15px;
-        border: 1px solid #3358d4;
+       
     }
 }   
 
 .card-loca {
-    @include background-primary;
+    @include background-dark-1;
+    @include border-medium ;
 
     width: 50%;
     height: 550px;
@@ -87,7 +89,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 15px;
-    border: 1px solid #3358d4;
+
     margin: 20px;
 
     .map-google {
@@ -152,16 +154,19 @@
         }
 
        .titre-formulaire {
-            @include text-secondary;
+            @include  text-secondary ;
+            font-size: xx-large;
         }
     
         .titre-formulaire-2 {
-            @include text-primary;
+            @include text-secondary-3;
+            font-size: x-large ;
         }
     
         .card-form {
-            @include background-primary;
-    
+            @include background-dark-1;
+            @include border-medium ;
+
             width: 70%;
     
             display: flex;
@@ -169,13 +174,13 @@
             align-items: center;
             justify-content: center;
             border-radius: 15px;
-            border: 1px solid #3358d4;
         }
     }   
     
     .card-loca {
-        @include background-primary;
-    
+        @include background-dark-1;
+        @include border-medium ;
+
         width: 50%;
         height: 550px;
     
@@ -184,7 +189,6 @@
         align-items: center;
         justify-content: center;
         border-radius: 15px;
-        border: 1px solid #3358d4;
         margin: 20px;
 
         .map-google {
@@ -249,16 +253,19 @@
         }
 
        .titre-formulaire {
-            @include text-secondary;
+            @include  text-secondary ;
+            font-size: xx-large;
         }
     
         .titre-formulaire-2 {
-            @include text-primary;
+            @include text-secondary-3;
+            font-size: x-large ;
         }
     
         .card-form {
-            @include background-primary;
-    
+            @include background-dark-1;
+            @include border-medium ;
+
             width: 70%;
     
             display: flex;
@@ -266,13 +273,13 @@
             align-items: center;
             justify-content: center;
             border-radius: 15px;
-            border: 1px solid #3358d4;
         }
     }   
     
     .card-loca {
-        @include background-primary;
-    
+        @include background-dark-1;
+        @include border-medium ;
+
         width: 50%;
         height: 550px;
     
@@ -281,7 +288,6 @@
         align-items: center;
         justify-content: center;
         border-radius: 15px;
-        border: 1px solid #3358d4;
         margin: 20px;
 
         .map-google {

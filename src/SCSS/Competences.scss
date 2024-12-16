@@ -42,17 +42,17 @@
             height: 1000px;
             padding: 20px;
     
-            background-color: $indigo-7;
+            @include background-tertiary-1;
             border-radius: 30px;
-            border: 5px solid $indigo-2 ;
-            box-shadow: 10px 5px 5px $indigo-11 ;
+            border: 4px solid $dark-12 ;
+            box-shadow: 10px 1px 5px $dark-7 ;
     
             .cv-title{
-                @include text-secondary-2;
+                @include text-primary-2;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;
-                border-bottom: solid $indigo-8 ;
+                border-bottom: solid $dark-12 ;
                 width: 100%;
                 padding: 20px;
                 margin: 0;
@@ -116,17 +116,17 @@
             height: 1000px;
             padding: 20px;
     
-            background-color: $indigo-7;
+            background-color: $dark-7;
             border-radius: 30px;
-            border: 5px solid $indigo-2 ;
-            box-shadow: 10px 5px 5px $indigo-11 ;
+            border: 5px solid $dark-2 ;
+            box-shadow: 10px 5px 5px $dark-11 ;
     
             .cv-title{
                 @include text-secondary-2;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;
-                border-bottom: solid $indigo-8 ;
+                border-bottom: solid $dark-8 ;
                 width: 100%;
                 padding: 20px;
                 margin: 0;
@@ -189,18 +189,18 @@
             width: 40%;
             height: 90%;
             padding: 20px;
-    
-            background-color: $indigo-7;
+
+            @include background-tertiary-1;
             border-radius: 30px;
-            border: 5px solid $indigo-2 ;
-            box-shadow: 10px 5px 5px $indigo-11 ;
+            border: 4px solid $dark-12 ;
+            box-shadow: 10px 1px 5px $dark-7 ;
     
             .cv-title{
                 @include text-secondary-2;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;
-                border-bottom: solid $indigo-8 ;
+                border-bottom: solid $dark-8 ;
                 width: 100%;
                 padding: 20px;
                 margin: 0;
