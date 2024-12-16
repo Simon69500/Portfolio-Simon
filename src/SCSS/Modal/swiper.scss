@@ -37,10 +37,12 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+    ///////////////////////////////////////////////////////////////////
+ 
 /* Mobile-first styles */
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .swiper {
-    height: 300px;
+    height: 200px;
   }
 
   /* Make the navigation buttons larger and easier to click on mobile */
@@ -50,4 +52,39 @@
     height: 40px;
     font-size: 20px;
   }
+
+  /* Styles pour les images Mobile */
+.mobile-image {
+  object-fit: contain; /* Remplissage complet pour mobile */
+  width: 30%; /* Largeur complète */
+  height: 30%; /* Hauteur automatique pour éviter les déformations */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+ // Petit écran mobile (portrait)
+ @media (max-width: 480px) {
+  .swiper {
+    height: 150px;
+  }
+
+  /* Make the navigation buttons larger and easier to click on mobile */
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  /* Styles pour les images Mobile */
+.mobile-image {
+  object-fit: contain; /* Remplissage complet pour mobile */
+  width: 30%; /* Largeur complète */
+  height: 30%; /* Hauteur automatique pour éviter les déformations */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+ }

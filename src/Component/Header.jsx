@@ -4,6 +4,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
+import BurgerMenu from './MenuBurger/BurgerMenu';
 
 
 import { Icones } from "../Component/Icons/Icones";
@@ -27,15 +28,21 @@ const Header = () => {
                 <Avatar src={Icones.profil} alt="Simon Badin" sx={{ width: 56, height: 56}}/>
                 </Stack>
 
-                <Box className="box-menu">
+                <Box className="box-menu"
+                    sx={{
+                        width: '100%'
+                    }}
+                >
 
-                    <Tabs value={value}
+                    <Tabs 
+                    value={value}
                     onChange={handleChange}
                     aria-label="menu navigation"
-                    sx={{color: '#D5E2FF' }}  
+                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600' }}  
                     >
                     
-                    <Tab value="one"
+                    <Tab 
+                    value="one"
                     label="Accueil" 
                     href="#main"
                     onChange={handleChange}
@@ -43,28 +50,32 @@ const Header = () => {
                     />
                     
 
-                    <Tab value="two"
+                    <Tab  
+                    value="two"
                     label="A Propos" 
                     href="#about"
                     onChange={handleChange}
                     sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600'}} 
                     />
                     
-                    <Tab value="three"
+                    <Tab 
+                    value="three"
                     label="Mes Compétences"
                     onChange={handleChange}
                     href="#Competences"
                     sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600'}}  
                     />
                     
-                    <Tab value="four"
+                    <Tab 
+                    value="four"
                     label="Mon Portfolio" 
                     onChange={handleChange}
                     href="#Portfolio"
                     sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600'}}  
                     />
                     
-                    <Tab value="five"
+                    <Tab 
+                    value="five"
                     label="Me Contacter" 
                     onChange={handleChange}
                     href="#Contact"
@@ -73,7 +84,11 @@ const Header = () => {
 
                     </Tabs>
                 </Box>
-               
+
+                <div className="burger-menu"> 
+                    <BurgerMenu />
+                </div>
+
             </div>
         </>
     );

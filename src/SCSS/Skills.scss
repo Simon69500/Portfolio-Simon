@@ -68,6 +68,8 @@
 }
 }
 
+    ///////////////////////////////////////////////////////////////////
+ 
 // Grand écran de bureau
 @media (min-width: 1281px) and (max-width: 1600px) {
     .contenair-skills {
@@ -132,7 +134,9 @@
     }
     }
 
-    // Bureau de taille moyenne
+    ///////////////////////////////////////////////////////////////////
+ 
+// Bureau de taille moyenne
 @media (min-width: 1025px) and (max-width: 1280px) {
     .contenair-skills {
         height:100%;
@@ -199,3 +203,215 @@
         }
     }
 }
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (paysage) ou petit écran de bureau
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contenair-skills {
+        height:100%;
+        width: 40%;
+        margin: 0 ;
+        padding: 10px;
+        text-align: left;
+        
+        @include background-tertiary-1;
+        border-radius: 30px;
+        border: 4px solid $dark-12 ;
+        box-shadow: 10px 1px 5px $dark-7 ;
+    
+    }
+    
+    .skill-title-1{
+        @include text-primary-2;
+        text-align: center;
+        font-size: x-large;
+    }
+    
+    .skill-title-2 {
+        color: $dark-12;
+        text-align: center;
+        font-size: large;
+        border-top: solid $dark-12 ;
+        padding-top: 5px;
+    }
+    
+    .skill-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+    
+        .card-logo {
+            text-align: center;
+            
+            .skill-name {
+                font-weight:  bold;
+                font-size: normal ;
+                @include text-dark;
+            }
+            
+            .skill-img {
+                height: 30px;
+                width: 30px;
+                padding: 10px;
+            }
+        }
+        .skill-bar-card {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .skill-level {
+            @include text-dark;
+            width: 300px;
+        }
+    
+        .skill-bar-level {
+            width: 100%;
+        }
+    }
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (portrait)
+@media (min-width: 481px) and (max-width: 768px)  {
+    .contenair-skills {
+        height:100%;
+        width: 80%;
+        margin-bottom: 30px ;
+        padding: 10px;
+        text-align: left;
+        
+        @include background-tertiary-1;
+        border-radius: 30px;
+        border: 4px solid $dark-12 ;
+        box-shadow: 10px 1px 5px $dark-7 ;
+    
+    }
+    
+    .skill-title-1{
+        @include text-primary-2;
+        text-align: center;
+        font-size: large;
+    }
+    
+    .skill-title-2 {
+        color: $dark-12;
+        text-align: center;
+        font-size: normal;
+        border-top: solid $dark-12 ;
+        padding-top: 10px;
+    }
+    
+    .skill-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 90%;
+    
+        .card-logo {
+            text-align: center;
+            width: 50%;
+            
+            .skill-name {
+                font-weight:  bold;
+                font-size: normal ;
+                @include text-dark;
+            }
+            
+            .skill-img {
+                height: 30px;
+                width: 30px;
+                padding: 10px;
+            }
+        }
+        .skill-bar-card {
+            width: 80%;
+            padding: 10px;
+        }
+
+        .skill-level {
+            @include text-dark;
+            width: 150px;
+        }
+    
+        .skill-bar-level {
+            width: 100%;
+        }
+    }
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+ // Petit écran mobile (portrait)
+ @media (max-width: 480px) {
+    .contenair-skills {
+        height:100%;
+        width: 80%;
+        margin-bottom: 30px ;
+        padding: 10px;
+        text-align: left;
+        
+        @include background-tertiary-1;
+        border-radius: 30px;
+        border: 4px solid $dark-12 ;
+        box-shadow: 10px 1px 5px $dark-7 ;
+    
+    }
+    
+    .skill-title-1{
+        @include text-primary-2;
+        text-align: center;
+        font-size: large;
+    }
+    
+    .skill-title-2 {
+        color: $dark-12;
+        text-align: center;
+        font-size: normal;
+        border-top: solid $dark-12 ;
+        padding-top: 10px;
+    }
+    
+    .skill-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 90%;
+    
+        .card-logo {
+            text-align: center;
+            width: 50%;
+            
+            .skill-name {
+                font-weight:  bold;
+                font-size: normal ;
+                @include text-dark;
+            }
+            
+            .skill-img {
+                height: 30px;
+                width: 30px;
+                padding: 10px;
+            }
+        }
+        .skill-bar-card {
+            width: 80%;
+            padding: 10px;
+        }
+
+        .skill-level {
+            @include text-dark;
+            width: 150px;
+        }
+    
+        .skill-bar-level {
+            width: 100%;
+        }
+    }
+ }

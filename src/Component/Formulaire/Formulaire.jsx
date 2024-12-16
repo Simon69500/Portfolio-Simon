@@ -227,7 +227,6 @@ export default function BasicTextFields() {
 <TextField
   sx={{
     backgroundColor: '#D5E2FF',
-    width: '500px',
   }}
   error={hasAttemptedSubmit && subjectError}
   id="standard-basic"

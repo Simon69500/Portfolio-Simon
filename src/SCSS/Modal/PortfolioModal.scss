@@ -73,7 +73,8 @@
     }
 }
 
-
+    ///////////////////////////////////////////////////////////////////
+ 
 // Balise Modal
 .box-modal {
     display: flex;
@@ -185,6 +186,8 @@
 }
 }
 
+    ///////////////////////////////////////////////////////////////////
+ 
 //Grand écran de bureau
 @media (min-width: 1281px) and (max-width: 1600px) {
 
@@ -255,7 +258,8 @@
     }
 }
 
-
+    ///////////////////////////////////////////////////////////////////
+ 
 // Balise Modal
 .box-modal {
     display: flex;
@@ -369,6 +373,8 @@
 }
 }
 
+    ///////////////////////////////////////////////////////////////////
+ 
 //Bureau de taille moyenne
 @media (min-width: 1025px) and (max-width: 1280px)  {
         // partie Portfolio
@@ -551,3 +557,565 @@
     }
 }
 }
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (paysage) ou petit écran de bureau
+@media (min-width: 769px) and (max-width: 1024px) {
+            // partie Portfolio
+.portfolio-contenair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 700px;
+
+    .title-portfolio {
+        @include  text-secondary ;
+        text-align: center;
+        font-size: xx-large;
+        padding: 20px;
+    }
+
+    .list-portfolio {
+        display: flex;
+        flex-direction: row ;
+        justify-content: space-evenly;
+        align-items: center;
+
+        width: 100%;
+        height: 500px;
+        padding: 0px;
+        list-style-type: none; 
+
+        .list-detail-portfolio {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+
+          width: 30%;
+          height: 400px;
+
+            .buton-projet-portfolio {
+                @include button2;
+
+                font-size: medium;
+                padding:10px;
+                border-radius: 30px;
+            }
+
+            .imagePort-id-1 {
+                width: 50%;
+                height: 40%;
+                object-fit: cover ;
+                border: 3px solid $dark-11;
+            }
+            .imagePort-id-2 {
+                width: 50%;
+                height: 40%;
+                object-fit: cover ;
+                border: 3px solid $dark-11;
+            }
+            .imagePort-id-3 {
+                width: 50%;
+                height: 40%;
+                object-fit: contain ;
+                border: 3px solid $dark-5;
+            }
+        }
+    }
+}
+
+
+// Balise Modal
+.box-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @include background-tertiary-1;
+    width: 100%;
+    height: 100%;
+
+    .title-principal-modal {
+       @include  text-secondary ;
+        font-size: xx-large;
+        padding: 20px;
+    }
+
+    .card-modal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+        color: $dark-12;
+        margin: 10px;
+        padding-top: 10px;
+        text-align: center;
+
+
+        .title-modal {
+            @include text-secondary-3;
+            font-size: large;
+            width: 30%;
+            height: 100%;
+            align-content: center;
+        }
+
+        .text-modal {
+            @include text-dark ;
+            @include border-dark;
+            @include background-header ;
+
+            width: 100%;
+            height: 80%;
+            padding: 10px;
+            margin: 0px;
+            
+            align-content: center;
+            font-size: 15px; /* Taille de la police */
+            line-height: 1.6; /* Espacement entre les lignes */
+            margin: 1em 0; /* Espacement autour du paragraphe */
+            text-align: center; /* Alignement du texte */
+        }
+
+    }
+
+    .line-modal {
+        border-top: 3px solid #D5E2FF;
+        margin-top: 10px;
+        width: 70%;
+    }
+
+    .card-techno {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        
+        height: 50%;
+        width: 100%;
+
+        .tech-item {
+            @include border-xLigth;
+            @include background-header;
+            @include text-dark;
+
+            padding: 10px;
+
+            
+        }
+        
+    }
+
+    .link-modal {
+        font-size: large;
+        padding: 20px;
+        text-decoration: none;
+        margin: 20px;
+        
+        @include text-ligth;
+        @include background-dark;
+    }
+
+    .image-id-1 {
+        height: 500px;
+        width:  800px;
+    }
+    
+    .image-id-2 {
+        height: 500px;
+        width:  800px;
+
+    }
+
+    .image-id-3 {
+        height: 500px;
+        width: 250px;
+
+    }
+}
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (portrait)
+@media (min-width: 481px) and (max-width: 768px) {
+
+ // partie Portfolio
+.portfolio-contenair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 100%;
+
+    .title-portfolio {
+        @include  text-secondary ;
+        text-align: center;
+        font-size: x-large;
+    }
+
+    .list-portfolio {
+        display: flex;
+        flex-direction: column ;
+        justify-content: space-evenly;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        list-style-type: none; 
+
+        .list-detail-portfolio {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+
+          width: 90%;
+          height: 400px;
+
+            .buton-projet-portfolio {
+                @include button2;
+
+                font-size: medium;
+                padding:10px;
+                border-radius: 30px;
+            }
+
+            .imagePort-id-1 {
+                width: 60%;
+                height: 50%;
+                object-fit: cover ;
+                border: 3px solid $dark-11;
+            }
+            .imagePort-id-2 {
+                width: 60%;
+                height: 50%;
+                object-fit: cover ;
+                border: 3px solid $dark-11;
+            }
+            .imagePort-id-3 {
+                width: 60%;
+                height: 50%;
+                object-fit: contain ;
+                border: 3px solid $dark-5;
+            }
+        }
+    }
+}
+
+
+// Balise Modal
+.box-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @include background-tertiary-1;
+    width:100%;
+    height: 100%;
+
+    .title-principal-modal {
+       @include  text-secondary ;
+        font-size: x-large;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        width: 400px;
+    }
+
+    .card-modal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+        color: $dark-12;
+        margin: 10px;
+        padding-top: 10px;
+        text-align: center;
+
+
+        .title-modal {
+            @include text-secondary-3;
+            font-size: normal;
+            width: 100%;
+            height: 100%;
+            align-content: center;
+            margin: 0;
+        }
+
+        .text-modal {
+            @include text-dark ;
+            @include border-dark;
+            @include background-header ;
+
+            width: 80%;
+            height: 80%;
+            padding: 10px;
+            margin: 0px;
+            
+            align-content: center;
+            font-size: 13px; /* Taille de la police */
+            line-height: 1.6; /* Espacement entre les lignes */
+            margin: 1em 0; /* Espacement autour du paragraphe */
+            text-align: center; /* Alignement du texte */
+        }
+
+    }
+
+    .line-modal {
+        border-top: 3px solid #D5E2FF;
+        margin-top: 10px;
+        width: 70%;
+    }
+
+    .card-techno {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        
+        height: 50%;
+        width: 100%;
+
+        .tech-item {
+            @include border-xLigth;
+            @include background-header;
+            @include text-dark;
+
+            width: 80px;
+            font-size: x-small;
+
+            
+        }
+        
+    }
+
+    .link-modal {
+        font-size: x-small;
+        text-decoration: none;
+        margin: 10px;
+        
+        @include text-ligth;
+        @include background-dark;
+    }
+
+    .image-id-1 {
+        height: 500px;
+        width:  800px;
+    }
+    
+    .image-id-2 {
+        height: 500px;
+        width:  800px;
+
+    }
+
+    .image-id-3 {
+        height: 500px;
+        width: 250px;
+
+    }
+}
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+ // Petit écran mobile (portrait)
+ @media (max-width: 480px) {
+     // partie Portfolio
+.portfolio-contenair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 100%;
+
+    .title-portfolio {
+        @include  text-secondary ;
+        text-align: center;
+        font-size: x-large;
+    }
+
+    .list-portfolio {
+        display: flex;
+        flex-direction: column ;
+        justify-content: space-evenly;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        list-style-type: none; 
+
+        .list-detail-portfolio {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+
+          width: 90%;
+          height: 400px;
+
+            .buton-projet-portfolio {
+                @include button2;
+
+                font-size: medium;
+                padding:10px;
+                border-radius: 30px;
+            }
+
+            .imagePort-id-1 {
+                width: 60%;
+                height: 50%;
+                object-fit: cover ;
+                border: 3px solid $dark-11;
+            }
+            .imagePort-id-2 {
+                width: 60%;
+                height: 50%;
+                object-fit: cover ;
+                border: 3px solid $dark-11;
+            }
+            .imagePort-id-3 {
+                width: 60%;
+                height: 50%;
+                object-fit: contain ;
+                border: 3px solid $dark-5;
+            }
+        }
+    }
+}
+
+
+// Balise Modal
+.box-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @include background-tertiary-1;
+    width:100%;
+    height: 100%;
+
+    .title-principal-modal {
+       @include  text-secondary ;
+        font-size: x-large;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        width: 400px;
+    }
+
+    .card-modal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+        color: $dark-12;
+        margin: 10px;
+        padding-top: 10px;
+        text-align: center;
+
+
+        .title-modal {
+            @include text-secondary-3;
+            font-size: normal;
+            width: 100%;
+            height: 100%;
+            align-content: center;
+            margin: 0;
+        }
+
+        .text-modal {
+            @include text-dark ;
+            @include border-dark;
+            @include background-header ;
+
+            width: 80%;
+            height: 80%;
+            padding: 10px;
+            margin: 0px;
+            
+            align-content: center;
+            font-size: 13px; /* Taille de la police */
+            line-height: 1.6; /* Espacement entre les lignes */
+            margin: 1em 0; /* Espacement autour du paragraphe */
+            text-align: center; /* Alignement du texte */
+        }
+
+    }
+
+    .line-modal {
+        border-top: 3px solid #D5E2FF;
+        margin-top: 10px;
+        width: 70%;
+    }
+
+    .card-techno {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        
+        height: 50%;
+        width: 100%;
+
+        .tech-item {
+            @include border-xLigth;
+            @include background-header;
+            @include text-dark;
+
+            width: 80px;
+            font-size: x-small;
+
+            
+        }
+        
+    }
+
+    .link-modal {
+        font-size: x-small;
+        text-decoration: none;
+        margin: 10px;
+        
+        @include text-ligth;
+        @include background-dark;
+    }
+
+    .image-id-1 {
+        height: 500px;
+        width:  800px;
+    }
+    
+    .image-id-2 {
+        height: 500px;
+        width:  800px;
+
+    }
+
+    .image-id-3 {
+        height: 500px;
+        width: 250px;
+
+    }
+}
+ }

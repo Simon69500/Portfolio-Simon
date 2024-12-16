@@ -63,6 +63,8 @@
 }
 }
 
+    ///////////////////////////////////////////////////////////////////
+ 
 // Grand écran de bureau
 @media (min-width: 1281px) and (max-width: 1600px) {
     .Footer {
@@ -124,6 +126,8 @@
     }
 }
 
+    ///////////////////////////////////////////////////////////////////
+ 
 //Bureau de taille moyenne
 @media (min-width: 1025px) and (max-width: 1280px) {
     .Footer {
@@ -184,3 +188,192 @@
         }
     }
 }
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (paysage) ou petit écran de bureau
+@media (min-width: 769px) and (max-width: 1024px) {
+    .Footer {
+        @include background-header ;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    
+        width: 100%;
+        height: 150px;
+    
+        .icon-footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+    
+            margin: 0px;
+            width: 100%;
+    
+            .item-icon {
+                height: 40px;
+                width: 40px;
+                padding-right: 10px
+            }
+        }
+    
+        .text-footer {
+            @include text-dark;
+            text-align: center;
+            margin: 0px;
+            padding: 5px;
+        
+        }
+    
+        .footer-contact {
+            @include text-dark;
+    
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            
+            width: 100%;
+            padding: 10px;
+    
+            .text-contact {
+                padding-left: 20px;
+                margin: 0px;
+                
+                a {
+                    text-decoration: none;
+                    @include text-ligth;
+                }
+            }
+        }
+    }
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (portrait)
+@media (min-width: 481px) and (max-width: 768px) {
+    .Footer {
+        @include background-header ;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    
+        width: 100%;
+        height: 150px;
+    
+        .icon-footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+    
+            margin: 0px;
+            width: 100%;
+    
+            .item-icon {
+                height: 40px;
+                width: 40px;
+                padding-right: 10px
+            }
+        }
+    
+        .text-footer {
+            @include text-dark;
+            text-align: center;
+            margin: 0px;
+            padding: 5px;
+        
+        }
+    
+        .footer-contact {
+            @include text-dark;
+    
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            
+            width: 100%;
+            padding: 10px;
+    
+            .text-contact {
+                padding-left: 20px;
+                margin: 0px;
+                
+                a {
+                    text-decoration: none;
+                    @include text-ligth;
+                }
+            }
+        }
+    }
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+ // Petit écran mobile (portrait)
+ @media (max-width: 480px) {
+    .Footer {
+        @include background-header ;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    
+        width: 100%;
+        height: 150px;
+    
+        .icon-footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+    
+            margin: 0px;
+            width: 100%;
+    
+            .item-icon {
+                height: 40px;
+                width: 40px;
+                padding-right: 10px
+            }
+        }
+    
+        .text-footer {
+            @include text-dark;
+            text-align: center;
+            margin: 0px;
+            padding: 5px;
+        
+        }
+    
+        .footer-contact {
+            @include text-dark;
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            width: 100%;
+            padding: 10px;
+    
+            .text-contact {
+                padding-left: 20px;
+                margin: 5px;
+                
+                a {
+                    text-decoration: none;
+                    @include text-ligth;
+                }
+            }
+        }
+    }
+ }

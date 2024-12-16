@@ -12,7 +12,7 @@
 
 
     @include background-secondary;
-    @include border-medium;
+
 
     width: 100%;
     height: 800px;
@@ -86,6 +86,8 @@
 }
 }
 
+    ///////////////////////////////////////////////////////////////////
+ 
 //Grand écran de bureau
 @media (min-width: 1281px) and (max-width: 1600px) {
     #about {
@@ -96,7 +98,6 @@
     
     
         @include background-secondary;
-        @include border-medium;
     
         width: 100%;
         height: 800px;
@@ -170,6 +171,8 @@
     }
 }
 
+    ///////////////////////////////////////////////////////////////////
+ 
 // Bureau de taille moyenne
 @media (min-width: 1025px) and (max-width: 1280px) {
     #about {
@@ -180,7 +183,6 @@
     
     
         @include background-secondary;
-        @include border-medium;
     
         width: 100%;
         height: 800px;
@@ -253,3 +255,260 @@
         }
     }
 }
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (paysage) ou petit écran de bureau
+@media (min-width: 769px) and (max-width: 1024px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    
+    
+        @include background-secondary;
+    
+        width: 100%;
+        height: 800px;
+        
+    
+        .about_article {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            background-color: $dark-3;
+            border-radius: 10px;
+    
+            width: 90%;
+            height: 60%;
+    
+            .text_about {
+                padding: 20px;
+                width: 100%;   
+    
+                @include text-dark;
+                line-height: 1.2; /* Espacement entre les lignes */
+                margin: 1em 0; /* Espacement autour du paragraphe */
+                text-align: start; /* Alignement du texte */
+    
+                strong {
+                    color: $dark-10;
+                }
+    
+                em {
+                    color: $dark-9;
+                }
+    
+                span {
+                    color: $dark-11;
+                }
+            }
+    
+            .photo-about {
+                width: 150px;
+                height: 150px;
+                border-radius: 100px;
+                padding: 50px;
+    
+            }
+        }
+    
+       
+    
+        .title-about {
+            @include text-secondary;
+            padding: 20px;
+            font-size: xx-large;
+        }
+    
+        .card-icon {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+    
+            width: 50%;
+            padding: 20px;
+    
+    
+            .icon {
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (portrait)
+@media (min-width: 481px) and (max-width: 768px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    
+        @include background-secondary;
+    
+        width: 100%;
+        height: 800px;
+        
+    
+        .about_article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            background-color: $dark-3;
+            border-radius: 10px;
+    
+            width: 90%;
+            height: 100%;
+    
+            .text_about {
+                padding: 20px;
+                width: 100%;   
+    
+                @include text-dark;
+                font-size: small;
+                line-height: 1.6; /* Espacement entre les lignes */
+                margin: 1em 0; /* Espacement autour du paragraphe */
+                text-align: center; /* Alignement du texte */
+    
+                strong {
+                    color: $dark-10;
+                }
+    
+                em {
+                    color: $dark-9;
+                }
+    
+                span {
+                    color: $dark-11;
+                }
+            }
+    
+            .photo-about {
+                width: 150px;
+                height: 150px;
+                border-radius: 100px;
+                padding: 20px;
+    
+            }
+        }
+    
+       
+    
+        .title-about {
+            @include text-secondary;
+            font-size: x-large;
+        }
+    
+        .card-icon {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+    
+            width: 50%;
+            padding: 10px 0px;
+    
+    
+            .icon {
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+ // Petit écran mobile (portrait)
+ @media (max-width: 480px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    
+        @include background-secondary;
+    
+        width: 100%;
+        height: 800px;
+        
+    
+        .about_article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            background-color: $dark-3;
+            border-radius: 10px;
+    
+            width: 90%;
+            height: 100%;
+    
+            .text_about {
+                padding: 20px;
+                width: 100%;   
+    
+                @include text-dark;
+                font-size: small;
+                line-height: 1.6; /* Espacement entre les lignes */
+                margin: 1em 0; /* Espacement autour du paragraphe */
+                text-align: center; /* Alignement du texte */
+    
+                strong {
+                    color: $dark-10;
+                }
+    
+                em {
+                    color: $dark-9;
+                }
+    
+                span {
+                    color: $dark-11;
+                }
+            }
+    
+            .photo-about {
+                width: 150px;
+                height: 150px;
+                border-radius: 100px;
+                padding: 20px;
+    
+            }
+        }
+    
+       
+    
+        .title-about {
+            @include text-secondary;
+            font-size: x-large;
+        }
+    
+        .card-icon {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+    
+            width: 50%;
+            padding: 10px 0px;
+    
+    
+            .icon {
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+ }

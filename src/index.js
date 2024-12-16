@@ -6,9 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <div className='index-contenair'>
   <React.StrictMode>
     <App /> {/* Le composant principal de votre application */}
   </React.StrictMode>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
