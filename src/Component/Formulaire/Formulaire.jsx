@@ -1,12 +1,13 @@
 import '../../SCSS/Formulaire.scss';
 import * as React from 'react';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import emailjs from '@emailjs/browser';
 
 export default function BasicTextFields() {
+
 
   // États pour chaque champ du formulaire
   const [name, setName] = useState('');
@@ -20,25 +21,38 @@ export default function BasicTextFields() {
   // États pour les erreurs
   const [nameError, setNameError] = useState(false);
   const [lastNameError, setLastNameError] = useState(false);
-  const [societyError, setSocietyError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [phoneError, setPhoneError] = useState(false);
   const [subjectError, setSubjectError] = useState(false);
   const [messageError, setMessageError] = useState(false);
 
-  // Gestion des erreur avec useEffect
-  useEffect(() => {
+  // Fonction pour valider les champs
+  const validateFields = useCallback(() => {
     setNameError(name === '');
     setLastNameError(lastName === '');
-    setSocietyError(false); // La société n'est plus obligatoire
     setEmailError(!/\S+@\S+\.\S+/.test(email));
     setPhoneError(!/^\+?[0-9]{10,15}$/.test(phone));
     setSubjectError(subject === '');
-    setMessageError(message.trim() === ''); // Message n'est plus obligatoire
-  }, [name, lastName, society, email, phone, subject, message]);
+  }, [name, lastName, email, phone, subject]); // Ajoutez ici les dépendances nécessaires
+  
+
+  // Réinit Erreur
+  const resetErrors = () => {
+    setNameError(false);
+    setLastNameError(false);
+    setEmailError(false);
+    setPhoneError(false);
+    setSubjectError(false);
+    setMessageError(false);
+  };  
+
+   // État pour détecter si l'utilisateur a tenté de valider le formulaire
+  const [hasAttemptedSubmit, setHasAttemptedSubmit] = useState(false);
 
   // Référence du formulaire
+  const formBoxRef = useRef(null);
   const form = useRef();
+
 
   // Validation globale
   const validateForm = () => {
@@ -46,16 +60,48 @@ export default function BasicTextFields() {
     return !(nameError || lastNameError || emailError || phoneError || subjectError);
   };
 
+    // Gestion du clic sur la Box pour déclencher la validation
+    const handleBoxClick = () => {
+      setHasAttemptedSubmit(true); // L'utilisateur a tenté d'interagir
+      validateFields(); // Valide les champs
+    };
+
+    // Détection des Clics Extérieurs
+    const handleClickOutside = useCallback((event) => {
+      if (formBoxRef.current && !formBoxRef.current.contains(event.target)) {
+        setHasAttemptedSubmit(false);         // Réinitialise les erreurs
+        resetErrors();                        // Efface les erreurs visuelles
+      }
+    }, [formBoxRef]);                     
+    
+
   // Gestion de la soumission du formulaire
   const handleSubmit = (e) => {
     e.preventDefault();
+    validateFields();
 
     if (validateForm()) {
       sendEmail();
     } else {
       alert('Veuillez remplir correctement tous les champs !');
     }
-  };
+  }; 
+  
+  // Valide uniquement après une tentative de soumission
+     useEffect(() => {
+        if (hasAttemptedSubmit) {
+          validateFields();                          
+        }
+      }, [hasAttemptedSubmit, validateFields]);
+      
+  // Surveille les clics extérieurs 
+   useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    };
+  }, [handleClickOutside]);
 
   // Envoi du formulaire sur ton mail avec EmailJS
   const sendEmail = () => {
@@ -86,7 +132,10 @@ export default function BasicTextFields() {
         <h3 className="titre-formulaire-2">Formulaire de contact</h3>
         <Box className='Box-form'
           component="form"
-          ref={form} // Référence du formulaire
+          ref={(el) =>{
+            form.current = el ;
+            formBoxRef.current = el;
+          }} 
           sx={{
             '& > :not(style)': {
               m: 2,
@@ -97,6 +146,7 @@ export default function BasicTextFields() {
           noValidate
           autoComplete="off"
           onSubmit={handleSubmit}
+          onClick={handleBoxClick}
         >
           <Box className='Box-card'>
           <TextField
@@ -104,14 +154,14 @@ export default function BasicTextFields() {
     backgroundColor: '#D5E2FF',
     margin: '20px',
   }}
-  error={nameError}
+  error={hasAttemptedSubmit && nameError}
   id="filled-basic"
   label="Votre nom"
   variant="filled"
   name="from_name"
   value={name}
   onChange={(e) => setName(e.target.value)}
-  helperText={nameError ? 'Mettez votre nom' : ''}
+  helperText={hasAttemptedSubmit && nameError ? 'Mettez votre nom' : ''}
 />
 
 <TextField
@@ -119,14 +169,14 @@ export default function BasicTextFields() {
     backgroundColor: '#D5E2FF',
     margin: '20px',
   }}
-  error={lastNameError}
+  error={hasAttemptedSubmit && lastNameError}
   id="filled-basic"
   label="Votre prénom"
   variant="filled"
   name="from_last_name"
   value={lastName}
   onChange={(e) => setLastName(e.target.value)}
-  helperText={lastNameError ? 'Mettez votre prénom' : ''}
+  helperText={hasAttemptedSubmit && lastNameError ? 'Mettez votre prénom' : ''}
 />
 </Box >
 
@@ -135,7 +185,7 @@ export default function BasicTextFields() {
   sx={{
     backgroundColor: '#D5E2FF',
   }}
-  error={emailError}
+  error={hasAttemptedSubmit && emailError}
   id="standard-basic"
   label="Votre email"
   variant="filled"
@@ -143,28 +193,27 @@ export default function BasicTextFields() {
   value={email}
   type="email"
   onChange={(e) => setEmail(e.target.value)}
-  helperText={emailError ? 'Email non valide' : ''}
+  helperText={hasAttemptedSubmit && emailError ? 'Email non valide' : ''}
 />
 
 <TextField
   sx={{
     backgroundColor: '#D5E2FF',
   }}
-  error={phoneError}
+  error={hasAttemptedSubmit && phoneError}
   id="standard-basic"
   label="Votre numéro"
   variant="filled"
   name="from_phone" 
   value={phone}
   onChange={(e) => setPhone(e.target.value)}
-  helperText={phoneError ? 'Votre numéro de téléphone ne fonctionne pas' : ''}
+  helperText={hasAttemptedSubmit && phoneError ? 'Votre numéro de téléphone ne fonctionne pas' : ''}
 />
 
 <TextField
   sx={{
     backgroundColor: '#D5E2FF',
   }}
-  error={societyError}
   id="filled-basic"
   label="Société"
   variant="filled"
@@ -180,14 +229,14 @@ export default function BasicTextFields() {
     backgroundColor: '#D5E2FF',
     width: '500px',
   }}
-  error={subjectError}
+  error={hasAttemptedSubmit && subjectError}
   id="standard-basic"
   label="Objet"
   variant="filled"
   name="subject"  
   value={subject}
   onChange={(e) => setSubject(e.target.value)}
-  helperText={subjectError ? 'Mettez l\'Objet du message' : ''}
+  helperText={hasAttemptedSubmit && subjectError ? 'Mettez l\'Objet du message' : ''}
 />
 </Box>
       <Box className='Box-card-3'>
@@ -195,7 +244,7 @@ export default function BasicTextFields() {
   sx={{
     backgroundColor: '#D5E2FF',
   }}
-  error={messageError}
+  error={hasAttemptedSubmit && messageError}
   id="filled-multiline-static"
   label="Votre message"
   multiline
@@ -204,7 +253,7 @@ export default function BasicTextFields() {
   name="message"
   value={message} // Lié à l'état
   onChange={(e) => setMessage(e.target.value)}
-  helperText={messageError ? 'On a besoin de votre message' : ''}
+  helperText={hasAttemptedSubmit && messageError ? 'On a besoin de votre message' : ''}
         />
       </Box>
       <Box className='Box-card-4'>
@@ -221,6 +270,7 @@ export default function BasicTextFields() {
           <h3 style={{textAlign: 'center'}} className="titre-formulaire-2">Ma localisation</h3>
           <iframe className='map-google'
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22278.237365320914!2d4.891016661527612!3d45.73551325301483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4c1763ee80817%3A0x408ab2ae4bb27c0!2s69500%20Bron!5e0!3m2!1sfr!2sfr!4v1734007451281!5m2!1sfr!2sfr"
+          title="Carte de localisation"
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
