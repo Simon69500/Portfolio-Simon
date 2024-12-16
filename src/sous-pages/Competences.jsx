@@ -34,7 +34,7 @@ const Competences = () => {
                 {/* Partie CV */}
                 <div className="contenair-cv">
                     <h3 className="cv-title">Mon CV</h3>
-                    <a href="/CV-BADIN-Simon.pdf" target="_blank" rel="noopener noreferrer">
+                    <a href="https://drive.google.com/file/d/1oVn2ZC21fYLtccR-7UgA6pdc3-WCwiMJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <img className="cv-img" src={CV} alt="image du CV" />
                     </a>
 
@@ -58,7 +58,7 @@ const Competences = () => {
                             color: "#172448",
                             margin: '10px',                         
                         }}
-                        href="../Download/CV-BADIN-Simon.pdf"
+                        href="https://drive.google.com/file/d/1oVn2ZC21fYLtccR-7UgA6pdc3-WCwiMJ/view?usp=sharing"
                         download="CV-BADIN-Simon.pdf"
                     >
                         Mon CV
@@ -79,7 +79,7 @@ const Competences = () => {
                             color: "#172448",
                             margin: '10px',                         
                         }}
-                        href="../Download/Lettre de motivation - Badin.pdf"
+                        href="https://drive.google.com/file/d/1sEqgIOQJbh-YdrrOZ7wluUOLqps7-_t3/view?usp=sharing"
                         download="Lettre de motivation - Badin.pdf"
                     >
                          Ma Lettre de Motivation
@@ -100,7 +100,7 @@ const Competences = () => {
                             color: "#172448",
                             margin: '10px',                         
                         }}
-                        href="../Download/Le_Reacteur_Programme_Alternance.pdf"
+                        href="https://drive.google.com/file/d/1wkzCETFFy_1D-wHKHgjNpxZWUI1BnyKo/view?usp=sharing"
                         download="Le_Reacteur_Programme_Alternance.pdf"
                     >
                         Mon Programme de Formation
