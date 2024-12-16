@@ -62,6 +62,7 @@ const Home = () => {
                         }}
                         href="https://drive.google.com/file/d/1wkzCETFFy_1D-wHKHgjNpxZWUI1BnyKo/view?usp=sharing"
                         download="Le_Reacteur_Programme_Alternance.pdf"
+                        target='_blanck'
                     >
                         Mon Programme de Formation
                     <VisuallyHiddenInput

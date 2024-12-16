@@ -60,6 +60,7 @@ const Competences = () => {
                         }}
                         href="https://drive.google.com/file/d/1oVn2ZC21fYLtccR-7UgA6pdc3-WCwiMJ/view?usp=sharing"
                         download="CV-BADIN-Simon.pdf"
+                        target='_blanck'
                     >
                         Mon CV
                     <VisuallyHiddenInput
@@ -81,6 +82,7 @@ const Competences = () => {
                         }}
                         href="https://drive.google.com/file/d/1sEqgIOQJbh-YdrrOZ7wluUOLqps7-_t3/view?usp=sharing"
                         download="Lettre de motivation - Badin.pdf"
+                        target='_blanck'
                     >
                          Ma Lettre de Motivation
                     <VisuallyHiddenInput
@@ -102,6 +104,7 @@ const Competences = () => {
                         }}
                         href="https://drive.google.com/file/d/1wkzCETFFy_1D-wHKHgjNpxZWUI1BnyKo/view?usp=sharing"
                         download="Le_Reacteur_Programme_Alternance.pdf"
+                        target='_blanck'
                     >
                         Mon Programme de Formation
                     <VisuallyHiddenInput
