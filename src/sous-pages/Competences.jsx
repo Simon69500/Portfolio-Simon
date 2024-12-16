@@ -35,7 +35,7 @@ const Competences = () => {
                 <div className="contenair-cv">
                     <h3 className="cv-title">Mon CV</h3>
                     <a href="https://drive.google.com/file/d/1oVn2ZC21fYLtccR-7UgA6pdc3-WCwiMJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                        <img className="cv-img" src={CV} alt="image du CV" />
+                        <img className="cv-img" src={CV} alt="présentation du CV" />
                     </a>
 
                     
