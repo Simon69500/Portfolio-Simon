@@ -31,8 +31,8 @@
 /* Styles pour les images Mobile */
 .mobile-image {
   object-fit: contain; /* Remplissage complet pour mobile */
-  width: 50%; /* Largeur complète */
-  height: 50%; /* Hauteur automatique pour éviter les déformations */
+  width: 40%; /* Largeur complète */
+  height: 40%; /* Hauteur automatique pour éviter les déformations */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
@@ -43,6 +43,7 @@
 @media (min-width: 481px) and (max-width: 768px) {
   .swiper {
     height: 200px;
+    width: 400px;
   }
 
   /* Make the navigation buttons larger and easier to click on mobile */
@@ -69,6 +70,7 @@
  @media (max-width: 480px) {
   .swiper {
     height: 150px;
+    width: 200px;
   }
 
   /* Make the navigation buttons larger and easier to click on mobile */

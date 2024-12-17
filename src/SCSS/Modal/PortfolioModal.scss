@@ -697,7 +697,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         
         height: 50%;
         width: 100%;
@@ -708,7 +708,8 @@
             @include text-dark;
 
             padding: 10px;
-
+            width: 50%;
+            font-size: x-small;
             
         }
         
@@ -1040,7 +1041,7 @@
             @include text-secondary-3;
             font-size: normal;
             width: 100%;
-            height: 100%;
+            height: 20%;
             align-content: center;
             margin: 0;
         }
@@ -1072,11 +1073,11 @@
 
     .card-techno {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
         
-        height: 50%;
+        height:100%;
         width: 100%;
 
         .tech-item {

@@ -33,6 +33,7 @@
 
         .button-close-modal {
             @include button ;
+
             width: 15px;
             height: 20px;
             padding: 0;
@@ -314,9 +315,9 @@
             align-items: center;
             justify-content: center;
            
-            width: 80%; 
+            width: 90%; 
             height: 80%;
-            padding: 20px; 
+            padding: 10px; 
             overflow-y: auto;
             box-shadow: 0 0 10px #D5E2FF;
             border-radius: 10px;
@@ -337,7 +338,7 @@
             align-items: center;
             justify-content: center;
            
-            width:80%; 
+            width:90%; 
             height: 80%;
             padding: 20px; 
             overflow-y: auto; 
@@ -381,7 +382,7 @@
           
            width: 90%; 
            height: 90%;
-           padding: 20px; 
+           padding: 20px 10px; 
            overflow-y: auto; 
            box-shadow: 0 0 10px #D5E2FF;
            border-radius: 10px;
@@ -403,9 +404,9 @@
             align-items: center;
             justify-content: center;
            
-            width: 80%; 
+            width: 90%; 
             height: 90%;
-            padding: 20px; 
+            padding: 20px 10px; 
             overflow-y: auto;
             box-shadow: 0 0 10px #D5E2FF;
             border-radius: 10px;
@@ -426,9 +427,9 @@
             align-items: center;
             justify-content: center;
            
-            width:80%; 
+            width: 90%; 
             height: 90%;
-            padding: 20px; 
+            padding: 20px 10px; 
             overflow-y: auto; 
             box-shadow: 0 0 10px #D5E2FF;
             border-radius: 10px;
@@ -469,8 +470,8 @@
            justify-content: center;
           
            width: 90%; 
-           height: 90%;
-           padding: 20px; 
+           height: 750px;
+           padding-top: 20px; 
            overflow-y: auto; 
            box-shadow: 0 0 10px #D5E2FF;
            border-radius: 10px;
@@ -492,9 +493,9 @@
             align-items: center;
             justify-content: center;
            
-            width: 80%; 
-            height: 90%;
-            padding: 20px; 
+            width: 90%; 
+            height: 750px;
+            padding-top: 20px; 
             overflow-y: auto;
             box-shadow: 0 0 10px #D5E2FF;
             border-radius: 10px;
@@ -510,14 +511,15 @@
     
          .modal-content-3 {
         @include background-tertiary-1;
+        
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-           
-            width:80%; 
-            height: 90%;
-            padding: 20px; 
+
+            width: 90%; 
+            height: 750px;
+            padding-top: 20px; 
             overflow-y: auto; 
             box-shadow: 0 0 10px #D5E2FF;
             border-radius: 10px;

@@ -33,7 +33,6 @@
       
         .menu-detail {
             @include background-dark;
-            @include text-ligth;
 
             display: none;
             position: absolute;
@@ -54,9 +53,10 @@
         }
       
         .menu_1 {
+            @include text-ligth;
+
             display: block;
             text-decoration: none;
-            color: black;
             padding: 10px;
       
             &:active, &.active {
