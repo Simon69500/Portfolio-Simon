@@ -13,6 +13,7 @@ import linkedin from '../../asset/img-logo/linkedin.png';
 import github2 from '../../asset/img-logo/github2.png';
 import react2 from '../../asset/img-logo/react2.png';
 
+
 // Utilisation d'un objet pour organiser les icônes
 export const Icones = {
   css3,
@@ -30,6 +31,3 @@ export const Icones = {
   github2,
   react2
 };
-
-
-

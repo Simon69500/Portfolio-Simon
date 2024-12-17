@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "../../SCSS/MenuBurger.scss";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+
 
 // Menu Burger pour la version mobile
 const BurgerMenu = () => {
@@ -30,15 +32,13 @@ const BurgerMenu = () => {
                 aria-label="Toggle menu"
                 aria-expanded={isOpen}
             >
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
+                <HamburgerMenuIcon/>
             </button>
 
             <nav className={`menu-detail ${isOpen ? 'open' : ''}`}>
                 <a className="menu_1" href="#main">Acceuil</a>
                 <a className="menu_1" href="#about">A propos</a>
-                <a className="menu_1" href="#Competences">Mes Compétences</a>
+                <a className="menu_1" href="#Competences">Compétences</a>
                 <a className="menu_1" href="#Portfolio">Portfolio</a>
                 <a className="menu_1" href="#Contact">Me Contacter</a>
             </nav>
