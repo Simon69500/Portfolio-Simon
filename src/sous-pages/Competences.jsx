@@ -34,11 +34,10 @@ const Competences = () => {
                 {/* Partie CV */}
                 <div className="contenair-cv">
                     <h3 className="cv-title">Mon CV</h3>
-                    <a href="https://drive.google.com/file/d/1oVn2ZC21fYLtccR-7UgA6pdc3-WCwiMJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <a href="https://drive.google.com/file/d/1WezKAjfjamqCfPSN4Ke2mGqWt14Gz5HU/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <img className="cv-img" src={CV} alt="présentation du CV" />
                     </a>
 
-                    
                     <Box 
                         sx={{
                             display: 'flex',
@@ -58,7 +57,7 @@ const Competences = () => {
                             color: "#172448",
                             margin: '10px',                         
                         }}
-                        href="https://drive.google.com/file/d/1oVn2ZC21fYLtccR-7UgA6pdc3-WCwiMJ/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1WezKAjfjamqCfPSN4Ke2mGqWt14Gz5HU/view?usp=sharing"
                         download="CV-BADIN-Simon.pdf"
                         target='_blanck'
                     >
