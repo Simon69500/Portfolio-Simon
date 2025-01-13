@@ -11,17 +11,19 @@ const About = () => {
             <article className='about_article'>
                 <img src={Icones.profil2} alt="Simon Badin" className="photo-about"/>
                 <p className='text_about'>
-  Bonjour, <br/>
-  Je suis <strong>Simon Badin</strong>, actuellement en formation pour devenir <strong>développeur full-stack</strong>, après une réorientation professionnelle. 
-  Avec des bases solides en <strong>front-end</strong> (<em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, <em>React</em>), je suis passionné par le développement web et cherche activement une <strong>alternance </strong> 
-   pour compléter ma formation et acquérir une expérience concrète en entreprise.
-  <br/><br/>
-  Mon parcours dans des secteurs variés tels que la <strong>vente</strong>, <strong>l’armée</strong> et la <strong>plomberie</strong> m’a permis de développer des compétences clés comme <span> la  rigueur </span>, 
-  <span> l’esprit d’équipe </span>  et <span>la résolution de problèmes complexes</span>. 
-  <br/><br/>
-  Ces qualités, associées à ma volonté <strong>d'apprendre</strong> et de <strong>m'adapter</strong>, font de moi un candidat motivé, prêt à contribuer à vos projets 
-  tout en progressant dans le développement web.
+    Bonjour, <br />
+    Je suis <strong>Simon Badin</strong>, actuellement en reconversion pour devenir développeur <strong>full-stack</strong>. Passionné par l'<em>informatique</em> et la <em>cybersécurité</em>, je cherche à m'investir dans <strong>un contrat d'apprentissage</strong> qui me permettra de renforcer mes compétences tout en apportant une <strong>valeur ajoutée</strong> à des projets concrets. <br /><br />
+    Mon parcours professionnel m’a permis d’acquérir des compétences transférables uniques. Après avoir dirigé des équipes en <strong>plomberie</strong> et servi en tant que <strong>Chasseur Alpin</strong> dans l’armée, j’ai appris à <em> gérer des projets complexes</em>, à <em>respecter des délais serrés</em> et à <em>résoudre des problèmes sous pression</em>.
+    <br /><br />
+     Ces expériences m’ont aussi permis de développer un fort <span>esprit d’équipe</span>, un sens de <span>l’adaptation</span>, et un <span>leadership naturel</span>. Autant de qualités que je mets aujourd’hui au service de ma reconversion dans le <em>développement</em>. 
+     <br /><br />
+    Ma reconversion n’est pas un hasard, elle découle d’une réflexion profonde et d’une volonté de changement après des soucis de santé qui m’ont forcé à quitter le <strong>BTP</strong>. Cette pause m’a permis de me réinventer et de découvrir ma <em>passion</em> pour le <em>développement web</em>, un secteur où je peux apporter des solutions innovantes tout en continuant à apprendre et à évoluer. La <em>cybersécurité</em> m’attire particulièrement car elle répond à des enjeux cruciaux pour les entreprises et les utilisateurs. Je veux contribuer à la <strong>sûreté</strong> des systèmes informatiques et relever les défis que ce domaine passionnant propose. <br /><br />
+    Aujourd'hui, je suis déterminé à mettre mon <strong>expérience</strong>, ma capacité d'<span>apprentissage</span> et mes <span>qualités humaines</span> au service de vos projets. Si vous cherchez un développeur <strong>rigoureux</strong>, <strong>motivé</strong> et capable de s’adapter rapidement aux défis, n’hésitez pas à me contacter. Je suis prêt à me lancer dans cette nouvelle aventure professionnelle et à apporter ma vision unique à votre équipe. <br /><br />
 </p>
+
+
+
+
 
             </article>
             <div className="card-icon">

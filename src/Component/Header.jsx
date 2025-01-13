@@ -4,104 +4,76 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
+import { createTheme, ThemeProvider } from '@mui/material/styles';  // Import du ThemeProvider et createTheme
+
 import BurgerMenu from './MenuBurger/BurgerMenu';
-
-
 import { Icones } from "../Component/Icons/Icones";
 import '../SCSS/Header.scss';
 import '../SCSS/theme-light.scss';
 
 const Header = () => {
-
     const [value, setValue] = React.useState('one');
     
-
-    const handleChange = (event , newValue) =>{
+    const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
+    // Créer le thème personnalisé
+    const theme = createTheme({
+        components: {
+            MuiTabs: {
+                styleOverrides: {
+                    indicator: {
+                        backgroundColor: '#FCDD79', // Couleur de l'indicateur
+                    },
+                },
+            },
+            MuiTab: {
+                styleOverrides: {
+                    root: {
+                        color: '#D5E2FF', // Couleur des tabs non sélectionnés
+                        fontSize: 'medium',
+                        fontWeight: '600',
+                        '&.Mui-selected': {
+                            color: '#FCDD79', // Couleur des tabs sélectionnés
+                        },
+                    },
+                },
+            },
+        },
+    });
 
     return (
         <>
             <div className="header">
-
                 <Stack direction="row" spacing={2} className="icon-header">
-                <Avatar src={Icones.profil} alt="Simon Badin" sx={{ width: 56, height: 56}}/>
+                    <Avatar src={Icones.profil} alt="Simon Badin" sx={{ width: 56, height: 56 }} />
                 </Stack>
 
-                <Box className="box-menu"
-                    sx={{
-                        width: '100%'
-                    }}
-                >
-
-                    <Tabs 
-                    value={value}
-                    onChange={handleChange}
-                    aria-label="menu navigation"
-                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600',
-                        '& .MuiTab-root': {
-                        color: '#D5E2FF', 
-                        },
-                        '& .Mui-selected': {
-                            color: '#FCDD79 !important',
-                         },
-                        '& .MuiTabs-indicator': {
-                             backgroundColor: '#FCDD79', 
-                        }
-                     }}  
-                    >
-                    
-                    <Tab 
-                    value="one"
-                    label="Accueil" 
-                    href="#main"
-                    onChange={handleChange}
-                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600'}} 
-                    />
-                    
-
-                    <Tab  
-                    value="two"
-                    label="A Propos" 
-                    href="#about"
-                    onChange={handleChange}
-                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600'}} 
-                    />
-                    
-                    <Tab 
-                    value="three"
-                    label="Mes Compétences"
-                    onChange={handleChange}
-                    href="#Competences"
-                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600'}}  
-                    />
-                    
-                    <Tab 
-                    value="four"
-                    label="Mon Portfolio" 
-                    onChange={handleChange}
-                    href="#Portfolio"
-                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600'}}  
-                    />
-                    
-                    <Tab 
-                    value="five"
-                    label="Me Contacter" 
-                    onChange={handleChange}
-                    href="#Contact"
-                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600'}} 
-                    />
-
-                    </Tabs>
+                <Box className="box-menu" sx={{ width: '100%' }}>
+                    {/* Envelopper les Tabs avec ThemeProvider */}
+                    <ThemeProvider theme={theme}>
+                        <Tabs
+                            value={value}
+                            onChange={handleChange}
+                            aria-label="menu navigation"
+                            sx={{ width: '100%' }}
+                        >
+                            <Tab value="one" label="Accueil" href="#main" />
+                            <Tab value="two" label="A Propos" href="#about" />
+                            <Tab value="three" label="Mes Compétences" href="#Competences" />
+                            <Tab value="four" label="Mon Portfolio" href="#Portfolio" />
+                            <Tab value="five" label="Me Contacter" href="#Contact" />
+                        </Tabs>
+                    </ThemeProvider>
                 </Box>
 
-                <div className="burger-menu"> 
+                <div className="burger-menu">
                     <BurgerMenu />
                 </div>
-
             </div>
         </>
     );
 };
 
-export default Header ;
+export default Header;
