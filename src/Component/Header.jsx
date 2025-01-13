@@ -43,7 +43,7 @@ const Header = () => {
                         color: '#D5E2FF', 
                         },
                         '& .Mui-selected': {
-                            color: '#FCDD79', 
+                            color: '#FCDD79 !important',
                          },
                         '& .MuiTabs-indicator': {
                              backgroundColor: '#FCDD79', 
