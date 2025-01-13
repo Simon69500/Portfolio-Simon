@@ -38,7 +38,6 @@ const Competences = () => {
                         <img className="cv-img" src={CV} alt="présentation du CV" />
                     </a>
 
-                    
                     <Box 
                         sx={{
                             display: 'flex',
