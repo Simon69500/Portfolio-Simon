@@ -79,7 +79,7 @@ const Competences = () => {
                             color: "#172448",
                             margin: '10px',                         
                         }}
-                        href="https://drive.google.com/file/d/1sEqgIOQJbh-YdrrOZ7wluUOLqps7-_t3/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1CSvGVSMxnneb7UxAumFoBB0E-JSEIg68/view?usp=sharing"
                         download="Lettre de motivation - Badin.pdf"
                         target='_blanck'
                     >
