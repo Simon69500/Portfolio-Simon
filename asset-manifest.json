@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio-Simon/static/css/main.7fbef736.css",
-    "main.js": "/Portfolio-Simon/static/js/main.fe35fa1d.js",
+    "main.css": "/Portfolio-Simon/static/css/main.21847181.css",
+    "main.js": "/Portfolio-Simon/static/js/main.a7e12768.js",
     "static/js/488.9561f9b8.chunk.js": "/Portfolio-Simon/static/js/488.9561f9b8.chunk.js",
     "static/media/bannière4.png": "/Portfolio-Simon/static/media/bannière4.8ac4bab4fa5c18220a23.png",
     "static/media/Au-petit-village.jpg": "/Portfolio-Simon/static/media/Au-petit-village.7603fc761120bf53830c.jpg",
@@ -13,7 +13,7 @@
     "static/media/Au-petit-village_Accueil.jpg": "/Portfolio-Simon/static/media/Au-petit-village_Accueil.d45d3becd2a136f7603c.jpg",
     "static/media/la-vie-des-plantes_Panier3.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes_Panier3.27c2761de0a68e57c8fe.jpg",
     "static/media/la-vie-des-plantes.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes.52b7b5c471c08af6a0dd.jpg",
-    "static/media/CV.jpg": "/Portfolio-Simon/static/media/CV.7298d5d78baafa9641d2.jpg",
+    "static/media/CV.jpg": "/Portfolio-Simon/static/media/CV.3da1238246bdf46e7953.jpg",
     "static/media/la-vie-des-plantes2.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes2.9585a2bb45dbae805772.jpg",
     "static/media/Profil2.png": "/Portfolio-Simon/static/media/Profil2.ff5349646b25a8582877.png",
     "static/media/la-vie-des-plantes_Produit.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes_Produit.919cc86e3b848543d2e2.jpg",
@@ -36,12 +36,12 @@
     "static/media/linkedin.png": "/Portfolio-Simon/static/media/linkedin.032cf8a63be2f0f4d425.png",
     "static/media/css3.png": "/Portfolio-Simon/static/media/css3.4a6549b8c2b4cda8bb88.png",
     "index.html": "/Portfolio-Simon/index.html",
-    "main.7fbef736.css.map": "/Portfolio-Simon/static/css/main.7fbef736.css.map",
-    "main.fe35fa1d.js.map": "/Portfolio-Simon/static/js/main.fe35fa1d.js.map",
+    "main.21847181.css.map": "/Portfolio-Simon/static/css/main.21847181.css.map",
+    "main.a7e12768.js.map": "/Portfolio-Simon/static/js/main.a7e12768.js.map",
     "488.9561f9b8.chunk.js.map": "/Portfolio-Simon/static/js/488.9561f9b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7fbef736.css",
-    "static/js/main.fe35fa1d.js"
+    "static/css/main.21847181.css",
+    "static/js/main.a7e12768.js"
   ]
 }
