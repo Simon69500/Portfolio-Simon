@@ -45,7 +45,7 @@
             @include background-tertiary-1;
             border-radius: 30px;
             border: 4px solid $dark-12 ;
-            box-shadow: 10px 1px 5px $dark-7 ;
+            box-shadow: 10px 5px 5px $dark-11 ;
     
             .cv-title{
                 @include text-primary-2;
@@ -120,11 +120,11 @@
     
             background-color: $dark-7;
             border-radius: 30px;
-            border: 5px solid $dark-2 ;
+            border: 5px solid $dark-12 ;
             box-shadow: 10px 5px 5px $dark-11 ;
     
             .cv-title{
-                @include text-secondary-2;
+                @include text-primary-2;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;
@@ -197,10 +197,10 @@
             @include background-tertiary-1;
             border-radius: 30px;
             border: 4px solid $dark-12 ;
-            box-shadow: 10px 1px 5px $dark-7 ;
+            box-shadow: 10px 1px 5px $dark-11 ;
     
             .cv-title{
-                @include text-secondary-2;
+                @include text-primary-2;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;
@@ -273,10 +273,10 @@
             @include background-tertiary-1;
             border-radius: 30px;
             border: 4px solid $dark-12 ;
-            box-shadow: 10px 1px 5px $dark-7 ;
+            box-shadow: 10px 1px 5px $dark-11 ;
     
             .cv-title{
-                @include text-secondary-2;
+                @include text-primary-2;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;
@@ -349,10 +349,10 @@
             @include background-tertiary-1;
             border-radius: 30px;
             border: 4px solid $dark-12 ;
-            box-shadow: 10px 1px 5px $dark-7 ;
+            box-shadow: 10px 1px 5px $dark-11 ;
     
             .cv-title{
-                @include text-secondary-2;
+                @include text-primary-2;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;
@@ -425,10 +425,10 @@
             @include background-tertiary-1;
             border-radius: 30px;
             border: 4px solid $dark-12 ;
-            box-shadow: 10px 1px 5px $dark-7 ;
+            box-shadow: 10px 1px 5px $dark-11 ;
     
             .cv-title{
-                @include text-secondary-2;
+                @include text-primary-2;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;

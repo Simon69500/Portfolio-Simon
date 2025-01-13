@@ -38,7 +38,17 @@ const Header = () => {
                     value={value}
                     onChange={handleChange}
                     aria-label="menu navigation"
-                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600' }}  
+                    sx={{color: '#D5E2FF', fontSize:'medium', fontWeight: '600',
+                        '& .MuiTab-root': {
+                        color: '#D5E2FF', 
+                        },
+                        '& .Mui-selected': {
+                            color: '#FCDD79', 
+                         },
+                        '& .MuiTabs-indicator': {
+                             backgroundColor: '#FCDD79', 
+                        }
+                     }}  
                     >
                     
                     <Tab 

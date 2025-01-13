@@ -87,7 +87,7 @@
     height: 100%;
 
     .title-principal-modal {
-        @include text-primary-2;
+        @include  text-secondary ;
         font-size: xx-large;
         padding: 20px;
     }
@@ -106,7 +106,7 @@
 
 
         .title-modal {
-           @include text-secondary-3;
+            @include text-primary-2;
             font-size: x-large;
             width: 30%;
             height: 100%;
@@ -135,7 +135,7 @@
     .line-modal {
         border-top: 3px solid #D5E2FF;
         margin-top: 10px;
-        width: 70%;
+        width: 100%;
     }
 
     .card-techno {
@@ -272,7 +272,7 @@
     height: 100%;
 
     .title-principal-modal {
-        @include text-secondary-3;
+        @include  text-secondary ;
         font-size: xx-large;
         padding: 20px;
     }
@@ -320,7 +320,7 @@
     .line-modal {
         border-top: 3px solid #D5E2FF;
         margin-top: 10px;
-        width: 70%;
+        width: 100%;
     }
 
     .card-techno {
@@ -476,7 +476,7 @@
 
 
         .title-modal {
-            @include text-secondary-3;
+            @include text-primary-2;
             font-size: large;
             width: 30%;
             height: 100%;
@@ -505,7 +505,7 @@
     .line-modal {
         border-top: 3px solid #D5E2FF;
         margin-top: 10px;
-        width: 70%;
+        width: 100%;
     }
 
     .card-techno {
@@ -661,9 +661,9 @@
 
 
         .title-modal {
-            @include text-secondary-3;
+            @include text-primary-2;
             font-size: large;
-            width: 30%;
+            width: 35%;
             height: 100%;
             align-content: center;
         }
@@ -690,7 +690,7 @@
     .line-modal {
         border-top: 3px solid #D5E2FF;
         margin-top: 10px;
-        width: 70%;
+        width: 100%;
     }
 
     .card-techno {
@@ -850,7 +850,7 @@
 
 
         .title-modal {
-            @include text-secondary-3;
+            @include text-primary-2;
             font-size: normal;
             width: 100%;
             height: 100%;
@@ -880,7 +880,7 @@
     .line-modal {
         border-top: 3px solid #D5E2FF;
         margin-top: 10px;
-        width: 70%;
+        width: 100%;
     }
 
     .card-techno {
@@ -1038,7 +1038,7 @@
 
 
         .title-modal {
-            @include text-secondary-3;
+            @include text-primary-2;
             font-size: normal;
             width: 100%;
             height: 20%;
@@ -1068,7 +1068,7 @@
     .line-modal {
         border-top: 3px solid #D5E2FF;
         margin-top: 10px;
-        width: 70%;
+        width: 100%;
     }
 
     .card-techno {

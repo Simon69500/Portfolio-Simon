@@ -46,7 +46,7 @@
                 align-items: center;
                 justify-content: center;
     
-                @include background-tertiary;
+                background-color: #D7FD9B;
                 @include border-medium;
                 
                 width: 100%;
@@ -54,7 +54,7 @@
             
     
                 .title-actual {
-                    @include text-secondary;
+                    @include text-primary;
                     font-size: xx-large;
                     margin-bottom: 0px;
                 }
@@ -65,7 +65,7 @@
     
                     .link-ecole {
                         text-decoration: none;
-                        @include text-secondary;
+                        @include text-primary;
                     }
                 }
             }
@@ -144,7 +144,7 @@
             align-items: center;
             justify-content: center;
 
-            @include background-tertiary;
+            background-color: #D7FD9B;
             @include border-medium;
             
             width: 100%;
@@ -152,7 +152,7 @@
         
 
             .title-actual {
-                @include text-secondary;
+                @include text-primary;
                 font-size: xx-large;
                 margin-bottom: 0px;
             }
@@ -163,7 +163,7 @@
 
                 .link-ecole {
                     text-decoration: none;
-                    @include text-secondary;
+                    @include text-primary;
                 }
             }
         }
@@ -239,7 +239,7 @@
             align-items: center;
             justify-content: center;
 
-            @include background-tertiary;
+            background-color: #D7FD9B;
             @include border-medium;
             
             width: 100%;
@@ -247,7 +247,7 @@
         
 
             .title-actual {
-                @include text-secondary;
+                @include text-primary;
                 font-size: xx-large;
                 margin-bottom: 0px;
             }
@@ -258,7 +258,7 @@
 
                 .link-ecole {
                     text-decoration: none;
-                    @include text-secondary;
+                    @include text-primary;
                 }
             }
         }
@@ -335,14 +335,14 @@
                 align-items: center;
                 justify-content: center;
     
-                @include background-tertiary;
+                background-color: #D7FD9B;
                 
                 width: 100%;
                 height: 250px;
             
     
                 .title-actual {
-                    @include text-secondary;
+                    @include text-primary;
                     font-size: xx-large;
                     margin-bottom: 0px;
                 }
@@ -353,7 +353,7 @@
     
                     .link-ecole {
                         text-decoration: none;
-                        @include text-secondary;
+                        @include text-primary;
                     }
                 }
             }
@@ -430,14 +430,14 @@
             align-items: center;
             justify-content: center;
 
-            @include background-tertiary;
+            background-color: #D7FD9B;
             
             width: 100%;
             height: 250px;
         
 
             .title-actual {
-                @include text-secondary;
+                @include text-primary;
                 font-size: x-large;
                 margin-bottom: 0px;
             }
@@ -451,7 +451,7 @@
 
                 .link-ecole {
                     text-decoration: none;
-                    @include text-secondary;
+                    @include text-primary;
                 }
             }
         }
@@ -528,14 +528,14 @@
             align-items: center;
             justify-content: center;
 
-            @include background-tertiary;
+            background-color: #D7FD9B;
             
             width: 100%;
             height: 250px;
         
 
             .title-actual {
-                @include text-secondary;
+                @include text-primary;
                 font-size: x-large;
                 margin-bottom: 0px;
             }
@@ -549,7 +549,7 @@
 
                 .link-ecole {
                     text-decoration: none;
-                    @include text-secondary;
+                    @include text-primary;
                 }
             }
         }

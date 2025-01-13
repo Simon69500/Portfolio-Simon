@@ -55,25 +55,43 @@ function PortfolioModal() {
                 <h3 className="title-modal">Description du projet : </h3>
                 <p className='text-modal'>{selectProjet.description}</p>
             </div>
-            <div className='line-modal'></div>   
+            <div className='line-modal'></div>
+
             {/* Objectif du projet */}
             <div className="card-modal">
                 <h3 className="title-modal">Objectif du projet : </h3>
                 <p className='text-modal'>{selectProjet.objectif}</p>
             </div>
-            <div className='line-modal'></div>   
+            <div className='line-modal'></div>
+
             {/* Public cible */}
             <div className="card-modal">
                 <h3 className="title-modal">Public cible : </h3>
                 <p className='text-modal'>{selectProjet.publicCible}</p>
             </div>
-            <div className='line-modal'></div>   
+            <div className='line-modal'></div>
+
             {/* Résultat du projet */}
             <div className="card-modal">
                 <h3 className="title-modal">Résultat du projet : </h3>
                 <p className='text-modal'>{selectProjet.resultat}</p>
             </div>
-            <div className='line-modal'></div>   
+            <div className='line-modal'></div>
+
+            {/* Défis rencontrés */}
+            <div className="card-modal">
+                <h3 className="title-modal">Défis rencontrés : </h3>
+                <p className='text-modal'>{selectProjet.défis}</p>
+            </div>
+            <div className='line-modal'></div>
+
+            {/* Solutions apportées */}
+            <div className="card-modal">
+                <h3 className="title-modal">Solutions apportées : </h3>
+                <p className='text-modal'>{selectProjet.solutions}</p>
+            </div>
+            <div className='line-modal'></div>
+
             {/* Technologies utilisées */}
             <div className="card-modal">
                 <h3 className="title-modal">Les technologies : </h3>
@@ -83,10 +101,12 @@ function PortfolioModal() {
                     ))}
                 </div>
             </div>
-            <span className='line-modal'></span>       
+            <span className='line-modal'></span>
+
             {/* Slider d'images */}
             <ImageSlider images={selectProjet.images || []} className={selectProjet.id === 3 ? "mobile-image" : "desktop-image"} />
-            <div className='line-modal'></div>        
+            <div className='line-modal'></div>
+
             {/* Lien vers GitHub */}
             <Button className="link-modal" href={selectProjet.link} target="_blank" rel="noopener noreferrer">
                 Voir le projet sur GitHub !
@@ -94,6 +114,7 @@ function PortfolioModal() {
         </div>
     )}
 </Modal>
+
  
 
         </div>
