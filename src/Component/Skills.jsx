@@ -10,7 +10,7 @@ function SkillBar ({skill, level}) {
                     <div className="skill-name">{skill.name}</div>
                 </div>
                 <div className='skill-bar-card'>
-                    <p className='skill-level'>{level}%</p>   
+                    <p className='skill-level'>{skill.niveau}</p>   
                     <progress className='skill-bar-level' value={level} max="100"></progress>
                 </div>
                 
@@ -22,21 +22,21 @@ function SkillBar ({skill, level}) {
     function Skills(){
 
         const skills = [
-            {name:'HTML5', level: 100, img: Icones.html5},
-            {name:'CSS3 / SASS', level: 100, img: Icones.css3},
-            {name:'JavaScript', level:80, img: Icones.scriptJava},
-            {name:'Vue.js', level: 50, img: Icones.vue},
-            {name:'ReactJS', level:70, img: Icones.react},
-            {name:'Angular', level:50, img: Icones.angular}
+            {name:'HTML5', level: 100, img: Icones.html5, niveau: 'Confirmé'},
+            {name:'CSS3 / SASS', level: 100, img: Icones.css3, niveau: 'Confirmé'},
+            {name:'JavaScript', level:80, img: Icones.scriptJava, niveau: 'Intermédiaire'},
+            {name:'Vue.js', level: 50, img: Icones.vue, niveau: 'Débutant'},
+            {name:'ReactJS', level:70, img: Icones.react, niveau: 'Intermédiaire'},
+            {name:'Angular', level:50, img: Icones.angular, niveau: 'Débutant'}
         ];
 
         const skillCms = [
-            {name: 'WordPress', level: 60, img : Icones.wordpress}
+            {name: 'WordPress', level: 60, img : Icones.wordpress, niveau: 'Débutant'}
         ];
 
         const skillOther = [
-            {name : 'GitHub', level: 100, img: Icones.github},
-            {name: 'Figma', level: 50, img: Icones.figma}
+            {name : 'GitHub', level: 70, img: Icones.github, niveau: 'Intermédiaire'},
+            {name: 'Figma', level: 50, img: Icones.figma, niveau: 'Débutant'}
 
         ]
 
