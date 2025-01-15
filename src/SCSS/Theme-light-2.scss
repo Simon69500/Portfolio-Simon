@@ -54,7 +54,7 @@ $dark-11: #93B4FF;  // Accessible text
 $dark-12: #D5E2FF;  // Accessible text
 $dark-13: #3AE1FE;  // Accessible text
 $dark-14: #3AE1FE;  // Accessible text
-$dark-15: #FCDD79;  // Accessible text
+$dark-15: #e4b696;  // Accessible text
 
 
 // Theme 
@@ -143,7 +143,7 @@ $dark-15: #FCDD79;  // Accessible text
 
 // Couleurs pleines pour textes et éléments visuels
 @mixin text-primary {
-  color: $dark-8;
+  color: $dark-9;
   @include titre-secondaire
 };
 
@@ -199,7 +199,7 @@ $dark-15: #FCDD79;  // Accessible text
 };
 
 @mixin text-muted-1 {
-  color:$dark-9;
+  color:$dark-4;
   @include text-important ;
 };
 

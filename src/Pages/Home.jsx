@@ -58,13 +58,15 @@ const Home = () => {
                         sx={{
                             background: "#93B4FF",
                             color: "#172448",
-                            margin: '10px',                         
+                            margin: '10px',
+                            width: '180px',
+                            borderRadius: '50px',                         
                         }}
                         href="https://drive.google.com/file/d/1wkzCETFFy_1D-wHKHgjNpxZWUI1BnyKo/view?usp=sharing"
                         download="Le_Reacteur_Programme_Alternance.pdf"
                         target='_blanck'
                     >
-                        Mon Programme de Formation
+                        En Savoir +
                     <VisuallyHiddenInput
                     type="file"
                     onChange={(event) => console.log(event.target.files)}

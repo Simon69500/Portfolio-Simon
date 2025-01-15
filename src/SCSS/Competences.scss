@@ -39,7 +39,7 @@
     
     
             width: 30%;
-            height: 1000px;
+            height: 900px;
             padding: 20px;
     
             @include background-tertiary-1;
@@ -115,7 +115,7 @@
     
     
             width: 30%;
-            height: 1000px;
+            height: 900px;
             padding: 20px;
     
             background-color: $dark-7;
@@ -191,7 +191,7 @@
     
     
             width: 40%;
-            height: 90%;
+            height: 70%;
             padding: 20px;
 
             @include background-tertiary-1;
@@ -267,7 +267,7 @@
     
     
             width: 40%;
-            height: 70%;
+            height: 55%;
             padding: 20px;
 
             @include background-tertiary-1;
@@ -296,6 +296,7 @@
                 @include button;
                 margin: 20px;
                 padding: 5px;
+                
             }
         }
         

@@ -39,14 +39,14 @@ const Competences = () => {
                     </a>
 
                     <Box 
-                        sx={{
+                         sx={{
                             display: 'flex',
-                            flexDirection: 'column',
-                            alignContent: 'center',
-                            justifyContent: 'space-evenly'
+                            flexDirection: 'row', // Pour aligner les boutons horizontalement
+                            justifyContent: 'space-around', // Espace uniforme entre les boutons
+                            alignItems: 'center', // Centrer verticalement
                         }}
                     >
-                    <Button
+                                 <Button
                         component="a"
                         role={undefined}
                         variant="contained"
@@ -55,57 +55,39 @@ const Competences = () => {
                         sx={{
                             background: "#93B4FF",
                             color: "#172448",
-                            margin: '10px',                         
-                        }}
-                        href="https://drive.google.com/file/d/1HNcgogH56pCgwIQoL7JZEoaM1dzSeCKU/view?usp=drive_link"
-                        download="CV-BADIN-Simon.pdf"
-                        target='_blanck'
-                    >
-                        Mon CV
-                    <VisuallyHiddenInput
-                    type="file"
-                    onChange={(event) => console.log(event.target.files)}
-                    multiple
-                    />
-                    </Button>
-                    <Button
-                        component="a"
-                        role={undefined}
-                        variant="contained"
-                        tabIndex={-1}
-                        startIcon={<CloudUploadIcon />}
-                        sx={{
-                            background: "#93B4FF",
-                            color: "#172448",
-                            margin: '10px',                         
-                        }}
-                        href="https://drive.google.com/file/d/1CSvGVSMxnneb7UxAumFoBB0E-JSEIg68/view?usp=sharing"
-                        download="Lettre de motivation - Badin.pdf"
-                        target='_blanck'
-                    >
-                         Ma Lettre de Motivation
-                    <VisuallyHiddenInput
-                    type="file"
-                    onChange={(event) => console.log(event.target.files)}
-                    multiple
-                    />
-                    </Button>
-                    <Button
-                        component="a"
-                        role={undefined}
-                        variant="contained"
-                        tabIndex={-1}
-                        startIcon={<CloudUploadIcon />}
-                        sx={{
-                            background: "#93B4FF",
-                            color: "#172448",
-                            margin: '10px',                         
+                            margin: '10px',
+                            width: '180px',
+                            borderRadius: '50px',                         
                         }}
                         href="https://drive.google.com/file/d/1wkzCETFFy_1D-wHKHgjNpxZWUI1BnyKo/view?usp=sharing"
                         download="Le_Reacteur_Programme_Alternance.pdf"
                         target='_blanck'
                     >
-                        Mon Programme de Formation
+                        En Savoir +
+                    <VisuallyHiddenInput
+                    type="file"
+                    onChange={(event) => console.log(event.target.files)}
+                    multiple
+                    />
+                    </Button>
+                    <Button
+                        component="a"
+                        role={undefined}
+                        variant="contained"
+                        tabIndex={-1}
+                        startIcon={<CloudUploadIcon />}
+                        sx={{
+                            background: "#93B4FF",
+                            color: "#172448",
+                            margin: '10px',  
+                            width: '150px',
+                            borderRadius: '50px',                       
+                        }}
+                        href="https://drive.google.com/file/d/1HNcgogH56pCgwIQoL7JZEoaM1dzSeCKU/view?usp=drive_link"
+                        download="CV-BADIN-Simon.pdf"
+                        target='_blanck'
+                    >
+                        CV
                     <VisuallyHiddenInput
                     type="file"
                     onChange={(event) => console.log(event.target.files)}

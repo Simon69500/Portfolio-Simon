@@ -24,7 +24,7 @@ const Header = () => {
             MuiTabs: {
                 styleOverrides: {
                     indicator: {
-                        backgroundColor: '#FCDD79', // Couleur de l'indicateur
+                        backgroundColor: '#e4b696', // Couleur de l'indicateur
                     },
                 },
             },
@@ -35,7 +35,7 @@ const Header = () => {
                         fontSize: 'medium',
                         fontWeight: '600',
                         '&.Mui-selected': {
-                            color: '#FCDD79', // Couleur des tabs sélectionnés
+                            color: '#e4b696', // Couleur des tabs sélectionnés
                         },
                     },
                 },
