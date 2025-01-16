@@ -8,7 +8,8 @@ function SkillBar ({skill, level}) {
                 <div className='card-logo'>
                     <img className='skill-img' src={skill.img} alt={skill.name} />
                     <div className="skill-name">{skill.name}</div>
-                </div>                
+                </div>
+                
             </div>
         )
     
@@ -17,12 +18,12 @@ function SkillBar ({skill, level}) {
     function Skills(){
 
         const skills = [
-            {name:'HTML5', level: 100, img: Icones.html5, niveau: 'Confirmé'},
-            {name:'CSS3 / SASS', level: 100, img: Icones.css3, niveau: 'Confirmé'},
-            {name:'JavaScript', level:80, img: Icones.scriptJava, niveau: 'Intermédiaire'},
-            {name:'Vue.js', level: 50, img: Icones.vue, niveau: 'Débutant'},
-            {name:'ReactJS', level:70, img: Icones.react, niveau: 'Intermédiaire'},
-            {name:'Angular', level:50, img: Icones.angular, niveau: 'Débutant'}
+            {name:'HTML5', img: Icones.html5, niveau: 'Confirmé'},
+            {name:'CSS3', img: Icones.css3, niveau: 'Confirmé'},
+            {name:'JavaScript', img: Icones.scriptJava, niveau: 'Intermédiaire'},
+            {name:'Vue.js', img: Icones.vue, niveau: 'Débutant'},
+            {name:'ReactJS', img: Icones.react, niveau: 'Intermédiaire'},
+            {name:'Angular', img: Icones.angular, niveau: 'Débutant'}
         ];
 
         const skillCms = [
@@ -37,19 +38,21 @@ function SkillBar ({skill, level}) {
 
         return (
             <div className="contenair-skills">
+                <div className='skill-card-title'>
                 <h3 className='skill-title-1'>Skills</h3>
                 <h4 className='skill-title-2'>Front-End</h4>
+                </div>
+                <div className='skill-card-logo'>
                 {skills.map((skill, index) =>(
-                    <SkillBar key={index} skill={skill} level={skill.level} />
+                    <SkillBar key={index} skill={skill}  />
                 ))}
-                <h4 className='skill-title-2'>CMS</h4>
                 {skillCms.map((skill, index) =>(
-                    <SkillBar key={index} skill={skill} level={skill.level} />
+                    <SkillBar key={index} skill={skill} />
                 ))}
-                <h4 className='skill-title-2'>Autres</h4>
                 {skillOther.map((skill, index) =>(
-                    <SkillBar key={index} skill={skill} level={skill.level} />
+                    <SkillBar key={index} skill={skill} />
                 ))}
+                </div>
             </div>
         );
     }
