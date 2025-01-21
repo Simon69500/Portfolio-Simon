@@ -34,7 +34,7 @@ const Competences = () => {
                 {/* Partie CV */}
                 <div className="contenair-cv">
                     <h3 className="cv-title">Mon CV</h3>
-                    <a href="https://drive.google.com/file/d/1HNcgogH56pCgwIQoL7JZEoaM1dzSeCKU/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://drive.google.com/file/d/1QzegMvYjspJ9s_RTYGFbW8i2pWuStZYu/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <img className="cv-img" src={CV} alt="présentation du CV" />
                     </a>
 
@@ -46,7 +46,7 @@ const Competences = () => {
                             alignItems: 'center', // Centrer verticalement
                         }}
                     >
-                                 <Button
+                                 <Button className="Button-Competence"
                         component="a"
                         role={undefined}
                         variant="contained"
@@ -70,7 +70,7 @@ const Competences = () => {
                     multiple
                     />
                     </Button>
-                    <Button
+                    <Button className="Button-Competence"
                         component="a"
                         role={undefined}
                         variant="contained"
@@ -83,7 +83,7 @@ const Competences = () => {
                             width: '150px',
                             borderRadius: '50px',                       
                         }}
-                        href="https://drive.google.com/file/d/1HNcgogH56pCgwIQoL7JZEoaM1dzSeCKU/view?usp=drive_link"
+                        href="https://drive.google.com/file/d/1QzegMvYjspJ9s_RTYGFbW8i2pWuStZYu/view?usp=sharing"
                         download="CV-BADIN-Simon.pdf"
                         target='_blanck'
                     >

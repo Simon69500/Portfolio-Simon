@@ -12,7 +12,19 @@ import angular from '../../asset/img-logo/angular.png';
 import linkedin from '../../asset/img-logo/linkedin.png';
 import github2 from '../../asset/img-logo/github2.png';
 import react2 from '../../asset/img-logo/react2.png';
-
+import nodejs from '../../asset/img-logo/nodejs.svg';
+import express from '../../asset/img-logo/express-js.svg';
+import mongodb from '../../asset/img-logo/mongodb.png';
+import strapi from '../../asset/img-logo/strapi.png';
+import stripe from '../../asset/img-logo/stripe.svg';
+import netlify from '../../asset/img-logo/netlify.svg';
+import tanStackQuery from '../../asset/img-logo/TanStackQuery.png';
+import cloudinary from '../../asset/img-logo/nodejs.svg';
+import retool from '../../asset/img-logo/retool.png';
+import openai from '../../asset/img-logo/open.svg';
+import typescript from '../../asset/img-logo/typescript.svg';
+import expo from '../../asset/img-logo/expo.svg';
+import nextjs from '../../asset/img-logo/nextjs.svg';
 
 // Utilisation d'un objet pour organiser les icônes
 export const Icones = {
@@ -29,5 +41,18 @@ export const Icones = {
   angular,
   linkedin,
   github2,
-  react2
+  react2,
+  nodejs,
+  express,
+  mongodb,
+  strapi,
+  stripe,
+  netlify,
+  tanStackQuery,
+  cloudinary,
+  retool,
+  openai,
+  typescript,
+  expo,
+  nextjs,
 };
