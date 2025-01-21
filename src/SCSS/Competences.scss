@@ -7,7 +7,8 @@
     #Competences {
 
         width: 100%;
-        height: 1500px;
+        height: 100%;
+        padding-bottom: 50px;
 
         @include background-secondary;
         @include border-medium;
@@ -81,7 +82,8 @@
     #Competences {
 
         width: 100%;
-        height: 1500px;
+        height: 100%;
+        padding-bottom: 50px;
 
         @include background-secondary;
         @include border-medium;
@@ -155,7 +157,8 @@
     #Competences {
 
         width: 100%;
-        height: 1500px;
+        height: 100%;
+        padding-bottom: 50px;
 
         @include background-secondary;
         @include border-medium;
@@ -229,7 +232,8 @@
     #Competences {
 
         width: 100%;
-        height: 1500px;
+        height: 100%;
+        padding-bottom: 50px;
 
         @include background-secondary;
         @include border-medium;
@@ -286,11 +290,8 @@
                 padding-top: 20px;
             }
     
-            .cv-button {
-                @include button;
-                margin: 20px;
-                padding: 5px;
-                
+            .Button-Competence {
+                width: 140px;
             }
         }
         
@@ -304,7 +305,7 @@
     #Competences {
 
         width: 100%;
-        height: 100%;
+        padding-bottom: 50px;
 
         @include background-secondary;
         @include border-medium;
@@ -361,10 +362,8 @@
                 padding-top: 20px;
             }
     
-            .cv-button {
-                @include button;
-                margin: 20px;
-                padding: 5px;
+            .Button-Competence {
+                width: 140px;
             }
         }
         
@@ -379,6 +378,7 @@
 
         width: 100%;
         height: 100%;
+        padding-bottom: 50px;
 
         @include background-secondary;
         @include border-medium;
