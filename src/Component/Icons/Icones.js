@@ -19,7 +19,7 @@ import strapi from '../../asset/img-logo/strapi.png';
 import stripe from '../../asset/img-logo/stripe.svg';
 import netlify from '../../asset/img-logo/netlify.svg';
 import tanStackQuery from '../../asset/img-logo/TanStackQuery.png';
-import cloudinary from '../../asset/img-logo/nodejs.svg';
+import cloudinary from '../../asset/img-logo/cloudinary.svg';
 import retool from '../../asset/img-logo/retool.png';
 import openai from '../../asset/img-logo/open.svg';
 import typescript from '../../asset/img-logo/typescript.svg';
