@@ -48,7 +48,7 @@ const Home = () => {
                     {/* Partie Recherche Emploi */}
                     <div id='Actual'>    
                         <h3 className='title-actual'>Actuellement : </h3>
-                        <p><a className='link-ecole' href="https://www.lereacteur.io/formation-alternance/concepteur-developpeur-applications/" target='_blanck'>Le Reacteur</a>  - Formation de Concepteur Développement d'Application "Début - 03 février 2025" - Recherche une Alternance </p>
+                        <p><a className='link-ecole' href="https://www.lereacteur.io/formation-alternance/concepteur-developpeur-applications/" target='_blanck'>Le Reacteur</a>  - Formation de Concepteur Développement d'Application "Début - 28 avril 2025" - Recherche une Alternance </p>
                         <Button
                         component="a"
                         role={undefined}
