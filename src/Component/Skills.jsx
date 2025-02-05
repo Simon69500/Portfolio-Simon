@@ -16,6 +16,7 @@ function Skills() {
     // Compétences Frontend
     const skillsFront = [
         { name: 'ReactJS-Native', img: Icones.react },
+        { name: 'Angular', img: Icones.angular},
         { name: 'Next.js', img: Icones.nextjs },
         { name: 'Vue.js', img: Icones.vue },
         { name: 'Expo', img: Icones.expo },
@@ -42,6 +43,7 @@ function Skills() {
         { name: 'Cloudinary', img: Icones.cloudinary },
         { name: 'Retool', img: Icones.retool },
         { name: 'OpenAI', img: Icones.openai },
+        { name: 'WordPress', img: Icones.wordpress},
     ];
 
     return (
