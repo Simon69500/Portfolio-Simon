@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio-Simon/static/css/main.1a002144.css",
-    "main.js": "/Portfolio-Simon/static/js/main.11941edf.js",
+    "main.js": "/Portfolio-Simon/static/js/main.867f3bb9.js",
     "static/js/488.9561f9b8.chunk.js": "/Portfolio-Simon/static/js/488.9561f9b8.chunk.js",
     "static/media/bannière4.png": "/Portfolio-Simon/static/media/bannière4.8ac4bab4fa5c18220a23.png",
     "static/media/Au-petit-village.jpg": "/Portfolio-Simon/static/media/Au-petit-village.7603fc761120bf53830c.jpg",
@@ -10,9 +10,9 @@
     "static/media/la-vie-des-plantes_About.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes_About.4b72b9572e0c9e20aeb8.jpg",
     "static/media/la-vie-des-plantes_Panier1.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes_Panier1.59c0427852de8affa965.jpg",
     "static/media/la-vie-des-plantes_Contact1.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes_Contact1.9aafbfef88172fe80051.jpg",
-    "static/media/CV.jpg": "/Portfolio-Simon/static/media/CV.91d7ca7e5db648fb2c4f.jpg",
     "static/media/Au-petit-village_Accueil.jpg": "/Portfolio-Simon/static/media/Au-petit-village_Accueil.d45d3becd2a136f7603c.jpg",
     "static/media/la-vie-des-plantes_Panier3.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes_Panier3.27c2761de0a68e57c8fe.jpg",
+    "static/media/CV.jpg": "/Portfolio-Simon/static/media/CV.d5f5642c566f38313591.jpg",
     "static/media/la-vie-des-plantes.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes.52b7b5c471c08af6a0dd.jpg",
     "static/media/la-vie-des-plantes2.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes2.9585a2bb45dbae805772.jpg",
     "static/media/Profil2.png": "/Portfolio-Simon/static/media/Profil2.ff5349646b25a8582877.png",
@@ -48,11 +48,11 @@
     "static/media/expo.svg": "/Portfolio-Simon/static/media/expo.2d405a5e7bdfb1be19fb3dd0bef3f4ba.svg",
     "static/media/typescript.svg": "/Portfolio-Simon/static/media/typescript.7243197b280742db557534f6bf69ee67.svg",
     "main.1a002144.css.map": "/Portfolio-Simon/static/css/main.1a002144.css.map",
-    "main.11941edf.js.map": "/Portfolio-Simon/static/js/main.11941edf.js.map",
+    "main.867f3bb9.js.map": "/Portfolio-Simon/static/js/main.867f3bb9.js.map",
     "488.9561f9b8.chunk.js.map": "/Portfolio-Simon/static/js/488.9561f9b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1a002144.css",
-    "static/js/main.11941edf.js"
+    "static/js/main.867f3bb9.js"
   ]
 }
