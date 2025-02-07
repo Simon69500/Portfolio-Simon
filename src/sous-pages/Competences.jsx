@@ -34,7 +34,7 @@ const Competences = () => {
                 {/* Partie CV */}
                 <div className="contenair-cv">
                     <h3 className="cv-title">Mon CV</h3>
-                    <a href="https://drive.google.com/file/d/19xTLt-FzFqm9xOfAxAPP37Ly-7Pbq0rF/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <a href="https://drive.google.com/file/d/1EEyYImWB8OZZJuvEdhie0-89yOk-1CDx/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <img className="cv-img" src={CV} alt="présentation du CV" />
                     </a>
 
@@ -83,7 +83,7 @@ const Competences = () => {
                             width: '150px',
                             borderRadius: '50px',                       
                         }}
-                        href="https://drive.google.com/file/d/19xTLt-FzFqm9xOfAxAPP37Ly-7Pbq0rF/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1EEyYImWB8OZZJuvEdhie0-89yOk-1CDx/view?usp=sharing"
                         download="CV-BADIN-Simon.pdf"
                         target='_blanck'
                     >
