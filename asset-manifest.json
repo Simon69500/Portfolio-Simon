@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Portfolio-Simon/static/css/main.1e15cd30.css",
+    "main.css": "/Portfolio-Simon/static/css/main.bec0d4e5.css",
     "main.js": "/Portfolio-Simon/static/js/main.ce447ecb.js",
     "static/js/488.9561f9b8.chunk.js": "/Portfolio-Simon/static/js/488.9561f9b8.chunk.js",
     "static/media/bannière4.png": "/Portfolio-Simon/static/media/bannière4.8ac4bab4fa5c18220a23.png",
@@ -47,12 +47,12 @@
     "static/media/express-js.svg": "/Portfolio-Simon/static/media/express-js.a9508f39f02f4f15cc19f3bdd88d21cc.svg",
     "static/media/expo.svg": "/Portfolio-Simon/static/media/expo.2d405a5e7bdfb1be19fb3dd0bef3f4ba.svg",
     "static/media/typescript.svg": "/Portfolio-Simon/static/media/typescript.7243197b280742db557534f6bf69ee67.svg",
-    "main.1e15cd30.css.map": "/Portfolio-Simon/static/css/main.1e15cd30.css.map",
+    "main.bec0d4e5.css.map": "/Portfolio-Simon/static/css/main.bec0d4e5.css.map",
     "main.ce447ecb.js.map": "/Portfolio-Simon/static/js/main.ce447ecb.js.map",
     "488.9561f9b8.chunk.js.map": "/Portfolio-Simon/static/js/488.9561f9b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e15cd30.css",
+    "static/css/main.bec0d4e5.css",
     "static/js/main.ce447ecb.js"
   ]
 }
