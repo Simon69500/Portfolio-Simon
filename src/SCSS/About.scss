@@ -405,8 +405,8 @@
             }
     
             .photo-about {
-                width: 150px;
-                height: 150px;
+                width: 100px;
+                height: 100px;
                 border-radius: 100px;
                 padding: 20px;
     
@@ -456,7 +456,7 @@
         
     
         .about_article {
-            @include background-secondary;
+            @include background-tertiary;
             @include border-light;
 
             display: flex;
@@ -466,15 +466,15 @@
             
             border-radius: 10px;
     
-            width: 90%;
+            width: 95%;
             height: 100%;
     
             .text_about {
-                padding: 20px;
+                padding: 15px;
                 width: 100%;   
     
                 @include text-dark;
-                font-size: small;
+                font-size: x-small;
                 line-height: 1.6; /* Espacement entre les lignes */
                 margin: 1em 0; /* Espacement autour du paragraphe */
                 text-align: center; /* Alignement du texte */
@@ -493,8 +493,8 @@
             }
     
             .photo-about {
-                width: 150px;
-                height: 150px;
+                width: 100px;
+                height: 100px;
                 border-radius: 100px;
                 padding: 20px;
     

@@ -85,8 +85,7 @@
         height: 100%;
         padding-bottom: 50px;
 
-        @include background-secondary;
-        @include border-medium;
+        @include background-primary;
         
 
         .title_divers {
@@ -160,8 +159,7 @@
         height: 100%;
         padding-bottom: 50px;
 
-        @include background-secondary;
-        @include border-medium;
+        @include background-primary;
         
 
         .title_divers {
@@ -199,7 +197,7 @@
             box-shadow: 10px 1px 5px $dark-11 ;
     
             .cv-title{
-                @include text-primary-2;
+                @include text-primary-3;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;
@@ -235,8 +233,7 @@
         height: 100%;
         padding-bottom: 50px;
 
-        @include background-secondary;
-        @include border-medium;
+        @include background-primary;
         
 
         .title_divers {
@@ -274,7 +271,7 @@
             box-shadow: 10px 1px 5px $dark-11 ;
     
             .cv-title{
-                @include text-primary-2;
+                @include text-primary-3;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;
@@ -307,8 +304,7 @@
         width: 100%;
         padding-bottom: 50px;
 
-        @include background-secondary;
-        @include border-medium;
+        @include background-primary;
         
 
         .title_divers {
@@ -346,7 +342,7 @@
             box-shadow: 10px 1px 5px $dark-11 ;
     
             .cv-title{
-                @include text-primary-2;
+                @include text-primary-3;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;
@@ -379,9 +375,8 @@
         width: 100%;
         height: 100%;
         padding-bottom: 50px;
-
-        @include background-secondary;
-        @include border-medium;
+        
+        @include background-primary;
         
 
         .title_divers {
@@ -419,7 +414,7 @@
             box-shadow: 10px 1px 5px $dark-11 ;
     
             .cv-title{
-                @include text-primary-2;
+                @include text-primary-3;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;

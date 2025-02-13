@@ -4,8 +4,7 @@
 //Très grand écran de bureau
 @media (min-width: 1601px){
 .contenair-form {
-    @include background-secondary;
-    @include border-medium;
+    @include background-primary;
 
     display: flex;
     flex-direction: column;
@@ -105,8 +104,7 @@
 // Grand écran de bureau
 @media (min-width: 1281px) and (max-width: 1600px) {
     .contenair-form {
-        @include background-secondary;
-        @include border-medium;
+        @include background-primary;
     
         display: flex;
         flex-direction: column;
@@ -206,8 +204,7 @@
 //Bureau de taille moyenne
 @media (min-width: 1025px) and (max-width: 1280px) {
     .contenair-form {
-        @include background-secondary;
-        @include border-medium;
+        @include background-primary;
     
         display: flex;
         flex-direction: column;
@@ -307,9 +304,8 @@
 // Tablette (paysage) ou petit écran de bureau
 @media (min-width: 769px) and (max-width: 1024px) {
     .contenair-form {
-        @include background-secondary;
-        @include border-medium;
-    
+        @include background-primary;
+
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -409,8 +405,7 @@
 // Tablette (portrait)
 @media (min-width: 481px) and (max-width: 768px) {
     .contenair-form {
-        @include background-secondary;
-        @include border-medium;
+        @include background-primary;
     
         display: flex;
         flex-direction: column;
@@ -510,8 +505,7 @@
  // Petit écran mobile (portrait)
  @media (max-width: 480px) {
     .contenair-form {
-        @include background-secondary;
-        @include border-medium;
+        @include background-primary;
     
         display: flex;
         flex-direction: column;
