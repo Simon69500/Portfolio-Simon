@@ -151,7 +151,7 @@ export default function BasicTextFields() {
           <Box className='Box-card'>
           <TextField
   sx={{
-    backgroundColor: '#D5E2FF',
+    backgroundColor: '#5D5D5D',
     margin: '20px',
   }}
   error={hasAttemptedSubmit && nameError}
@@ -166,7 +166,7 @@ export default function BasicTextFields() {
 
 <TextField
   sx={{
-    backgroundColor: '#D5E2FF',
+    backgroundColor: '#5D5D5D',
     margin: '20px',
   }}
   error={hasAttemptedSubmit && lastNameError}
@@ -183,7 +183,7 @@ export default function BasicTextFields() {
 <Box className='Box-card-1'>
 <TextField
   sx={{
-    backgroundColor: '#D5E2FF',
+    backgroundColor: '#5D5D5D',
   }}
   error={hasAttemptedSubmit && emailError}
   id="standard-basic"
@@ -198,7 +198,7 @@ export default function BasicTextFields() {
 
 <TextField
   sx={{
-    backgroundColor: '#D5E2FF',
+    backgroundColor: '#5D5D5D',
   }}
   error={hasAttemptedSubmit && phoneError}
   id="standard-basic"
@@ -212,7 +212,7 @@ export default function BasicTextFields() {
 
 <TextField
   sx={{
-    backgroundColor: '#D5E2FF',
+    backgroundColor: '#5D5D5D',
   }}
   id="filled-basic"
   label="Société"
@@ -226,7 +226,7 @@ export default function BasicTextFields() {
 <Box className='Box-card-2'>
 <TextField
   sx={{
-    backgroundColor: '#D5E2FF',
+    backgroundColor: '#5D5D5D',
   }}
   error={hasAttemptedSubmit && subjectError}
   id="standard-basic"
@@ -241,7 +241,7 @@ export default function BasicTextFields() {
       <Box className='Box-card-3'>
         <TextField
   sx={{
-    backgroundColor: '#D5E2FF',
+    backgroundColor: '#5D5D5D',
   }}
   error={hasAttemptedSubmit && messageError}
   id="filled-multiline-static"
@@ -256,7 +256,7 @@ export default function BasicTextFields() {
         />
       </Box>
       <Box className='Box-card-4'>
-        <Button variant="contained" color="primary" type="submit" value="Send" disabled={!validateForm()}>
+        <Button sx={{ background: "#9F9F9F", color: "#3A3A3A", margin: '10px', width: '180px', borderRadius: '50px',border:" solid , 1px ,#6E6E6E"   }} variant="contained"  type="submit" value="Send" disabled={!validateForm()}>
               Soumettre
         </Button>
       </Box>

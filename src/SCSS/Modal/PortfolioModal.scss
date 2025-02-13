@@ -44,30 +44,29 @@
           height: 400px;
 
             .buton-projet-portfolio {
-                @include button2;
-
-                font-size:x-large;
+                font-size: large;
                 padding:20px;
                 border-radius: 30px;
+                cursor: pointer;
             }
 
             .imagePort-id-1 {
                 width: 60%;
                 height: 70%;
                 object-fit: cover ;
-                border: 3px solid $dark-11;
+
             }
             .imagePort-id-2 {
                 width: 60%;
                 height: 70%;
-                object-fit: cover ;
-                border: 3px solid $dark-11;
+                object-fit: fill ;
+
             }
             .imagePort-id-3 {
                 width: 60%;
                 height: 70%;
                 object-fit: contain ;
-                border: 3px solid $dark-11;
+
             }
         }
     }
@@ -87,7 +86,7 @@
     height: 100%;
 
     .title-principal-modal {
-        @include  text-secondary ;
+        @include  text-secondary-3 ;
         font-size: xx-large;
         padding: 20px;
     }
@@ -106,7 +105,7 @@
 
 
         .title-modal {
-            @include text-primary-2;
+            @include text-primary-3;
             font-size: x-large;
             width: 30%;
             height: 100%;
@@ -114,14 +113,13 @@
         }
 
         .text-modal {
-            @include text-dark ;
-            @include border-dark;
-            @include background-header ;
+            @include text-ligth-1 ;
 
             width: 60%;
             height: 100%;
             padding: 10px;
             margin: 0px;
+            border-radius: 50px;
             
             align-content: center;
             font-size: 20px; /* Taille de la police */
@@ -133,9 +131,9 @@
     }
 
     .line-modal {
-        border-top: 3px solid #D5E2FF;
+        border-top: 2px solid #7F7F7F;
         margin-top: 10px;
-        width: 100%;
+        width: 50%;
     }
 
     .card-techno {
@@ -149,8 +147,8 @@
 
         .tech-item {
             @include border-xLigth;
-            @include background-header;
-            @include text-dark;
+            @include background-tertiary;
+            @include text-secondary;
 
             padding: 10px;            
         }
@@ -228,31 +226,30 @@
           width: 50%;
           height: 400px;
 
-            .buton-projet-portfolio {
-                @include button2;
-
-                font-size: large;
-                padding:10px;
-                border-radius: 30px;
-            }
+          .buton-projet-portfolio {
+            font-size: large;
+            padding:20px;
+            border-radius: 30px;
+            cursor: pointer;
+        }
 
             .imagePort-id-1 {
                 width: 50%;
                 height: 40%;
                 object-fit: cover ;
-                border: 3px solid $dark-11;
+
             }
             .imagePort-id-2 {
                 width: 50%;
                 height: 40%;
-                object-fit: cover ;
-                border: 3px solid $dark-11;
+                object-fit: fill ;
+
             }
             .imagePort-id-3 {
                 width: 50%;
                 height: 40%;
                 object-fit: contain ;
-                border: 3px solid $dark-11;
+
             }
         }
     }
@@ -272,7 +269,7 @@
     height: 100%;
 
     .title-principal-modal {
-        @include  text-secondary ;
+        @include  text-secondary-3 ;
         font-size: xx-large;
         padding: 20px;
     }
@@ -284,14 +281,14 @@
 
         width: 100%;
         height: 100%;
-        color: $dark-12;
+        color: $dark-2;
         margin: 20px;
         padding-top: 10px;
         text-align: center;
 
 
         .title-modal {
-            @include text-primary-2;
+            @include text-primary-3;
             font-size: x-large;
             width: 30%;
             height: 100%;
@@ -299,9 +296,7 @@
         }
 
         .text-modal {
-            @include text-dark ;
-            @include border-dark;
-            @include background-header ;
+            @include text-ligth-1 ;
 
             width: 60%;
             height: 100%;
@@ -318,9 +313,9 @@
     }
 
     .line-modal {
-        border-top: 3px solid #D5E2FF;
+        border-top: 2px solid #7F7F7F;
         margin-top: 10px;
-        width: 100%;
+        width: 50%;
     }
 
     .card-techno {
@@ -334,8 +329,8 @@
 
         .tech-item {
             @include border-xLigth;
-            @include background-header;
-            @include text-dark;
+            @include background-tertiary;
+            @include text-secondary;
 
             padding: 10px;
 
@@ -415,7 +410,6 @@
           height: 400px;
 
             .buton-projet-portfolio {
-                @include button2;
 
                 font-size: large;
                 padding:10px;
@@ -426,19 +420,18 @@
                 width: 50%;
                 height: 40%;
                 object-fit: cover ;
-                border: 3px solid $dark-11;
+
             }
             .imagePort-id-2 {
                 width: 50%;
                 height: 40%;
-                object-fit: cover ;
-                border: 3px solid $dark-11;
+                object-fit: fill ;
+
             }
             .imagePort-id-3 {
                 width: 50%;
                 height: 40%;
                 object-fit: contain ;
-                border: 3px solid $dark-5;
             }
         }
     }
@@ -457,7 +450,7 @@
     height: 100%;
 
     .title-principal-modal {
-       @include  text-secondary ;
+        @include  text-secondary-3 ;
         font-size: xx-large;
         padding: 20px;
     }
@@ -469,14 +462,14 @@
 
         width: 100%;
         height: 100%;
-        color: $dark-12;
+        color: $dark-2;
         margin: 10px;
         padding-top: 10px;
         text-align: center;
 
 
         .title-modal {
-            @include text-primary-2;
+            @include text-primary-3;
             font-size: large;
             width: 30%;
             height: 100%;
@@ -484,12 +477,10 @@
         }
 
         .text-modal {
-            @include text-dark ;
-            @include border-dark;
-            @include background-header ;
+            @include text-ligth-1;
 
-            width: 100%;
-            height: 80%;
+            width: 60%;
+            height: 100%;
             padding: 10px;
             margin: 0px;
             
@@ -503,9 +494,9 @@
     }
 
     .line-modal {
-        border-top: 3px solid #D5E2FF;
+        border-top: 2px solid #7F7F7F;
         margin-top: 10px;
-        width: 100%;
+        width: 50%;
     }
 
     .card-techno {
@@ -519,8 +510,8 @@
 
         .tech-item {
             @include border-xLigth;
-            @include background-header;
-            @include text-dark;
+            @include background-tertiary;
+            @include text-secondary;
 
             padding: 10px;
 
@@ -600,7 +591,6 @@
           height: 400px;
 
             .buton-projet-portfolio {
-                @include button2;
 
                 font-size: medium;
                 padding:10px;
@@ -611,19 +601,18 @@
                 width: 50%;
                 height: 40%;
                 object-fit: cover ;
-                border: 3px solid $dark-11;
+
             }
             .imagePort-id-2 {
                 width: 50%;
                 height: 40%;
-                object-fit: cover ;
-                border: 3px solid $dark-11;
+                object-fit: fill ;
+
             }
             .imagePort-id-3 {
                 width: 50%;
                 height: 40%;
                 object-fit: contain ;
-                border: 3px solid $dark-5;
             }
         }
     }
@@ -637,12 +626,12 @@
     align-items: center;
     justify-content: space-around;
 
-    @include background-tertiary-1;
+    @include background-tertiary;
     width: 100%;
     height: 100%;
 
     .title-principal-modal {
-       @include  text-secondary ;
+        @include  text-secondary-3 ;
         font-size: xx-large;
         padding: 20px;
     }
@@ -654,24 +643,22 @@
 
         width: 100%;
         height: 100%;
-        color: $dark-12;
+        color: $dark-2;
         margin: 10px;
         padding-top: 10px;
         text-align: center;
 
 
         .title-modal {
-            @include text-primary-2;
+            @include text-primary-3;
             font-size: large;
-            width: 35%;
+            width: 30%;
             height: 100%;
             align-content: center;
         }
 
         .text-modal {
-            @include text-dark ;
-            @include border-dark;
-            @include background-header ;
+            @include text-ligth-1 ;
 
             width: 100%;
             height: 80%;
@@ -688,27 +675,26 @@
     }
 
     .line-modal {
-        border-top: 3px solid #D5E2FF;
+        border-top: 2px solid #7F7F7F;
         margin-top: 10px;
-        width: 100%;
+        width: 50%;
     }
 
     .card-techno {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         
         height: 50%;
         width: 100%;
 
         .tech-item {
             @include border-xLigth;
-            @include background-header;
-            @include text-dark;
+            @include background-tertiary;
+            @include text-secondary;
 
             padding: 10px;
-            width: 50%;
             font-size: x-small;
             
         }
@@ -716,10 +702,10 @@
     }
 
     .link-modal {
-        font-size: large;
-        padding: 20px;
+        font-size: medium;
+        padding: 10px;
         text-decoration: none;
-        margin: 20px;
+        margin: 10px;
         
         @include text-ligth;
         @include background-dark;
@@ -786,7 +772,6 @@
           height: 400px;
 
             .buton-projet-portfolio {
-                @include button2;
 
                 font-size: medium;
                 padding:10px;
@@ -794,22 +779,21 @@
             }
 
             .imagePort-id-1 {
-                width: 60%;
+                width: 50%;
                 height: 50%;
                 object-fit: cover ;
-                border: 3px solid $dark-11;
+
             }
             .imagePort-id-2 {
-                width: 60%;
+                width: 50%;
                 height: 50%;
-                object-fit: cover ;
-                border: 3px solid $dark-11;
+                object-fit: fill ;
+
             }
             .imagePort-id-3 {
                 width: 60%;
                 height: 50%;
                 object-fit: contain ;
-                border: 3px solid $dark-5;
             }
         }
     }
@@ -823,12 +807,12 @@
     align-items: center;
     justify-content: space-around;
 
-    @include background-tertiary-1;
+    @include background-tertiary;
     width:100%;
     height: 100%;
 
     .title-principal-modal {
-       @include  text-secondary ;
+        @include  text-secondary-3 ;
         font-size: x-large;
         text-align: center;
         padding: 10px;
@@ -843,14 +827,14 @@
 
         width: 100%;
         height: 100%;
-        color: $dark-12;
+        color: $dark-2;
         margin: 10px;
         padding-top: 10px;
         text-align: center;
 
 
         .title-modal {
-            @include text-primary-2;
+            @include text-primary-3;
             font-size: normal;
             width: 100%;
             height: 100%;
@@ -859,9 +843,7 @@
         }
 
         .text-modal {
-            @include text-dark ;
-            @include border-dark;
-            @include background-header ;
+            @include text-ligth-1 ;
 
             width: 80%;
             height: 80%;
@@ -878,27 +860,27 @@
     }
 
     .line-modal {
-        border-top: 3px solid #D5E2FF;
+          border-top: 2px solid #7F7F7F;
         margin-top: 10px;
-        width: 100%;
+        width: 50%;
     }
 
     .card-techno {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-around;
         
         height: 50%;
         width: 100%;
 
         .tech-item {
             @include border-xLigth;
-            @include background-header;
-            @include text-dark;
+            @include background-tertiary;
+            @include text-secondary;
 
-            width: 80px;
-            font-size: x-small;
+            font-size: small;
+            padding: 5px;
 
             
         }
@@ -974,7 +956,6 @@
           height: 400px;
 
             .buton-projet-portfolio {
-                @include button2;
 
                 font-size: medium;
                 padding:10px;
@@ -985,19 +966,19 @@
                 width: 60%;
                 height: 50%;
                 object-fit: cover ;
-                border: 3px solid $dark-11;
+
             }
             .imagePort-id-2 {
                 width: 60%;
                 height: 50%;
-                object-fit: cover ;
-                border: 3px solid $dark-11;
+                object-fit: fill ;
+
             }
             .imagePort-id-3 {
                 width: 60%;
                 height: 50%;
                 object-fit: contain ;
-                border: 3px solid $dark-5;
+
             }
         }
     }
@@ -1011,12 +992,12 @@
     align-items: center;
     justify-content: space-around;
 
-    @include background-tertiary-1;
+    @include background-tertiary;
     width:100%;
     height: 100%;
 
     .title-principal-modal {
-       @include  text-secondary ;
+        @include  text-secondary-3 ;
         font-size: x-large;
         text-align: center;
         padding: 10px;
@@ -1028,17 +1009,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include background-tertiary;
 
         width: 100%;
         height: 100%;
-        color: $dark-12;
+        color: $dark-2;
         margin: 10px;
         padding-top: 10px;
         text-align: center;
 
 
         .title-modal {
-            @include text-primary-2;
+            @include text-primary-3;
             font-size: normal;
             width: 100%;
             height: 20%;
@@ -1047,9 +1029,7 @@
         }
 
         .text-modal {
-            @include text-dark ;
-            @include border-dark;
-            @include background-header ;
+            @include text-ligth-1 ;
 
             width: 80%;
             height: 80%;
@@ -1066,27 +1046,29 @@
     }
 
     .line-modal {
-        border-top: 3px solid #D5E2FF;
+        border-top: 2px solid #7F7F7F;
         margin-top: 10px;
-        width: 100%;
+        width: 50%;
+        @include background-tertiary;
     }
 
     .card-techno {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-around;
+        @include background-tertiary;
         
-        height:100%;
+        height:50%;
         width: 100%;
 
         .tech-item {
             @include border-xLigth;
-            @include background-header;
-            @include text-dark;
+            @include background-tertiary;
+            @include text-secondary;
 
-            width: 80px;
-            font-size: x-small;
+            font-size: xx-small;
+            padding: 5px; 
 
             
         }

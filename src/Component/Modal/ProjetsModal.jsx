@@ -27,16 +27,17 @@ const ProjetsModal = [
         titre: 'Angular - Au petit village',
         image: Village,
         images: imgVillage, // Images pour un slider
-        technologie: ['HTML5', 'CSS3/SASS', 'JavaScript', 'Angular'],
-        description: `Projet réalisé pendant ma formation, ayant pour objectif la création d'un site vitrine avec Angular. Le projet avait pour but de développer une plateforme permettant de consulter un catalogue de produits.`,
-        objectif: `Développer un site web pour "Au petit village", une entreprise fabriquant des figurines inspirées d'Astérix et Obélix. Le site devait permettre aux utilisateurs de consulter un catalogue de produits, de les trier par prix, et d'utiliser une barre de recherche pour trouver rapidement des produits spécifiques.`,
-        publicCible: `Population nostalgique entre 30 et 55 ans, passionnée par les aventures des célèbres Gaulois.`,
-        resultat: `Un site respectant la charte graphique du client, avec une navigation claire et une présentation attractive des produits. Une fonctionnalité de tri des prix et une barre de recherche fonctionnelle ont été intégrées pour améliorer l'expérience utilisateur.`,
-        défis: `L'un des défis majeurs du projet a été l'implémentation de la fonctionnalité de tri des prix en croissant/décroissant ainsi que la mise en place d'une barre de recherche efficace pour filtrer les produits.`,
-        solutions: `Pour résoudre ces problèmes, j'ai utilisé les composants d'Angular, comme 'ngFor' et les filtres pour gérer dynamiquement le tri des produits. Pour la barre de recherche, j'ai mis en place une fonction de filtrage en temps réel, permettant aux utilisateurs de trouver rapidement les produits en fonction de leurs mots-clés.`,
+        technologie: ['HTML5', 'CSS3/SASS', 'JavaScript', 'Angular (Routing, Services, Pipes)', 'TypeScript'],
+        description: `Projet réalisé pendant ma formation, ayant pour objectif la création d'un site vitrine responsive avec Angular. Le projet visait à développer une plateforme permettant de consulter un catalogue de produits, triés par prix et recherchables en fonction des mots-clés.`,
+        objectif: `Développer un site web interactif pour "Au petit village", une entreprise fabriquant des figurines inspirées d'Astérix et Obélix. Le site devait non seulement permettre aux utilisateurs de consulter un catalogue de produits, mais aussi d'offrir une expérience fluide grâce à un tri efficace des produits par prix et à une recherche rapide par nom de produit.`,
+        publicCible: `Les passionnés de l'univers d'Astérix et Obélix, généralement âgés de 30 à 55 ans, à la recherche de figurines uniques qui rappellent les célèbres Gaulois et leurs aventures.`,
+        resultat: `Le site respecte la charte graphique du client avec une navigation claire, une présentation soignée des produits et une fonctionnalité de tri optimisée. Une barre de recherche a été intégrée pour permettre aux utilisateurs de trouver rapidement les produits. Le site est également entièrement responsive et bien adapté aux utilisateurs sur différentes plateformes.`,
+        défis: `L'un des défis majeurs du projet a été l'implémentation de la fonctionnalité de tri des prix en croissant/décroissant, tout en veillant à la réactivité du site pour une expérience utilisateur fluide. La mise en place d’une barre de recherche en temps réel, permettant aux utilisateurs de filtrer les produits efficacement, a également été un défi technique intéressant.`,
+        solutions: `Pour résoudre ces problèmes, j'ai utilisé des composants réutilisables d'Angular, tels que 'ngFor' pour le rendu dynamique des produits. Pour la fonctionnalité de tri, j'ai créé un pipe personnalisé afin de trier efficacement les produits par prix. J'ai également mis en place un système de filtrage en temps réel avec un autre pipe, pour permettre aux utilisateurs de trouver facilement les produits correspondant à leurs critères.`,
         link: 'https://github.com/Simon69500/Angular',
-        mobileFirst: false,
+        mobileFirst: true, 
     },
+    
 
     {
         id: 3,

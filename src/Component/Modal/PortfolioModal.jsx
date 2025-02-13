@@ -4,7 +4,9 @@ import ProjetsModal from './ProjetsModal';
 import '../../SCSS/Modal/PortfolioModal.scss';
 import ImageSlider from '../Interface/SwiperImage';
 import * as React from 'react';
+
 import Button from '@mui/material/Button';
+
 
 let Projets = ProjetsModal;
 
@@ -31,13 +33,18 @@ function PortfolioModal() {
                     <li  className='list-detail-portfolio'  key={projet.id}>
 
                         {/* Passer le projet spécifique à handleOpenModal */}
-                        <button style={{
-                            cursor: 'pointer'
+                      
+                        <Button  sx={{
+                            color: "#1C1C1C",
+                            '&:hover': {
+                                backgroundColor: '#7F7F7F', // Couleur de fond au survol
+                                color: '#F3F3F3', // Couleur du texte au survol
+    },
                         }} 
                         className='buton-projet-portfolio' 
                         onClick={() => handleOpenModal(projet)}>
-                            Voir le projet : {projet.titre}
-                        </button>
+                            Découvrir le projet : {projet.titre}
+                        </Button>
 
                         <img className={`imagePort-id-${projet.id}`} src={projet.image} alt='projet du portfolio' />
 
@@ -49,6 +56,15 @@ function PortfolioModal() {
     {selectProjet && (
         <div className="box-modal">
             <h2 className="title-principal-modal">{selectProjet.titre}</h2>
+
+             {/* Technologies utilisées */}
+             <div className="card-modal">
+                <div className="card-techno">
+                    {selectProjet.technologie.map((tech, index) => (
+                        <p key={index} className="tech-item">{tech}</p>
+                    ))}
+                </div>
+            </div>
 
             {/* Description du projet */}
             <div className="card-modal">
@@ -90,22 +106,9 @@ function PortfolioModal() {
                 <h3 className="title-modal">Solutions apportées : </h3>
                 <p className='text-modal'>{selectProjet.solutions}</p>
             </div>
-            <div className='line-modal'></div>
-
-            {/* Technologies utilisées */}
-            <div className="card-modal">
-                <h3 className="title-modal">Les technologies : </h3>
-                <div className="card-techno">
-                    {selectProjet.technologie.map((tech, index) => (
-                        <p key={index} className="tech-item">{tech}</p>
-                    ))}
-                </div>
-            </div>
-            <span className='line-modal'></span>
 
             {/* Slider d'images */}
             <ImageSlider images={selectProjet.images || []} className={selectProjet.id === 3 ? "mobile-image" : "desktop-image"} />
-            <div className='line-modal'></div>
 
             {/* Lien vers GitHub */}
             <Button className="link-modal" href={selectProjet.link} target="_blank" rel="noopener noreferrer">

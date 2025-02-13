@@ -40,10 +40,10 @@
     margin: 10px;
 
     .skill-title-2 {
-        color: $dark-11;
+        color: $dark-15;
         text-align: center;
         font-size: x-large;
-        border-top:  solid $dark-2 ;
+        border-top:  solid $dark-6;
         padding: 10px;
         margin: 0;
         padding: 10px;
@@ -63,7 +63,7 @@
         .skill-name {
             font-weight:  bold;
             font-size: normal ;
-            @include text-dark;
+            @include text-ligth;
             padding: 10px;
         }
 

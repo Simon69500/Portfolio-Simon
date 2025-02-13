@@ -34,7 +34,7 @@ const Competences = () => {
                 {/* Partie CV */}
                 <div className="contenair-cv">
                     <h3 className="cv-title">Mon CV</h3>
-                    <a href="https://drive.google.com/file/d/1EEyYImWB8OZZJuvEdhie0-89yOk-1CDx/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <a href="https://drive.google.com/file/d/1qXM_4IZcIfzm60GJINFUNyqH8YAh5XFC/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <img className="cv-img" src={CV} alt="présentation du CV" />
                     </a>
 
@@ -53,11 +53,12 @@ const Competences = () => {
                         tabIndex={-1}
                         startIcon={<CloudUploadIcon />}
                         sx={{
-                            background: "#93B4FF",
-                            color: "#172448",
+                            background: "#5D5D5D",
+                            color: "#D1D1D1",
                             margin: '10px',
                             width: '180px',
-                            borderRadius: '50px',                         
+                            borderRadius: '50px',
+                            border:" solid , 1px ,#8F8F8F"                           
                         }}
                         href="https://drive.google.com/file/d/1wkzCETFFy_1D-wHKHgjNpxZWUI1BnyKo/view?usp=sharing"
                         download="Le_Reacteur_Programme_Alternance.pdf"
@@ -77,13 +78,14 @@ const Competences = () => {
                         tabIndex={-1}
                         startIcon={<CloudUploadIcon />}
                         sx={{
-                            background: "#93B4FF",
-                            color: "#172448",
+                            background: "#5D5D5D",
+                            color: "#D1D1D1",
                             margin: '10px',  
                             width: '150px',
-                            borderRadius: '50px',                       
+                            borderRadius: '50px',
+                            border:" solid , 1px ,#8F8F8F"                       
                         }}
-                        href="https://drive.google.com/file/d/1EEyYImWB8OZZJuvEdhie0-89yOk-1CDx/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1qXM_4IZcIfzm60GJINFUNyqH8YAh5XFC/view?usp=sharing"
                         download="CV-BADIN-Simon.pdf"
                         target='_blanck'
                     >

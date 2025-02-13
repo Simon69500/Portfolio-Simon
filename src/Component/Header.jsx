@@ -24,18 +24,18 @@ const Header = () => {
             MuiTabs: {
                 styleOverrides: {
                     indicator: {
-                        backgroundColor: '#e4b696', // Couleur de l'indicateur
+                        backgroundColor: '#F3F3F3', // Couleur de l'indicateur
                     },
                 },
             },
             MuiTab: {
                 styleOverrides: {
                     root: {
-                        color: '#D5E2FF', // Couleur des tabs non sélectionnés
+                        color: '#9F9F9F', // Couleur des tabs non sélectionnés
                         fontSize: 'medium',
                         fontWeight: '600',
                         '&.Mui-selected': {
-                            color: '#e4b696', // Couleur des tabs sélectionnés
+                            color: '#F3F3F3', // Couleur des tabs sélectionnés
                         },
                     },
                 },
@@ -50,14 +50,13 @@ const Header = () => {
                     <Avatar src={Icones.profil} alt="Simon Badin" sx={{ width: 56, height: 56 }} />
                 </Stack>
 
-                <Box className="box-menu" sx={{ width: '100%' }}>
+                <Box className="box-menu">
                     {/* Envelopper les Tabs avec ThemeProvider */}
                     <ThemeProvider theme={theme}>
                         <Tabs
                             value={value}
                             onChange={handleChange}
                             aria-label="menu navigation"
-                            sx={{ width: '100%' }}
                         >
                             <Tab value="one" label="Accueil" href="#main" />
                             <Tab value="two" label="A Propos" href="#about" />

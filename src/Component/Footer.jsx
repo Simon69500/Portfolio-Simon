@@ -8,13 +8,13 @@ const Footer = () => {
         <div className='Footer'>
             <div className='icon-footer'>
                 <a href="https://github.com/Simon69500" target="_blank" rel="noopener noreferrer">
-                    <img className="item-icon" src={Icones.github} alt="icone de GitHub" />
+                    <img className="item-icon" src={Icones.github2} alt="icone de GitHub" />
                 </a>
                 <a href="https://www.linkedin.com/in/simon-badin-939594279/" target="_blank" rel="noopener noreferrer">
                     <img className="item-icon" src={Icones.linkedin} alt="icone de LinkedIn" />
                 </a>
             </div>
-            <div>
+            <div >
                 <p className='text-footer'> © 2024 Simon Badin. Tous droits réservés.</p>
             </div>
             <div className="footer-contact">

@@ -27,12 +27,12 @@
         .item-icon {
             height: 40px;
             width: 40px;
-            padding-right: 10px
+            padding-right: 10px;
         }
     }
 
     .text-footer {
-        @include text-dark;
+        @include text-footer;
         text-align: center;
         margin: 0px;
         padding: 5px;
@@ -40,7 +40,7 @@
     }
 
     .footer-contact {
-        @include text-dark;
+        @include text-footer;
 
         display: flex;
         flex-direction: row;
@@ -56,7 +56,7 @@
             
             a {
                 text-decoration: none;
-                @include text-ligth;
+                @include text-footer-1;
             }
         }
     }
@@ -95,7 +95,7 @@
         }
     
         .text-footer {
-            @include text-dark;
+            @include text-footer;
             text-align: center;
             margin: 0px;
             padding: 5px;
@@ -103,7 +103,7 @@
         }
     
         .footer-contact {
-            @include text-dark;
+            @include text-footer;
     
             display: flex;
             flex-direction: row;
@@ -119,7 +119,7 @@
                 
                 a {
                     text-decoration: none;
-                    @include text-ligth;
+                    @include text-footer-1;
                 }
             }
         }
@@ -158,7 +158,7 @@
         }
     
         .text-footer {
-            @include text-dark;
+            @include text-footer;
             text-align: center;
             margin: 0px;
             padding: 5px;
@@ -166,7 +166,7 @@
         }
     
         .footer-contact {
-            @include text-dark;
+            @include text-footer;
     
             display: flex;
             flex-direction: row;
@@ -182,7 +182,7 @@
                 
                 a {
                     text-decoration: none;
-                    @include text-ligth;
+                    @include text-footer-1;
                 }
             }
         }
@@ -221,7 +221,7 @@
         }
     
         .text-footer {
-            @include text-dark;
+            @include text-footer;
             text-align: center;
             margin: 0px;
             padding: 5px;
@@ -229,7 +229,7 @@
         }
     
         .footer-contact {
-            @include text-dark;
+            @include text-footer;
     
             display: flex;
             flex-direction: row;
@@ -245,7 +245,7 @@
                 
                 a {
                     text-decoration: none;
-                    @include text-ligth;
+                    @include text-footer-1;
                 }
             }
         }
@@ -284,7 +284,7 @@
         }
     
         .text-footer {
-            @include text-dark;
+            @include text-footer;
             text-align: center;
             margin: 0px;
             padding: 5px;
@@ -292,7 +292,7 @@
         }
     
         .footer-contact {
-            @include text-dark;
+            @include text-footer;
     
             display: flex;
             flex-direction: row;
@@ -307,7 +307,7 @@
                 
                 a {
                     text-decoration: none;
-                    @include text-ligth;
+                    @include text-footer-1;
                 }
             }
         }
@@ -346,7 +346,7 @@
         }
     
         .text-footer {
-            @include text-dark;
+             @include text-footer;
             text-align: center;
             margin: 0px;
             padding: 5px;
@@ -354,7 +354,7 @@
         }
     
         .footer-contact {
-            @include text-dark;
+             @include text-footer;
     
             display: flex;
             flex-direction: column;
@@ -369,7 +369,7 @@
                 
                 a {
                     text-decoration: none;
-                    @include text-ligth;
+                    @include text-footer-1;
                 }
             }
         }

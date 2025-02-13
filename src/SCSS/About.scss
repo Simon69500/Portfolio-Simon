@@ -19,7 +19,8 @@
     
 
     .about_article {
-        @include background-tertiary-1;
+        @include background-secondary;
+        @include border-light;
 
         display: flex;
         justify-content: space-around;
@@ -40,15 +41,15 @@
             text-align: start; /* Alignement du texte */
 
             strong {
-                color: $dark-13;
+                color: #000000;
             }
 
             em {
-                color:$dark-13;
+                color:#131313;
             }
 
             span {
-                color: $dark-14;
+                color: #000000;
             }
         }
 
@@ -105,7 +106,8 @@
         
     
         .about_article {
-            @include background-tertiary-1;
+            @include background-secondary;
+            @include border-light;
 
             display: flex;
             justify-content: space-around;
@@ -126,16 +128,16 @@
                 text-align: start; /* Alignement du texte */
     
                 strong {
-                    color: $dark-13;
-                }
-    
-                em {
-                    color:$dark-13;
-                }
-    
-                span {
-                    color: $dark-14;
-                }
+                color: #000000;
+            }
+
+            em {
+                color:#131313;
+            }
+
+            span {
+                color: #000000;
+            }
             }
     
             .photo-about {
@@ -191,7 +193,8 @@
         
     
         .about_article {
-            @include background-tertiary-1;
+            @include background-secondary;
+            @include border-light;
 
             display: flex;
             justify-content: space-around;
@@ -212,16 +215,16 @@
                 text-align: start; /* Alignement du texte */
     
                 strong {
-                    color: $dark-13;
-                }
-    
-                em {
-                    color:$dark-13;
-                }
-    
-                span {
-                    color: $dark-14;
-                }
+                color: #000000;
+            }
+
+            em {
+                color:#131313;
+            }
+
+            span {
+                color: #000000;
+            }
             }
     
             .photo-about {
@@ -277,7 +280,8 @@
         
     
         .about_article {
-            @include background-tertiary-1;
+            @include background-secondary;
+            @include border-light;
 
             display: flex;
             justify-content: space-around;
@@ -299,15 +303,15 @@
                 text-align: start; /* Alignement du texte */
     
                 strong {
-                    color: $dark-13;
+                    color: #000000;
                 }
     
                 em {
-                    color:$dark-13;
+                    color:#131313;
                 }
     
                 span {
-                    color: $dark-14;
+                    color: #000000;
                 }
             }
     
@@ -364,7 +368,8 @@
         
     
         .about_article {
-            @include background-tertiary-1;
+            @include background-secondary;
+            @include border-light;
 
             display: flex;
             flex-direction: column;
@@ -387,15 +392,15 @@
                 text-align: center; /* Alignement du texte */
     
                 strong {
-                    color: $dark-13;
+                    color: #000000;
                 }
     
                 em {
-                    color:$dark-13;
+                    color:#131313;
                 }
     
                 span {
-                    color: $dark-14;
+                    color: #000000;
                 }
             }
     
@@ -451,7 +456,8 @@
         
     
         .about_article {
-            @include background-tertiary-1;
+            @include background-secondary;
+            @include border-light;
 
             display: flex;
             flex-direction: column;
@@ -474,15 +480,15 @@
                 text-align: center; /* Alignement du texte */
     
                 strong {
-                    color: $dark-13;
+                    color: #000000;
                 }
     
                 em {
-                    color:$dark-13;
+                    color:#131313;
                 }
     
                 span {
-                    color: $dark-14;
+                    color: #000000;
                 }
             }
     

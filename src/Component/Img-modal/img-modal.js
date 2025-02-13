@@ -1,11 +1,12 @@
 import Village from '../../asset/Projet-img/projet1/Au-petit-village.jpg';
 import Village1 from '../../asset/Projet-img/projet1/Au-petit-village_Accueil.jpg';
-import Village2 from '../../asset/Projet-img/projet1/Au-petit-village_About.jpg';
-import Village3 from '../../asset/Projet-img/projet1/Au-petit-village_Produit.jpg';
+import Village2 from '../../asset/Projet-img/projet1/Au-petit-village_Accueil2.jpg';
+import Village3 from '../../asset/Projet-img/projet1/SearchProduit.jpg';
+import Village4 from '../../asset/Projet-img/projet1/Au-petit-village_About.jpg';
+import Village5 from '../../asset/Projet-img/projet1/Au-petit-village_Produit.jpg';
 
 import Artisan from '../../asset/Projet-img/projet2/trouve-ton-artisan.jpg';
 import Artisan1 from '../../asset/Projet-img/projet2/trouve-ton-artisan1.jpg';
-import Artisan2 from '../../asset/Projet-img/projet2/trouve-ton-artisan2.jpg';
 import Artisan3 from '../../asset/Projet-img/projet2/trouve-ton-artisan_burger.jpg';
 import Artisan4 from '../../asset/Projet-img/projet2/trouve-ton-artisan_search.jpg';
 import Artisan5 from '../../asset/Projet-img/projet2/trouve-ton-artisan_List.jpg';
@@ -27,18 +28,19 @@ export const imgVillage = [
     Village,
     Village1,
     Village2,
-    Village3
+    Village3,
+    Village4,
+    Village5,
 ];
 
 export const imgArtisan = [
     Artisan,
-    Artisan1,
-    Artisan2,
     Artisan3,
     Artisan4,
     Artisan5,
     Artisan6,
-    Artisan7
+    Artisan7,
+    Artisan1,
 ]
 
 export const imgPlantes = [

@@ -2,7 +2,6 @@ import '../../SCSS/Modal/Modal.scss';
 
 import * as React from 'react';
 
-
 const Modal = ({show , onClose, children, projectId}) => {
 
     // Vérification si le modal doit être affiché
@@ -23,7 +22,6 @@ const Modal = ({show , onClose, children, projectId}) => {
     return (
         <div className='modal-overlay' onClick={handleOverlayClick}>
             <div className={contentClass}>
-                <button className='button-close-modal' onClick={onClose}>X</button>
                 {children}
             </div>
         </div>

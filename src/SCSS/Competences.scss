@@ -10,8 +10,8 @@
         height: 100%;
         padding-bottom: 50px;
 
-        @include background-secondary;
-        @include border-medium;
+        @include background-primary;
+       
         
 
         .title_divers {
@@ -39,21 +39,21 @@
             justify-content: space-around;
     
     
-            width: 30%;
-            height: 900px;
+            width: 25%;
+            height: 100%;
             padding: 20px;
     
             @include background-tertiary-1;
             border-radius: 30px;
-            border: 4px solid $dark-12 ;
-            box-shadow: 10px 5px 5px $dark-11 ;
+            border: 2px solid $dark-12 ;
+            box-shadow: 5px 5px 5px $dark-11 ;
     
             .cv-title{
-                @include text-primary-2;
+                @include text-primary-3;
                 text-align: center;
                 justify-self: center;
                 font-size: x-large;
-                border-bottom: solid $dark-12 ;
+                border-bottom: 2px solid $dark-12 ;
                 width: 100%;
                 padding: 20px;
                 margin: 0;
