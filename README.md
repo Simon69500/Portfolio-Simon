@@ -3,7 +3,7 @@
 Bienvenue sur mon portfolio personnel, développé avec **ReactJS** ! 🚀  
 Ce site est une **application single-page (SPA)** où je me présente, partage mes projets et facilite le contact avec moi.  
 
-🔗 **Lien du site en ligne** : [Mon Portfolio]([https://ton-github.github.io/ton-repo](https://simon69500.github.io/Portfolio-Simon/))  
+🔗 **Lien du site en ligne** : https://simon69500.github.io/Portfolio-Simon/ 
 
 ---
 
