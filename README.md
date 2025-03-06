@@ -10,7 +10,7 @@ Ce site est une **application single-page (SPA)** où je me présente, partage m
 ## 🌟 Aperçu
 
 
-![screencapture-simon69500-github-io-Portfolio-Simon-2025-02-11-12_25_03](https://github.com/user-attachments/assets/95ecc56f-e8ff-4c5f-9563-ac4ff3b9707a)
+![screencapture-simon69500-github-io-Portfolio-Simon-2025-02-11-12_25_03]([https://github.com/user-attachments/assets/95ecc56f-e8ff-4c5f-9563-ac4ff3b9707a](https://simon69500.github.io/Portfolio-Simon/))
 
 ---
 
