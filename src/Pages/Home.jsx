@@ -48,8 +48,10 @@ const Home = () => {
                     {/* Partie Recherche Emploi */}
                     <div id='Actual'>    
                         <h3 className='title-actual'>Actuellement : </h3>
-                        <p>Le Centre Européen de Formation - Formation de <strong className='textStrong'>Développeur FullStack</strong> - en cours de formation <br/> <br /> 
-                            Suivie d'un   <strong className='textStrong'>stage en entreprise</strong> - "a partir de Septembre 2025", sur une durée de 2 mois.  
+                        <p>
+                        Centre Européen de Formation – Formation de <strong className='textStrong'>Développeur Full-Stack</strong> – actuellement en cours.  
+                        <br /><br />
+                        Un <strong className='textStrong'>stage en entreprise</strong> est prévu à partir de <strong>septembre 2025</strong>, pour une durée de 2 mois.
                         </p>
                     </div>
 

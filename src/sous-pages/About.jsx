@@ -11,8 +11,8 @@ const About = () => {
             <article className='about_article'>
                 <img src={Icones.profil2} alt="Simon Badin" className="photo-about"/>
                 <p className='text_about'>
-                Bonjour, <br />
-                Je suis <strong>Simon Badin </strong>, <strong> développeur fullstack web & mobile en reconversion. </strong> 
+                <h3>Bonjour</h3>
+                Je suis <strong> Simon Badin </strong>, <strong> développeur fullstack web & mobile en reconversion. </strong> 
                 Fort d’une expérience en gestion de projets complexes dans le BTP et l’armée, je mets aujourd’hui ma rigueur, 
                 mon esprit d’équipe et mon leadership au service du développement web.
                 Je recherche un <strong> stage en entreprise </strong>dans la région lyonnaise pour valider ma formation et contribuer à des projets concrets. 
