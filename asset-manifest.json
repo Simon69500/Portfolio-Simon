@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/Portfolio-Simon/static/css/main.bec0d4e5.css",
-    "main.js": "/Portfolio-Simon/static/js/main.ce447ecb.js",
-    "static/js/488.9561f9b8.chunk.js": "/Portfolio-Simon/static/js/488.9561f9b8.chunk.js",
+    "main.js": "/Portfolio-Simon/static/js/main.2b37ca4c.js",
+    "static/js/488.1446b851.chunk.js": "/Portfolio-Simon/static/js/488.1446b851.chunk.js",
     "static/media/bannière4.png": "/Portfolio-Simon/static/media/bannière4.8ac4bab4fa5c18220a23.png",
     "static/media/Au-petit-village_About.jpg": "/Portfolio-Simon/static/media/Au-petit-village_About.fa18d2dfde89b7b892bd.jpg",
     "static/media/Au-petit-village.jpg": "/Portfolio-Simon/static/media/Au-petit-village.e285d6e18d7ed2f2ea6b.jpg",
     "static/media/Au-petit-village_Produit.jpg": "/Portfolio-Simon/static/media/Au-petit-village_Produit.a71a234c97476e7fac2a.jpg",
     "static/media/la-vie-des-plantes_About.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes_About.4b72b9572e0c9e20aeb8.jpg",
     "static/media/la-vie-des-plantes_Panier1.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes_Panier1.59c0427852de8affa965.jpg",
-    "static/media/CV.jpg": "/Portfolio-Simon/static/media/CV.a036026c4177ef5e4b4e.jpg",
     "static/media/la-vie-des-plantes_Contact1.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes_Contact1.9aafbfef88172fe80051.jpg",
     "static/media/Au-petit-village_Accueil.jpg": "/Portfolio-Simon/static/media/Au-petit-village_Accueil.53ce498bfb5e9cb7d73b.jpg",
     "static/media/Au-petit-village_Accueil2.jpg": "/Portfolio-Simon/static/media/Au-petit-village_Accueil2.afa8f009e43c0370cc17.jpg",
+    "static/media/CV.jpg": "/Portfolio-Simon/static/media/CV.6a157b40014e47f81c7e.jpg",
     "static/media/la-vie-des-plantes_Panier3.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes_Panier3.27c2761de0a68e57c8fe.jpg",
     "static/media/la-vie-des-plantes.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes.52b7b5c471c08af6a0dd.jpg",
     "static/media/la-vie-des-plantes2.jpg": "/Portfolio-Simon/static/media/la-vie-des-plantes2.9585a2bb45dbae805772.jpg",
@@ -36,8 +36,10 @@
     "static/media/github.png": "/Portfolio-Simon/static/media/github.f11021803f68852df283.png",
     "static/media/html5.png": "/Portfolio-Simon/static/media/html5.2c6a71b184b518b01b9a.png",
     "static/media/scriptJava.png": "/Portfolio-Simon/static/media/scriptJava.78206ba65e01c7d57080.png",
+    "static/media/php.png": "/Portfolio-Simon/static/media/php.efac7069f892f9cdf129.png",
     "static/media/css3.png": "/Portfolio-Simon/static/media/css3.4a6549b8c2b4cda8bb88.png",
     "static/media/nodejs.svg": "/Portfolio-Simon/static/media/nodejs.2c8a289cd82072187a8d47cc2c84f45c.svg",
+    "static/media/mysql.svg": "/Portfolio-Simon/static/media/mysql.17e572d590819cbe5cac74acfecb45da.svg",
     "static/media/cloudinary.svg": "/Portfolio-Simon/static/media/cloudinary.9008d81d12e08b4f49e785a29b9b04d4.svg",
     "static/media/netlify.svg": "/Portfolio-Simon/static/media/netlify.a8421bd4618b3fff39b171c8b846c00b.svg",
     "static/media/stripe.svg": "/Portfolio-Simon/static/media/stripe.d838cc91cd171539c9157234893007fa.svg",
@@ -48,11 +50,11 @@
     "static/media/expo.svg": "/Portfolio-Simon/static/media/expo.2d405a5e7bdfb1be19fb3dd0bef3f4ba.svg",
     "static/media/typescript.svg": "/Portfolio-Simon/static/media/typescript.7243197b280742db557534f6bf69ee67.svg",
     "main.bec0d4e5.css.map": "/Portfolio-Simon/static/css/main.bec0d4e5.css.map",
-    "main.ce447ecb.js.map": "/Portfolio-Simon/static/js/main.ce447ecb.js.map",
-    "488.9561f9b8.chunk.js.map": "/Portfolio-Simon/static/js/488.9561f9b8.chunk.js.map"
+    "main.2b37ca4c.js.map": "/Portfolio-Simon/static/js/main.2b37ca4c.js.map",
+    "488.1446b851.chunk.js.map": "/Portfolio-Simon/static/js/488.1446b851.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bec0d4e5.css",
-    "static/js/main.ce447ecb.js"
+    "static/js/main.2b37ca4c.js"
   ]
 }
