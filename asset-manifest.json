@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio-Simon/static/css/main.bec0d4e5.css",
-    "main.js": "/Portfolio-Simon/static/js/main.2b37ca4c.js",
+    "main.js": "/Portfolio-Simon/static/js/main.09a2a942.js",
     "static/js/488.1446b851.chunk.js": "/Portfolio-Simon/static/js/488.1446b851.chunk.js",
     "static/media/bannière4.png": "/Portfolio-Simon/static/media/bannière4.8ac4bab4fa5c18220a23.png",
     "static/media/Au-petit-village_About.jpg": "/Portfolio-Simon/static/media/Au-petit-village_About.fa18d2dfde89b7b892bd.jpg",
@@ -50,11 +50,11 @@
     "static/media/expo.svg": "/Portfolio-Simon/static/media/expo.2d405a5e7bdfb1be19fb3dd0bef3f4ba.svg",
     "static/media/typescript.svg": "/Portfolio-Simon/static/media/typescript.7243197b280742db557534f6bf69ee67.svg",
     "main.bec0d4e5.css.map": "/Portfolio-Simon/static/css/main.bec0d4e5.css.map",
-    "main.2b37ca4c.js.map": "/Portfolio-Simon/static/js/main.2b37ca4c.js.map",
+    "main.09a2a942.js.map": "/Portfolio-Simon/static/js/main.09a2a942.js.map",
     "488.1446b851.chunk.js.map": "/Portfolio-Simon/static/js/488.1446b851.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bec0d4e5.css",
-    "static/js/main.2b37ca4c.js"
+    "static/js/main.09a2a942.js"
   ]
 }
