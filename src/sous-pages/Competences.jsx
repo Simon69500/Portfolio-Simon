@@ -34,7 +34,7 @@ const Competences = () => {
                 {/* Partie CV */}
                 <div className="contenair-cv">
                     <h3 className="cv-title">Mon CV</h3>
-                    <a href="https://drive.google.com/file/d/1qXM_4IZcIfzm60GJINFUNyqH8YAh5XFC/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <a href="https://drive.google.com/file/d/1WezKAjfjamqCfPSN4Ke2mGqWt14Gz5HU/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                         <img className="cv-img" src={CV} alt="présentation du CV" />
                     </a>
 
@@ -46,31 +46,6 @@ const Competences = () => {
                             alignItems: 'center', // Centrer verticalement
                         }}
                     >
-                                 <Button className="Button-Competence"
-                        component="a"
-                        role={undefined}
-                        variant="contained"
-                        tabIndex={-1}
-                        startIcon={<CloudUploadIcon />}
-                        sx={{
-                            background: "#5D5D5D",
-                            color: "#D1D1D1",
-                            margin: '10px',
-                            width: '180px',
-                            borderRadius: '50px',
-                            border:" solid , 1px ,#8F8F8F"                           
-                        }}
-                        href="https://drive.google.com/file/d/1wkzCETFFy_1D-wHKHgjNpxZWUI1BnyKo/view?usp=sharing"
-                        download="Le_Reacteur_Programme_Alternance.pdf"
-                        target='_blanck'
-                    >
-                        En Savoir +
-                    <VisuallyHiddenInput
-                    type="file"
-                    onChange={(event) => console.log(event.target.files)}
-                    multiple
-                    />
-                    </Button>
                     <Button className="Button-Competence"
                         component="a"
                         role={undefined}
@@ -85,7 +60,7 @@ const Competences = () => {
                             borderRadius: '50px',
                             border:" solid , 1px ,#8F8F8F"                       
                         }}
-                        href="https://drive.google.com/file/d/1qXM_4IZcIfzm60GJINFUNyqH8YAh5XFC/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1WezKAjfjamqCfPSN4Ke2mGqWt14Gz5HU/view?usp=drive_link"
                         download="CV-BADIN-Simon.pdf"
                         target='_blanck'
                     >

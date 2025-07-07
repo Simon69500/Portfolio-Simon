@@ -15,11 +15,10 @@ function SkillBar({ skill }) {
 function Skills() {
     // Compétences Frontend
     const skillsFront = [
-        { name: 'ReactJS-Native', img: Icones.react },
+        { name: 'ReactJS', img: Icones.react },
         { name: 'Angular', img: Icones.angular},
         { name: 'Next.js', img: Icones.nextjs },
         { name: 'Vue.js', img: Icones.vue },
-        { name: 'Expo', img: Icones.expo },
         { name: 'JavaScript', img: Icones.scriptJava },
         { name: 'TypeScript', img: Icones.typescript },
         { name: 'CSS3 / SASS', img: Icones.css3 },
@@ -31,19 +30,16 @@ function Skills() {
         { name: 'Node.js', img: Icones.nodejs },
         { name: 'Express', img: Icones.express },
         { name: 'MongoDB', img: Icones.mongodb },
-        { name: 'Strapi', img: Icones.strapi },
-        { name: 'Stripe', img: Icones.stripe },
+        { name: 'MySQL', img: Icones.mysql },
+        { name: 'PHP', img: Icones.php },
     ];
 
     // Outils et Plateformes
     const skillsTools = [
         { name: 'GitHub', img: Icones.github },
-        { name: 'Netlify', img: Icones.netlify },
-        { name: 'TanStack Query', img: Icones.tanStackQuery },
-        { name: 'Cloudinary', img: Icones.cloudinary },
-        { name: 'Retool', img: Icones.retool },
         { name: 'OpenAI', img: Icones.openai },
         { name: 'WordPress', img: Icones.wordpress},
+        { name: 'Figma', img: Icones.figma },
     ];
 
     return (

@@ -25,6 +25,8 @@ import openai from '../../asset/img-logo/open.svg';
 import typescript from '../../asset/img-logo/typescript.svg';
 import expo from '../../asset/img-logo/expo.svg';
 import nextjs from '../../asset/img-logo/nextjs.svg';
+import mysql from '../../asset/img-logo/mysql.svg';
+import php from '../../asset/img-logo/php.png';
 
 // Utilisation d'un objet pour organiser les icônes
 export const Icones = {
@@ -55,4 +57,6 @@ export const Icones = {
   typescript,
   expo,
   nextjs,
+  mysql,
+  php,
 };

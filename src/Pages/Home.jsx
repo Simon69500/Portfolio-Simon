@@ -49,36 +49,9 @@ const Home = () => {
                     {/* Partie Recherche Emploi */}
                     <div id='Actual'>    
                         <h3 className='title-actual'>Actuellement : </h3>
-                        <p><a className='link-ecole' href="https://www.lereacteur.io/formation-alternance/concepteur-developpeur-applications/" target='_blank'>Le Reacteur</a> - Formation de <strong className='textStrong'>Développeur FullStack</strong> - "début le 28 avril 2025", sur 10 semaines. <br/>  
-                            Suivie d'une formation de <strong className='textStrong'>Concepteur Développeur d'Applications</strong> - "début mi-juillet 2025", en alternance <em>(contrat d'apprentissage)</em>.  
+                        <p>Le Centre Européen de Formation - Formation de <strong className='textStrong'>Développeur FullStack</strong> - en cours de formation <br/> <br /> 
+                            Suivie d'un   <strong className='textStrong'>stage en entreprise</strong> - "a partir de Septembre 2025", sur une durée de 2 mois.  
                         </p>
-                        <Button
-                        component="a"
-                        role={undefined}
-                        variant="contained"
-                        tabIndex={-1}
-                        startIcon={<CloudUploadIcon />}
-                        sx={{
-                            background: "#3A3A3A",
-                            color: "#D1D1D1",
-                            margin: '10px',
-                            width: '180px',
-                            borderRadius: '50px',
-                            border:" solid , 1px ,#8F8F8F" ,                         
-                        }}
-                        className='buttonActual'
-                        href="https://drive.google.com/file/d/1wkzCETFFy_1D-wHKHgjNpxZWUI1BnyKo/view?usp=sharing"
-                        download="Le_Reacteur_Programme_Alternance.pdf"
-                        target='_blanck'
-                    >
-                        En Savoir +
-                    <VisuallyHiddenInput
-                    type="file"
-                    onChange={(event) => console.log(event.target.files)}
-                    multiple
-                    />
-                    </Button>
-
                     </div>
 
                     {/* Partie Mes compétences + Skill */} 
