@@ -1,4 +1,4 @@
-# 🎨 Mon Portfolio - ReactJS
+# 🎨 Mon Portfolio - ReactJS (en cours d'actualisation)
 
 Bienvenue sur mon portfolio personnel, développé avec **ReactJS** ! 🚀  
 Ce site est une **application single-page (SPA)** où je me présente, partage mes projets et facilite le contact avec moi.  
