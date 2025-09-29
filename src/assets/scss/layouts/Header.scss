@@ -1,0 +1,230 @@
+@use '../Colors.scss' as c ;
+
+// Très grand écran de bureau
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;  /* Assurez-vous que l'élément soit fixé à gauche */
+    right: 0; /* Assurez-vous que l'élément soit fixé à droite */
+    z-index: 1000;
+    box-sizing: border-box;
+
+    @include c.background-header;
+
+    .icon-header  {
+        padding: 10px;
+        margin-left: 30px;
+    }
+
+    .box-menu {
+        width: 40% ;
+    }
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Grand écran de bureau
+@media (min-width: 1281px) and (max-width: 1600px){
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+
+        width: 100%; 
+        height: 100px;
+        top: 0;
+        left: 0;  
+        right: 0; 
+        z-index: 1000;
+    
+        @include c.background-header;
+    
+        .icon-header  {
+            padding: 10px;
+            margin-right: 60px;            
+        }
+
+        .box-menu {
+            width: 60% ;
+
+            .burger-menu {
+                display: none;
+            }
+        }
+    }
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Bureau de taille moyenne
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        position: sticky;
+
+        width: 100%; 
+        height: 100px;
+
+        top: 0;
+        left: 0;  
+        right: 0; 
+        z-index: 1000;
+    
+        @include c.background-header;
+        
+        .icon-header  {
+            padding: 10px;
+        }
+
+        .box-menu {
+            width: 70%;
+
+            .burger-menu {
+                display: none;
+            }
+        }
+        
+    }
+    }
+
+    ///////////////////////////////////////////////////////////////////
+ 
+    //Tablette (paysage) ou petit écran de bureau
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .header {
+            display: flex;
+            align-items: center;
+            position: sticky;
+
+            width: 100%;
+            height: 60px;
+            width: 100%;
+            max-width: 1024px; /* Limite la largeur à 1024px */
+            margin: 0 auto;
+            top: 0;
+            left: 0;  
+            right: 0; 
+            z-index: 1000;
+        
+            @include c.background-header;
+            
+            .icon-header  {
+                padding: 10px;
+            }
+    
+            .box-menu {
+                display: none;
+            }
+
+            .burger-menu {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+        
+                width: 80%;
+                height: 100px;
+            }
+        }
+    }
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (portrait)
+ @media (min-width: 481px) and (max-width: 768px) {
+    .header {
+        display: flex;
+        align-items: center;
+        position: sticky;
+
+        width: 100%;
+        height: 60px;
+        width: 100%;
+        max-width: 1024px; /* Limite la largeur à 1024px */
+        margin: 0 auto;
+        top: 0;
+        left: 0;  
+        right: 0; 
+        z-index: 1000;
+    
+        @include c.background-header;
+        
+        .icon-header  {
+            padding: 10px;
+
+            img {
+                height: 40px;
+                width: 40px;
+                border-radius: 30px;
+            }
+        }
+
+        .box-menu {
+            display: none;
+        }
+
+        .burger-menu {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+    
+            width: 80%;
+            height: 100px;
+        }
+    }
+ }
+
+    ///////////////////////////////////////////////////////////////////
+ 
+ // Petit écran mobile (portrait)
+ @media (max-width: 480px) {
+    .header {
+        display: flex;
+        align-items: center;
+        position: sticky;
+
+        width: 100%;
+        height: 60px;
+        width: 100%;
+        margin: 0 auto;
+        top: 0;
+        left: 0;  
+        right: 0; 
+        z-index: 1000;
+    
+        @include c.background-header;
+        
+        .icon-header  {
+            padding: 10px;
+            
+            img {
+                height: 40px;
+                width: 40px;
+                border-radius: 30px;
+            }
+        }
+
+        .box-menu {
+            display: none;
+        }
+
+        .burger-menu {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+    
+            width: 80%;
+            height: 100px;
+        }
+    }
+ }

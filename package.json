@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://simon69500.github.io/Portfolio-Simon",
   "dependencies": {
+    "@craco/craco": "^7.1.0",
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
@@ -23,9 +24,9 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "install": "npm install --legacy-peer-deps",
     "predeploy": "npm run build",
