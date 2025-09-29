@@ -1,11 +1,9 @@
-@import './theme-light.scss';
-@import './theme-dark.scss';
-@import './Theme-light-2.scss';
+@use './Colors.scss' as c ;
 
 //Très grand écran de bureau
 @media (min-width: 1601px){
 .Footer {
-    @include background-header ;
+    @include c.background-header ;
 
     display: flex;
     flex-direction: column;
@@ -32,7 +30,7 @@
     }
 
     .text-footer {
-        @include text-footer;
+        @include c.text-footer;
         text-align: center;
         margin: 0px;
         padding: 5px;
@@ -40,7 +38,7 @@
     }
 
     .footer-contact {
-        @include text-footer;
+        @include c.text-footer;
 
         display: flex;
         flex-direction: row;
@@ -56,7 +54,7 @@
             
             a {
                 text-decoration: none;
-                @include text-footer-1;
+                @include c.text-footer-1;
             }
         }
     }
@@ -68,7 +66,7 @@
 // Grand écran de bureau
 @media (min-width: 1281px) and (max-width: 1600px) {
     .Footer {
-        @include background-header ;
+        @include c.background-header ;
     
         display: flex;
         flex-direction: column;
@@ -95,7 +93,7 @@
         }
     
         .text-footer {
-            @include text-footer;
+            @include c.text-footer;
             text-align: center;
             margin: 0px;
             padding: 5px;
@@ -103,7 +101,7 @@
         }
     
         .footer-contact {
-            @include text-footer;
+            @include c.text-footer;
     
             display: flex;
             flex-direction: row;
@@ -119,7 +117,7 @@
                 
                 a {
                     text-decoration: none;
-                    @include text-footer-1;
+                    @include c.text-footer-1;
                 }
             }
         }
@@ -131,7 +129,7 @@
 //Bureau de taille moyenne
 @media (min-width: 1025px) and (max-width: 1280px) {
     .Footer {
-        @include background-header ;
+        @include c.background-header ;
     
         display: flex;
         flex-direction: column;
@@ -158,7 +156,7 @@
         }
     
         .text-footer {
-            @include text-footer;
+            @include c.text-footer;
             text-align: center;
             margin: 0px;
             padding: 5px;
@@ -166,7 +164,7 @@
         }
     
         .footer-contact {
-            @include text-footer;
+            @include c.text-footer;
     
             display: flex;
             flex-direction: row;
@@ -182,7 +180,7 @@
                 
                 a {
                     text-decoration: none;
-                    @include text-footer-1;
+                    @include c.text-footer-1;
                 }
             }
         }
@@ -194,7 +192,7 @@
 // Tablette (paysage) ou petit écran de bureau
 @media (min-width: 769px) and (max-width: 1024px) {
     .Footer {
-        @include background-header ;
+        @include c.background-header ;
     
         display: flex;
         flex-direction: column;
@@ -221,7 +219,7 @@
         }
     
         .text-footer {
-            @include text-footer;
+            @include c.text-footer;
             text-align: center;
             margin: 0px;
             padding: 5px;
@@ -229,7 +227,7 @@
         }
     
         .footer-contact {
-            @include text-footer;
+            @include c.text-footer;
     
             display: flex;
             flex-direction: row;
@@ -245,7 +243,7 @@
                 
                 a {
                     text-decoration: none;
-                    @include text-footer-1;
+                    @include c.text-footer-1;
                 }
             }
         }
@@ -257,7 +255,7 @@
 // Tablette (portrait)
 @media (min-width: 481px) and (max-width: 768px) {
     .Footer {
-        @include background-header ;
+        @include c.background-header ;
     
         display: flex;
         flex-direction: column;
@@ -284,7 +282,7 @@
         }
     
         .text-footer {
-            @include text-footer;
+            @include c.text-footer;
             text-align: center;
             margin: 0px;
             padding: 5px;
@@ -292,7 +290,7 @@
         }
     
         .footer-contact {
-            @include text-footer;
+            @include c.text-footer;
     
             display: flex;
             flex-direction: row;
@@ -307,7 +305,7 @@
                 
                 a {
                     text-decoration: none;
-                    @include text-footer-1;
+                    @include c.text-footer-1;
                 }
             }
         }
@@ -319,7 +317,7 @@
  // Petit écran mobile (portrait)
  @media (max-width: 480px) {
     .Footer {
-        @include background-header ;
+        @include c.background-header ;
     
         display: flex;
         flex-direction: column;
@@ -346,7 +344,7 @@
         }
     
         .text-footer {
-             @include text-footer;
+             @include c.text-footer;
             text-align: center;
             margin: 0px;
             padding: 5px;
@@ -354,7 +352,7 @@
         }
     
         .footer-contact {
-             @include text-footer;
+             @include c.text-footer;
     
             display: flex;
             flex-direction: column;
@@ -369,7 +367,7 @@
                 
                 a {
                     text-decoration: none;
-                    @include text-footer-1;
+                    @include c.text-footer-1;
                 }
             }
         }

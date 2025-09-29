@@ -1,6 +1,4 @@
-@import './theme-light.scss';
-@import './theme-dark.scss';
-@import './Theme-light-2.scss';
+@use './Colors.scss' as c ;
 
 //Très grand écran de bureau
 @media (min-width: 1601px){
@@ -12,8 +10,8 @@
     height: 100%;
     width: 100%;
 
-    @include background-primary;
-    @include border-medium;
+    @include c.background-primary;
+    @include c.border-medium;
 
 }}
 
@@ -29,8 +27,8 @@
         height: 100%;
         width: 100%;
     
-        @include background-primary;
-        @include border-medium;
+        @include c.background-primary;
+        @include c.border-medium;
     
     } 
 }
@@ -47,8 +45,8 @@
         height: 100%;
         width: 100%;
     
-        @include background-primary;
-        @include border-medium;
+        @include c.background-primary;
+        @include c.border-medium;
     
     } 
 }
@@ -65,8 +63,8 @@
         height: 100%;
         width: 100%;
     
-        @include background-primary;
-        @include border-medium;
+        @include c.background-primary;
+        @include c.border-medium;
     
     } 
 }
@@ -83,8 +81,8 @@
         height: 100%;
         width: 100%;
     
-        @include background-primary;
-        @include border-medium;
+        @include c.background-primary;
+        @include c.border-medium;
     
     } 
 }
@@ -101,8 +99,8 @@
         height: 100%;
         width: 100%;
     
-        @include background-primary;
-        @include border-medium;
+        @include c.background-primary;
+        @include c.border-medium;
     
     } 
  }

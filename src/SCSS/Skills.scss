@@ -1,6 +1,4 @@
-@import './theme-light.scss';
-@import './theme-dark.scss';
-@import './Theme-light-2.scss';
+@use './Colors.scss' as c ;
 
 // Très grand écran de bureau
 @media (min-width: 1601px){
@@ -27,7 +25,7 @@
     margin-bottom: 20px;
 
     .skill-title-1{
-        @include text-primary-2;
+        @include c.text-primary-2;
         text-align: center;
         font-size: xx-large;
         margin: 0;
@@ -40,10 +38,10 @@
     margin: 10px;
 
     .skill-title-2 {
-        color: $dark-15;
+        color: c.$dark-15;
         text-align: center;
         font-size: x-large;
-        border-top:  solid $dark-6;
+        border-top:  solid c.$dark-6;
         padding: 10px;
         margin: 0;
         padding: 10px;
@@ -63,7 +61,7 @@
         .skill-name {
             font-weight:  bold;
             font-size: normal ;
-            @include text-ligth;
+            @include c.text-ligth;
             padding: 10px;
         }
 
@@ -108,7 +106,7 @@
         margin-bottom: 20px;
     
         .skill-title-1{
-            @include text-primary-2;
+            @include c.text-primary-2;
             text-align: center;
             font-size: xx-large;
             margin: 0;
@@ -122,10 +120,10 @@
         margin: 10px;
     
         .skill-title-2 {
-            color: $dark-11;
+            color: c.$dark-11;
             text-align: center;
             font-size: x-large;
-            border-top:  solid $dark-2 ;
+            border-top:  solid c.$dark-2 ;
             padding: 10px;
             margin: 0;
             padding: 10px;
@@ -143,7 +141,7 @@
             .skill-name {
                 font-weight:  bold;
                 font-size: normal ;
-                @include text-dark;
+                @include c.text-dark;
                 padding: 10px;
             }
     
@@ -188,7 +186,7 @@
         margin-bottom: 20px;
     
         .skill-title-1{
-            @include text-primary-2;
+            @include c.text-primary-2;
             text-align: center;
             font-size: xx-large;
             margin: 0;
@@ -202,10 +200,10 @@
         margin: 10px;
     
         .skill-title-2 {
-            color: $dark-11;
+            color: c.$dark-11;
             text-align: center;
             font-size: x-large;
-            border-top:  solid $dark-2 ;
+            border-top:  solid c.$dark-2 ;
             padding: 10px;
             margin: 0;
             padding: 10px;
@@ -223,7 +221,7 @@
             .skill-name {
                 font-weight:  bold;
                 font-size: normal ;
-                @include text-dark;
+                @include c.text-dark;
                 padding: 10px;
             }
     
@@ -268,7 +266,7 @@
         margin-bottom: 20px;
     
         .skill-title-1{
-            @include text-primary-2;
+            @include c.text-primary-2;
             text-align: center;
             font-size: xx-large;
             margin: 0;
@@ -282,10 +280,10 @@
         margin: 10px;
     
         .skill-title-2 {
-            color: $dark-11;
+            color: c.$dark-11;
             text-align: center;
             font-size: x-large;
-            border-top:  solid $dark-2 ;
+            border-top:  solid c.$dark-2 ;
             padding: 10px;
             margin: 0;
             padding: 10px;
@@ -304,7 +302,7 @@
             .skill-name {
                 font-weight:  bold;
                 font-size: normal ;
-                @include text-dark;
+                @include c.text-dark;
                 padding: 10px;
             }
     
@@ -350,7 +348,7 @@
         margin-bottom: 20px;
     
         .skill-title-1{
-            @include text-primary-2;
+            @include c.text-primary-2;
             text-align: center;
             font-size: xx-large;
             margin: 0;
@@ -364,10 +362,10 @@
         margin: 10px;
     
         .skill-title-2 {
-            color: $dark-11;
+            color: c.$dark-11;
             text-align: center;
             font-size: x-large;
-            border-top:  solid $dark-2 ;
+            border-top:  solid c.$dark-2 ;
             padding: 10px;
             margin: 0;
             padding: 10px;
@@ -387,7 +385,7 @@
             .skill-name {
                 font-weight:  bold;
                 font-size: normal ;
-                @include text-dark;
+                @include c.text-dark;
                 padding: 10px;
             }
     
@@ -433,7 +431,7 @@
         margin-bottom: 20px;
     
         .skill-title-1{
-            @include text-primary-2;
+            @include c.text-primary-2;
             text-align: center;
             font-size: xx-large;
             margin: 0;
@@ -447,10 +445,10 @@
         margin: 10px;
     
         .skill-title-2 {
-            color: $dark-11;
+            color: c.$dark-11;
             text-align: center;
             font-size: x-large;
-            border-top:  solid $dark-2 ;
+            border-top:  solid c.$dark-2 ;
             padding: 10px;
             margin: 0;
             padding: 10px;
@@ -469,7 +467,7 @@
             .skill-name {
                 font-weight:  bold;
                 font-size: normal ;
-                @include text-dark;
+                @include c.text-dark;
                 padding: 10px;
             }
     

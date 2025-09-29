@@ -1,6 +1,4 @@
-@import '../theme-light.scss';
-@import '../theme-dark.scss';
-@import '../Theme-light-2.scss';
+@use '../Colors.scss' as c ;
 
 //Très grand écran de bureau
 @media (min-width: 1601px){
@@ -15,10 +13,10 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    @include trans-4;
+    @include c.trans-4;
 
     .modal-content-1 {
-        @include background-tertiary-1;
+        @include c.background-tertiary-1;
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -32,13 +30,13 @@
        border-radius: 10px;
 
         .button-close-modal {
-            @include button ;
+            @include c.button ;
             align-self: self-end;
         }
     }
 
     .modal-content-2 {
-        @include background-tertiary-1;
+        @include c.background-tertiary-1;
 
         display: flex;
         flex-direction: column;
@@ -55,7 +53,7 @@
      }
 
      .modal-content-3 {
-        @include background-tertiary-1;
+        @include c.background-tertiary-1;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -87,10 +85,10 @@
         justify-content: center;
         align-items: center;
         z-index: 1000;
-        @include trans-4;
+        @include c.trans-4;
     
         .modal-content-1 {
-        @include background-tertiary-1;
+        @include c.background-tertiary-1;
            display: flex;
            flex-direction: column;
            align-items: center;
@@ -105,7 +103,7 @@
         }
     
         .modal-content-2 {
-        @include background-tertiary-1;
+        @include c.background-tertiary-1;
     
             display: flex;
             flex-direction: column;
@@ -119,7 +117,7 @@
             border-radius: 10px;
      
              .button-close-modal {
-                 @include button ;
+                 @include c.button ;
                  width: 15px;
                  height: 20px;
                  padding: 0;
@@ -128,7 +126,7 @@
          }
     
          .modal-content-3 {
-        @include background-tertiary-1;
+        @include c.background-tertiary-1;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -142,7 +140,7 @@
             border-radius: 10px;
      
              .button-close-modal {
-                 @include button ;
+                 @include c.button ;
                  width: 15px;
                  height: 20px;
                  padding: 0;
@@ -167,10 +165,10 @@
         justify-content: center;
         align-items: center;
         z-index: 1000;
-        @include trans-4;
+        @include c.trans-4;
     
         .modal-content-1 {
-        @include background-tertiary-1;
+        @include c.background-tertiary-1;
            display: flex;
            flex-direction: column;
            align-items: center;
@@ -184,7 +182,7 @@
            border-radius: 10px;
     
             .button-close-modal {
-                @include button ;
+                @include c.button ;
                 width: 15px;
                 height: 20px;
                 padding: 0;
@@ -193,7 +191,7 @@
         }
     
         .modal-content-2 {
-        @include background-tertiary-1;
+        @include c.background-tertiary-1;
     
             display: flex;
             flex-direction: column;
@@ -208,7 +206,7 @@
             border-radius: 10px;
      
              .button-close-modal {
-                 @include button ;
+                 @include c.button ;
                  width: 15px;
                  height: 20px;
                  padding: 0;
@@ -217,7 +215,7 @@
          }
     
          .modal-content-3 {
-        @include background-tertiary-1;
+        @include c.background-tertiary-1;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -231,7 +229,7 @@
             border-radius: 10px;
      
              .button-close-modal {
-                 @include button ;
+                 @include c.button ;
                  width: 15px;
                  height: 20px;
                  padding: 0;
@@ -256,10 +254,10 @@
         justify-content: center;
         align-items: center;
         z-index: 1000;
-        @include trans-4;
+        @include c.trans-4;
     
         .modal-content-1 {
-            @include background-tertiary;
+            @include c.background-tertiary;
            display: flex;
            flex-direction: column;
            align-items: center;
@@ -273,7 +271,7 @@
            border-radius: 10px;
     
             .button-close-modal {
-                @include button ;
+                @include c.button ;
                 width: 15px;
                 height: 20px;
                 padding: 0;
@@ -282,7 +280,7 @@
         }
     
         .modal-content-2 {
-            @include background-tertiary;
+            @include c.background-tertiary;
     
             display: flex;
             flex-direction: column;
@@ -297,7 +295,7 @@
             border-radius: 10px;
      
              .button-close-modal {
-                 @include button ;
+                 @include c.button ;
                  width: 15px;
                  height: 20px;
                  padding: 0;
@@ -306,7 +304,7 @@
          }
     
          .modal-content-3 {
-            @include background-tertiary;
+            @include c.background-tertiary;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -320,7 +318,7 @@
             border-radius: 10px;
      
              .button-close-modal {
-                 @include button ;
+                 @include c.button ;
                  width: 15px;
                  height: 20px;
                  padding: 0;
@@ -345,10 +343,10 @@
         justify-content: center;
         align-items: center;
         z-index: 1000;
-        @include trans-4;
+        @include c.trans-4;
     
         .modal-content-1 {
-            @include background-tertiary;
+            @include c.background-tertiary;
            display: flex;
            flex-direction: column;
            align-items: center;
@@ -362,7 +360,7 @@
            border-radius: 10px;
     
             .button-close-modal {
-                @include button ;
+                @include c.button ;
                 width: 15px;
                 height: 20px;
                 padding: 0;
@@ -371,7 +369,7 @@
         }
     
         .modal-content-2 {
-            @include background-tertiary;
+            @include c.background-tertiary;
     
             display: flex;
             flex-direction: column;
@@ -386,7 +384,7 @@
             border-radius: 10px;
      
              .button-close-modal {
-                 @include button ;
+                 @include c.button ;
                  width: 15px;
                  height: 20px;
                  padding: 0;
@@ -395,7 +393,7 @@
          }
     
          .modal-content-3 {
-            @include background-tertiary;
+            @include c.background-tertiary;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -409,7 +407,7 @@
             border-radius: 10px;
      
              .button-close-modal {
-                 @include button ;
+                 @include c.button ;
                  width: 15px;
                  height: 20px;
                  padding: 0;
@@ -434,10 +432,10 @@
         justify-content: center;
         align-items: center;
         z-index: 1000;
-        @include trans-4;
+        @include c.trans-4;
     
         .modal-content-1 {
-            @include background-tertiary;
+            @include c.background-tertiary;
            display: flex;
            flex-direction: column;
            align-items: center;
@@ -451,7 +449,7 @@
            border-radius: 10px;
     
             .button-close-modal {
-                @include button ;
+                @include c.button ;
                 width: 15px;
                 height: 20px;
                 padding: 0;
@@ -460,7 +458,7 @@
         }
     
         .modal-content-2 {
-            @include background-tertiary;
+            @include c.background-tertiary;
     
             display: flex;
             flex-direction: column;
@@ -475,7 +473,7 @@
             border-radius: 10px;
      
              .button-close-modal {
-                 @include button ;
+                 @include c.button ;
                  width: 15px;
                  height: 20px;
                  padding: 0;
@@ -484,7 +482,7 @@
          }
     
          .modal-content-3 {
-            @include background-tertiary;
+            @include c.background-tertiary;
         
             display: flex;
             flex-direction: column;
@@ -499,7 +497,7 @@
             border-radius: 10px;
      
              .button-close-modal {
-                 @include button ;
+                 @include c.button ;
                  width: 15px;
                  height: 20px;
                  padding: 0;

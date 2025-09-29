@@ -1,10 +1,9 @@
-@import './theme-light.scss';
-@import './Theme-light-2.scss';
+@use './Colors.scss' as c ;
 
 //Très grand écran de bureau
 @media (min-width: 1601px){
 .contenair-form {
-    @include background-primary;
+    @include c.background-primary;
 
     display: flex;
     flex-direction: column;
@@ -54,18 +53,18 @@
     }
 
    .titre-formulaire {
-        @include  text-secondary ;
+        @include c.text-secondary ;
         font-size: xx-large;
     }
 
     .titre-formulaire-2 {
-        @include text-secondary-3;
+        @include c.text-secondary-3;
         font-size: x-large ;
     }
 
     .card-form {
-        @include background-dark-1;
-        @include border-medium ;
+        @include c.background-dark-1;
+        @include c.border-medium ;
         width: 50%;
 
         display: flex;
@@ -77,8 +76,8 @@
 }   
 
 .card-loca {
-    @include background-dark-1;
-    @include border-medium ;
+    @include c.background-dark-1;
+    @include c.border-medium ;
 
     width: 50%;
     height: 550px;
@@ -104,7 +103,7 @@
 // Grand écran de bureau
 @media (min-width: 1281px) and (max-width: 1600px) {
     .contenair-form {
-        @include background-primary;
+        @include c.background-primary;
     
         display: flex;
         flex-direction: column;
@@ -154,18 +153,18 @@
         }
 
        .titre-formulaire {
-            @include  text-secondary ;
+            @include c.text-secondary ;
             font-size: xx-large;
         }
     
         .titre-formulaire-2 {
-            @include text-secondary-3;
+            @include c.text-secondary-3;
             font-size: x-large ;
         }
     
         .card-form {
-            @include background-dark-1;
-            @include border-medium ;
+            @include c.background-dark-1;
+            @include c.border-medium ;
 
             width: 70%;
     
@@ -178,8 +177,8 @@
     }   
     
     .card-loca {
-        @include background-dark-1;
-        @include border-medium ;
+        @include c.background-dark-1;
+        @include c.border-medium ;
 
         width: 50%;
         height: 550px;
@@ -204,7 +203,7 @@
 //Bureau de taille moyenne
 @media (min-width: 1025px) and (max-width: 1280px) {
     .contenair-form {
-        @include background-primary;
+        @include c.background-primary;
     
         display: flex;
         flex-direction: column;
@@ -254,18 +253,18 @@
         }
 
        .titre-formulaire {
-            @include  text-secondary ;
+            @include c.text-secondary ;
             font-size: xx-large;
         }
     
         .titre-formulaire-2 {
-            @include text-secondary-3;
+            @include c.text-secondary-3;
             font-size: x-large ;
         }
     
         .card-form {
-            @include background-dark-1;
-            @include border-medium ;
+            @include c.background-dark-1;
+            @include c.border-medium ;
 
             width: 70%;
     
@@ -278,8 +277,8 @@
     }   
     
     .card-loca {
-        @include background-dark-1;
-        @include border-medium ;
+        @include c.background-dark-1;
+        @include c.border-medium ;
 
         width: 50%;
         height: 550px;
@@ -304,7 +303,7 @@
 // Tablette (paysage) ou petit écran de bureau
 @media (min-width: 769px) and (max-width: 1024px) {
     .contenair-form {
-        @include background-primary;
+        @include c.background-primary;
 
         display: flex;
         flex-direction: column;
@@ -355,18 +354,18 @@
         }
 
        .titre-formulaire {
-            @include  text-secondary ;
+            @include c.text-secondary ;
             font-size: xx-large;
         }
     
         .titre-formulaire-2 {
-            @include text-secondary-3;
+            @include c.text-secondary-3;
             font-size: x-large ;
         }
     
         .card-form {
-            @include background-dark-1;
-            @include border-medium ;
+            @include c.background-dark-1;
+            @include c.border-medium ;
 
             width: 70%;
     
@@ -379,8 +378,8 @@
     }   
     
     .card-loca {
-        @include background-dark-1;
-        @include border-medium ;
+        @include c.background-dark-1;
+        @include c.border-medium ;
 
         width: 50%;
         height: 550px;
@@ -405,7 +404,7 @@
 // Tablette (portrait)
 @media (min-width: 481px) and (max-width: 768px) {
     .contenair-form {
-        @include background-primary;
+        @include c.background-primary;
     
         display: flex;
         flex-direction: column;
@@ -455,18 +454,18 @@
         }
 
        .titre-formulaire {
-            @include  text-secondary ;
+            @include c.text-secondary ;
             font-size: xx-large;
         }
     
         .titre-formulaire-2 {
-            @include text-secondary-3;
+            @include c.text-secondary-3;
             font-size: x-large ;
         }
     
         .card-form {
-            @include background-dark-1;
-            @include border-medium ;
+            @include c.background-dark-1;
+            @include c.border-medium ;
 
             width: 70%;
     
@@ -479,8 +478,8 @@
     }   
     
     .card-loca {
-        @include background-dark-1;
-        @include border-medium ;
+        @include c.background-dark-1;
+        @include c.border-medium ;
 
         width: 70%;
         height: 550px;
@@ -505,7 +504,7 @@
  // Petit écran mobile (portrait)
  @media (max-width: 480px) {
     .contenair-form {
-        @include background-primary;
+        @include c.background-primary;
     
         display: flex;
         flex-direction: column;
@@ -557,18 +556,18 @@
         }
 
        .titre-formulaire {
-            @include  text-secondary ;
+            @include c.text-secondary ;
             font-size: xx-large;
         }
     
         .titre-formulaire-2 {
-            @include text-secondary-3;
+            @include c.text-secondary-3;
             font-size: large ;
         }
     
         .card-form {
-            @include background-dark-1;
-            @include border-medium ;
+            @include c.background-dark-1;
+            @include c.border-medium ;
 
             width: 70%;
     
@@ -581,8 +580,8 @@
     }   
     
     .card-loca {
-        @include background-dark-1;
-        @include border-medium ;
+        @include c.background-dark-1;
+        @include c.border-medium ;
 
         width: 70%;
         height: 550px;

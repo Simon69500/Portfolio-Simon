@@ -1,6 +1,4 @@
-@import './theme-light.scss';
-@import './theme-dark.scss';
-@import './Theme-light-2.scss';
+@use './Colors.scss' as c ;
 
 // Très grand écran de bureau
 .header {
@@ -17,7 +15,7 @@
     z-index: 1000;
     box-sizing: border-box;
 
-    @include background-header;
+    @include c.background-header;
 
     .icon-header  {
         padding: 10px;
@@ -47,7 +45,7 @@
         right: 0; 
         z-index: 1000;
     
-        @include background-header;
+        @include c.background-header;
     
         .icon-header  {
             padding: 10px;
@@ -83,7 +81,7 @@
         right: 0; 
         z-index: 1000;
     
-        @include background-header;
+        @include c.background-header;
         
         .icon-header  {
             padding: 10px;
@@ -119,7 +117,7 @@
             right: 0; 
             z-index: 1000;
         
-            @include background-header;
+            @include c.background-header;
             
             .icon-header  {
                 padding: 10px;
@@ -159,7 +157,7 @@
         right: 0; 
         z-index: 1000;
     
-        @include background-header;
+        @include c.background-header;
         
         .icon-header  {
             padding: 10px;
@@ -204,7 +202,7 @@
         right: 0; 
         z-index: 1000;
     
-        @include background-header;
+        @include c.background-header;
         
         .icon-header  {
             padding: 10px;

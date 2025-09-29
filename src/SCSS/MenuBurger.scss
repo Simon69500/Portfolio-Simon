@@ -1,4 +1,4 @@
-@import './Theme-light-2.scss';
+@use './Colors.scss' as c ;
 
 // Tablette (paysage) ou petit écran de bureau
 @media (max-width: 1024px) {
@@ -17,7 +17,7 @@
             align-items: center;
 
             background: none;
-            color: $dark-13;
+            color: c.$dark-13;
             border: none;
             outline: none;
       
@@ -33,7 +33,7 @@
         }
       
         .menu-detail {
-            @include background-dark;
+            @include c.background-dark;
 
             display: none;
             position: absolute;
@@ -54,7 +54,7 @@
         }
       
         .menu_1 {
-            @include text-ligth;
+            @include c.text-ligth;
 
             display: block;
             text-decoration: none;
