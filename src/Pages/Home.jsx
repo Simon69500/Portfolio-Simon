@@ -6,30 +6,17 @@ import Portfolio from '../sous-pages/Portfolio';
 import Formulaire from '../Component/Formulaire/Formulaire';
 import Footer from '../Component/Footer';
 import Header from '../Component/Header';
-
-import * as React from 'react';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
 
 
 const Home = () => {
 
-    const VisuallyHiddenInput = styled('input')({
-        clip: 'rect(0 0 0 0)',
-        clipPath: 'inset(50%)',
-        height: 1,
-        overflow: 'hidden',
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        whiteSpace: 'nowrap',
-        width: 1,
-      });
-
     return (
-        <>
+        <>  
+        {/* Partie Header */}  
             <Header /> 
+
                 <main id='main'> 
                     {/* Partie Bannière */}
                     <div className='presentation' style={{backgroundImage: `url(${Banniere})`, backgroundPosition: '0% 20%'}}>                    
@@ -48,11 +35,12 @@ const Home = () => {
                     {/* Partie Recherche Emploi */}
                     <div id='Actual'>    
                         <h3 className='title-actual'>Actuellement : </h3>
-                        <p>
-                        Centre Européen de Formation – Formation de <strong className='textStrong'>Développeur Full-Stack</strong> – actuellement en cours.  
-                        <br /><br />
-                        Un <strong className='textStrong'>stage en entreprise</strong> est prévu à partir de <strong>septembre 2025</strong>, pour une durée de 2 mois.
-                        </p>
+                            <p>
+                            Centre Européen de Formation – Formation <strong className='textStrong'>Développeur Web & Mobile - Full Stack</strong> terminée, en attente de l’examen.  
+                            <br /><br />
+                            Un <strong className='textStrong'>stage en entreprise</strong> est prévu à partir de <strong>septembre 2025</strong> pour une durée de 3 mois, afin de valider la formation et passer l’examen.
+                            </p>
+
                     </div>
 
                     {/* Partie Mes compétences + Skill */} 
@@ -64,7 +52,7 @@ const Home = () => {
                     {/* Partie Formulaire */}  
                     <Formulaire />
 
-                    {/* Partie Formulaire */}  
+                    {/* Partie Footer */}  
                     <Footer/>
                 </main>
         </>

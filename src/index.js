@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='index-contenair'>
   <React.StrictMode>
-    <App /> {/* Le composant principal de votre application */}
+    <App />
   </React.StrictMode>
   </div>
 );

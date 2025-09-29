@@ -1,7 +1,5 @@
 import '../../SCSS/Modal/Modal.scss';
 
-import * as React from 'react';
-
 const Modal = ({show , onClose, children, projectId}) => {
 
     // Vérification si le modal doit être affiché

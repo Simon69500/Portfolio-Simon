@@ -1,6 +1,4 @@
-import React from 'react';
-
-import Home from './Pages/Home'; // Exemple d'autre composant
+import Home from './Pages/Home';
 
 function App() {
   

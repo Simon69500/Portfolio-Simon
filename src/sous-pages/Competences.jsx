@@ -2,7 +2,6 @@ import Skills from "../Component/Skills";
 import '../SCSS/Competences.scss';
 import CV from '../asset/CV.jpg';
 
-import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
@@ -41,9 +40,9 @@ const Competences = () => {
                     <Box 
                          sx={{
                             display: 'flex',
-                            flexDirection: 'row', // Pour aligner les boutons horizontalement
-                            justifyContent: 'space-around', // Espace uniforme entre les boutons
-                            alignItems: 'center', // Centrer verticalement
+                            flexDirection: 'row',
+                            justifyContent: 'space-around', 
+                            alignItems: 'center', 
                         }}
                     >
                     <Button className="Button-Competence"

@@ -3,8 +3,6 @@ import Modal from './Modal';
 import ProjetsModal from './ProjetsModal';
 import '../../SCSS/Modal/PortfolioModal.scss';
 import ImageSlider from '../Interface/SwiperImage';
-import * as React from 'react';
-
 import Button from '@mui/material/Button';
 
 

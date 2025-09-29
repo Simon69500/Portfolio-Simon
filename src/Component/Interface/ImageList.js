@@ -1,4 +1,3 @@
-import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -22,10 +21,10 @@ const TitlebarImageList = () => {
     <ImageList sx={{ width: 500, height: 450 }}> 
 
         {projetImages.map((item) => ( 
-                    <ImageListItem key="Subheader"  cols={2}>
-                    <ListSubheader component="div"> Image du projet {item.titre} </ListSubheader>
+              <ImageListItem key="Subheader"  cols={2}>
+                <ListSubheader component="div"> Image du projet {item.titre} </ListSubheader>
               </ImageListItem>
-             ))}
+        ))}
 
       
       {projetImages.map((item) => (
