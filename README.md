@@ -8,10 +8,12 @@ Ce site est une **application single-page (SPA)** où je me présente, partage m
 ---
 
 ## 🌟 Aperçu
+Nouvelle version en production (maquette)
+<img width="1046" height="606" alt="image" src="https://github.com/user-attachments/assets/792b406f-0ed6-45ef-8b59-63272e17777d" />
+
+---
 
 ![portfolio](https://github.com/user-attachments/assets/3f28710c-fb5d-4a50-ac8b-581c1ec50ee2)
-
-
 
 ---
 
