@@ -1,1102 +1,479 @@
-@use '../Colors.scss' as c ;
-
-
-// Très grand écran de bureau
-@media (min-width: 1601px){
+@use "../Colors.scss" as c;
 
 // partie Portfolio
 .portfolio-contenair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 100%;
+  height: 700px;
+
+  .title-portfolio {
+    @include c.title;
+    text-align: center;
+    font-size: xx-large;
+    padding: 20px;
+  }
+
+  .list-portfolio {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
 
     width: 100%;
-    height: 700px;
+    height: 500px;
+    padding: 0px;
+    list-style-type: none;
 
-    .title-portfolio {
-        @include c.text-secondary ;
-        text-align: center;
-        font-size: xx-large;
+    .list-detail-portfolio {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      width: 50%;
+      height: 400px;
+
+      .buton-projet-portfolio {
+        font-size: large;
         padding: 20px;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+
+      .imagePort-id-1 {
+        width: 60%;
+        height: 70%;
+        object-fit: cover;
+      }
+      .imagePort-id-2 {
+        width: 60%;
+        height: 70%;
+        object-fit: fill;
+      }
+      .imagePort-id-3 {
+        width: 60%;
+        height: 70%;
+        object-fit: contain;
+      }
     }
-
-    .list-portfolio {
-        display: flex;
-        flex-direction: row ;
-        justify-content: space-evenly;
-        align-items: center;
-
-        width: 100%;
-        height: 500px;
-        padding: 0px;
-        list-style-type: none; 
-
-        .list-detail-portfolio {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-
-          width: 50%;
-          height: 400px;
-
-            .buton-projet-portfolio {
-                font-size: large;
-                padding:20px;
-                border-radius: 30px;
-                cursor: pointer;
-            }
-
-            .imagePort-id-1 {
-                width: 60%;
-                height: 70%;
-                object-fit: cover ;
-
-            }
-            .imagePort-id-2 {
-                width: 60%;
-                height: 70%;
-                object-fit: fill ;
-
-            }
-            .imagePort-id-3 {
-                width: 60%;
-                height: 70%;
-                object-fit: contain ;
-
-            }
-        }
-    }
+  }
 }
 
-    ///////////////////////////////////////////////////////////////////
- 
+///////////////////////////////////////////////////////////////////
+
 // Balise Modal
 .box-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  @include c.background-tertiary;
+  width: 100%;
+  height: 100%;
+
+  .title-principal-modal {
+    @include c.title;
+    font-size: xx-large;
+    padding: 20px;
+  }
+
+  .card-modal {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    color: c.$dark-2;
+    margin: 20px;
+    padding-top: 10px;
+    text-align: center;
+
+    .title-modal {
+      @include c.title;
+      font-size: x-large;
+      width: 30%;
+      height: 100%;
+      align-content: center;
+    }
+
+    .text-modal {
+      @include c.text;
+
+      width: 60%;
+      height: 100%;
+      padding: 10px;
+      margin: 0px;
+      border-radius: 50px;
+
+      align-content: center;
+      font-size: 20px; /* Taille de la police */
+      line-height: 1.9; /* Espacement entre les lignes */
+      margin: 1em 0; /* Espacement autour du paragraphe */
+      text-align: center; /* Alignement du texte */
+    }
+  }
+
+  .line-modal {
+    border-top: 2px solid #7f7f7f;
+    margin-top: 10px;
+    width: 50%;
+  }
+
+  .card-techno {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
 
-    @include c.background-tertiary-1;
+    height: 50%;
     width: 100%;
-    height: 100%;
 
-    .title-principal-modal {
-        @include c.text-secondary-3 ;
-        font-size: xx-large;
-        padding: 20px;
+    .tech-item {
+      @include c.border-xLigth;
+      @include c.background-tertiary;
+      @include c.title;
+
+      padding: 10px;
     }
+  }
 
-    .card-modal {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+  .link-modal {
+    font-size: large;
+    padding: 20px;
+    text-decoration: none;
+    margin: 20px;
 
-        width: 100%;
-        height: 100%;
-        color: c.$dark-2;
-        margin: 20px;
-        padding-top: 10px;
-        text-align: center;
+    @include c.text;
+    @include c.background-tertiary;
+  }
 
+  .image-id-1 {
+    height: 500px;
+    width: 800px;
+  }
 
-        .title-modal {
-            @include c.text-primary-3;
-            font-size: x-large;
-            width: 30%;
-            height: 100%;
-            align-content: center;
-        }
+  .image-id-2 {
+    height: 500px;
+    width: 800px;
+  }
 
-        .text-modal {
-            @include c.text-ligth-1 ;
-
-            width: 60%;
-            height: 100%;
-            padding: 10px;
-            margin: 0px;
-            border-radius: 50px;
-            
-            align-content: center;
-            font-size: 20px; /* Taille de la police */
-            line-height: 1.9; /* Espacement entre les lignes */
-            margin: 1em 0; /* Espacement autour du paragraphe */
-            text-align: center; /* Alignement du texte */
-        }
-
-    }
-
-    .line-modal {
-        border-top: 2px solid #7F7F7F;
-        margin-top: 10px;
-        width: 50%;
-    }
-
-    .card-techno {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        
-        height: 50%;
-        width: 100%;
-
-        .tech-item {
-            @include c.border-xLigth;
-            @include c.background-tertiary;
-            @include c.text-secondary;
-
-            padding: 10px;            
-        }
-        
-    }
-
-    .link-modal {
-        font-size: large;
-        padding: 20px;
-        text-decoration: none;
-        margin: 20px;
-        
-        @include c.text-ligth;
-        @include c.background-dark;
-    }
-
-    .image-id-1 {
-        height: 500px;
-        width:  800px;
-    }
-    
-    .image-id-2 {
-        height: 500px;
-        width:  800px;
-
-    }
-
-    .image-id-3 {
-        height: 500px;
-        width: 250px;
-
-    }
-}
+  .image-id-3 {
+    height: 500px;
+    width: 250px;
+  }
 }
 
-    ///////////////////////////////////////////////////////////////////
- 
+///////////////////////////////////////////////////////////////////
+
 //Grand écran de bureau
 @media (min-width: 1281px) and (max-width: 1600px) {
-
-    // partie Portfolio
-.portfolio-contenair {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-    width: 100%;
-    height: 700px;
-
-    .title-portfolio {
-        @include c.text-secondary ;
-        text-align: center;
-        font-size: xx-large;
-        padding: 20px;
-    }
-
-    .list-portfolio {
-        display: flex;
-        flex-direction: row ;
-        justify-content: space-evenly;
-        align-items: center;
-
-        width: 100%;
-        height: 500px;
-        padding: 0px;
-        list-style-type: none; 
-
-        .list-detail-portfolio {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-
-          width: 50%;
-          height: 400px;
-
-          .buton-projet-portfolio {
-            font-size: large;
-            padding:20px;
-            border-radius: 30px;
-            cursor: pointer;
-        }
-
-            .imagePort-id-1 {
-                width: 50%;
-                height: 40%;
-                object-fit: cover ;
-
-            }
-            .imagePort-id-2 {
-                width: 50%;
-                height: 40%;
-                object-fit: fill ;
-
-            }
-            .imagePort-id-3 {
-                width: 50%;
-                height: 40%;
-                object-fit: contain ;
-
-            }
-        }
-    }
-}
-
-    ///////////////////////////////////////////////////////////////////
- 
-// Balise Modal
-.box-modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-    @include c.background-tertiary-1;
-    width: 100%;
-    height: 100%;
-
-    .title-principal-modal {
-        @include c.text-secondary-3 ;
-        font-size: xx-large;
-        padding: 20px;
-    }
-
-    .card-modal {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        width: 100%;
-        height: 100%;
-        color: c.$dark-2;
-        margin: 20px;
-        padding-top: 10px;
-        text-align: center;
-
-
-        .title-modal {
-            @include c.text-primary-3;
-            font-size: x-large;
-            width: 30%;
-            height: 100%;
-            align-content: center;
-        }
-
-        .text-modal {
-            @include c.text-ligth-1 ;
-
-            width: 60%;
-            height: 100%;
-            padding: 10px;
-            margin: 0px;
-            
-            align-content: center;
-            font-size: 20px; /* Taille de la police */
-            line-height: 1.9; /* Espacement entre les lignes */
-            margin: 1em 0; /* Espacement autour du paragraphe */
-            text-align: center; /* Alignement du texte */
-        }
-
-    }
-
-    .line-modal {
-        border-top: 2px solid #7F7F7F;
-        margin-top: 10px;
+  // partie Portfolio
+  .portfolio-contenair {
+    .list-detail-portfolio {
+      .imagePort-id-1 {
         width: 50%;
+        height: 40%;
+        object-fit: cover;
+      }
+      .imagePort-id-2 {
+        width: 50%;
+        height: 40%;
+        object-fit: fill;
+      }
+      .imagePort-id-3 {
+        width: 50%;
+        height: 40%;
+        object-fit: contain;
+      }
     }
-
-    .card-techno {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        
-        height: 50%;
-        width: 100%;
-
-        .tech-item {
-            @include c.border-xLigth;
-            @include c.background-tertiary;
-            @include c.text-secondary;
-
-            padding: 10px;
-
-            
-        }
-        
-    }
-
-    .link-modal {
-        font-size: large;
-        padding: 20px;
-        text-decoration: none;
-        margin: 20px;
-        
-        @include c.text-ligth;
-        @include c.background-dark;
-    }
-
-    .image-id-1 {
-        height: 500px;
-        width:  800px;
-    }
-    
-    .image-id-2 {
-        height: 500px;
-        width:  800px;
-
-    }
-
-    .image-id-3 {
-        height: 500px;
-        width: 250px;
-
-    }
-}
+  }
 }
 
-    ///////////////////////////////////////////////////////////////////
- 
+///////////////////////////////////////////////////////////////////
+
+// Balise Modal
+
+///////////////////////////////////////////////////////////////////
+
 //Bureau de taille moyenne
-@media (min-width: 1025px) and (max-width: 1280px)  {
-        // partie Portfolio
-.portfolio-contenair {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-    width: 100%;
-    height: 700px;
-
-    .title-portfolio {
-        @include c.text-secondary ;
-        text-align: center;
-        font-size: xx-large;
-        padding: 20px;
-    }
-
+@media (min-width: 1025px) and (max-width: 1280px) {
+  // partie Portfolio
+  .portfolio-contenair {
     .list-portfolio {
-        display: flex;
-        flex-direction: row ;
-        justify-content: space-evenly;
-        align-items: center;
+      .list-detail-portfolio {
+        .buton-projet-portfolio {
+          padding: 10px;
+        }
 
-        width: 100%;
-        height: 500px;
-        padding: 0px;
-        list-style-type: none; 
-
-        .list-detail-portfolio {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-
+        .imagePort-id-1 {
           width: 50%;
-          height: 400px;
-
-            .buton-projet-portfolio {
-
-                font-size: large;
-                padding:10px;
-                border-radius: 30px;
-            }
-
-            .imagePort-id-1 {
-                width: 50%;
-                height: 40%;
-                object-fit: cover ;
-
-            }
-            .imagePort-id-2 {
-                width: 50%;
-                height: 40%;
-                object-fit: fill ;
-
-            }
-            .imagePort-id-3 {
-                width: 50%;
-                height: 40%;
-                object-fit: contain ;
-            }
+          height: 40%;
+          object-fit: cover;
         }
+        .imagePort-id-2 {
+          width: 50%;
+          height: 40%;
+          object-fit: fill;
+        }
+        .imagePort-id-3 {
+          width: 50%;
+          height: 40%;
+          object-fit: contain;
+        }
+      }
     }
-}
+  }
 
-
-// Balise Modal
-.box-modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-    @include c.background-tertiary-1;
-    width: 100%;
-    height: 100%;
-
-    .title-principal-modal {
-        @include c.text-secondary-3 ;
-        font-size: xx-large;
-        padding: 20px;
-    }
-
+  // Balise Modal
+  .box-modal {
     .card-modal {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+      margin: 10px;
+      padding-top: 10px;
 
-        width: 100%;
-        height: 100%;
-        color: c.$dark-2;
-        margin: 10px;
-        padding-top: 10px;
-        text-align: center;
-
-
-        .title-modal {
-            @include c.text-primary-3;
-            font-size: large;
-            width: 30%;
-            height: 100%;
-            align-content: center;
-        }
-
-        .text-modal {
-            @include c.text-ligth-1;
-
-            width: 60%;
-            height: 100%;
-            padding: 10px;
-            margin: 0px;
-            
-            align-content: center;
-            font-size: 15px; /* Taille de la police */
-            line-height: 1.9; /* Espacement entre les lignes */
-            margin: 1em 0; /* Espacement autour du paragraphe */
-            text-align: center; /* Alignement du texte */
-        }
-
+      .text-modal {
+        font-size: 15px;
+      }
     }
-
-    .line-modal {
-        border-top: 2px solid #7F7F7F;
-        margin-top: 10px;
-        width: 50%;
-    }
-
-    .card-techno {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        
-        height: 50%;
-        width: 100%;
-
-        .tech-item {
-            @include c.border-xLigth;
-            @include c.background-tertiary;
-            @include c.text-secondary;
-
-            padding: 10px;
-
-            
-        }
-        
-    }
-
-    .link-modal {
-        font-size: large;
-        padding: 20px;
-        text-decoration: none;
-        margin: 20px;
-        
-        @include c.text-ligth;
-        @include c.background-dark;
-    }
-
-    .image-id-1 {
-        height: 500px;
-        width:  800px;
-    }
-    
-    .image-id-2 {
-        height: 500px;
-        width:  800px;
-
-    }
-
-    .image-id-3 {
-        height: 500px;
-        width: 250px;
-
-    }
-}
+  }
 }
 
-    ///////////////////////////////////////////////////////////////////
- 
+///////////////////////////////////////////////////////////////////
+
 // Tablette (paysage) ou petit écran de bureau
 @media (min-width: 769px) and (max-width: 1024px) {
-            // partie Portfolio
-.portfolio-contenair {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-    width: 100%;
-    height: 700px;
-
-    .title-portfolio {
-        @include c.text-secondary ;
-        text-align: center;
-        font-size: xx-large;
-        padding: 20px;
-    }
-
+  // partie Portfolio
+  .portfolio-contenair {
     .list-portfolio {
-        display: flex;
-        flex-direction: row ;
-        justify-content: space-evenly;
-        align-items: center;
+      .list-detail-portfolio {
+        width: 30%;
 
-        width: 100%;
-        height: 500px;
-        padding: 0px;
-        list-style-type: none; 
-
-        .list-detail-portfolio {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-
-          width: 30%;
-          height: 400px;
-
-            .buton-projet-portfolio {
-
-                font-size: medium;
-                padding:10px;
-                border-radius: 30px;
-            }
-
-            .imagePort-id-1 {
-                width: 50%;
-                height: 40%;
-                object-fit: cover ;
-
-            }
-            .imagePort-id-2 {
-                width: 50%;
-                height: 40%;
-                object-fit: fill ;
-
-            }
-            .imagePort-id-3 {
-                width: 50%;
-                height: 40%;
-                object-fit: contain ;
-            }
+        .buton-projet-portfolio {
+          font-size: medium;
+          padding: 10px;
         }
+
+        .imagePort-id-1 {
+          width: 50%;
+          height: 40%;
+          object-fit: cover;
+        }
+        .imagePort-id-2 {
+          width: 50%;
+          height: 40%;
+          object-fit: fill;
+        }
+        .imagePort-id-3 {
+          width: 50%;
+          height: 40%;
+          object-fit: contain;
+        }
+      }
     }
-}
+  }
 
-
-// Balise Modal
-.box-modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-    @include c.background-tertiary;
-    width: 100%;
-    height: 100%;
-
-    .title-principal-modal {
-        @include c.text-secondary-3 ;
-        font-size: xx-large;
-        padding: 20px;
-    }
-
+  // Balise Modal
+  .box-modal {
     .card-modal {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+      margin: 10px;
 
+      .text-modal {
         width: 100%;
-        height: 100%;
-        color: c.$dark-2;
-        margin: 10px;
-        padding-top: 10px;
-        text-align: center;
-
-
-        .title-modal {
-            @include c.text-primary-3;
-            font-size: large;
-            width: 30%;
-            height: 100%;
-            align-content: center;
-        }
-
-        .text-modal {
-            @include c.text-ligth-1 ;
-
-            width: 100%;
-            height: 80%;
-            padding: 10px;
-            margin: 0px;
-            
-            align-content: center;
-            font-size: 15px; /* Taille de la police */
-            line-height: 1.9; /* Espacement entre les lignes */
-            margin: 1em 0; /* Espacement autour du paragraphe */
-            text-align: center; /* Alignement du texte */
-        }
-
-    }
-
-    .line-modal {
-        border-top: 2px solid #7F7F7F;
-        margin-top: 10px;
-        width: 50%;
+        height: 80%;
+        font-size: 15px;
+      }
     }
 
     .card-techno {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        
-        height: 50%;
-        width: 100%;
-
-        .tech-item {
-            @include c.border-xLigth;
-            @include c.background-tertiary;
-            @include c.text-secondary;
-
-            padding: 10px;
-            font-size: x-small;
-            
-        }
-        
+      .tech-item {
+        font-size: x-small;
+      }
     }
 
     .link-modal {
-        font-size: medium;
-        padding: 10px;
-        text-decoration: none;
-        margin: 10px;
-        
-        @include c.text-ligth;
-        @include c.background-dark;
+      font-size: medium;
+      padding: 10px;
+      margin: 10px;
     }
-
-    .image-id-1 {
-        height: 500px;
-        width:  800px;
-    }
-    
-    .image-id-2 {
-        height: 500px;
-        width:  800px;
-
-    }
-
-    .image-id-3 {
-        height: 500px;
-        width: 250px;
-
-    }
-}
+  }
 }
 
-    ///////////////////////////////////////////////////////////////////
- 
+///////////////////////////////////////////////////////////////////
+
 // Tablette (portrait)
 @media (min-width: 481px) and (max-width: 768px) {
-
- // partie Portfolio
-.portfolio-contenair {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-    width: 100%;
+  // partie Portfolio
+  .portfolio-contenair {
     height: 100%;
-
-    .title-portfolio {
-        @include c.text-secondary ;
-        text-align: center;
-        font-size: x-large;
-    }
 
     .list-portfolio {
-        display: flex;
-        flex-direction: column ;
-        justify-content: space-evenly;
-        align-items: center;
+      height: 100%;
 
-        width: 100%;
-        height: 100%;
-        padding: 0px;
-        list-style-type: none; 
+      .list-detail-portfolio {
+        width: 90%;
+        height: 400px;
 
-        .list-detail-portfolio {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-
-          width: 90%;
-          height: 400px;
-
-            .buton-projet-portfolio {
-
-                font-size: medium;
-                padding:10px;
-                border-radius: 30px;
-            }
-
-            .imagePort-id-1 {
-                width: 50%;
-                height: 50%;
-                object-fit: cover ;
-
-            }
-            .imagePort-id-2 {
-                width: 50%;
-                height: 50%;
-                object-fit: fill ;
-
-            }
-            .imagePort-id-3 {
-                width: 60%;
-                height: 50%;
-                object-fit: contain ;
-            }
+        .buton-projet-portfolio {
+          font-size: medium;
+          padding: 10px;
         }
+
+        .imagePort-id-1 {
+          width: 50%;
+          height: 50%;
+          object-fit: cover;
+        }
+        .imagePort-id-2 {
+          width: 50%;
+          height: 50%;
+          object-fit: fill;
+        }
+        .imagePort-id-3 {
+          width: 60%;
+          height: 50%;
+          object-fit: contain;
+        }
+      }
     }
-}
+  }
 
-
-// Balise Modal
-.box-modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-    @include c.background-tertiary;
-    width:100%;
-    height: 100%;
-
+  // Balise Modal
+  .box-modal {
     .title-principal-modal {
-        @include c.text-secondary-3 ;
-        font-size: x-large;
-        text-align: center;
-        padding: 10px;
-        margin: 0;
-        width: 400px;
+      font-size: x-large;
+      text-align: center;
+      padding: 10px;
+      margin: 0;
+      width: 400px;
     }
 
     .card-modal {
+      margin: 10px;
+
+      .title-modal {
+        font-size: medium;
+        width: 100%;
+        margin: 0;
+      }
+
+      .text-modal {
+        width: 80%;
+        height: 80%;
+        font-size: 13px;
+      }
+
+      .card-techno {
+        .tech-item {
+          font-size: small;
+          padding: 5px;
+        }
+      }
+
+      .link-modal {
+        font-size: x-small;
+        margin: 10px;
+      }
+    }
+  }
+}
+  ///////////////////////////////////////////////////////////////////
+
+  // Petit écran mobile (portrait)
+  @media (max-width: 480px) {
+    // partie Portfolio
+    .portfolio-contenair {
+      height: 100%;
+
+      .title-portfolio {
+        font-size: x-large;
+      }
+
+      .list-portfolio {
         display: flex;
         flex-direction: column;
-        align-items: center;
-
-        width: 100%;
-        height: 100%;
-        color: c.$dark-2;
-        margin: 10px;
-        padding-top: 10px;
-        text-align: center;
-
-
-        .title-modal {
-            @include c.text-primary-3;
-            font-size: normal;
-            width: 100%;
-            height: 100%;
-            align-content: center;
-            margin: 0;
-        }
-
-        .text-modal {
-            @include c.text-ligth-1 ;
-
-            width: 80%;
-            height: 80%;
-            padding: 10px;
-            margin: 0px;
-            
-            align-content: center;
-            font-size: 13px; /* Taille de la police */
-            line-height: 1.9; /* Espacement entre les lignes */
-            margin: 1em 0; /* Espacement autour du paragraphe */
-            text-align: center; /* Alignement du texte */
-        }
-
-    }
-
-    .line-modal {
-          border-top: 2px solid #7F7F7F;
-        margin-top: 10px;
-        width: 50%;
-    }
-
-    .card-techno {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        
-        height: 50%;
-        width: 100%;
-
-        .tech-item {
-            @include c.border-xLigth;
-            @include c.background-tertiary;
-            @include c.text-secondary;
-
-            font-size: small;
-            padding: 5px;
-
-            
-        }
-        
-    }
-
-    .link-modal {
-        font-size: x-small;
-        text-decoration: none;
-        margin: 10px;
-        
-        @include c.text-ligth;
-        @include c.background-dark;
-    }
-
-    .image-id-1 {
-        height: 500px;
-        width:  800px;
-    }
-    
-    .image-id-2 {
-        height: 500px;
-        width:  800px;
-
-    }
-
-    .image-id-3 {
-        height: 500px;
-        width: 250px;
-
-    }
-}
-}
-
-    ///////////////////////////////////////////////////////////////////
- 
- // Petit écran mobile (portrait)
- @media (max-width: 480px) {
-     // partie Portfolio
-.portfolio-contenair {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-    width: 100%;
-    height: 100%;
-
-    .title-portfolio {
-        @include c.text-secondary ;
-        text-align: center;
-        font-size: x-large;
-    }
-
-    .list-portfolio {
-        display: flex;
-        flex-direction: column ;
         justify-content: space-evenly;
         align-items: center;
 
-        width: 100%;
-        height: 100%;
-        padding: 0px;
-        list-style-type: none; 
-
         .list-detail-portfolio {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-
           width: 90%;
-          height: 400px;
 
-            .buton-projet-portfolio {
+          .buton-projet-portfolio {
+            font-size: medium;
+            padding: 10px;
+          }
 
-                font-size: medium;
-                padding:10px;
-                border-radius: 30px;
-            }
-
-            .imagePort-id-1 {
-                width: 60%;
-                height: 50%;
-                object-fit: cover ;
-
-            }
-            .imagePort-id-2 {
-                width: 60%;
-                height: 50%;
-                object-fit: fill ;
-
-            }
-            .imagePort-id-3 {
-                width: 60%;
-                height: 50%;
-                object-fit: contain ;
-
-            }
+          .imagePort-id-1 {
+            width: 60%;
+            height: 50%;
+            object-fit: cover;
+          }
+          .imagePort-id-2 {
+            width: 60%;
+            height: 50%;
+            object-fit: fill;
+          }
+          .imagePort-id-3 {
+            width: 60%;
+            height: 50%;
+            object-fit: contain;
+          }
         }
+      }
     }
-}
 
-
-// Balise Modal
-.box-modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-    @include c.background-tertiary;
-    width:100%;
-    height: 100%;
-
-    .title-principal-modal {
-        @include c.text-secondary-3 ;
+    // Balise Modal
+    .box-modal {
+      .title-principal-modal {
+        @include c.title;
         font-size: x-large;
         text-align: center;
         padding: 10px;
         margin: 0;
         width: 300px;
-    }
+      }
 
-    .card-modal {
+      .card-modal {
         display: flex;
         flex-direction: column;
         align-items: center;
-        @include c.background-tertiary;
-
-        width: 100%;
-        height: 100%;
-        color: c.$dark-2;
         margin: 10px;
-        padding-top: 10px;
-        text-align: center;
-
 
         .title-modal {
-            @include c.text-primary-3;
-            font-size: normal;
-            width: 100%;
-            height: 20%;
-            align-content: center;
-            margin: 0;
+          font-size: medium;
+          width: 100%;
+          height: 20%;
+          margin: 0;
         }
 
         .text-modal {
-            @include c.text-ligth-1 ;
-
-            width: 80%;
-            height: 80%;
-            padding: 10px;
-            margin: 0px;
-            
-            align-content: center;
-            font-size: 13px; /* Taille de la police */
-            line-height: 1.9; /* Espacement entre les lignes */
-            margin: 1em 0; /* Espacement autour du paragraphe */
-            text-align: center; /* Alignement du texte */
+          width: 80%;
+          height: 80%;
+          font-size: 13px;
         }
+      }
 
-    }
-
-    .line-modal {
-        border-top: 2px solid #7F7F7F;
-        margin-top: 10px;
-        width: 50%;
+      .line-modal {
         @include c.background-tertiary;
-    }
+      }
 
-    .card-techno {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
+      .card-techno {
         @include c.background-tertiary;
-        
-        height:50%;
-        width: 100%;
 
         .tech-item {
-            @include c.border-xLigth;
-            @include c.background-tertiary;
-            @include c.text-secondary;
-
-            font-size: xx-small;
-            padding: 5px; 
-
-            
+          font-size: xx-small;
+          padding: 5px;
         }
-        
-    }
+      }
 
-    .link-modal {
+      .link-modal {
         font-size: x-small;
-        text-decoration: none;
         margin: 10px;
-        
-        @include c.text-ligth;
-        @include c.background-dark;
+      }
     }
+  }
 
-    .image-id-1 {
-        height: 500px;
-        width:  800px;
-    }
-    
-    .image-id-2 {
-        height: 500px;
-        width:  800px;
-
-    }
-
-    .image-id-3 {
-        height: 500px;
-        width: 250px;
-
-    }
-}
- }

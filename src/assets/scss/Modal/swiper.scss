@@ -4,89 +4,69 @@
   width: 100%;
   height: 100%;
   max-width: 1200px;
-  margin: 0 auto; /* Center the swiper on the page */
+  margin: 0 auto; /* Center the swiper */
 }
 
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #5d5d5d00; /* Background for empty slides */
+  background-color: transparent; /* Background for empty slides */
 }
 
 .swiper {
-  height: 100%; /* Taille spécifique pour les projets desktop */
   width: 100%;
+  height: 100%;
 }
 
-/* Styles pour les images Desktop */
+/* Desktop image styles */
 .desktop-image {
-  object-fit: contain; /* Préserve les proportions */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  width: 100%; /* Largeur complète */
-  height: 100%; /* Hauteur automatique pour éviter les déformations */
 }
 
-/* Styles pour les images Mobile */
+/* Mobile image styles (default mobile-first) */
 .mobile-image {
-  object-fit: contain; /* Remplissage complet pour mobile */
-  width: 40%; /* Largeur complète */
-  height: 40%; /* Hauteur automatique pour éviter les déformations */
+  width: 40%;
+  height: 40%;
+  object-fit: contain;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-    ///////////////////////////////////////////////////////////////////
- 
-/* Mobile-first styles */
+/* Navigation buttons default */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
+
+/* Tablet landscape */
 @media (min-width: 481px) and (max-width: 768px) {
   .swiper {
-    height: 200px;
     width: 400px;
+    height: 200px;
   }
 
-  /* Make the navigation buttons larger and easier to click on mobile */
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+  .mobile-image {
+    width: 30%;
+    height: 30%;
   }
-
-  /* Styles pour les images Mobile */
-.mobile-image {
-  object-fit: contain; /* Remplissage complet pour mobile */
-  width: 30%; /* Largeur complète */
-  height: 30%; /* Hauteur automatique pour éviter les déformations */
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
 }
 
-    ///////////////////////////////////////////////////////////////////
- 
- // Petit écran mobile (portrait)
- @media (max-width: 480px) {
+/* Small mobile */
+@media (max-width: 480px) {
   .swiper {
-    height: 150px;
     width: 200px;
+    height: 150px;
   }
 
-  /* Make the navigation buttons larger and easier to click on mobile */
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+  .mobile-image {
+    width: 30%;
+    height: 30%;
   }
-
-  /* Styles pour les images Mobile */
-.mobile-image {
-  object-fit: contain; /* Remplissage complet pour mobile */
-  width: 30%; /* Largeur complète */
-  height: 30%; /* Hauteur automatique pour éviter les déformations */
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
- }

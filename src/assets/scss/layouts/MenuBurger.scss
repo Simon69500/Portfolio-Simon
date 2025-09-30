@@ -17,7 +17,7 @@
             align-items: center;
 
             background: none;
-            color: c.$dark-13;
+            color: c.$Title;
             border: none;
             outline: none;
       
@@ -33,7 +33,7 @@
         }
       
         .menu-detail {
-            @include c.background-dark;
+            @include c.background-header;
 
             display: none;
             position: absolute;
@@ -54,7 +54,7 @@
         }
       
         .menu_1 {
-            @include c.text-ligth;
+            @include c.text;
 
             display: block;
             text-decoration: none;

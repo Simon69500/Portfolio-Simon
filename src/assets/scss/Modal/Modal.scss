@@ -1,22 +1,20 @@
 @use '../Colors.scss' as c ;
 
-//Très grand écran de bureau
-@media (min-width: 1601px){
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width:100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    @include c.trans-4;
+    @include c.text;
 
     .modal-content-1 {
-        @include c.background-tertiary-1;
+        @include c.background-tertiary;
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -36,7 +34,7 @@
     }
 
     .modal-content-2 {
-        @include c.background-tertiary-1;
+        @include c.background-tertiary;
 
         display: flex;
         flex-direction: column;
@@ -53,7 +51,7 @@
      }
 
      .modal-content-3 {
-        @include c.background-tertiary-1;
+        @include c.background-tertiary;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -68,54 +66,21 @@
  
      }
 }
-}
 
     ///////////////////////////////////////////////////////////////////
  
 // Grand écran de bureau 
 @media (min-width: 1281px) and (max-width: 1600px) {
     .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        @include c.trans-4;
-    
-        .modal-content-1 {
-        @include c.background-tertiary-1;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           justify-content: center;
-          
+        .modal-content-1 {        
            width: 80%; 
            height: 80%;
-           padding: 20px; 
-           overflow-y: auto; 
-           box-shadow: 0 0 10px #D5E2FF;
-           border-radius: 10px;
         }
     
         .modal-content-2 {
-        @include c.background-tertiary-1;
-    
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-           
             width: 80%; 
             height: 80%;
-            padding: 20px; 
-            overflow-y: auto; 
-            border-radius: 10px;
-     
+
              .button-close-modal {
                  @include c.button ;
                  width: 15px;
@@ -126,25 +91,14 @@
          }
     
          .modal-content-3 {
-        @include c.background-tertiary-1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-           
             width:80%; 
             height: 80%;
             padding: 20px; 
-            overflow-y: auto; 
-            box-shadow: 0 0 10px #D5E2FF;
-            border-radius: 10px;
      
              .button-close-modal {
-                 @include c.button ;
                  width: 15px;
                  height: 20px;
                  padding: 0;
-                 align-self: self-end;
              }
          }
     }
@@ -155,55 +109,22 @@
 //Bureau de taille moyenne
 @media (min-width: 1025px) and (max-width: 1280px) {
     .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        @include c.trans-4;
-    
         .modal-content-1 {
-        @include c.background-tertiary-1;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           justify-content: center;
-          
+        @include c.background-tertiary;       
            width: 90%; 
            height: 70%;
-           padding: 20px; 
-           overflow-y: auto; 
-           box-shadow: 0 0 10px #D5E2FF;
-           border-radius: 10px;
     
             .button-close-modal {
-                @include c.button ;
                 width: 15px;
                 height: 20px;
                 padding: 0;
-                align-self: self-end;
+
             }
         }
     
-        .modal-content-2 {
-        @include c.background-tertiary-1;
-    
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-           
+        .modal-content-2 {         
             width: 80%; 
             height: 80%;
-            padding: 20px; 
-            overflow-y: auto;
-            box-shadow: 0 0 10px #D5E2FF;
-            border-radius: 10px;
      
              .button-close-modal {
                  @include c.button ;
@@ -214,19 +135,9 @@
              }
          }
     
-         .modal-content-3 {
-        @include c.background-tertiary-1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-           
+         .modal-content-3 {     
             width:80%; 
             height: 80%;
-            padding: 20px; 
-            overflow-y: auto; 
-            box-shadow: 0 0 10px #D5E2FF;
-            border-radius: 10px;
      
              .button-close-modal {
                  @include c.button ;
@@ -244,56 +155,21 @@
 // Tablette (paysage) ou petit écran de bureau
 @media (min-width: 769px) and (max-width: 1024px) {
     .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        @include c.trans-4;
-    
-        .modal-content-1 {
-            @include c.background-tertiary;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           justify-content: center;
-          
+        .modal-content-1 {         
            width: 90%; 
            height: 70%;
-           padding: 20px; 
-           overflow-y: auto; 
-           box-shadow: 0 0 10px #D5E2FF;
-           border-radius: 10px;
     
             .button-close-modal {
-                @include c.button ;
                 width: 15px;
                 height: 20px;
                 padding: 0;
-                align-self: self-end;
             }
         }
     
         .modal-content-2 {
-            @include c.background-tertiary;
-    
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-           
-            width: 90%; 
             height: 80%;
             padding: 10px; 
-            overflow-y: auto;
-            box-shadow: 0 0 10px #D5E2FF;
-            border-radius: 10px;
-     
+
              .button-close-modal {
                  @include c.button ;
                  width: 15px;
@@ -304,18 +180,7 @@
          }
     
          .modal-content-3 {
-            @include c.background-tertiary;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-           
-            width:90%; 
             height: 80%;
-            padding: 20px; 
-            overflow-y: auto; 
-            box-shadow: 0 0 10px #D5E2FF;
-            border-radius: 10px;
      
              .button-close-modal {
                  @include c.button ;
@@ -333,55 +198,18 @@
 // Tablette (portrait)
 @media (min-width: 481px) and (max-width: 768px) {
     .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        @include c.trans-4;
-    
         .modal-content-1 {
-            @include c.background-tertiary;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           justify-content: center;
-          
-           width: 90%; 
-           height: 90%;
            padding: 20px 10px; 
-           overflow-y: auto; 
-           box-shadow: 0 0 10px #D5E2FF;
-           border-radius: 10px;
     
             .button-close-modal {
-                @include c.button ;
                 width: 15px;
                 height: 20px;
                 padding: 0;
-                align-self: self-end;
             }
         }
     
         .modal-content-2 {
-            @include c.background-tertiary;
-    
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-           
-            width: 90%; 
-            height: 90%;
             padding: 20px 10px; 
-            overflow-y: auto;
-            box-shadow: 0 0 10px #D5E2FF;
-            border-radius: 10px;
      
              .button-close-modal {
                  @include c.button ;
@@ -393,18 +221,7 @@
          }
     
          .modal-content-3 {
-            @include c.background-tertiary;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-           
-            width: 90%; 
-            height: 90%;
             padding: 20px 10px; 
-            overflow-y: auto; 
-            box-shadow: 0 0 10px #D5E2FF;
-            border-radius: 10px;
      
              .button-close-modal {
                  @include c.button ;
@@ -422,55 +239,19 @@
  // Petit écran mobile (portrait)
  @media (max-width: 480px) {
     .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        @include c.trans-4;
-    
-        .modal-content-1 {
-            @include c.background-tertiary;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           justify-content: center;
-          
+        .modal-content-1 {       
            width: 90%; 
            height: 750px;
-           padding-top: 20px; 
-           overflow-y: auto; 
-           box-shadow: 0 0 10px #D5E2FF;
-           border-radius: 10px;
-    
+
             .button-close-modal {
-                @include c.button ;
                 width: 15px;
                 height: 20px;
                 padding: 0;
-                align-self: self-end;
             }
         }
     
         .modal-content-2 {
-            @include c.background-tertiary;
-    
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-           
-            width: 90%; 
             height: 750px;
-            padding-top: 20px; 
-            overflow-y: auto;
-            box-shadow: 0 0 10px #D5E2FF;
-            border-radius: 10px;
      
              .button-close-modal {
                  @include c.button ;
@@ -482,20 +263,9 @@
          }
     
          .modal-content-3 {
-            @include c.background-tertiary;
-        
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            width: 90%; 
             height: 750px;
             padding-top: 20px; 
-            overflow-y: auto; 
-            box-shadow: 0 0 10px #D5E2FF;
-            border-radius: 10px;
-     
+                 
              .button-close-modal {
                  @include c.button ;
                  width: 15px;

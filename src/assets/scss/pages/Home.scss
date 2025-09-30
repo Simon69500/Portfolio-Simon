@@ -1,594 +1,114 @@
-@use '../Colors.scss' as c ;
+@use '../Colors.scss' as c;
 
-// Très grand écran de bureau
-@media (min-width: 1601px) {
-        #main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-    
-            @include c.background-primary;
-    
-            .presentation {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-    
-                position: relative;
-                background-size: cover ;
-                background-position: center ;
-                
-                
-                
-                height: 500px;
-                width: 100%;
-    
-                .title_name {
-                    @include c.text-primary-1;
-                    margin-bottom: 5px;
-                    font-size: xxx-large;
-                    
-                }
-    
-                .title_profession {
-                    @include c.text-primary-1 ;
-                    margin: 0px;
-                    text-align: center;
-                }
-            }
-            
-            #Actual {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-    
-                @include c.background-secondary;
-                @include c.border-medium;
-                
-                width: 100%;
-                height: 250px;
+// Styles communs à tous les écrans
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @include c.background-primary;
 
-            
-    
-                .title-actual {
-                    @include c.text-primary;
-                    font-size: xx-large;
-                    margin-bottom: 0px;
-                }
-    
-                p {
-                    @include c.text-muted-1;
-                    text-align: center;
-
-                    .textStrong {
-                        @include c.text-muted;
-                        font-weight: bold;
-                    }
-    
-                    .link-ecole {
-                        text-decoration: none;
-                        @include c.text-primary;
-                    }
-                }
-            }
-    
-    
-            .formulaire {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                height: 500px;
-    
-                .form {
-                    display: flex;
-                    flex-direction: column;
-    
-                    input {
-                        margin: 10px 0px ;
-                    }
-    
-                    textarea {
-                        padding: 100px;
-                    }
-                    
-                }
-            }
-        }
-    }
- 
-    ///////////////////////////////////////////////////////////////////
-     
-// Grand écran de bureau
-@media (min-width: 1281px) and (max-width: 1600px) {
-    #main {
+    .presentation {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        height: 500px;
         width: 100%;
 
-        @include c.background-primary;
-
-        .presentation {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            position: relative;
-            background-size: cover ;
-            background-position: center ;
-            
-            
-            
-            height: 500px;
-            width: 100%;
-
-            .title_name {
-                @include c.text-primary-1;
-                margin-bottom: 5px;
-                font-size: xxx-large;
-                
-            }
-                
-            }
-
-            .title_profession {
-                @include c.text-primary-1 ;
-                margin: 0px;
-                text-align: center;
-            }
-        }
-        
-        #Actual {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            @include c.background-secondary;
-            @include c.border-medium;
-            
-            width: 100%;
-            height: 250px;
-        
-
-            .title-actual {
-                @include c.text-primary;
-                font-size: xx-large;
-                margin-bottom: 0px;
-            }
-
-            p {
-                @include c.text-muted-1;
-                text-align: center;
-
-                .link-ecole {
-                    text-decoration: none;
-                    @include c.text-primary;
-                }
-            }
+        .title_name {
+            @include c.title;
+            margin-bottom: 5px;
+            font-size: xxx-large;
         }
 
-
-        .formulaire {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 500px;
-
-            .form {
-                display: flex;
-                flex-direction: column;
-
-                input {
-                    margin: 10px 0px ;
-                }
-
-                textarea {
-                    padding: 100px;
-                }
-                
-            }
+        .title_profession {
+            @include c.title;
+            margin: 0;
+            text-align: center;
         }
     }
 
-    ///////////////////////////////////////////////////////////////////
-  
-// Bureau de taille moyenne
-@media (min-width: 1025px) and (max-width: 1280px) {
-    #main {
+    #Actual {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        @include c.background-secondary;
+        @include c.border-medium;
+        width: 100%;
+        height: 250px;
 
-        @include c.background-primary;
-
-        .presentation {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            position: relative;
-            background-size: cover ;
-            background-position: center ;
-            
-            
-            
-            height: 500px;
-            width: 100%;
-
-            .title_name {
-                @include c.text-primary-1;
-                margin-bottom: 5px;
-                font-size: xxx-large;
-                
-            }
-
-            .title_profession {
-                @include c.text-primary-1 ;
-                margin: 0px;
-                text-align: center;
-            }
+        .title-actual {
+            @include c.title;
+            font-size: xx-large;
+            margin-bottom: 0;
         }
-        
-        #Actual {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
 
-            background-color: #9eb5ca;
-            @include c.border-medium;
-            
-            width: 100%;
-            height: 250px;
-        
+        p {
+            @include c.text;
+            text-align: center;
+            line-height: 1.6;
 
-            .title-actual {
-                @include c.text-primary;
-                font-size: xx-large;
-                margin-bottom: 0px;
+            .textStrong {
+                font-weight: bold;
             }
 
-            p {
-                @include c.text-muted-1;
-                text-align: center;
-
-                .link-ecole {
-                    text-decoration: none;
-                    @include c.text-primary;
-                }
+            .link-ecole {
+                text-decoration: none;
+                @include c.title;
             }
         }
 
+        .buttonActual {
+            font-size: x-small;
+            margin: 5px;
+        }
+    }
 
-        .formulaire {
+    .formulaire {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+
+        .form {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 500px;
 
-            .form {
-                display: flex;
-                flex-direction: column;
+            input {
+                margin: 10px 0;
+            }
 
-                input {
-                    margin: 10px 0px ;
-                }
-
-                textarea {
-                    padding: 100px;
-                }
-                
+            textarea {
+                padding: 100px;
             }
         }
     }
 }
 
-    ///////////////////////////////////////////////////////////////////
-    
-//Tablette (paysage) ou petit écran de bureau
+// Media queries — uniquement ce qui change
+@media (min-width: 1281px) and (max-width: 1600px) {
+    #Actual p { font-size: medium; }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    #Actual { height: 250px; }
+    #Actual p { font-size: medium; }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
-        #main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-    
-            @include c.background-primary;
-    
-            .presentation {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-    
-                position: relative;
-                background-size: cover ;
-                background-position: center ;
-                
-                
-                
-                height: 500px;
-                width: 100%;
-    
-                .title_name {
-                    @include c.text-primary-1;
-                    margin-bottom: 5px;
-                    font-size: xxx-large;
-                    
-                }
-    
-                .title_profession {
-                    @include c.text-primary-1 ;
-                    margin: 0px;
-                    text-align: center;
-                }
-            }
-            
-            #Actual {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-    
-                @include c.background-secondary;
-                
-                width: 100%;
-                height:100%;
-            
-    
-                .title-actual {
-                    @include c.text-primary;
-                    font-size: x-large;
-                    margin-bottom: 0px;
-                }
-    
-                p {
-                    @include c.text-muted-1;
-                    text-align: center;
-                    font-size: medium;
-    
-                    .link-ecole {
-                        text-decoration: none;
-                        @include c.text-primary;
-                    }
-                }
-            }
-    
-    
-            .formulaire {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                height: 500px;
-    
-                .form {
-                    display: flex;
-                    flex-direction: column;
-    
-                    input {
-                        margin: 10px 0px ;
-                    }
-    
-                    textarea {
-                        padding: 100px;
-                    }
-                    
-                }
-            }
-        }
-    }
+    #Actual p { font-size: medium; }
+}
 
-    ///////////////////////////////////////////////////////////////////
- 
-// Tablette (portrait)
 @media (min-width: 481px) and (max-width: 768px) {
-    #main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+    #Actual p { font-size: medium; width: 70%; }
+}
 
-        @include c.background-primary;
-
-        .presentation {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            position: relative;
-            background-size: cover ;
-            background-position: center ;
-            
-            
-            
-            height: 500px;
-            width: 100%;
-
-            .title_name {
-                @include c.text-primary-1;
-                margin-bottom: 5px;
-                font-size: xxx-large;
-                
-            }
-
-            .title_profession {
-                @include c.text-primary-1 ;
-                margin: 0px;
-                text-align: center;
-            }
-        }
-        
-        #Actual {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            @include c.background-secondary;
-            
-            width: 100%;
-            height: 100%;
-        
-
-            .title-actual {
-                @include c.text-primary;
-                font-size: x-large;
-                margin-bottom: 0px;
-            }
-
-            p {
-                @include c.text-muted-1;
-                text-align: center;
-                font-size: medium;
-                width: 70%;
-                line-height: 1.6; /* Espacement entre les lignes */
-
-                .link-ecole {
-                    text-decoration: none;
-                    @include c.text-primary;
-                }
-            }
-
-            .buttonActual {
-                font-size: x-small;
-                margin: 5px;
-            }
-        }
-
-
-        .formulaire {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 500px;
-
-            .form {
-                display: flex;
-                flex-direction: column;
-
-                input {
-                    margin: 10px 0px ;
-                }
-
-                textarea {
-                    padding: 100px;
-                }
-                
-            }
-        }
-    }
-}    
-
-    ///////////////////////////////////////////////////////////////////
- 
- // Petit écran mobile (portrait)
- @media (max-width: 480px) {
-    #main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-
-        @include c.background-primary;
-
-        .presentation {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            position: relative;
-            background-size: cover ;
-            background-position: center ;
-            
-            
-            
-            height: 500px;
-            width: 100%;
-
-            .title_name {
-                @include c.text-primary-1;
-                margin-bottom: 5px;
-                font-size: xxx-large;
-                
-            }
-
-            .title_profession {
-                @include c.text-primary-1 ;
-                margin: 0px;
-                text-align: center;
-            }
-        }
-        
-        #Actual {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            @include c.background-secondary;
-            
-            width: 100%;
-            height: 100%;
-        
-
-            .title-actual {
-                @include c.text-primary;
-                font-size: x-large;
-                margin-bottom: 0px;
-            }
-
-            p {
-                @include c.text-muted-1;
-                text-align: center;
-                font-size: medium;
-                width: 70%;
-                line-height: 1.6; /* Espacement entre les lignes */
-
-                .link-ecole {
-                    text-decoration: none;
-                    @include c.text-primary;
-                }
-            }
-
-            .buttonActual {
-                font-size: x-small;
-                margin: 5px;
-            }
-        }
-
-
-        .formulaire {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 500px;
-
-            .form {
-                display: flex;
-                flex-direction: column;
-
-                input {
-                    margin: 10px 0px ;
-                }
-
-                textarea {
-                    padding: 100px;
-                }
-                
-            }
-        }
-    }
- }
+@media (max-width: 480px) {
+    #Actual p { font-size: medium; width: 70%; }
+}

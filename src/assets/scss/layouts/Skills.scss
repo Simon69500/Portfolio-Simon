@@ -1,7 +1,5 @@
 @use '../Colors.scss' as c ;
 
-// Très grand écran de bureau
-@media (min-width: 1601px){
 .contenair-skills {
     display: flex;
     flex-direction: column;
@@ -15,9 +13,8 @@
     
 
     border-radius: 30px;
-
-
 }
+
 .skill-card-title {
     display: flex;
     flex-direction: column;
@@ -25,13 +22,14 @@
     margin-bottom: 20px;
 
     .skill-title-1{
-        @include c.text-primary-2;
+        @include c.text;
         text-align: center;
         font-size: xx-large;
         margin: 0;
         padding: 10px;
     }
 }
+
 .skill-category {
     width: 80%;
     padding: 10px;
@@ -48,8 +46,7 @@
     }
 }
 
-
-    .skill-card-logo {
+.skill-card-logo {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -61,7 +58,7 @@
         .skill-name {
             font-weight:  bold;
             font-size: normal ;
-            @include c.text-ligth;
+            @include c.text;
             padding: 10px;
         }
 
@@ -77,328 +74,62 @@
             }
         }
     }
-}
 
-    ///////////////////////////////////////////////////////////////////
  
 // Grand écran de bureau
 @media (min-width: 1281px) and (max-width: 1600px) {
-    .contenair-skills {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    
-        width: 100%;
-        margin: 30px;
-        padding: 10px;
-        text-align: center;
-        
-    
-        border-radius: 30px;
-    
-    
-    }
-    .skill-card-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    
-        .skill-title-1{
-            @include c.text-primary-2;
-            text-align: center;
-            font-size: xx-large;
-            margin: 0;
-            padding: 10px;
-        }
-    }
     
     .skill-category {
-        width: 80%;
-        padding: 10px;
-        margin: 10px;
-    
         .skill-title-2 {
-            color: c.$dark-11;
-            text-align: center;
-            font-size: x-large;
             border-top:  solid c.$dark-2 ;
-            padding: 10px;
-            margin: 0;
-            padding: 10px;
         }
     }
-        .skill-card-logo {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-    
-            width: 100%;
-            width: 100%;
-    
-            .skill-name {
-                font-weight:  bold;
-                font-size: normal ;
-                @include c.text-dark;
-                padding: 10px;
-            }
-    
-            .skill-img {
-                height: 50px;
-                width: 50px;
-                padding: 10px;
-    
-                &:hover {
-                    transform: scale(1.3) rotate(2deg);
-                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-                    border-radius: 50px;
-                }
-            }
-        }
     }
 
     ///////////////////////////////////////////////////////////////////
  
 // Bureau de taille moyenne
 @media (min-width: 1025px) and (max-width: 1280px) {
-    .contenair-skills {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    
-        width: 100%;
-        margin: 30px;
-        padding: 10px;
-        text-align: center;
-        
-    
-        border-radius: 30px;
-    
-    
-    }
-    .skill-card-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    
-        .skill-title-1{
-            @include c.text-primary-2;
-            text-align: center;
-            font-size: xx-large;
-            margin: 0;
-            padding: 10px;
-        }
-    }
     
     .skill-category {
-        width: 80%;
-        padding: 10px;
-        margin: 10px;
-    
         .skill-title-2 {
-            color: c.$dark-11;
-            text-align: center;
-            font-size: x-large;
+            color: c.$text;
             border-top:  solid c.$dark-2 ;
-            padding: 10px;
-            margin: 0;
-            padding: 10px;
         }
     }
-        .skill-card-logo {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-    
-            width: 100%;
-            width: 100%;
-    
-            .skill-name {
-                font-weight:  bold;
-                font-size: normal ;
-                @include c.text-dark;
-                padding: 10px;
-            }
-    
-            .skill-img {
-                height: 50px;
-                width: 50px;
-                padding: 10px;
-    
-                &:hover {
-                    transform: scale(1.3) rotate(2deg);
-                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-                    border-radius: 50px;
-                }
-            }
-        }
 }
 
     ///////////////////////////////////////////////////////////////////
  
 // Tablette (paysage) ou petit écran de bureau
 @media (min-width: 769px) and (max-width: 1024px) {
-    .contenair-skills {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    
-        width: 100%;
-        margin: 30px;
-        padding: 10px;
-        text-align: center;
-        
-    
-        border-radius: 30px;
-    
-    
-    }
-    .skill-card-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    
-        .skill-title-1{
-            @include c.text-primary-2;
-            text-align: center;
-            font-size: xx-large;
-            margin: 0;
-            padding: 10px;
-        }
-    }
     
     .skill-category {
-        width: 80%;
-        padding: 10px;
-        margin: 10px;
-    
         .skill-title-2 {
-            color: c.$dark-11;
-            text-align: center;
-            font-size: x-large;
+            color: c.$text;
             border-top:  solid c.$dark-2 ;
-            padding: 10px;
-            margin: 0;
-            padding: 10px;
         }
     }
-
-        .skill-card-logo {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-    
-            width: 100%;
-            width: 100%;
-    
-            .skill-name {
-                font-weight:  bold;
-                font-size: normal ;
-                @include c.text-dark;
-                padding: 10px;
-            }
-    
-            .skill-img {
-                height: 50px;
-                width: 50px;
-                padding: 10px;
-    
-                &:hover {
-                    transform: scale(1.3) rotate(2deg);
-                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-                    border-radius: 50px;
-                }
-            }
-        }
 }
 
     ///////////////////////////////////////////////////////////////////
  
 // Tablette (portrait)
 @media (min-width: 481px) and (max-width: 768px)  {
-    .contenair-skills {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
     
-        width: 100%;
-        margin: 30px;
-        padding: 10px;
-        text-align: center;
-        
-    
-        border-radius: 30px;
-    
-    
-    }
-    .skill-card-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    
-        .skill-title-1{
-            @include c.text-primary-2;
-            text-align: center;
-            font-size: xx-large;
-            margin: 0;
-            padding: 10px;
-        }
-    }
-    
-    .skill-category {
-        width: 80%;
-        padding: 10px;
-        margin: 10px;
-    
+    .skill-category { 
         .skill-title-2 {
-            color: c.$dark-11;
-            text-align: center;
-            font-size: x-large;
-            border-top:  solid c.$dark-2 ;
-            padding: 10px;
-            margin: 0;
-            padding: 10px;
+            color: c.$text;
+            border-top:  solid c.$dark-2 ;;
         }
     }
 
         .skill-card-logo {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
             flex-wrap: wrap;
-    
-            width: 100%;
-            width: 100%;
-    
-            .skill-name {
-                font-weight:  bold;
-                font-size: normal ;
-                @include c.text-dark;
-                padding: 10px;
-            }
     
             .skill-img {
                 height: 25px;
                 width: 25px;
-                padding: 10px;
-    
-                &:hover {
-                    transform: scale(1.3) rotate(2deg);
-                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-                    border-radius: 50px;
-                }
             }
         }
 }
@@ -408,79 +139,22 @@
  // Petit écran mobile (portrait)
  @media (max-width: 480px) {
     .contenair-skills {
-        display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
-        align-items: center;
         justify-content: center;
-    
-        width: 100%;
-        margin: 30px;
-        padding: 10px;
-        text-align: center;
-        
-    
-        border-radius: 30px;
-    
-    
-    }
-    .skill-card-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    
-        .skill-title-1{
-            @include c.text-primary-2;
-            text-align: center;
-            font-size: xx-large;
-            margin: 0;
-            padding: 10px;
-        }
     }
     
-    .skill-category {
-        width: 80%;
-        padding: 10px;
-        margin: 10px;
-    
+    .skill-category {   
         .skill-title-2 {
-            color: c.$dark-11;
-            text-align: center;
-            font-size: x-large;
+            color: c.$text;
             border-top:  solid c.$dark-2 ;
-            padding: 10px;
-            margin: 0;
-            padding: 10px;
         }
     }
         .skill-card-logo {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
             flex-wrap: wrap;
-    
-            width: 100%;
-            width: 100%;
-    
-            .skill-name {
-                font-weight:  bold;
-                font-size: normal ;
-                @include c.text-dark;
-                padding: 10px;
-            }
     
             .skill-img {
                 height: 25px;
                 width: 25px;
-                padding: 10px;
-    
-                &:hover {
-                    transform: scale(1.3) rotate(2deg);
-                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-                    border-radius: 50px;
-                }
             }
         }
  }
