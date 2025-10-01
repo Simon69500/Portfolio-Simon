@@ -28,6 +28,10 @@
         color: c.$text;
     }
   }
+
+  .btn {
+    @include c.button;
+  }
 }
 
 // Responsive adjustments

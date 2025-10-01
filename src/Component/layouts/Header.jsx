@@ -36,13 +36,13 @@ const Header = () => {
                 <Link className="nav-link" aria-current="page"  to="/">Accueil</Link>
               </li>
               <li className="nav-item me-5 fs-4">
-                <Link className="nav-link" to="/competences">compétences</Link>
+                <Link className="nav-link" to="/competences">Compétences</Link>
               </li>
               <li className="nav-item me-5 fs-4">
                 <Link className="nav-link" to="/portfolio">Portfolio</Link>
               </li>
               <li className="nav-item me-5 fs-4">
-                <Link className="btn btn-primary fs-4" role="button" to="/contact">Contact</Link>
+                <Link className="btn fs-4" role="button" to="/contact">Contact</Link>
               </li>
             </ul>
           </div>
