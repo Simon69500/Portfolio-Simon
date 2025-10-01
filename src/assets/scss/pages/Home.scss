@@ -2,113 +2,67 @@
 
 // Styles communs à tous les écrans
 #main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    @include c.background-primary;
+
+    @include c.background-secondary;
+
+    .title {
+        @include c.title
+    }
+
+    .subtitle {
+        @include c.sub-title
+    }
+
+    .text {
+        @include c.text
+    }
+
 
     .presentation {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+
         position: relative;
         background-size: cover;
         background-position: center;
-        height: 500px;
+        height: 350px;
         width: 100%;
+    }
 
-        .title_name {
-            @include c.title;
-            margin-bottom: 5px;
-            font-size: xxx-large;
-        }
+    .about {
+        @include c.background-tertiary;
 
-        .title_profession {
-            @include c.title;
-            margin: 0;
-            text-align: center;
+        .photo-about {
+            width: 150px;
+            height: 150px;
         }
     }
 
-    #Actual {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        @include c.background-secondary;
-        @include c.border-medium;
-        width: 100%;
-        height: 250px;
-
-        .title-actual {
-            @include c.title;
-            font-size: xx-large;
-            margin-bottom: 0;
-        }
-
-        p {
-            @include c.text;
-            text-align: center;
-            line-height: 1.6;
-
-            .textStrong {
-                font-weight: bold;
-            }
-
-            .link-ecole {
-                text-decoration: none;
-                @include c.title;
-            }
-        }
-
-        .buttonActual {
-            font-size: x-small;
-            margin: 5px;
-        }
+    .actual {
+        @include c.background-tertiary;  
     }
 
-    .formulaire {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 500px;
-
-        .form {
-            display: flex;
-            flex-direction: column;
-
-            input {
-                margin: 10px 0;
-            }
-
-            textarea {
-                padding: 100px;
-            }
-        }
+    .portfolio {
+        @include c.background-tertiary;          
     }
 }
 
 // Media queries — uniquement ce qui change
 @media (min-width: 1281px) and (max-width: 1600px) {
-    #Actual p { font-size: medium; }
+    .text { font-size: medium; }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-    #Actual { height: 250px; }
-    #Actual p { font-size: medium; }
+    .actual { height: 250px; }
+    .text { font-size: medium; }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    #Actual p { font-size: medium; }
+    .text { font-size: medium; }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    #Actual p { font-size: medium; width: 70%; }
+    .text { font-size: medium; width: 70%; }
 }
 
 @media (max-width: 480px) {
-    #Actual p { font-size: medium; width: 70%; }
+    .text { font-size: medium; width: 70%; }
 }
