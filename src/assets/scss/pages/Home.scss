@@ -37,9 +37,21 @@
             height: 150px;
         }
     }
-
+        
     .actual {
-        @include c.background-tertiary;  
+    @include c.background-tertiary;
+
+        .social-icons {
+            svg {
+            color: c.$dark-1;           // couleur par défaut
+            transition: color 0.3s ease;
+            cursor: pointer;
+            }
+
+            svg:hover {
+            color: c.$bleu-1;           // couleur au hover
+            }
+        }
     }
 
     .portfolio {
