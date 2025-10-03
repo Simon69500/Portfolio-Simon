@@ -1,0 +1,141 @@
+@use '../Colors.scss' as c ;
+
+.about {
+    @include c.background-tertiary;
+
+    .text {
+        @include c.text;
+
+        strong { 
+            color: c.$bleu-1; // mots-clés forts / titres internes
+        }
+
+        em { 
+            color: c.$vert; // mots soulignés pour action / réussite / concentration
+        }
+
+        span {
+            &.text-blue { color: c.$bleu-1; }  // classe pour mots clés importants
+            &.text-green { color: c.$vert; }   // classe pour succès / motivation
+            &.text-grey { color: c.$dark-9; }  // accent neutre
+        }
+    }
+
+    .title {
+        @include c.title;
+    }
+
+    .subtitle {
+        @include c.sub-title;
+    }
+
+    .photo-about {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+// Très grand écran de bureau
+@media (min-width: 1601px){
+.about {
+        .text {
+            line-height: 1.6; 
+        }
+    }
+
+    .title {
+        font-size: xx-large;
+    }
+    }
+
+    ///////////////////////////////////////////////////////////////////
+ 
+//Grand écran de bureau
+@media (min-width: 1281px) and (max-width: 1600px) {
+    .about {
+            .text {
+                line-height: 1.6; 
+            }
+    }
+    
+        .title {
+            font-size: xx-large;
+        }
+    }
+
+///////////////////////////////////////////////////////////////////
+ 
+// Bureau de taille moyenne
+@media (min-width: 1025px) and (max-width: 1280px) {        
+    
+        .text {
+            line-height: 1.6; 
+        }
+    }
+    
+        .title{
+            font-size: xx-large;
+        }
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (paysage) ou petit écran de bureau
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+            .text {
+                line-height: 1.2; 
+            }
+    
+            .photo-about {
+                width: 150px;
+                height: 150px;    
+            }
+        }
+    
+        .title {
+            font-size: xx-large;
+        }
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (portrait)
+@media (min-width: 481px) and (max-width: 768px) {
+    
+            .text {
+                font-size: small;
+                line-height: 1.6;
+                text-align: center; 
+            }
+    
+            .photo-about {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    
+        .title {
+            font-size: x-large;
+        }
+
+    ///////////////////////////////////////////////////////////////////
+ 
+ // Petit écran mobile (portrait)
+ @media (max-width: 480px) {        
+    
+            .text {  
+
+                font-size: x-small;
+                line-height: 1.6; 
+                text-align: center; 
+            }
+    
+            .photo-about {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    
+        .title {
+            font-size: x-large;
+        }

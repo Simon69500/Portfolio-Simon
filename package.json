@@ -15,17 +15,20 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.9.3",
     "react-scripts": "^5.0.1",
     "styled-components": "^6.1.13",
     "swiper": "^11.1.15",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "install": "npm install --legacy-peer-deps",
     "predeploy": "npm run build",
@@ -50,8 +53,9 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "css-loader": "^7.1.2",
-    "gh-pages": "^6.2.0",
+    "gh-pages": "^6.3.0",
     "sass": "^1.79.4",
     "sass-loader": "^16.0.2",
     "style-loader": "^4.0.0"
