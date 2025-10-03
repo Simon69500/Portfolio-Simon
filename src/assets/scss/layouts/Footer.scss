@@ -11,21 +11,17 @@
     width: 100%;
     height: 150px;
 
-    .icon-footer {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-
-        margin: 0px;
-        width: 100%;
-
-        .item-icon {
-            height: 40px;
-            width: 40px;
-            padding-right: 10px;
+    .social-icons {
+        svg {
+            color: c.$grisClair;
+            transition: color 0.3s ease;
+            cursor: pointer;
         }
-    }
+
+        svg:hover {
+            color: c.$bleu-1;
+        }
+    }}
 
     .text-footer {
         @include c.text;
@@ -56,7 +52,7 @@
             }
         }
     }    
-}    
+   
 //Très grand écran de bureau
 @media (min-width: 1601px){
 }
