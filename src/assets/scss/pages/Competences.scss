@@ -6,7 +6,7 @@
         height: 100%;
         padding-bottom: 50px;
 
-        @include c.background-primary;
+        @include c.background-secondary;
        
         
 
@@ -24,8 +24,6 @@
             flex-direction: column;
             justify-content: space-around ;
             align-items: center;
-            margin: 0px;
-            padding: 10px;
         }
         
         .contenair-cv {

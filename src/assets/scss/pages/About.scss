@@ -1,112 +1,66 @@
 @use '../Colors.scss' as c ;
 
-#about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.about {
+    @include c.background-tertiary;
 
-    @include c.background-primary;
+    .text {
+        @include c.text;
 
-    .about_article {
-        @include c.background-secondary;
-        @include c.border-light;
+        strong { 
+            color: c.$bleu-1; // mots-clés forts / titres internes
+        }
 
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        border-radius: 10px;
-        width: 90%;        
+        em { 
+            color: c.$vert; // mots soulignés pour action / réussite / concentration
+        }
+
+        span {
+            &.text-blue { color: c.$bleu-1; }  // classe pour mots clés importants
+            &.text-green { color: c.$vert; }   // classe pour succès / motivation
+            &.text-grey { color: c.$dark-9; }  // accent neutre
+        }
     }
 
-    .text_about {
-        padding: 20px;
-        width: 100%;
-        text-align: start;
-        margin: 1em 0;  
-        strong { color: #000; }
-        em { color: #131313; }
-        span { color: #000; }
-        @include c.text;
+    .title {
+        @include c.title;
+    }
+
+    .subtitle {
+        @include c.sub-title;
     }
 
     .photo-about {
-        border-radius: 100px;
-    }
-
-    .title-about {
-        @include c.title;
-        padding: 20px;
-    }
-
-    .card-icon {
-        display: flex;
-        justify-content: space-around;
-        width: 50%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
     }
 }
 
 // Très grand écran de bureau
 @media (min-width: 1601px){
-#about {
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
-
-        .text_about {
+.about {
+        .text {
             line-height: 1.6; 
         }
-
-        .photo-about {
-            width: 300px;
-            height: 300px;
-            padding: 50px;
-        }
     }
 
-    .title-about {
+    .title {
         font-size: xx-large;
     }
-
-    .card-icon {
-        padding: 20px;
-
-        .icon {
-            height: 50px;
-            width: 50px;
-        }
     }
-}
-
 
     ///////////////////////////////////////////////////////////////////
  
 //Grand écran de bureau
 @media (min-width: 1281px) and (max-width: 1600px) {
-    #about {
-            .text_about {
+    .about {
+            .text {
                 line-height: 1.6; 
             }
+    }
     
-            .photo-about {
-                width: 300px;
-                height: 300px;
-                padding: 50px;
-    
-            }
-        }
-    
-        .title-about {
-            padding: 20px;
+        .title {
             font-size: xx-large;
-        }
-    
-        .card-icon {   
-            padding: 20px;
-    
-            .icon {
-                height: 50px;
-                width: 50px;
-            }
         }
     }
 
@@ -115,30 +69,13 @@
 // Bureau de taille moyenne
 @media (min-width: 1025px) and (max-width: 1280px) {        
     
-            .text_about {
-                line-height: 1.6; 
-            }
-    
-            .photo-about {
-                width: 300px;
-                height: 300px;
-                padding: 50px;
-    
-            }
+        .text {
+            line-height: 1.6; 
         }
+    }
     
-        .title-about {
-            padding: 20px;
+        .title{
             font-size: xx-large;
-        }
-    
-        .card-icon {    
-            padding: 20px;
-    
-            .icon {
-                height: 50px;
-                width: 50px;
-            }
         }
 
     ///////////////////////////////////////////////////////////////////
@@ -146,31 +83,18 @@
 // Tablette (paysage) ou petit écran de bureau
 @media (min-width: 769px) and (max-width: 1024px) {
     
-            .text_about {
+            .text {
                 line-height: 1.2; 
             }
     
             .photo-about {
                 width: 150px;
-                height: 150px;
-                padding: 50px;
-    
+                height: 150px;    
             }
         }
     
-        .title-about {
-            padding: 20px;
+        .title {
             font-size: xx-large;
-        }
-    
-        .card-icon {    
-            width: 50%;
-            padding: 20px;
-       
-            .icon {
-                height: 50px;
-                width: 50px;
-            }
         }
 
     ///////////////////////////////////////////////////////////////////
@@ -178,7 +102,7 @@
 // Tablette (portrait)
 @media (min-width: 481px) and (max-width: 768px) {
     
-            .text_about {
+            .text {
                 font-size: small;
                 line-height: 1.6;
                 text-align: center; 
@@ -190,18 +114,8 @@
             }
         }
     
-        .title-about {
+        .title {
             font-size: x-large;
-        }
-    
-        .card-icon {    
-            width: 50%;
-            padding: 10px 0px;   
-    
-            .icon {
-                height: 25px;
-                width: 25px;
-            }
         }
 
     ///////////////////////////////////////////////////////////////////
@@ -209,7 +123,7 @@
  // Petit écran mobile (portrait)
  @media (max-width: 480px) {        
     
-            .text_about {  
+            .text {  
 
                 font-size: x-small;
                 line-height: 1.6; 
@@ -219,25 +133,9 @@
             .photo-about {
                 width: 100px;
                 height: 100px;
-                padding: 20px;
             }
         }
     
-        .title-about {
+        .title {
             font-size: x-large;
-        }
-    
-        .card-icon {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-    
-            width: 50%;
-            padding: 10px 0px;
-    
-            .icon {
-                height: 25px;
-                width: 25px;
-            }
         }

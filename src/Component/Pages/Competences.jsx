@@ -1,5 +1,6 @@
 import '@scss/index.scss';
 import Skills from "../layouts/Skills";
+import About from './About';
 import CV from '@img/CV.jpg';
 
 import { styled } from '@mui/material/styles';
@@ -27,8 +28,11 @@ const Competences = () => {
         <h2 className="title_divers">Mes compétences</h2>
             <div className="card-cpts">
 
-                    {/* Partie Skills */}
-                    <Skills/>
+                {/* Partie Présentation (About) */}
+                <About/>
+
+                {/* Partie Skills */}
+                <Skills/>
             
                 {/* Partie CV */}
                 <div className="contenair-cv">
