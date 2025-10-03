@@ -14,8 +14,8 @@ const HomeCarousel = () => {
 
         {projects.map((project, index) => (
           <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={project.key}>
-            <div className="d-flex justify-content-center">
-              <div className="card" style={{ width: "18rem" }}>
+            <div className="d-flex justify-content-center p-3">
+              <div className="card" style={{ width: "18rem", height: "25rem" }}>
                 <img src={project.images[0]} className="card-img-top" alt={project.name} />
                 <div className="card-body text-center">
                   <h5 className="card-title">{project.name}</h5>

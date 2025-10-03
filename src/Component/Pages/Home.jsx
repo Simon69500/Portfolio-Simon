@@ -60,7 +60,7 @@ const Home = () => {
                     </div>
 
                     {/* Partie Présentation projets */}
-                    <div className='portfolio mt-5'>
+                    <div className='portfolio my-5'>
                         <h3 className='subtitle text-center pt-4 fs-2'>Mes projets</h3>
                         <div>
                             <Carousel/>
