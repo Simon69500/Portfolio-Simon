@@ -22,40 +22,12 @@
         }
 
         
-        .contenair-cv {
-
-    
-    
-            width: 25%;
-            height: 100%;
-            padding: 20px;
-    
+        .CV {
             @include c.background-tertiary;
-            border-radius: 30px;
-            border: 2px solid c.$dark-8 ;
-            box-shadow: 5px 5px 5px c.$dark-7 ;
-    
-            .cv-title{
-                @include c.title;
-                text-align: center;
-                justify-self: center;
-                font-size: x-large;
-                border-bottom: 2px solid c.$dark-8 ;
-                width: 100%;
-                padding: 20px;
-                margin: 0;
-            }
     
             .cv-img {
-                width: 400px;
-                height: 600px;
-                padding-top: 20px;
-            }
-    
-            .cv-button {
-                @include c.button;
-                margin: 20px;
-                padding: 5px;
+                width: 350px;
+                height: 550px;
             }
         }
         
@@ -65,106 +37,31 @@
  
 //Grand écran de bureau
 @media (min-width: 1281px) and (max-width: 1600px) {
-    #Competences {    
-        .contenair-cv {
-            width: 30%;
-            height: 900px;
-        }
-    }
 }
 
     ///////////////////////////////////////////////////////////////////
  
 // Bureau de taille moyenne
 @media (min-width: 1025px) and (max-width: 1280px) {
-    #Competences {            
-        .contenair-cv {
-            width: 40%;
-            height: 70%;
-            padding: 20px;
-            border: 4px solid c.$dark-8 ;
-            box-shadow: 10px 1px 5px c.$dark-7 ;
-        }   
-    }
 }
 
     ///////////////////////////////////////////////////////////////////
  
 // Tablette (paysage) ou petit écran de bureau
 @media (min-width: 769px) and (max-width: 1024px) {
-    #Competences {            
-        .contenair-cv {
-            width: 40%;
-            height: 5%;
-            border: 4px solid c.$dark-8 ;
-            box-shadow: 10px 1px 5px c.$dark-7 ;
 
-            .cv-img {
-                width: 300px;
-                height: 400px;
-            }
-    
-            .Button-Competence {
-                width: 140px;
-            }
-        }
-    }
 }
 
     ///////////////////////////////////////////////////////////////////
  
 // Tablette (portrait)
 @media (min-width: 481px) and (max-width: 768px) {
-    #Competences {
-        .title_divers {
-            font-size: x-large;
-        }
-        
-        .contenair-cv {
-            width: 80%;
-            height: 70%;
-            padding: 20px;
-            border: 4px solid c.$dark-8 ;
-            box-shadow: 10px 1px 5px c.$dark-7 ;
-    
-            .cv-img {
-                width: 300px;
-                height: 400px;
-                padding-top: 20px;
-            }
-    
-            .Button-Competence {
-                width: 140px;
-            }
-        }
-        
-    }
+
 }
 
     ///////////////////////////////////////////////////////////////////
  
  // Petit écran mobile (portrait)
  @media (max-width: 480px) {
-    #Competences {
-        .title_divers {
-            font-size: x-large;
-        }   
-        .contenair-cv {
-            width: 80%;
-            height: 70%;
-            border: 4px solid c.$dark-8 ;
-            box-shadow: 10px 1px 5px c.$dark-7 ;
-    
-            .cv-img {
-                width: 250px;
-                height: 350px;
-                padding-top: 20px;
-            }
-    
-            .Button-Competence {
-                width: 130px;
-                font-size: x-small;
-            }
-        } 
-    }
+ 
 }

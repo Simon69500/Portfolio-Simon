@@ -4,7 +4,7 @@ import { Icones } from "../ui/Icones";
 function SkillBar({ skill }) {
     return (
         <div className="skill-bar">
-            <div className="m-2">
+            <div className="m-2 d-flex flex-column align-items-center">
                 <img className="skill-img" src={skill.img} alt={skill.name} />
                 <div className="text text-center">{skill.name}</div>
             </div>
@@ -15,14 +15,15 @@ function SkillBar({ skill }) {
 function Skills() {
     // Compétences Frontend
     const skillsFront = [
-        { name: 'ReactJS', img: Icones.react },
-        { name: 'Angular', img: Icones.angular},
-        { name: 'Next.js', img: Icones.nextjs },
-        { name: 'Vue.js', img: Icones.vue },
+        { name: 'HTML5', img: Icones.html5 },
+        { name: 'CSS3', img: Icones.css3 },
         { name: 'JavaScript', img: Icones.scriptJava },
         { name: 'TypeScript', img: Icones.typescript },
-        { name: 'CSS3 / SASS', img: Icones.css3 },
-        { name: 'HTML5', img: Icones.html5 },
+        { name: 'Vue.js', img: Icones.vue },
+        { name: 'ReactJS', img: Icones.react },
+        { name: 'Angular', img: Icones.angular},
+        { name: 'Sass', img: Icones.sass},
+        { name: 'Bootstrap', img: Icones.bootstrap},
     ];
 
     // Compétences Backend
@@ -32,6 +33,8 @@ function Skills() {
         { name: 'MongoDB', img: Icones.mongodb },
         { name: 'MySQL', img: Icones.mysql },
         { name: 'PHP', img: Icones.php },
+        { name: 'Symfony', img: Icones.symfony },
+
     ];
 
     // Outils et Plateformes
@@ -40,6 +43,11 @@ function Skills() {
         { name: 'OpenAI', img: Icones.openai },
         { name: 'WordPress', img: Icones.wordpress},
         { name: 'Figma', img: Icones.figma },
+        { name: 'Render', img: Icones.render },
+        { name: 'Alwaysdata', img: Icones.alwaysdata },
+
+        
+
     ];
 
     return (
