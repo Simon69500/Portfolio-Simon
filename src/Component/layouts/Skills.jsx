@@ -1,5 +1,5 @@
 import '@scss/index.scss';
-import { Icones } from "../ui/Icones";
+import { Technologies } from '../../data/technologies';
 
 function SkillBar({ skill }) {
     return (
@@ -15,36 +15,35 @@ function SkillBar({ skill }) {
 function Skills() {
     // Compétences Frontend
     const skillsFront = [
-        { name: 'HTML5', img: Icones.html5 },
-        { name: 'CSS3', img: Icones.css3 },
-        { name: 'JavaScript', img: Icones.scriptJava },
-        { name: 'TypeScript', img: Icones.typescript },
-        { name: 'Vue.js', img: Icones.vue },
-        { name: 'ReactJS', img: Icones.react },
-        { name: 'Angular', img: Icones.angular},
-        { name: 'Sass', img: Icones.sass},
-        { name: 'Bootstrap', img: Icones.bootstrap},
+        Technologies.HTML,
+        Technologies.CSS,
+        Technologies.JavaScript,
+        Technologies.TypeScript,
+        Technologies.VueJS,
+        Technologies.ReactJS,
+        Technologies.Angular,
+        Technologies.SASS,
+        Technologies.Bootstrap,
     ];
 
     // Compétences Backend
     const skillsBackend = [
-        { name: 'Node.js', img: Icones.nodejs },
-        { name: 'Express', img: Icones.express },
-        { name: 'MongoDB', img: Icones.mongodb },
-        { name: 'MySQL', img: Icones.mysql },
-        { name: 'PHP', img: Icones.php },
-        { name: 'Symfony', img: Icones.symfony },
-
+        Technologies.NodeJS,
+        Technologies.Express,
+        Technologies.MongoDB,
+        Technologies.MySQL,
+        Technologies.PHP,
+        Technologies.Symfony,
     ];
 
     // Outils et Plateformes
     const skillsTools = [
-        { name: 'GitHub', img: Icones.github },
-        { name: 'OpenAI', img: Icones.openai },
-        { name: 'WordPress', img: Icones.wordpress},
-        { name: 'Figma', img: Icones.figma },
-        { name: 'Render', img: Icones.render },
-        { name: 'Alwaysdata', img: Icones.alwaysdata },
+        Technologies.GitHub,
+        Technologies.OpenAI,
+        Technologies.WordPress,
+        Technologies.Figma,
+        Technologies.Render,
+        Technologies.Alwaysdata,
 
         
 
@@ -58,8 +57,8 @@ function Skills() {
             <div className="w-100 m-2">
                 <h4 className="Subtitle fs-4">Frontend</h4>
                 <div className="d-flex flex-row justify-content-evenly flex-wrap">
-                    {skillsFront.map((skill, index) => (
-                        <SkillBar key={index} skill={skill} />
+                    {skillsFront.filter(Boolean).map((skill) => (
+                        <SkillBar key={skill.name} skill={skill} />
                     ))}
                 </div>
             </div>
@@ -68,8 +67,8 @@ function Skills() {
             <div className="w-100 m-2">
                 <h4 className="Subtitle fs-4">Backend</h4>
                 <div className="d-flex flex-row justify-content-evenly flex-wrap">
-                    {skillsBackend.map((skill, index) => (
-                        <SkillBar key={index} skill={skill} />
+                    {skillsBackend.filter(Boolean).map((skill) => (
+                       <SkillBar key={skill.name} skill={skill} />
                     ))}
                 </div>
             </div>
@@ -78,8 +77,8 @@ function Skills() {
             <div className="w-100 m-2">
                 <h4 className="Subtitle fs-4">Outils et Plateformes</h4>
                 <div className="d-flex flex-row justify-content-evenly flex-wrap">
-                    {skillsTools.map((skill, index) => (
-                        <SkillBar key={index} skill={skill} />
+                    {skillsTools.filter(Boolean).map((skill) => (
+                        <SkillBar key={skill.name} skill={skill} />
                     ))}
                 </div>
             </div>

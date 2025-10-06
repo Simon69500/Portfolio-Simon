@@ -35,12 +35,12 @@ export const Technologies = {
        HTML: { name: 'HTML', img: html },
        CSS: { name: 'CSS', img: css },
        JavaScript: { name: 'JavaScript', img: scriptJava },
-       typeScript: { name: 'TypeScript', img: typescript },
-       VueJS: { name: 'Vue.js', img: vue },
+       TypeScript: { name: 'TypeScript', img: typescript },
+       VueJS: { name: 'VueJS', img: vue },
        ReactJS: { name: 'ReactJS', img: react },
        Angular: { name: 'Angular', img: angular},
        SASS: { name: 'Sass', img: sass},
-       Boostrap: { name: 'Bootstrap', img: bootstrap},
+       Bootstrap: { name: 'Bootstrap', img: bootstrap},
        
     // Backend
        NodeJS: { name: 'Node.js', img: nodejs },
