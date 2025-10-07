@@ -1,5 +1,5 @@
 import '@scss/index.scss';
-import { Icones } from "../ui/Icones";
+import { Icones } from "../../data/Icones";
 
 
 const About = () => {

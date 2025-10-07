@@ -1,7 +1,7 @@
 import '@scss/index.scss';
 
 import Carousel from '../layouts/Carousel';
-import { Icones } from "../ui/Icones";
+import { Icones } from "../../data/Icones";
 import { Link } from 'react-router-dom';
 import Banniere from '@img/Newbannière.jpg';
 
