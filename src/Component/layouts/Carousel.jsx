@@ -1,11 +1,7 @@
-import { Link } from 'react-router-dom';
-import { imgVillage, imgArtisan, imgPlantes } from '../ui/img-modal';
+import projects from '../../data/projects.json';
 
-const projects = [
-  { name: "Au petit village", images: imgVillage, key: "village" },
-  { name: "Trouve ton artisan", images: imgArtisan, key: "artisan" },
-  { name: "La vie des plantes", images: imgPlantes, key: "plantes" },
-];
+import { Link } from 'react-router-dom';
+import { imageMap } from '../../data/imgProjects';
 
 const HomeCarousel = () => {
   return (
@@ -15,8 +11,9 @@ const HomeCarousel = () => {
         {projects.map((project, index) => (
           <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={project.key}>
             <div className="d-flex justify-content-center p-3">
+              
               <div className="card" style={{ width: "18rem", height: "25rem" }}>
-                <img src={project.images[0]} className="card-img-top" alt={project.name} />
+                <img src={imageMap[project.slug][0]} className="card-img-top" alt={project.name} />
                 <div className="card-body text-center">
                   <h5 className="card-title">{project.name}</h5>
                   <Link

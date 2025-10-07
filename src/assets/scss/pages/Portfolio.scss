@@ -1,13 +1,9 @@
 @use '../Colors.scss' as c;
 
-#Portfolio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.Portfolio {
+    @include c.background-secondary;
 
-    width: 100%;
-    height: 100%;
-
-    @include c.background-primary;
-    @include c.border-medium;
+    .projet {
+        @include c.background-tertiary
+    }
 }
