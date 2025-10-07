@@ -1,0 +1,25 @@
+@use '../Colors.scss' as c ;
+
+.projet {
+    @include c.background-secondary;
+
+    .projetCard {
+        @include c.background-tertiary;
+    }
+
+    .border {
+        border-color: c.$dark-1
+    }
+
+    .title {
+        @include c.title;
+    }
+
+    .Subtitle {
+        @include c.sub-title;
+    }
+
+    .text {
+        @include c.text;
+    }
+}

@@ -8,15 +8,15 @@ import { imageMap } from "../../data/imgProjects";
 const Portfolio = () => {
   return (
 
-    <div className="Portfolio d-flex flex-row justify-content-evenly align-items-center">
+    <div className="Portfolio d-flex flex-row justify-content-evenly p-5">
       {projects.map((projet) => {
         const images = imageMap[projet.slug] || [];
 
         return (
-<div className="m-2" key={projet.id}>
+        <div className="col-12 col-md-6 col-lg-3 d-flex" key={projet.id}>
          
           {/* Card-Projet */}         
-          <div className="projet card d-flex flex-column align-items-center my-5">
+          <div className="projet card d-flex flex-column h-100 w-100 my-3">
 
             {/* Card-Header */}
             <div className="card-header w-100">
@@ -66,7 +66,7 @@ const Portfolio = () => {
               </button>
               <button
                 className="carousel-control-next"
-                type="button"
+                type="button"git 
                 data-bs-target={`#carousel-${projet.id}`}
                 data-bs-slide="next"
               >
@@ -110,7 +110,7 @@ const Portfolio = () => {
             </div>
 
              {/* Bouton lien Github */}         
-              <Link to={`/projet/${projet.id}`} className="btn btn-primary mb-3">Voir le projet</Link>
+              <Link to={`/projet/${projet.id}`} className="btn btn-primary mt-auto mb-3">Voir le projet</Link>
           </div>
         </div>
         )
