@@ -26,7 +26,7 @@ const Home = () => {
                     </div>
 
                     {/* Partie Présentation courte */}
-                    <div className='about my-5'>
+                    <div className='about my-5 d-flex flex-column justify-content-center align-items-center'>
                         <h3 className='subtitle text-center pt-4 fs-2'>A propos de moi</h3>
                         <div className='card-text d-flex flex-row justify-content-around pt-3'>
                                 <img src={Icones.profil2} alt="Simon Badin" className="photo-about rounded-4 align-content-center"/>
@@ -35,11 +35,9 @@ const Home = () => {
                                 Passionné par l’informatique et les nouvelles technologies depuis toujours, j’ai récemment achevé une reconversion pour exercer ce métier qui me motive chaque jour.
                                 </p>
                         </div>
-                        <div className="d-flex justify-content-center py-3 ">
                             <Link className='btn btn-primary mb-3' to="/competences">
                             En savoir plus
                             </Link>
-                        </div>
                     </div>
 
 
