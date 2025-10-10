@@ -2,8 +2,12 @@
 
 .Portfolio {
     @include c.background-secondary;
+}
 
-    .projet {
-        @include c.background-tertiary
-    }
+.projetCard {
+    @include c.background-tertiary;
+}
+
+.title {
+    @include c.title;
 }

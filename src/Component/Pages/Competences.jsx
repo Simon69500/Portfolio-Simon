@@ -8,7 +8,7 @@ const Competences = () => {
     return (
 
 <div className="Competences">
-    <h2 className="title text-center fs-2 py-4">Mes compétences</h2>
+    <h1 className="title text-center fs-1 py-4">Mes compétences</h1>
 
     {/* Partie About full width */}
         <About />
