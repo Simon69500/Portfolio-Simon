@@ -1,0 +1,17 @@
+@use '../Colors.scss' as c ;
+
+.form {
+    @include c.background-tertiary ;
+
+    .title {
+        @include c.title;
+    }
+
+    .subtitle {
+        @include c.sub-title;
+    }
+
+    .text {
+        @include c.text
+    }
+}
