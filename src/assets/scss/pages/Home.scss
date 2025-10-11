@@ -1,0 +1,82 @@
+@use '../Colors.scss' as c;
+
+// Styles communs à tous les écrans
+#main {
+
+    @include c.background-secondary;
+    width: 100%;
+    padding-bottom: 0.5rem;
+
+    .title {
+        @include c.title
+    }
+
+    .subtitle {
+        @include c.sub-title
+    }
+
+    .text {
+        @include c.text
+    }
+
+
+    .presentation {
+
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 100%;
+    }
+
+    .about {
+        @include c.background-tertiary;
+
+        .photo-about {
+            width: 150px;
+            height: 150px;
+        }
+    }
+        
+    .actual {
+    @include c.background-tertiary;
+
+        .social-icons {
+            svg {
+            color: c.$dark-1;           // couleur par défaut
+            transition: color 0.3s ease;
+            cursor: pointer;
+            }
+
+            svg:hover {
+            color: c.$bleu-1;           // couleur au hover
+            }
+        }
+    }
+
+    .portfolio {
+        @include c.background-tertiary;          
+    }
+}
+
+// Media queries — uniquement ce qui change
+@media (min-width: 1281px) and (max-width: 1600px) {
+    .text { font-size: medium; }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .actual { height: 250px; }
+    .text { font-size: medium; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .text { font-size: medium; }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .text { font-size: medium; width: 70%; }
+}
+
+@media (max-width: 480px) {
+    .text { font-size: medium; width: 70%; }
+}

@@ -1,0 +1,49 @@
+@use '../Colors.scss' as c;
+
+.header {
+  @include c.background-header;
+
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    height: 100px;
+
+    .navbar-brand {
+      padding: 0 15px;
+
+      img {
+        width: 56px;
+        height: 56px;
+        border-radius: 50px; 
+        object-fit: cover;
+      }
+    }
+
+    .nav-item  a{
+        color: c.$text;
+    }
+  }
+
+  .btn {
+    @include c.button;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .header {
+    .navbar {
+      height: 60px;
+
+      .navbar-brand img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

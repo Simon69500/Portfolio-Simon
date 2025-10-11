@@ -1,0 +1,13 @@
+@use '../Colors.scss' as c;
+
+.Portfolio {
+    @include c.background-secondary;
+}
+
+.projetCard {
+    @include c.background-tertiary;
+}
+
+.title {
+    @include c.title;
+}
