@@ -62,7 +62,7 @@ function Projet({ project }) {
                     src={img}
                     className="d-block w-100"
                     alt={`${projet.titre} ${idx + 1}`}
-                    style={{ height: "20rem", objectFit: "cover" }}
+                    style={{ height: "50rem" }}
                     />
                 </div>
                 ))}
@@ -123,6 +123,18 @@ function Projet({ project }) {
             </div>
             </div>
 
+            <div className="border-top border-dark my-5"></div>
+
+            {/* Technologie Secondaire du projet */}
+            <div className="d-flex flex-column align-content-center align-items-center my-5">
+            <h3 className="Subtitle card-title me-3">Technologie Secondaire : </h3>
+             <div className="d-flex justify-content-center flex-wrap">
+            {projet.technologiesSec?.map((tech) => (
+                <span key={tech} className="text p-3"> {tech} </span>
+            ))}
+            </div>
+            </div>
+            
             <div className="border-top border-dark my-5"></div>
 
             {/* Description du projet */}

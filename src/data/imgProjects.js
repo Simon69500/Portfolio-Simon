@@ -13,16 +13,26 @@ import Artisan5 from '@img/Projet-img/projet2/trouve-ton-artisan_List.jpg';
 import Artisan6 from '@img/Projet-img/projet2/trouve-ton-artisan_Artisan.jpg';
 import Artisan7 from '@img/Projet-img/projet2/trouve-ton-artisan_category.jpg';
 
-import Plantes from '@img/Projet-img/projet3/la-vie-des-plantes.jpg';
-import Plantes2 from '@img/Projet-img/projet3/la-vie-des-plantes_Panier1.jpg';
-import Plantes3 from '@img/Projet-img/projet3/la-vie-des-plantes2.jpg';
-import Plantes4 from '@img/Projet-img/projet3/la-vie-des-plantes_About.jpg';
-import Plantes5 from '@img/Projet-img/projet3/la-vie-des-plantes_Produit.jpg';
-import Plantes6 from '@img/Projet-img/projet3/la-vie-des-plantes_Panier1.jpg';
-import Plantes7 from '@img/Projet-img/projet3/la-vie-des-plantes_Panier2.jpg';
-import Plantes8 from '@img/Projet-img/projet3/la-vie-des-plantes_Panier3.jpg';
-import Plantes9 from '@img/Projet-img/projet3/la-vie-des-plantes_Contact.jpg';
-import Plantes10 from '@img/Projet-img/projet3/la-vie-des-plantes_Contact1.jpg';
+import TPK from '@img/Projet-img/projet3/tpk-HomeVisiteur.png';
+import TPK2 from '@img/Projet-img/projet3/tpk-Connexion.png';
+import TPK3 from '@img/Projet-img/projet3/tpk-CreateUser.png';
+import TPK4 from '@img/Projet-img/projet3/tpk-HomeUser.png';
+import TPK5 from '@img/Projet-img/projet3/tpk-HomeUser-Modal.png';
+import TPK6 from '@img/Projet-img/projet3/tpk-HomeUser-Modal2.png';
+import TPK7 from '@img/Projet-img/projet3/tpk-CreateTrajet.png';
+import TPK8 from '@img/Projet-img/projet3/tpk-ModifTrajet.png';
+import TPK9 from '@img/Projet-img/projet3/tpk-ErrorCreate.png';
+import TPK10 from '@img/Projet-img/projet3/tpk-adminHome.png';
+import TPK11 from '@img/Projet-img/projet3/tpk-adminAgence.png';
+
+import API from '@img/Projet-img/projet4/API_Home.png';
+import API2 from '@img/Projet-img/projet4/API_HomeAdmin.png';
+import API3 from '@img/Projet-img/projet4/API_Users.png';
+import API4 from '@img/Projet-img/projet4/API_UsersModif.png';
+import API5 from '@img/Projet-img/projet4/API_Catways.png';
+import API6 from '@img/Projet-img/projet4/API_Reserve.png';
+import API7 from '@img/Projet-img/projet4/API_Doc.png';
+
 
 export const imgVillage = [
     Village,
@@ -43,21 +53,33 @@ export const imgArtisan = [
     Artisan1,
 ]
 
-export const imgPlantes = [
-    Plantes,
-    Plantes2,
-    Plantes3,
-    Plantes4,
-    Plantes5,
-    Plantes6,
-    Plantes7,
-    Plantes8,
-    Plantes9,
-    Plantes10
+export const imgTpk = [
+    TPK,
+    TPK2,
+    TPK3,
+    TPK4,
+    TPK5,
+    TPK6,
+    TPK7,
+    TPK8,
+    TPK9,
+    TPK10,
+    TPK11,
+]
+
+export const imgApi = [
+    API,
+    API2,
+    API3,
+    API4,
+    API5,
+    API6,
+    API7,
 ]
 
 export const imageMap = {
     village: imgVillage,
     artisan: imgArtisan,
-    plantes: imgPlantes
+    touche_pas_au_klaxon: imgTpk,
+    API_Russel: imgApi
 };

@@ -1,8 +1,8 @@
 [
  {
         "id": 1,
-        "titre":"Touche pas au klaxon",
-        "slug": "plantes",
+        "titre":"Au petit Village",
+        "slug": "village",
        "technologies": ["PHP", "MySQL", "Looping", "GitHub"],
         "description": "Projet réalisé dans le cadre de ma formation, consistant en la création d'un site e-commerce avec WordPress. Ce projet m'a permis de mettre en pratique mes compétences sur un projet concret et appliqué dans un environnement de gestion de contenu.",
         "objectif": "Développer une application web interne à l’entreprise pour le covoiturage entre agences. L’objectif est de réduire les trajets peu occupés et de favoriser le partage des véhicules. L’application est développée en PHP, utilise MySQL et respecte une architecture MVC.",
@@ -16,33 +16,51 @@
     
     {
         "id": 2,
-        "titre": "Base de données – Le Tifosi",
-        "slug": "village",
-        "technologies": ["MySQL", "Looping", "GitHub"],
-        "description": "Projet réalisé pendant ma formation, ayant pour objectif la création d'un site vitrine responsive avec Angular. Le projet visait à développer une plateforme permettant de consulter un catalogue de produits, triés par prix et recherchables en fonction des mots-clés.",
-        "objectif": "Développer un site web interactif pour 'Au petit village', une entreprise fabriquant des figurines inspirées d'Astérix et Obélix. Le site devait non seulement permettre aux utilisateurs de consulter un catalogue de produits, mais aussi d'offrir une expérience fluide grâce à un tri efficace des produits par prix et à une recherche rapide par nom de produit.",
-        "publicCible": "Les passionnés de l'univers d'Astérix et Obélix, généralement âgés de 30 à 55 ans, à la recherche de figurines uniques qui rappellent les célèbres Gaulois et leurs aventures.",
-        "resultat": "Le site respecte la charte graphique du client avec une navigation claire, une présentation soignée des produits et une fonctionnalité de tri optimisée. Une barre de recherche a été intégrée pour permettre aux utilisateurs de trouver rapidement les produits. Le site est également entièrement responsive et bien adapté aux utilisateurs sur différentes plateformes.",
-        "défis": "L'un des défis majeurs du projet a été l'implémentation de la fonctionnalité de tri des prix en croissant/décroissant, tout en veillant à la réactivité du site pour une expérience utilisateur fluide. La mise en place d’une barre de recherche en temps réel, permettant aux utilisateurs de filtrer les produits efficacement, a également été un défi technique intéressant.",
-        "solutions": "Pour résoudre ces problèmes, j'ai utilisé des composants réutilisables d'Angular, tels que 'ngFor' pour le rendu dynamique des produits. Pour la fonctionnalité de tri, j'ai créé un pipe personnalisé afin de trier efficacement les produits par prix. J'ai également mis en place un système de filtrage en temps réel avec un autre pipe, pour permettre aux utilisateurs de trouver facilement les produits correspondant à leurs critères.",
-        "link": "https://github.com/Simon69500/base-de-donn-es-avec-MySQL",
-        "mobileFirst": true
+        "titre": "Touche pas au klaxon",
+        "slug": "touche_pas_au_klaxon",
+        "technologies": ["PHP", "MySQL", "Bootstrap", "SASS", "GitHub"],
+        "technologiesSec": ["MVC","PHPUnit", "PHPStan" ],
+        "description": "Projet réalisé dans le cadre de ma formation : développement d’une application web de covoiturage interne pour une grande entreprise multi-sites. L’objectif était de réduire le nombre de trajets à faible taux d’occupation en permettant aux employés de publier et de réserver des trajets directement via l’intranet de l’entreprise.",
+        "objectif": "Concevoir et développer une application PHP respectant l’architecture MVC et les bonnes pratiques de développement (tests unitaires, documentation, code statique). L’application devait permettre aux utilisateurs de se connecter, consulter les trajets disponibles, en proposer, les modifier ou les supprimer, selon leurs droits. Un administrateur disposait d’un tableau de bord complet pour gérer les agences et superviser les trajets.",
+        "publicCible": "Les employés de l’entreprise et l’administrateur en charge de la gestion des trajets inter-sites.",
+        "resultat": "Application fonctionnelle avec authentification sécurisée, affichage dynamique des trajets disponibles, création et modification des trajets par les utilisateurs, et un espace administrateur complet. Le code est structuré en architecture MVC, validé avec PHPStan et testé avec PHPUnit. L’interface, construite avec Bootstrap et Sass, respecte la charte graphique imposée. Les données sont stockées dans une base MySQL et les scripts SQL d’installation et d’alimentation sont inclus.",
+        "défis": "Assurer la réutilisabilité du code et le respect strict de l’architecture MVC, tout en maintenant une séparation claire entre les rôles utilisateurs et administrateurs. Garantir la fiabilité du code avec des tests unitaires sur les opérations d’écriture et une validation statique sans erreurs PHPStan.",
+        "solutions": "Mise en place d’un système de rôles différenciés (utilisateur et administrateur), utilisation de PDO pour la gestion sécurisée des requêtes SQL, validation côté serveur des formulaires et contrôles de cohérence sur les trajets (dates, agences, disponibilité). Le projet a été entièrement documenté avec DocBlock, testé avec PHPUnit, et vérifié via PHPStan pour garantir la qualité du code.",
+        "link": "https://github.com/Simon69500/Touche-pas-au-klaxon",
+        "mobileFirst": false
     },
-    
 
     {
         "id": 3,
-        "titre": "ReactJS - Trouve ton artisan",
-        "slug": "artisan", 
-        "technologies": ["ReactJS", "Express", "MySQL", "GitHub"],
-        "description": "Projet réalisé dans le cadre de ma formation, pour le développement de la partie frontend d'une plateforme de mise en relation entre particuliers et artisans. Ce projet a impliqué une approche mobile-first et un design validé avant la phase de développement.",
-        "objectif": "Créer une interface utilisateur moderne et accessible, permettant aux utilisateurs de trouver un artisan correspondant à leurs besoins. Le site devait être responsive, offrir une recherche dynamique avec des filtres et permettre de guider l'utilisateur vers un formulaire de contact pour rentrer en relation avec un artisan.",
+        "titre": "Trouve ton artisan",
+        "slug": "artisan",
+        "technologies": ["ReactJS", "Bootstrap", "SASS", "NodeJS", "Express", "Sequelize", "MySQL", "Figma", "GitHub"],
+        "technologiesSec": ["Sequelize" ],
+        "description": "Projet complet réalisé dans le cadre de ma formation, consistant à concevoir et développer une plateforme web permettant aux particuliers de trouver facilement un artisan dans la région Auvergne-Rhône-Alpes. Le projet comprenait la conception des maquettes sur Figma, la réalisation du frontend en ReactJS, ainsi que le développement d’une API REST sécurisée en Node.js / Express connectée à une base de données MySQL.",
+        "objectif": "Créer une application web moderne, accessible et responsive (mobile-first) permettant de rechercher des artisans par nom ou spécialité, d’afficher leur fiche détaillée et de les contacter via un formulaire. L’ensemble devait respecter les normes d’accessibilité WCAG 2.1 et s’intégrer dans la charte graphique de la région Auvergne-Rhône-Alpes.",
         "publicCible": "Tous les habitants de la région Auvergne-Rhône-Alpes, incluant jeunes, seniors et personnes en situation de handicap.",
-        "resultat": "Un site conforme aux normes WCAG 2.1, offrant une expérience fluide grâce à une navigation optimisée, et une fonctionnalité de recherche avancée avec plusieurs filtres comme le nom, le métier, et la ville. Une maquette validée avant développement et une intégration frontend dynamique basée sur un fichier JSON ont été réalisées.",
-        "défis": "L'un des principaux défis du projet a été de développer un site en respectant les principes du mobile-first, ce qui a impliqué une conception entièrement responsive. Il a aussi fallu intégrer une API pour partager la liste des artisans et permettre aux utilisateurs de filtrer et rechercher un artisan selon leurs critères.",
-        "solutions": "Pour résoudre ces défis, j'ai utilisé ReactJS pour la création dynamique des composants et la gestion de l'état. La barre de recherche a été équipée de filtres permettant de rechercher par nom, métier, et ville, offrant une expérience utilisateur fluide et interactive. Une navigation fluide a été mise en place en utilisant les ID des cartes des artisans sélectionnés pour maintenir une continuité dans l'expérience. De plus, l'interface a été conçue en respectant les normes d'accessibilité (WCAG 2.1).",
-        "link":"https://github.com/Simon69500/React.js",
+        "resultat": "Une plateforme complète avec un design validé sous Figma, un frontend dynamique en ReactJS, et une API sécurisée interrogeant une base de données MySQL. Le site propose une recherche dynamique, un système de filtres par catégorie, des fiches artisans détaillées, un formulaire de contact fonctionnel et une page 404 personnalisée. Le tout a été développé selon une approche mobile-first et conforme aux normes WCAG 2.1.",
+        "défis": "Le principal défi a été d’assurer la cohérence entre le frontend et l’API tout en respectant les bonnes pratiques de sécurité (validation des données, gestion des requêtes, limitation d’accès à l’API). Il a également fallu veiller à la conformité WCAG 2.1 et au rendu responsive sur différents supports (mobile, tablette, desktop).",
+        "solutions": "Mise en place d’une architecture REST avec Express et Sequelize pour l’accès à la base de données MySQL. Côté frontend, utilisation de ReactJS avec Bootstrap et Sass pour un design moderne et responsive. La communication entre le front et l’API se fait via des requêtes Axios sécurisées. Des tests ont été effectués pour garantir la conformité W3C et la bonne accessibilité du site. Le tout versionné sur GitHub avec un déploiement test en ligne.",
+        "link": "https://github.com/Simon69500/Trouve_ton_artisan_React.JS",
         "mobileFirst": true
+    },
+
+    
+    {
+        "id": 4,
+        "titre": "API Russell Port",
+        "slug": "API_Russel",
+        "technologies": ["NodeJS", "Express", "MongoDB",  "GitHub"],
+        "technologiesSec": ["Mongoose", "JWT", "Cors", "Dotenv", "EJS" ],
+        "description": "Création d'une API privée pour le Port de Plaisance de Russell permettant la gestion des catways et des réservations de bateaux, avec une partie frontend simple pour l'administration.",
+        "objectif": "Mettre en place une application web sécurisée permettant la gestion des catways, des réservations et des utilisateurs, avec un tableau de bord administrateur et un système d'authentification.",
+        "publicCible": "Personnel de la capitainerie du Port de Russell et administrateurs de l'API.",
+        "resultat": "API fonctionnelle avec gestion complète des catways, réservations et utilisateurs, interface administrateur pour CRUD, sécurité via JWT, et base de données MongoDB. La solution permet de visualiser, créer, modifier et supprimer des catways et réservations en toute sécurité.",
+        "défis": "Mettre en place une authentification sécurisée, gérer les relations entre catways et réservations, concevoir une API REST claire et documentée, et créer un tableau de bord administrateur fonctionnel.",
+        "solutions": "Architecture REST avec Express et Mongoose pour MongoDB. Authentification via JWT. Frontend minimal en EJS pour l'administration. Routes CRUD sécurisées pour toutes les collections. Documentation incluse et versionnement sur GitHub.",
+        "link": "https://github.com/Simon69500/Creer_une_API",
+        "mobileFirst": false
     }
 
 ]

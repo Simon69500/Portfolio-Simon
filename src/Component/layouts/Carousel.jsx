@@ -13,7 +13,7 @@ const HomeCarousel = () => {
             <div className="d-flex justify-content-center p-3">
               
               <div className="card" style={{ width: "18rem", height: "25rem" }}>
-                <img src={imageMap[project.slug][0]} className="card-img-top" alt={project.name} />
+                <img src={imageMap[project.slug] ? imageMap[project.slug][0] : "/fallback.jpg"} className="card-img-top" alt={project.name} />
                 <div className="card-body text-center">
                   <h5 className="card-title">{project.name}</h5>
                   <Link
