@@ -1,11 +1,9 @@
 @use '../Colors.scss' as c;
 
 // Styles communs à tous les écrans
-#main {
+.main {
 
     @include c.background-secondary;
-    width: 100%;
-    padding-bottom: 0.5rem;
 
     .title {
         @include c.title
@@ -32,7 +30,7 @@
     .about {
         @include c.background-tertiary;
 
-        .photo-about {
+        .photo-home {
             width: 150px;
             height: 150px;
         }
@@ -41,7 +39,7 @@
     .actual {
     @include c.background-tertiary;
 
-        .social-icons {
+        .icons-home {
             svg {
             color: c.$dark-1;           // couleur par défaut
             transition: color 0.3s ease;
@@ -61,22 +59,53 @@
 
 // Media queries — uniquement ce qui change
 @media (min-width: 1281px) and (max-width: 1600px) {
-    .text { font-size: medium; }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-    .actual { height: 250px; }
-    .text { font-size: medium; }
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .text { font-size: medium; }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    .text { font-size: medium; width: 70%; }
+    .main {    
+        .about {
+            .photo-home {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        .actual {
+            .icons-home {
+                .bi {
+                    width: 28px;
+                    height: 28px;  
+                }
+          
+            }
+    }
+    }
 }
 
 @media (max-width: 480px) {
-    .text { font-size: medium; width: 70%; }
+    .main {    
+        .about {
+            .photo-home {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        .actual {
+            .icons-home {
+                .bi {
+                    width: 20px;
+                    height: 20px;  
+                }
+          
+            }
+    }        
+    }
 }
