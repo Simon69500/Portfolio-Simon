@@ -1,5 +1,9 @@
 @use '../Colors.scss' as c;
 
+.Portfolio_container{
+    @include c.background-secondary;
+}
+
 .Portfolio {
     @include c.background-secondary;
 }

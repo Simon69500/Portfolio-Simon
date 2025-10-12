@@ -1,27 +1,10 @@
 @use '../Colors.scss' as c ;
 
-.projet {
+.card {
     @include c.background-secondary;
-
-    .projetCard {
-        @include c.background-tertiary;
-    }
-
-    .border {
-        border-color: c.$dark-1
-    }
-
-    .title {
-        @include c.title;
-    }
 
     .Subtitle {
         @include c.sub-title;
-    }
-
-    .text {
-        @include c.text;
-        width: 75%;
     }
 }
 
@@ -35,6 +18,7 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
