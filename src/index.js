@@ -7,12 +7,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { BrowserRouter } from 'react-router-dom';
+import ScrollToTop from './Component/layouts/ScrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='index-contenair'>
   <React.StrictMode>
     <BrowserRouter basename="/Portfolio-Simon">
+    <ScrollToTop/>
       <App />    
     </BrowserRouter>
   </React.StrictMode>

@@ -9,10 +9,6 @@
   z-index: 1000;
 
   .navbar {
-    display: flex;
-    align-items: center;
-    height: 100px;
-
     .navbar-brand {
       padding: 0 15px;
 
@@ -24,8 +20,8 @@
       }
     }
 
-    .nav-item  a{
-        color: c.$text;
+    .Subtitle{
+      @include c.sub-title
     }
   }
 
@@ -38,12 +34,26 @@
 @media (max-width: 768px) {
   .header {
     .navbar {
-      height: 60px;
-
       .navbar-brand img {
         width: 30px;
         height: 30px;
       }
+
+      .menu-burger {
+        @include c.background-header;
+        
+        position: fixed;
+        top: 3.5rem;
+        right: 0rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);        
+
+      }    
     }
   }
 }
+
+ // Petit écran mobile (portrait) XS
+ @media (max-width: 575.98px) {
+
+ }
