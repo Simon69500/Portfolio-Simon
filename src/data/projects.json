@@ -1,66 +1,131 @@
-[
- {
-        "id": 1,
-        "titre":"Au petit Village",
-        "slug": "village",
-       "technologies": ["PHP", "MySQL", "Looping", "GitHub"],
-        "description": "Projet réalisé dans le cadre de ma formation, consistant en la création d'un site e-commerce avec WordPress. Ce projet m'a permis de mettre en pratique mes compétences sur un projet concret et appliqué dans un environnement de gestion de contenu.",
-        "objectif": "Développer une application web interne à l’entreprise pour le covoiturage entre agences. L’objectif est de réduire les trajets peu occupés et de favoriser le partage des véhicules. L’application est développée en PHP, utilise MySQL et respecte une architecture MVC.",
-        "publicCible": "Pour les employés de l'entreprise",
-        "resultat": "Un site fonctionnel permettant de présenter les produits, de gérer les paiements en ligne et de proposer une expérience d'achat fluide pour les utilisateurs.",
-        "défis": "Les principaux défis rencontrés ont été la mise en place du site en local en utilisant l'application 'Local' pour gérer WordPress, l'importation du site sur un serveur FTP, ainsi que l'intégration des différents modules nécessaires au bon fonctionnement du site. La gestion des plugins WooCommerce, WPForms et Elementor a nécessité une attention particulière pour garantir leur bon fonctionnement.",
-        "solutions": "Pour résoudre ces défis, j'ai utilisé l'application 'Local' pour créer un environnement local pour le site WordPress. Une fois le site prêt, j'ai exporté et importé le projet sur un serveur FTP à l'aide de FileZilla, afin de le mettre en ligne. J'ai ensuite configuré les plugins WooCommerce pour le système de paiement, WPForms pour les formulaires de contact et Elementor pour la personnalisation des pages. Cela m'a permis d'assurer une compatibilité optimale entre le thème du site et les différentes fonctionnalités intégrées.",
-        "link": "https://github.com/Simon69500/Touche-pas-au-klaxon",
-       "mobileFirst": false
-    },
-    
+[   
     {
-        "id": 2,
+        "id": 1,
         "titre": "Touche pas au klaxon",
         "slug": "touche_pas_au_klaxon",
         "technologies": ["PHP", "MySQL", "Bootstrap", "SASS", "GitHub"],
-        "technologiesSec": ["MVC","PHPUnit", "PHPStan" ],
-        "description": "Projet réalisé dans le cadre de ma formation : développement d’une application web de covoiturage interne pour une grande entreprise multi-sites. L’objectif était de réduire le nombre de trajets à faible taux d’occupation en permettant aux employés de publier et de réserver des trajets directement via l’intranet de l’entreprise.",
-        "objectif": "Concevoir et développer une application PHP respectant l’architecture MVC et les bonnes pratiques de développement (tests unitaires, documentation, code statique). L’application devait permettre aux utilisateurs de se connecter, consulter les trajets disponibles, en proposer, les modifier ou les supprimer, selon leurs droits. Un administrateur disposait d’un tableau de bord complet pour gérer les agences et superviser les trajets.",
-        "publicCible": "Les employés de l’entreprise et l’administrateur en charge de la gestion des trajets inter-sites.",
-        "resultat": "Application fonctionnelle avec authentification sécurisée, affichage dynamique des trajets disponibles, création et modification des trajets par les utilisateurs, et un espace administrateur complet. Le code est structuré en architecture MVC, validé avec PHPStan et testé avec PHPUnit. L’interface, construite avec Bootstrap et Sass, respecte la charte graphique imposée. Les données sont stockées dans une base MySQL et les scripts SQL d’installation et d’alimentation sont inclus.",
-        "défis": "Assurer la réutilisabilité du code et le respect strict de l’architecture MVC, tout en maintenant une séparation claire entre les rôles utilisateurs et administrateurs. Garantir la fiabilité du code avec des tests unitaires sur les opérations d’écriture et une validation statique sans erreurs PHPStan.",
-        "solutions": "Mise en place d’un système de rôles différenciés (utilisateur et administrateur), utilisation de PDO pour la gestion sécurisée des requêtes SQL, validation côté serveur des formulaires et contrôles de cohérence sur les trajets (dates, agences, disponibilité). Le projet a été entièrement documenté avec DocBlock, testé avec PHPUnit, et vérifié via PHPStan pour garantir la qualité du code.",
-        "link": "https://github.com/Simon69500/Touche-pas-au-klaxon",
-        "mobileFirst": false
+        "technologiesSecTitle": "Aspects techniques clés",
+        "technologiesSec": [
+            "Architecture MVC",
+            "Tests unitaires avec PHPUnit",
+            "Validation statique avec PHPStan",
+            "Gestion sécurisée des requêtes avec PDO",
+            "CRUD et routing pour trajets et agences"
+        ],
+        "contexte": "Développement d’une application interne de covoiturage pour une entreprise multi-sites afin d’optimiser l’occupation des véhicules et faciliter la gestion des trajets.",
+        "description": "Développement d’une application web interne de covoiturage pour une entreprise multi-sites. Permet aux employés de consulter, proposer, modifier et réserver des trajets, tout en optimisant l’occupation des véhicules et en respectant les rôles utilisateurs/administrateurs.",
+        "resultat": "Application sécurisée et fonctionnelle avec authentification, affichage dynamique des trajets disponibles et gestion complète pour les administrateurs. Le code est testé, validé et documenté pour assurer maintenabilité et réutilisabilité.",
+        "défis": "Respecter l’architecture MVC, intégrer les tests unitaires et la validation statique, gérer les rôles et permissions, et garantir la cohérence des trajets tout en maintenant un code clair et réutilisable.",
+        "solutions": "Mise en place d’une architecture MVC complète, utilisation de PDO pour les requêtes sécurisées, création de tests PHPUnit, validation statique avec PHPStan, documentation avec DocBlock et scripts SQL inclus pour la création et l’alimentation de la base MySQL.",
+        "link": "https://github.com/Simon69500/Touche-pas-au-klaxon"
     },
 
     {
-        "id": 3,
+        "id": 2,
+        "titre": "API Russell Port",
+        "slug": "API_Russel",
+        "technologies": ["NodeJS", "Express", "MongoDB", "GitHub"],
+        "technologiesSecTitle": "Aspects techniques clés",
+        "technologiesSec": [
+            "Architecture REST sécurisée avec Express",
+            "Gestion des données avec Mongoose",
+            "Authentification JWT",
+            "Gestion des requêtes CORS et variables d'environnement avec Dotenv",
+            "CRUD complet pour catways, réservations et utilisateurs",
+            "Frontend administrateur avec EJS et vues Express"
+        ],
+        "contexte": "Développement d’une API et d’un frontend administrateur pour le Port de Plaisance de Russell afin de gérer les catways, réservations et utilisateurs de manière sécurisée.",
+        "description": "Création d’une API privée pour le Port de Plaisance de Russell permettant de gérer les catways, les réservations et les utilisateurs. Le projet inclut également une interface frontend simple pour l'administration et la documentation de l'API.",
+        "resultat": "API fonctionnelle avec gestion complète des catways, réservations et utilisateurs. Tableau de bord administrateur opérationnel, sécurisation via JWT, validation des données et base MongoDB. L’ensemble est versionné sur GitHub et hébergé en ligne.",
+        "défis": "Mettre en place une API REST sécurisée, gérer les relations entre catways et réservations, assurer un tableau de bord administrateur fonctionnel et documenté, et déployer l’application en ligne.",
+        "solutions": "Architecture REST avec Express et Mongoose, routes CRUD sécurisées, authentification via JWT, frontend minimal en EJS pour l’administration, documentation incluse, et hébergement de l’API en ligne avec accès sécurisé. Versionnage du projet sur GitHub.",
+        "link": "https://github.com/Simon69500/Creer_une_API"
+    },  
+    
+    {
+    "id": 3,
+    "titre": "Au petit Village",
+    "slug": "village",
+    "technologies": ["Angular", "TypeScript", "HTML", "CSS", "GitHub"],
+    "technologiesSecTitle": "Aspects techniques clés",
+    "technologiesSec": [
+        "Composants Angular réutilisables", 
+        "Routing multi-page", "Services pour la gestion des données produits", 
+        "Pipes personnalisées pour tri et recherche", 
+        "Responsive design"
+    ],
+    "contexte": "Création d’un site e-commerce Angular pour la vente de figurines artisanales, avec catalogue interactif, tri et recherche, et respect de la charte graphique client.",
+    "description": "Création d’un site e-commerce dynamique et responsive avec Angular pour la vente de figurines artisanales inspirées d’Astérix & Obélix. Le projet met en avant un catalogue interactif avec tri et recherche, une page produit détaillée et une navigation fluide grâce au routing Angular.",
+    "resultat": "Un site fluide et esthétique, respectant la charte graphique du client, permettant aux utilisateurs de consulter, trier et rechercher des produits facilement. L’ensemble du code est organisé en composants modulaires et versionné sur GitHub.",
+    "défis": "Respecter la charte graphique imposée, intégrer les requis techniques liés à Angular (composants, routing, services et pipes), tout en assurant la cohérence visuelle et la performance du site sur tous les supports.",
+    "solutions": "Structuration du projet autour de cinq composants principaux, mise en place d’un routing paramétré, de pipes personnalisées pour le tri et la recherche, et d’un service pour centraliser les données produits. Les tests et ajustements visuels ont permis de garantir une expérience utilisateur fluide et conforme à la charte.",
+    "link": "https://github.com/Simon69500/Touche-pas-au-klaxon"
+    },    
+
+    {
+        "id": 4,
         "titre": "Trouve ton artisan",
         "slug": "artisan",
         "technologies": ["ReactJS", "Bootstrap", "SASS", "NodeJS", "Express", "Sequelize", "MySQL", "Figma", "GitHub"],
-        "technologiesSec": ["Sequelize" ],
-        "description": "Projet complet réalisé dans le cadre de ma formation, consistant à concevoir et développer une plateforme web permettant aux particuliers de trouver facilement un artisan dans la région Auvergne-Rhône-Alpes. Le projet comprenait la conception des maquettes sur Figma, la réalisation du frontend en ReactJS, ainsi que le développement d’une API REST sécurisée en Node.js / Express connectée à une base de données MySQL.",
-        "objectif": "Créer une application web moderne, accessible et responsive (mobile-first) permettant de rechercher des artisans par nom ou spécialité, d’afficher leur fiche détaillée et de les contacter via un formulaire. L’ensemble devait respecter les normes d’accessibilité WCAG 2.1 et s’intégrer dans la charte graphique de la région Auvergne-Rhône-Alpes.",
-        "publicCible": "Tous les habitants de la région Auvergne-Rhône-Alpes, incluant jeunes, seniors et personnes en situation de handicap.",
-        "resultat": "Une plateforme complète avec un design validé sous Figma, un frontend dynamique en ReactJS, et une API sécurisée interrogeant une base de données MySQL. Le site propose une recherche dynamique, un système de filtres par catégorie, des fiches artisans détaillées, un formulaire de contact fonctionnel et une page 404 personnalisée. Le tout a été développé selon une approche mobile-first et conforme aux normes WCAG 2.1.",
-        "défis": "Le principal défi a été d’assurer la cohérence entre le frontend et l’API tout en respectant les bonnes pratiques de sécurité (validation des données, gestion des requêtes, limitation d’accès à l’API). Il a également fallu veiller à la conformité WCAG 2.1 et au rendu responsive sur différents supports (mobile, tablette, desktop).",
-        "solutions": "Mise en place d’une architecture REST avec Express et Sequelize pour l’accès à la base de données MySQL. Côté frontend, utilisation de ReactJS avec Bootstrap et Sass pour un design moderne et responsive. La communication entre le front et l’API se fait via des requêtes Axios sécurisées. Des tests ont été effectués pour garantir la conformité W3C et la bonne accessibilité du site. Le tout versionné sur GitHub avec un déploiement test en ligne.",
-        "link": "https://github.com/Simon69500/Trouve_ton_artisan_React.JS",
-        "mobileFirst": true
+        "technologiesSecTitle": "Aspects techniques clés",
+        "technologiesSec": [
+            "Architecture REST avec Express et Sequelize",
+            "Frontend ReactJS responsive et modulable",
+            "Recherche et filtres dynamiques",
+            "Formulaire de contact sécurisé",
+            "Intégration des maquettes Figma"
+        ],
+        "contexte": "Création d’une plateforme web pour aider les habitants de la région Auvergne-Rhône-Alpes à trouver et contacter des artisans via un site accessible, responsive et sécurisé.",
+        "description": "Développement d’une plateforme web permettant aux habitants de la région Auvergne-Rhône-Alpes de trouver facilement un artisan et de le contacter via un formulaire. Le projet comprenait la réalisation des maquettes sur Figma, le frontend en ReactJS et une API REST sécurisée avec Node.js / Express et MySQL.",
+        "resultat": "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé (frontend sur Vercel, backend sur Render, base MySQL sur Railway).",
+        "défis": "Assurer la cohérence entre le frontend et l’API, garantir la sécurité et la performance, maintenir un design accessible et responsive, et déployer une solution hébergée fiable et maintenable.",
+        "solutions": "Mise en place d’une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration des requêtes API via Axios sécurisées, tests pour conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
+        "link": "https://github.com/Simon69500/Trouve_ton_artisan_React.JS"
     },
 
-    
     {
-        "id": 4,
-        "titre": "API Russell Port",
-        "slug": "API_Russel",
-        "technologies": ["NodeJS", "Express", "MongoDB",  "GitHub"],
-        "technologiesSec": ["Mongoose", "JWT", "Cors", "Dotenv", "EJS" ],
-        "description": "Création d'une API privée pour le Port de Plaisance de Russell permettant la gestion des catways et des réservations de bateaux, avec une partie frontend simple pour l'administration.",
-        "objectif": "Mettre en place une application web sécurisée permettant la gestion des catways, des réservations et des utilisateurs, avec un tableau de bord administrateur et un système d'authentification.",
-        "publicCible": "Personnel de la capitainerie du Port de Russell et administrateurs de l'API.",
-        "resultat": "API fonctionnelle avec gestion complète des catways, réservations et utilisateurs, interface administrateur pour CRUD, sécurité via JWT, et base de données MongoDB. La solution permet de visualiser, créer, modifier et supprimer des catways et réservations en toute sécurité.",
-        "défis": "Mettre en place une authentification sécurisée, gérer les relations entre catways et réservations, concevoir une API REST claire et documentée, et créer un tableau de bord administrateur fonctionnel.",
-        "solutions": "Architecture REST avec Express et Mongoose pour MongoDB. Authentification via JWT. Frontend minimal en EJS pour l'administration. Routes CRUD sécurisées pour toutes les collections. Documentation incluse et versionnement sur GitHub.",
-        "link": "https://github.com/Simon69500/Creer_une_API",
-        "mobileFirst": false
+        "id": 5,
+        "titre": "CV en ligne",
+        "slug": "cv_en_ligne",
+        "technologies": ["HTML", "CSS", "GitHub"],
+        "technologiesSecTitle": "Aspects techniques clés",
+        "technologiesSec": [
+            "Maquette respectée avec Flexbox", 
+            "Responsive design centré et largeur fixe", 
+            "Liens interactifs (email, téléphone, Google Maps)", 
+            "Effets au survol pour dynamisme", 
+            "Structuration des fichiers et workflow GitHub"
+        ],
+        "contexte": "Création d’un CV interactif en ligne pour postuler à une start-up GreenTech, démontrant les compétences techniques, le respect de maquette et la maîtrise de HTML/CSS.",
+        "description": "Création d’un CV en ligne présentant l’ensemble du parcours académique et professionnel, ainsi que les compétences et centres d’intérêt, tout en respectant scrupuleusement une maquette imposée et en démontrant les bonnes pratiques de développement web.",
+        "resultat": "Un CV en ligne complet, esthétique et fonctionnel avec tous les éléments classiques d’un CV : photo de profil, informations personnelles, compétences, langues, expériences, formations et liens vers réseaux professionnels. Effets graphiques dynamiques appliqués pour un rendu interactif et attractif.",
+        "défis": "Respecter scrupuleusement la maquette, utiliser Flexbox pour la mise en page, gérer les effets dynamiques au survol, maintenir un code structuré et propre, et assurer la compatibilité et le centrage sur différents écrans.",
+        "solutions": "Structuration du projet avec sous-dossiers pour HTML, CSS et images, utilisation de Flexbox pour le layout, liens fonctionnels pour email, téléphone et Google Maps, mise en place d’effets graphiques au survol et versionnement sur GitHub avec workflow complet de branches et pull requests.",
+        "link": "https://github.com/Simon69500/CV_en_ligne"
+    },
+
+    {
+        "id": 6,
+        "titre": "Portfolio React.js",
+        "slug": "portfolio_react",
+        "technologies": ["ReactJS", "Bootstrap", "CSS", "GitHub"],
+        "technologiesSecTitle": "Aspects techniques clés",
+        "technologiesSec": [
+            "Composants réutilisables", 
+            "Routing avec React Router", 
+            "Gestion du state et hooks", 
+            "Effets CSS dynamiques sur Cards et boutons", 
+            "Modale dynamique pour profil GitHub", 
+            "SEO et code W3C validé"
+        ],
+        "contexte": "Création d’un portfolio interactif pour se présenter comme développeur web et valoriser ses compétences, expériences et projets auprès des recruteurs et employeurs potentiels.",
+        "description": "Création d’un portfolio interactif pour un développeur web, permettant de présenter ses compétences, expériences, projets et informations de contact, en respectant une maquette fournie et en intégrant des effets graphiques et une modale dynamique.",
+        "objectif": "Mettre en valeur les compétences et réalisations d’un développeur web à travers un site moderne et interactif, développé avec ReactJS et Bootstrap, avec un code propre, modulable et conforme aux standards web.",
+        "publicCible": "Recruteurs, employeurs potentiels, et toute personne souhaitant découvrir le profil et les réalisations du développeur.",
+        "resultat": "Un portfolio complet et fonctionnel avec page d’accueil Hero, sections présentation et compétences, pages Services, Réalisations (minimum 6 projets), Contact et Mentions légales, modale pour profil GitHub et effets CSS dynamiques sur Cards, boutons et liens. Navigation fluide et responsive sur tous supports.",
+        "défis": "Structurer le projet en composants réutilisables, gérer le routing avec React Router, intégrer les effets graphiques CSS, récupérer les données d’une API externe pour la modale, et assurer un site SEO-friendly et W3C-compliant.",
+        "solutions": "Organisation du projet avec composants React modulaires, utilisation de React Router pour la navigation, intégration de Bootstrap et CSS personnalisé pour les effets dynamiques, hook useEffect pour la récupération du profil GitHub, versionnement sur GitHub avec workflow d’issues et pull requests.",
+        "link": "https://github.com/Simon69500/Portfolio_React"
     }
 
 ]

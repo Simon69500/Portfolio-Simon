@@ -9,12 +9,12 @@ const Portfolio = () => {
   return (
     <div className="Portfolio_container d-flex flex-column">
       <h1 className="title text-center fs-1 pt-3">Portfolio</h1>
-      <div className="Portfolio d-flex flex-wrap justify-content-evenly pt-3 pb-5">
+      <div className="Portfolio d-flex flex-wrap justify-content-evenly align-items-stretch">
       {projects.map((projet) => {
         const images = imageMap[projet.slug] || [];
 
         return (
-        <div className="col-sm-8 col-md-4 col-lg-4 col-xl-5 d-flex m-3" key={projet.id}>
+        <div className="col-sm-8 col-md-4 col-lg-4 col-xl-3 d-flex m-3" key={projet.id}>
          
           {/* Card-Projet */}         
           <div className="projetCard card d-flex flex-column h-100 w-100">
@@ -78,10 +78,10 @@ const Portfolio = () => {
             </div>
 
             {/* Card-Body */}
-            <div className="card-body text-center align-content-center">
+            <div className="card-body d-flex flex-column justify-content-between text-center">
                   <h5 className="Subtitle fs-5">Contexte :</h5>
-                  <p className="text w-100"> {projet.description} </p>
-                  
+                  <p className="text w-100"> {projet.contexte} </p>
+
                   {/* Technologies utilisées */}
                   <div>
                     <h5 className="Subtitle fs-5">Technologies utilisées :</h5>

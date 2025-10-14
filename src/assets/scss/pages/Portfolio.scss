@@ -10,6 +10,10 @@
 
 .projetCard {
     @include c.background-tertiary;
+
+    .card-body p.text {
+    overflow: hidden; // Évite que le texte dépasse
+    }    
 }
 
 .title {

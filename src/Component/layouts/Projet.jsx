@@ -17,9 +17,9 @@ function Projet({ project }) {
   if (!projet) return <p>Projet introuvable</p>;
 
   return (
-    <div id="projet" className="projet contenair p-md-5 p-2">
+    <div id="projet" className="projet contenair d-flex flex-column align-items-center p-md-5 p-2">
         
-      <div className="card projetCard m-md-5  ">
+      <div className="card projetCard col-8 ">
 
         {/* Card-Header */}
         <div className="card-header d-flex justify-content-center">
@@ -33,7 +33,7 @@ function Projet({ project }) {
             {/* Carousel */}
             <div
             id={`carousel-${projet.id}`}
-            className="carousel carousel-dark slide my-md-5 px-md-5 my-2 px-2"
+            className="carousel carousel-dark  slide my-md-5 px-md-5 my-2 px-2"
             data-bs-ride="carousel"
             >
             {/* Carousel-Indicators */}
@@ -60,8 +60,9 @@ function Projet({ project }) {
                 >
                     <img
                     src={img}
-                    className="d-block w-100"
+                    className="d-block mx-auto"
                     alt={`${projet.titre} ${idx + 1}`}
+                    style={{width: "50rem", height:"35rem"}}
                     />
                 </div>
                 ))}
@@ -107,14 +108,14 @@ function Projet({ project }) {
                     skill && (
                     <div
                         key={index}
-                        className="tech-item d-flex flex-column align-items-center m-2"
+                        className="d-flex flex-column align-items-center m-2"
                     >
                         <img
                         src={skill.img}
                         alt={skill.name}
                         className="skill-img"
                         />
-                        <span className="text text-center">{skill.name}</span>
+                        <span className="text text-center w-100">{skill.name}</span>
                     </div>
                     )
                 );
@@ -124,43 +125,28 @@ function Projet({ project }) {
 
             <div className="border-top border-dark my-md-5 my-2"></div>
 
-            {/* Technologie Secondaire du projet */}
-            <div className="d-flex flex-column align-items-md-center my-md-5 my-3">
-            <h3 className="Subtitle text-center card-title me-3">Technologie Secondaire : </h3>
-             <div className="d-flex justify-content-center flex-wrap">
-            {projet.technologiesSec?.map((tech) => (
-                <span key={tech} className="text p-3"> {tech} </span>
-            ))}
+            {/* Technologies secondaires du projet */}
+            <div className="d-flex flex-column align-items-center my-md-5 my-3">
+            <h3 className="Subtitle text-center card-title mb-3">
+                {projet.technologiesSecTitle} :
+            </h3>
+
+            {/* Conteneur flex pour les items */}
+            <div className="d-flex flex-wrap justify-content-center gap-2">
+                {projet.technologiesSec?.map((tech) => (
+                <span key={tech} className="text text-center p-2 px-3"> {tech} </span>
+                ))}
             </div>
             </div>
-            
+
+
             <div className="border-top border-dark my-md-5 my-2"></div>
 
             {/* Description du projet */}
-            <div className="d-flex flex-column align-items-md-center my-md-5 my-3">
-            <h3 className="Subtitle text-center text-center card-title me-3">Description du projet : </h3>
-            <p className="text card-text px-md-0 px-1">{projet.description}</p>
+            <div className="d-flex flex-column align-items-center my-3">
+            <h3 className="Subtitle text-center card-title me-3">Description du projet : </h3>
+            <p className="text text-center px-md-0 px-1">{projet.description}</p>
             </div>
-
-            <div className="border-top border-dark my-md-5 my-2"></div>
-
-            {/* Objectif du projet */}
-            {projet.objectif && (
-            <div className="d-flex flex-column align-items-md-center my-md-5 my-3">
-                <h3 className="Subtitle text-center">Objectif du projet : </h3>
-                <p className="text card-text px-md-0 px-1 ">{projet.objectif}</p>
-            </div>
-            )}
-
-            <div className="border-top border-dark my-md-5 my-2"></div>
-
-            {/* Public cible */}
-            {projet.publicCible && (
-            <div className="d-flex flex-column align-items-md-center my-md-5 my-3">
-                <h3 className="Subtitle text-center">Public cible : </h3>
-                <p className="text card-text px-md-0 px-1 ">{projet.publicCible}</p>
-            </div>
-            )}
 
             <div className="border-top border-dark my-md-5 my-2"></div>
 
@@ -168,7 +154,7 @@ function Projet({ project }) {
             {projet.resultat && (
             <div className="d-flex flex-column align-items-md-center my-md-5 my-3">
                 <h3 className="Subtitle text-center">Résultat du projet : </h3>
-                <p className="text card-text px-md-0 px-1 ">{projet.resultat}</p>
+                <p className="text text-center px-md-0 px-1 ">{projet.resultat}</p>
             </div>
             )}
 
@@ -178,7 +164,7 @@ function Projet({ project }) {
             {projet.défis && (
             <div className="d-flex flex-column align-items-md-center my-md-5 my-3">
                 <h3 className="Subtitle text-center">Défis rencontrés : </h3>
-                <p className="text card-text px-md-0 px-1 ">{projet.défis}</p>
+                <p className="text text-center px-md-0 px-1 ">{projet.défis}</p>
             </div>
             )}
 
@@ -188,14 +174,14 @@ function Projet({ project }) {
             {projet.solutions && (
             <div className="d-flex flex-column align-items-md-center my-md-5 my-3">
                 <h3 className="Subtitle text-center">Solutions apportées : </h3>
-                <p className="text card-text px-md-0 px-1 ">{projet.solutions}</p>
+                <p className="text text-center px-md-0 px-1 ">{projet.solutions}</p>
             </div>
             )}
 
             {/* Lien vers GitHub */}
             <div className="card-footer d-flex justify-content-center">
                 <a
-                className="btn btn-sm btn-primary my-3"
+                className="btn btn-primary my-3"
                 href={projet.link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -206,7 +192,7 @@ function Projet({ project }) {
         </div>
       </div>
 
-        <div className="d-flex justify-content-end">
+        <div className="w-100 d-flex justify-content-end">
         <a href="#projet">
             <i className="bi bi-arrow-bar-up fs-1"></i>
         </a>
