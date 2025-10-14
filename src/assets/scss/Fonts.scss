@@ -5,7 +5,7 @@
 // Variables pour les Titres
 
 // Front utiliser avec la mixin titre sur Colors.scss
-@mixin titre-principaux($font-size-desktop: 2.5rem, $font-size-tablet: 2rem, $font-size-mobile: 1.5rem) {
+@mixin titre-principaux($font-size-desktop: 2.5rem, $font-size-tablet: 2rem, $font-size-mobile: 1.2rem) {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: $font-size-desktop;
@@ -30,7 +30,7 @@
 
 
 // Front utiliser avec la mixin sub-titre sur Colors.scss
-@mixin titre-secondaire($font-size-desktop: 1.75rem, $font-size-tablet: 1.5rem, $font-size-mobile: 1.2rem) {
+@mixin titre-secondaire($font-size-desktop: 1.75rem, $font-size-tablet: 1.5rem, $font-size-mobile: 1.0rem) {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: $font-size-desktop;
@@ -46,7 +46,7 @@
 
 
 // Front utiliser avec la mixin text sur Colors.scss
-@mixin text-paragraphe($font-size-desktop: 1rem, $font-size-tablet: 0.9rem, $font-size-mobile: 0.8rem) {
+@mixin text-paragraphe($font-size-desktop: 1.5rem, $font-size-tablet: 0.9rem, $font-size-mobile: 0.8rem) {
   font-family: "Lato", serif;
   font-weight: 400;
   font-size: $font-size-desktop;

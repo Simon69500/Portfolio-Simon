@@ -19,12 +19,12 @@ function Projet({ project }) {
   return (
     <div id="projet" className="projet contenair d-flex flex-column align-items-center p-md-5 p-2">
         
-      <div className="card projetCard col-8 ">
+      <div className="card projetCard col-sm-10 col-lg-10 col-12 ">
 
         {/* Card-Header */}
         <div className="card-header d-flex justify-content-center">
-            <Link to="/portfolio" ><i className="bi bi-arrow-bar-left fs-2 px-3"></i></Link>
-            <h1 className="title text-center fs-1">{projet.titre}</h1>
+            <Link to="/portfolio" ><i className="bi bi-arrow-bar-left"></i></Link>
+            <h1 className="title">{projet.titre}</h1>
         </div>
 
         {/* Card-Body */}
@@ -60,9 +60,8 @@ function Projet({ project }) {
                 >
                     <img
                     src={img}
-                    className="d-block mx-auto"
+                    className="img-carousel d-block mx-auto"
                     alt={`${projet.titre} ${idx + 1}`}
-                    style={{width: "50rem", height:"35rem"}}
                     />
                 </div>
                 ))}
@@ -100,27 +99,27 @@ function Projet({ project }) {
 
             {/* Technologies utilisées */}
             <div className="d-flex flex-column align-items-md-center my-md-5 my-3">
-            <h3 className="Subtitle text-center card-title me-md-3">Technologies utilisées :</h3>
-            <div className="d-flex justify-content-center flex-wrap">
-                {projet.technologies?.map((tech, index) => {
-                const skill = Technologies[tech];
-                return (
-                    skill && (
-                    <div
-                        key={index}
-                        className="d-flex flex-column align-items-center m-2"
-                    >
-                        <img
-                        src={skill.img}
-                        alt={skill.name}
-                        className="skill-img"
-                        />
-                        <span className="text text-center w-100">{skill.name}</span>
-                    </div>
-                    )
-                );
-                })}
-            </div>
+                <h3 className="Subtitle text-center card-title me-md-3">Technologies utilisées :</h3>
+                <div className="d-flex justify-content-center flex-wrap">
+                    {projet.technologies?.map((tech, index) => {
+                    const skill = Technologies[tech];
+                    return (
+                        skill && (
+                        <div
+                            key={index}
+                            className="d-flex flex-column align-items-center m-2"
+                        >
+                            <img
+                            src={skill.img}
+                            alt={skill.name}
+                            className="skill-img"
+                            />
+                            <span className="text text-center w-100">{skill.name}</span>
+                        </div>
+                        )
+                    );
+                    })}
+                </div>
             </div>
 
             <div className="border-top border-dark my-md-5 my-2"></div>
@@ -144,39 +143,33 @@ function Projet({ project }) {
 
             {/* Description du projet */}
             <div className="d-flex flex-column align-items-center my-3">
-            <h3 className="Subtitle text-center card-title me-3">Description du projet : </h3>
+            <h3 className="Subtitle text-center ">Description du projet : </h3>
             <p className="text text-center px-md-0 px-1">{projet.description}</p>
             </div>
 
             <div className="border-top border-dark my-md-5 my-2"></div>
 
             {/* Résultat du projet */}
-            {projet.resultat && (
-            <div className="d-flex flex-column align-items-md-center my-md-5 my-3">
-                <h3 className="Subtitle text-center">Résultat du projet : </h3>
+            <div className="d-flex flex-column align-items-center my-md-5 my-3">
+                <h3 className="Subtitle text-center ">Résultat du projet : </h3>
                 <p className="text text-center px-md-0 px-1 ">{projet.resultat}</p>
             </div>
-            )}
 
             <div className="border-top border-dark my-md-5 my-2"></div>
 
             {/* Défis rencontrés */}
-            {projet.défis && (
-            <div className="d-flex flex-column align-items-md-center my-md-5 my-3">
-                <h3 className="Subtitle text-center">Défis rencontrés : </h3>
+            <div className="d-flex flex-column align-items-center my-md-5 my-3">
+                <h3 className="Subtitle text-center ">Défis rencontrés : </h3>
                 <p className="text text-center px-md-0 px-1 ">{projet.défis}</p>
             </div>
-            )}
 
             <div className="border-top border-dark my-md-5 my-2"></div>
 
             {/* Solutions apportées */}
-            {projet.solutions && (
-            <div className="d-flex flex-column align-items-md-center my-md-5 my-3">
+            <div className="d-flex flex-column align-items-center my-md-5 my-3">
                 <h3 className="Subtitle text-center">Solutions apportées : </h3>
                 <p className="text text-center px-md-0 px-1 ">{projet.solutions}</p>
             </div>
-            )}
 
             {/* Lien vers GitHub */}
             <div className="card-footer d-flex justify-content-center">
@@ -194,7 +187,7 @@ function Projet({ project }) {
 
         <div className="w-100 d-flex justify-content-end">
         <a href="#projet">
-            <i className="bi bi-arrow-bar-up fs-1"></i>
+            <i className="bi bi-arrow-bar-up"></i>
         </a>
         </div>
     </div>

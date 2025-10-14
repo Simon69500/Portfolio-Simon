@@ -3,6 +3,8 @@
 .card {
     @include c.background-secondary;
 
+    width: 30rem;
+
     .Subtitle {
         @include c.sub-title;
     }
@@ -22,9 +24,14 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+.card {
+    width: 15rem;
+}
 
 }
 
 @media (max-width: 480px) {
-
+.card {
+    width: 15rem;
+}
 }

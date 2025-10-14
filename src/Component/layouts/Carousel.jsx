@@ -7,6 +7,7 @@ import { imageMap } from '../../data/imgProjects';
 import { Technologies } from "../../data/technologies";
 
 const HomeCarousel = () => {
+
   return (
     <div id="projectCarousel" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-inner">
@@ -15,7 +16,7 @@ const HomeCarousel = () => {
           <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={project.key}>
             <div className="d-flex justify-content-center ">
 
-            <div className="card shadow rounded mb-3 mb-md-4" style={{ width: "20rem", height: "35rem" }}>
+            <div className="card shadow rounded mb-3 mb-md-4">
               <img 
                 src={imageMap[project.slug] ? imageMap[project.slug][0] : "/fallback.jpg"} 
                 className="card-img-top img-fluid rounded-top object-fit-cover" 
@@ -23,7 +24,7 @@ const HomeCarousel = () => {
                 style={{ height: "15rem" }} 
               />
               <div className="card-body d-flex flex-column justify-content-between align-items-center">
-                <h5 className="Subtitle card-title fs-5">{project.titre}</h5>
+                <h5 className="Subtitle text-center card-title fs-5">{project.titre}</h5>
                 
                 <div className="d-flex flex-wrap justify-content-center my-2">
                   {project.technologies?.map((techKey, index) => {
@@ -37,7 +38,7 @@ const HomeCarousel = () => {
                   })}
                 </div>
 
-                <Link to="/portfolio" state={{ project: project.key }} className="btn btn-primary mt-2">
+                <Link to={`/portfolio#project-${project.id}`} state={{ project: project.key }} className="btn btn-primary mt-2">
                   Voir le projet
                 </Link>
               </div>
