@@ -38,29 +38,36 @@ export default function ContactForm() {
 
     return (
 
-        <form ref={form} onSubmit={handleSubmit} className='form p-4 card shadow w-50 w-md-25'>
-            <legend className='subtitle text-center'>Formulaire de contact</legend>
+        <form ref={form} onSubmit={handleSubmit} className='form p-4 card shadow col-sm-10 col-lg-8 m-2'>
+            <legend className='title text-center'>Formulaire de contact</legend>
 
-            <div className="mb-3 d-flex flex-column align-items-start">
-                <label htmlForfor="name" className="subtitle form-label">Nom* :</label>
-                <input type="text" className="form-control w-25 " id="name" name='from_name' placeholder="Votre nom" required />
-            </div>                      
-
-            <div className="mb-3 d-flex flex-column align-items-star">
-                <label htmlForfor="email" className="subtitle form-label">Email* :</label>
-                <input type="email" className="form-control w-50 " id="email" name='from_email' aria-describedby="emailHelp" placeholder="email@gmail.com" required/>
-                <div id="emailHelp" className="text form-text fs-6 fst-italic">Nous ne partagerons jamais votre e-mail avec qui que ce soit d'autre.</div>
+        <div className="row mb-3">
+            <div className="col-12 col-md-4">
+                <label htmlFor="name" className="subtitle form-label">Nom* :</label>
+                <input type="text" className="form-control" id="name" name='from_name' placeholder="Votre nom" required />
             </div>
+        </div>
 
-            <div className="mb-3 d-flex flex-column align-items-star">
+        <div className="row mb-3">
+            <div className="col-12 col-md-4">
+                <label htmlFor="email" className="subtitle form-label">Email* :</label>
+                <input type="email" className="form-control" id="email" name='from_email' placeholder="email@gmail.com" required/>
+            </div>
+        </div>
+
+        <div className="row mb-3">
+            <div className="col-12 col-md-10">
                 <label htmlFor="subject" className="subtitle form-label">Objet* :</label>
                 <input type="text" className="form-control" id="subject" name='subject' placeholder="L'objet du message" required/>
             </div>
+        </div>
 
-            <div class="mb-3 d-flex flex-column align-items-start">
-                <label htmlFor="message" class="subtitle form-label">Votre message* :</label>
-                <textarea class="form-control" id="message" name='message' rows="4" placeholder="Votre message ..." required ></textarea>
+        <div className="row mb-3">
+            <div className="col-12 ">
+                <label htmlFor="message" className="subtitle form-label">Votre message* :</label>
+                <textarea className="form-control" id="message" name='message' rows="4" placeholder="Votre message ..." required ></textarea>
             </div>
+        </div>
 
             <button type="submit" className="btn btn-primary w-100">Envoyer</button>
 

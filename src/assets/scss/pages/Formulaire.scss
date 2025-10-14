@@ -1,5 +1,6 @@
 @use '../Colors.scss' as c ;
 
+// XXL : ≥1400px (très grands écrans)
 .contact {
     @include c.background-secondary;
 
@@ -19,35 +20,35 @@
 
     ///////////////////////////////////////////////////////////////////
  
-// Grand écran de bureau
-@media (min-width: 1281px) and (max-width: 1600px) {
+//Grand écran de bureau XL
+@media (max-width: 1399.98px) {
   
 }
 
     ///////////////////////////////////////////////////////////////////
  
-//Bureau de taille moyenne
-@media (min-width: 1025px) and (max-width: 1280px) {
+// Bureau de taille moyenne LG
+@media (max-width: 1199.98px) {
  
 }
 
     ///////////////////////////////////////////////////////////////////
  
-// Tablette (paysage) ou petit écran de bureau
-@media (min-width: 769px) and (max-width: 1024px) {
+// Tablette (paysage) ou petit écran de bureau MD
+@media (max-width: 991.98px) {
  
 }
 
     ///////////////////////////////////////////////////////////////////
  
-// Tablette (portrait)
-@media (min-width: 481px) and (max-width: 768px) {
+// Tablette (portrait) SM
+@media (max-width: 767.98px) {
 
 }
 
     ///////////////////////////////////////////////////////////////////
  
- // Petit écran mobile (portrait)
- @media (max-width: 480px) {
+ // Petit écran mobile (portrait) XS
+ @media (max-width: 575.98px) {
 
  }
