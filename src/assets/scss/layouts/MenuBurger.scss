@@ -1,0 +1,78 @@
+@use '../Colors.scss' as c ;
+
+// Tablette (paysage) ou petit écran de bureau
+@media (max-width: 1024px) {
+    #menu {
+        position: absolute;
+        z-index: 1000;
+       } 
+        .burger-icon {
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background: none;
+            color: c.$Title;
+            border: none;
+            outline: none;
+      
+            svg {
+                height:100%;
+                width: 100%;
+
+            }
+            
+            &:focus {
+                outline: 2px solid #93B4FF;
+            }
+        }
+      
+        .menu-detail {
+            @include c.background-header;
+
+            display: none;
+            position: absolute;
+            top: 70%; 
+            right: 25px;
+
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+      
+            &.open {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+      
+        .menu_1 {
+            @include c.text;
+
+            display: block;
+            text-decoration: none;
+            padding: 10px;
+      
+            &:active, &.active {
+                font-weight: bold;
+                color: #3498db;
+            }
+        }
+  }
+
+    ///////////////////////////////////////////////////////////////////
+ 
+ // Format Desktop
+ @media (min-width: 1025px) {
+
+    #menu { 
+        display: none;
+    }
+ }

@@ -1,0 +1,93 @@
+@use '../Colors.scss' as c ;
+
+.about {
+    @include c.background-tertiary;
+
+    .text {
+        @include c.text;
+
+        strong { 
+            color: c.$vert; // mots-clés forts / titres internes
+        }
+
+        em { 
+            &.text-blue { color: c.$bleu-1; }  // classe pour mots clés importants
+            &.text-green { color: c.$text2; }   // classe pour succès / motivation
+        }
+
+        span {
+            &.text-blue { color: c.$bleu-1; }  // classe pour mots clés importants
+            &.text-green { color: c.$text2; }   // classe pour succès / motivation
+            &.text-grey { color: c.$text2; }  // accent neutre
+        }
+    }
+
+    .title {
+        @include c.title;
+    }
+
+    .subtitle {
+        @include c.sub-title;
+    }
+
+    .photo-about {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+// Très grand écran de bureau
+@media (min-width: 1601px){
+
+    }
+
+    ///////////////////////////////////////////////////////////////////
+ 
+//Grand écran de bureau
+@media (min-width: 1281px) and (max-width: 1600px) {
+
+    }
+
+///////////////////////////////////////////////////////////////////
+ 
+// Bureau de taille moyenne
+@media (min-width: 1025px) and (max-width: 1280px) {        
+
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (paysage) ou petit écran de bureau
+@media (min-width: 769px) and (max-width: 1024px) {
+.about {    
+    .photo-about {
+        width: 150px;
+        height: 150px;    
+    }
+}
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (portrait)
+@media (min-width: 481px) and (max-width: 768px) {
+.about {    
+    .photo-about {
+        width: 100px;
+        height: 100px;    
+    }
+}
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+ // Petit écran mobile (portrait)
+ @media (max-width: 480px) {        
+.about {    
+    .photo-about {
+        width: 80px;
+        height: 80px;    
+    }
+}
+}

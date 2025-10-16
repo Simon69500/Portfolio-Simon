@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import { BrowserRouter } from 'react-router-dom';
+import ScrollToTop from './Component/layouts/ScrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className='index-contenair'>
   <React.StrictMode>
-    <App /> {/* Le composant principal de votre application */}
+    <BrowserRouter basename="/Portfolio-Simon">
+    <ScrollToTop/>
+      <App />    
+    </BrowserRouter>
   </React.StrictMode>
   </div>
 );

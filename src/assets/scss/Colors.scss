@@ -1,0 +1,134 @@
+@use "./Fonts.scss" as f;
+
+// Importation de la palette Indigo(Light) de Radix Colors
+@import "~@radix-ui/colors/indigo.css";
+
+@media (max-width: 480px) { /* Petit écran mobile (portrait) */ }
+@media (min-width: 481px) and (max-width: 768px) { /* Tablette (portrait) */ }
+@media (min-width: 769px) and (max-width: 1024px) { /* Tablette (paysage) ou petit écran de bureau */ }
+@media (min-width: 1025px) and (max-width: 1280px) { /* Bureau de taille moyenne */ }
+@media (min-width: 1281px) and (max-width: 1600px) { /* Grand écran de bureau */ }
+@media (min-width: 1601px) { /* Très grand écran de bureau */ }
+
+
+// Variables de couleurs pour chaque niveau de la palette 
+$dark-1:    #1C1C1C;  // Fond principal - Un noir/gris très foncé, parfait pour des arrière-plans profonds
+$dark-2:    #2E2E2E;  // Fond secondaire - Gris très sombre, légèrement plus clair que $dark-1
+
+$bleu-1:    #3B82F6;   // Eléments interactifs - Un bleu clair pour les boutons et liens
+$bleu-2:    #3A5BC7;   // Eléments interactifs - Un bleu foncé pour plus de contraste utiliser pour &hover
+$vert:      #10B981;   // Eléments interactifs - vert clair pour des éléments séléctionnés ou &active
+$grisClair: #7F7F7F;   // Eléments interactifs - Un gris clair mais plus distinct pour une séparation nette
+
+$dark-6:    #6E6E6E;  // Bordures et séparateurs - Gris très clair pour des séparations douces
+$dark-7:    #7F7F7F;  // Bordures et séparateurs - Un gris clair mais plus distinct pour une séparation nette                                   
+$dark-8:    #8F8F8F;  // Bordures et séparateurs - Gris pâle pour délimiter sans être trop agressif
+
+$dark-9:    #9F9F9F;  // Couleur principale solide - Gris clair à tendance froide pour les titres et accents
+$dark-10:   #B0B0B0; // Couleur principale solide - Gris clair pour les éléments visibles mais doux
+
+$text:      #D1D1D1; // Texte accessible - Gris pâle pour les textes
+$text2:     #000000; // Texte accessible - Gris pâle pour les textes 
+$subTitle:  #E2E2E2; // Texte accessible - Gris clair pour les sous-titres
+$Title:     #F3F3F3; // Texte accessible - Gris très clair, presque blanc, pour les titres principaux
+
+$dark-14:   #4E4E4E; // Textes accentués - Un gris moyen avec un léger ton brun, parfait pour les liens et boutons
+$dark-15:   #3A3A3A; // Textes accentués - Un gris avec une touche plus chaude, pour des textes qui attirent l'attention
+
+$background-primary: linear-gradient(135deg, #4B4B4B, #8F8F8F);
+$background-secondary: linear-gradient(135deg, #2E2E2E, #5D5D5D);
+$background-tertiary: linear-gradient(135deg, #3A3A3A, #6E6E6E);
+$background-header: linear-gradient(135deg, #1C1C1C, #4B4B4B);
+
+$primary: $background-primary;
+$secondary: $background-secondary;
+$success: $background-tertiary;
+$dark: $background-header;
+
+// Theme 
+// Styles de backgrounds
+@mixin background-primary {
+  background: $background-primary;
+}
+
+@mixin background-secondary {
+  background: $background-secondary;
+}
+
+@mixin background-tertiary {
+  background: $background-tertiary;
+}
+
+@mixin background-header {
+  background: $background-header;
+}
+
+
+
+// Composants interactifs
+@mixin button {
+  background-color:$bleu-1;
+  color:$Title !important;
+
+  &:hover {
+    background-color:$bleu-2;
+    color: white !important;
+  }
+  &:focus {
+    background-color:$vert;
+    border: 2px solid $bleu-1;
+  }
+};
+
+@mixin button2 {
+  background-color:$grisClair;
+  @include text-dark; 
+
+  &:hover {
+    background-color:$dark-6;
+  }
+  &:active {
+    border: 2px solid$dark-8;
+  }
+};
+
+// Bordures et séparateurs
+@mixin border-light {
+  border: 1px solid $dark-6;
+};
+
+@mixin border-medium {
+  border: 2px solid $dark-8;
+};
+
+@mixin border-dark { 
+  border: 1px solid $dark-11;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #d5e2ffab; 
+};
+
+@mixin border-xLigth {
+  border: 1px solid $dark-8;
+  border-radius: 30px;
+};
+
+// Couleurs pleines pour textes et polices
+@mixin title {
+  color: $Title;
+  @include f.titre-principaux
+};
+
+@mixin sub-title {
+  color: $subTitle;
+  @include f.titre-secondaire
+};
+
+@mixin text {
+  color:$text;
+  @include f.text-paragraphe;
+};
+
+@mixin text2 {
+  color:$text2;
+  @include f.text-paragraphe;
+};

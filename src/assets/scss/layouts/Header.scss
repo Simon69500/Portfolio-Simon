@@ -1,0 +1,59 @@
+@use '../Colors.scss' as c;
+
+.header {
+  @include c.background-header;
+
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  .navbar {
+    .navbar-brand {
+      padding: 0 15px;
+
+      img {
+        width: 56px;
+        height: 56px;
+        border-radius: 50px; 
+        object-fit: cover;
+      }
+    }
+
+    .Subtitle{
+      @include c.sub-title
+    }
+  }
+
+  .btn {
+    @include c.button;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .header {
+    .navbar {
+      .navbar-brand img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .menu-burger {
+        @include c.background-header;
+        
+        position: fixed;
+        top: 3.5rem;
+        right: 0rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);        
+
+      }    
+    }
+  }
+}
+
+ // Petit écran mobile (portrait) XS
+ @media (max-width: 575.98px) {
+
+ }

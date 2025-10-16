@@ -1,0 +1,68 @@
+@use '../Colors.scss' as c ;
+
+.Footer {
+    @include c.background-header ;
+
+    height: 10rem;
+    .social-icons {
+        svg {
+            color: c.$grisClair;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        svg:hover {
+            color: c.$bleu-1;
+        }
+    }}
+
+    .text {
+        @include c.text;
+        font-size: 0.5rem;    
+    } 
+
+     ///////////////////////////////////////////////////////////////////
+ 
+// Bureau de taille moyenne LG
+@media (max-width: 1199.98px) {
+  
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (paysage) ou petit écran de bureau MD
+@media (max-width: 991.98px) {
+
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+// Tablette (portrait) SM
+@media (max-width: 767.98px) {
+
+}
+
+    ///////////////////////////////////////////////////////////////////
+ 
+ // Petit écran mobile (portrait) XS
+ @media (max-width: 575.98px) {
+    .Footer {
+       .social-icons { 
+            .bi {
+                width: 20px;
+                height: 20px;  
+            }
+        }            
+        .footer-contact {
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            .text-contact {
+                margin: 5px;
+            }
+        }
+    }
+ }

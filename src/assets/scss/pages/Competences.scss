@@ -1,0 +1,62 @@
+@use '../Colors.scss' as c ;
+
+// XXL : ≥1400px (très grands écrans)
+.Competences, .container-skill {
+  @include c.background-secondary;    
+}
+
+.soft-skills {
+  @include c.background-tertiary;
+}
+
+.CV {
+  @include c.background-tertiary;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+
+  .img-card-cv {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: contain; 
+    @include c.background-tertiary;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    @include c.sub-title;
+  }
+
+  .text {
+    @include c.text;
+  }
+}
+
+/*  Responsive */
+@media (max-width: 1200px) {
+  .CV {
+    .img-card-cv {
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .CV {
+    .img-card-cv {
+      max-width: 260px;
+    }
+  }
+}

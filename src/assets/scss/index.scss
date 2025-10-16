@@ -1,0 +1,18 @@
+// Racine du dossier
+@use './Colors.scss' as * ;
+@use './Fonts.scss' as *;
+
+// Dossier Layouts
+@use './layouts/Header.scss' as *;
+@use './layouts/Footer.scss' as *;
+@use './layouts/Projet.scss' as *;
+@use './layouts/Skills.scss' as *;
+@use './layouts/Carousel.scss' as *;
+
+// Dossier Pages
+@use './pages/About.scss' as *;
+@use './pages/Competences.scss' as *;
+@use './pages/Formulaire.scss' as *;
+@use './pages/form.scss' as *;
+@use './pages/Home.scss' as *;
+@use './pages/Portfolio.scss' as *;

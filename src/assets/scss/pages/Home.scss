@@ -1,0 +1,116 @@
+@use '../Colors.scss' as c;
+
+// Styles communs à tous les écrans
+.main {
+
+    @include c.background-secondary;
+
+    .title {
+        @include c.title
+    }
+
+    .subtitle {
+        @include c.sub-title
+    }
+
+    .text {
+        @include c.text
+    }
+
+    .textStrong {
+        @include c.text2;
+        color: c.$bleu-1;
+        font-weight: 600;
+    }   
+
+    .presentation {
+
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        width: 100%;
+    }
+
+    .about_home {
+        @include c.background-tertiary;
+
+        .photo-home {
+            width: 150px;
+            height: 150px;
+        }
+    }
+        
+    .actual {
+    @include c.background-tertiary;
+
+        .icons-home {
+            svg {
+            color: c.$dark-1;           // couleur par défaut
+            transition: color 0.3s ease;
+            cursor: pointer;
+            }
+
+            svg:hover {
+            color: c.$bleu-1;           // couleur au hover
+            }
+        }
+    }
+
+    .portfolio {
+        @include c.background-tertiary;          
+    }
+}
+
+// Media queries — uniquement ce qui change
+@media (min-width: 1281px) and (max-width: 1600px) {
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .main {    
+        .about_home  {
+            .photo-home {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        .actual {
+            .icons-home {
+                .bi {
+                    width: 28px;
+                    height: 28px;  
+                }
+          
+            }
+    }
+    }
+}
+
+@media (max-width: 480px) {
+    .main {    
+        .about_home  {
+            .photo-home {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        .actual {
+            .icons-home {
+                .bi {
+                    width: 20px;
+                    height: 20px;  
+                }
+          
+            }
+    }        
+    }
+}
