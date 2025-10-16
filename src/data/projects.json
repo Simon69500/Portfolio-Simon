@@ -59,7 +59,7 @@
     "resultat": "Un site fluide et esthétique, respectant la charte graphique du client, permettant aux utilisateurs de consulter, trier et rechercher des produits facilement. L’ensemble du code est organisé en composants modulaires et versionné sur GitHub.",
     "défis": "Respecter la charte graphique imposée, intégrer les requis techniques liés à Angular (composants, routing, services et pipes), tout en assurant la cohérence visuelle et la performance du site sur tous les supports.",
     "solutions": "Structuration du projet autour de cinq composants principaux, mise en place d’un routing paramétré, de pipes personnalisées pour le tri et la recherche, et d’un service pour centraliser les données produits. Les tests et ajustements visuels ont permis de garantir une expérience utilisateur fluide et conforme à la charte.",
-    "link": "https://github.com/Simon69500/Touche-pas-au-klaxon"
+    "link": "https://github.com/Simon69500/Angular"
     },    
 
     {
@@ -101,7 +101,7 @@
         "resultat": "Un CV en ligne complet, esthétique et fonctionnel avec tous les éléments classiques d’un CV : photo de profil, informations personnelles, compétences, langues, expériences, formations et liens vers réseaux professionnels. Effets graphiques dynamiques appliqués pour un rendu interactif et attractif.",
         "défis": "Respecter scrupuleusement la maquette, utiliser Flexbox pour la mise en page, gérer les effets dynamiques au survol, maintenir un code structuré et propre, et assurer la compatibilité et le centrage sur différents écrans.",
         "solutions": "Structuration du projet avec sous-dossiers pour HTML, CSS et images, utilisation de Flexbox pour le layout, liens fonctionnels pour email, téléphone et Google Maps, mise en place d’effets graphiques au survol et versionnement sur GitHub avec workflow complet de branches et pull requests.",
-        "link": "https://github.com/Simon69500/CV_en_ligne"
+        "link": "https://github.com/Simon69500/CV-en-Ligne"
     },
 
     {
@@ -125,7 +125,7 @@
         "resultat": "Un portfolio complet et fonctionnel avec page d’accueil Hero, sections présentation et compétences, pages Services, Réalisations (minimum 6 projets), Contact et Mentions légales, modale pour profil GitHub et effets CSS dynamiques sur Cards, boutons et liens. Navigation fluide et responsive sur tous supports.",
         "défis": "Structurer le projet en composants réutilisables, gérer le routing avec React Router, intégrer les effets graphiques CSS, récupérer les données d’une API externe pour la modale, et assurer un site SEO-friendly et W3C-compliant.",
         "solutions": "Organisation du projet avec composants React modulaires, utilisation de React Router pour la navigation, intégration de Bootstrap et CSS personnalisé pour les effets dynamiques, hook useEffect pour la récupération du profil GitHub, versionnement sur GitHub avec workflow d’issues et pull requests.",
-        "link": "https://github.com/Simon69500/Portfolio_React"
+        "link": "https://github.com/Simon69500/Portfolio---ReactJS"
     }
 
 ]
