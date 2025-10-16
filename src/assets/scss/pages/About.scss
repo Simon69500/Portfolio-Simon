@@ -5,21 +5,7 @@
 
     .text {
         @include c.text;
-
-        strong { 
-            color: c.$vert; // mots-clés forts / titres internes
-        }
-
-        em { 
-            &.text-blue { color: c.$bleu-1; }  // classe pour mots clés importants
-            &.text-green { color: c.$text2; }   // classe pour succès / motivation
-        }
-
-        span {
-            &.text-blue { color: c.$bleu-1; }  // classe pour mots clés importants
-            &.text-green { color: c.$text2; }   // classe pour succès / motivation
-            &.text-grey { color: c.$text2; }  // accent neutre
-        }
+        font-style: italic;
     }
 
     .title {

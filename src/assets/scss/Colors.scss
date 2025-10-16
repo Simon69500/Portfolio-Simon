@@ -38,6 +38,7 @@ $dark-15:   #3A3A3A; // Textes accentués - Un gris avec une touche plus chaude,
 $background-primary: linear-gradient(135deg, #4B4B4B, #8F8F8F);
 $background-secondary: linear-gradient(135deg, #2E2E2E, #5D5D5D);
 $background-tertiary: linear-gradient(135deg, #3A3A3A, #6E6E6E);
+$background-tertiary-light: linear-gradient(135deg, #4D4D4D, #8C8C8C);
 $background-header: linear-gradient(135deg, #1C1C1C, #4B4B4B);
 
 $primary: $background-primary;
@@ -57,6 +58,10 @@ $dark: $background-header;
 
 @mixin background-tertiary {
   background: $background-tertiary;
+}
+
+@mixin background-tertiary-light {
+  background: $background-tertiary-light;
 }
 
 @mixin background-header {
