@@ -19,9 +19,8 @@ const HomeCarousel = () => {
             <div className="card shadow rounded mb-3 mb-md-4">
               <img 
                 src={imageMap[project.slug] ? imageMap[project.slug][0] : "/fallback.jpg"} 
-                className="card-img-top img-fluid rounded-top object-fit-cover" 
+                className="img-card-home" 
                 alt={project.name} 
-                style={{ height: "15rem" }} 
               />
               <div className="card-body d-flex flex-column justify-content-between align-items-center">
                 <h5 className="Subtitle text-center card-title fs-5">{project.titre}</h5>

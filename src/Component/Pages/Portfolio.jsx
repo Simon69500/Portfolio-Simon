@@ -47,9 +47,8 @@ const Portfolio = () => {
                   <div key={idx} className={`carousel-item ${idx === 0 ? "active" : ""}`}>
                     <img 
                     src={img}
-                    className="d-block w-100" 
+                    className="img-card" 
                     alt={`${projet.titre} ${idx + 1}`}
-                    style={{height: "20rem", objectFit: "cover"}} 
                     />
                   </div>
                 ))}

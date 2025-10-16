@@ -1,37 +1,43 @@
 @use '../Colors.scss' as c ;
 
 .card {
+  @include c.background-secondary;
+  width: 30rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  .Subtitle {
+    @include c.sub-title;
+  }
+
+  .img-card-home {
+    width: 100%;
+    height: 16rem;
+    object-fit: contain; 
     @include c.background-secondary;
+    padding: 0.5rem; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
 
-    width: 30rem;
+/* Responsive */
+@media (max-width: 992px) {
+  .card {
+    width: 20rem;
 
-    .Subtitle {
-        @include c.sub-title;
+    .img-card-home {
+      height: 13rem;
     }
+  }
 }
 
-// Media queries — uniquement ce qui change
-@media (min-width: 1281px) and (max-width: 1600px) {
-
-}
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-.card {
+@media (max-width: 576px) {
+  .card {
     width: 15rem;
-}
 
-}
-
-@media (max-width: 480px) {
-.card {
-    width: 15rem;
-}
+    .img-card-home {
+      height: 11rem;
+    }
+  }
 }
