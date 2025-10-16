@@ -3,14 +3,7 @@
 .Footer {
     @include c.background-header ;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-    width: 100%;
-    height: 150px;
-
+    height: 10rem;
     .social-icons {
         svg {
             color: c.$grisClair;
@@ -23,70 +16,43 @@
         }
     }}
 
-    .text-footer {
+    .text {
         @include c.text;
-        text-align: center;
-        margin: 0px;
-        padding: 5px;
-    
-    }
+        font-size: 0.5rem;    
+    } 
 
-    .footer-contact {
-        @include c.text;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        
-        width: 100%;
-        padding: 10px;
-
-        .text-contact {
-            padding-left: 20px;
-            margin: 0px;
-            
-            a {
-                text-decoration: none;
-                @include c.text;
-            }
-        }
-    }    
-   
-//Très grand écran de bureau
-@media (min-width: 1601px){
+     ///////////////////////////////////////////////////////////////////
+ 
+// Bureau de taille moyenne LG
+@media (max-width: 1199.98px) {
+  
 }
 
     ///////////////////////////////////////////////////////////////////
  
-// Grand écran de bureau
-@media (min-width: 1281px) and (max-width: 1600px) {
+// Tablette (paysage) ou petit écran de bureau MD
+@media (max-width: 991.98px) {
+
 }
 
     ///////////////////////////////////////////////////////////////////
  
-//Bureau de taille moyenne
-@media (min-width: 1025px) and (max-width: 1280px) {
+// Tablette (portrait) SM
+@media (max-width: 767.98px) {
+
 }
 
     ///////////////////////////////////////////////////////////////////
  
-// Tablette (paysage) ou petit écran de bureau
-@media (min-width: 769px) and (max-width: 1024px) {
-}
-
-    ///////////////////////////////////////////////////////////////////
- 
-// Tablette (portrait)
-@media (min-width: 481px) and (max-width: 768px) {
-}
-
-    ///////////////////////////////////////////////////////////////////
- 
- // Petit écran mobile (portrait)
- @media (max-width: 480px) {
+ // Petit écran mobile (portrait) XS
+ @media (max-width: 575.98px) {
     .Footer {
-
+       .social-icons { 
+            .bi {
+                width: 20px;
+                height: 20px;  
+            }
+        }            
         .footer-contact {
     
             display: flex;

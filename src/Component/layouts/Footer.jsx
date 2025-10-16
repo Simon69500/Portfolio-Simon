@@ -4,7 +4,8 @@ import '@scss/index.scss';
 const Footer = () => {
 
     return (
-        <div className='Footer'>
+        <div className='Footer d-flex flex-column justify-content-evenly align-items-center h-auto'>
+        
         <div className='social-icons d-flex flex-row justify-content-center align-content-center pb-2'>
             <a className='p-2 mt-1' href="https://github.com/Simon69500" target="_blank" rel="noopener noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
@@ -17,13 +18,16 @@ const Footer = () => {
                 </svg>
             </a>                            
         </div>
+
         <div >
-            <p className='text-footer'> © 2024 Simon Badin. Tous droits réservés.</p>
+            <p className='text fs-6 text-center m-0 '> © 2024 Simon Badin. Tous droits réservés.</p>
         </div>
-        <div className="footer-contact">
-            <p className=' text-contact'>📧 Email : <a href="mailto:simonsola67@gmail.com"> simonsola67@gmail.com</a></p>
-            <p className=' text-contact'>📞 Téléphone : <a href="tel:+33665679770"> 06 65 67 97 70</a></p>
+
+        <div className="align-items-center">
+            <p className='text fs-6 m-0 p-2'>📧 Email : <a className='text fs-6 text-decoration-none' href="mailto:simonsola67@gmail.com"> simonsola67@gmail.com</a></p>
+            <p className='text fs-6 mb-2'>📞 Téléphone : <a className='text fs-6 text-decoration-none' href="tel:+33665679770"> 06 65 67 97 70</a></p>
         </div>
+
         </div>
     )
 };
