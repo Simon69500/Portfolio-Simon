@@ -59,7 +59,7 @@ const Competences = () => {
                 <strong>Recherche de stage</strong> d'une durée de 350h pour validation d'examen en tant que Développeur Web & Mobile FullStack
             </p>
             <a
-                href="/CV-BADIN_Simon_DevWeb2.pdf"
+                href={`${process.env.PUBLIC_URL}/CV-BADIN_Simon_DevWeb2.pdf`}
                 download
                 className="btn btn-primary btn-sm"
             >
