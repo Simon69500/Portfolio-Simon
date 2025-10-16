@@ -78,7 +78,7 @@ useEffect(() => {
                 <Link className="Subtitle nav-link mx-sm-3" to="/portfolio">Portfolio</Link>
               </li>
               <li className="nav-item">
-                <Link className="btn btn-sm btn-primary fs-4 mx-sm-3 mb-sm-3" role="button" to="/contact">Contact</Link>
+                <Link className="btn btn-primary fs-4 mx-sm-3 mb-sm-3 mt-2" role="button" to="/contact">Contact</Link>
               </li>
             </ul>
           </div>
