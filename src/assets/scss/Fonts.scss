@@ -46,7 +46,7 @@
 
 
 // Front utiliser avec la mixin text sur Colors.scss
-@mixin text-paragraphe($font-size-desktop: 1.5rem, $font-size-tablet: 0.9rem, $font-size-mobile: 0.8rem) {
+@mixin text-paragraphe($font-size-desktop: 1.1rem, $font-size-tablet: 0.9rem, $font-size-mobile: 0.8rem) {
   font-family: "Lato", serif;
   font-weight: 400;
   font-size: $font-size-desktop;

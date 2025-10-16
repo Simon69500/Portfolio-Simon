@@ -54,7 +54,7 @@ function Skills() {
             <h3 className="Subtitle text-center p-md-3"> Hard Skills</h3>
             
             {/* Frontend */}
-            <div className="w-md-100 m-2">
+            <div className="w-100 m-2">
                 <h4 className="Subtitle fs-4">Frontend</h4>
                 <div className="d-flex flex-row justify-content-evenly flex-wrap">
                     {skillsFront.filter(Boolean).map((skill) => (
@@ -64,7 +64,7 @@ function Skills() {
             </div>
             
             {/* Backend */}
-            <div className="w-md-100 m-2">
+            <div className="w-100 m-2">
                 <h4 className="Subtitle fs-4">Backend</h4>
                 <div className="d-flex flex-row justify-content-evenly flex-wrap">
                     {skillsBackend.filter(Boolean).map((skill) => (
@@ -74,7 +74,7 @@ function Skills() {
             </div>
 
             {/* Outils et Plateformes */}
-            <div className="w-md-100 m-2">
+            <div className="w-100 m-2">
                 <h4 className="Subtitle fs-4">Outils et Plateformes</h4>
                 <div className="d-flex flex-row justify-content-evenly flex-wrap">
                     {skillsTools.filter(Boolean).map((skill) => (

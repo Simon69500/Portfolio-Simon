@@ -1,26 +1,26 @@
 import '@scss/index.scss';
 import Skills from "../layouts/Skills";
 import About from './About';
-import CV from '@img/CV.jpg';
+import CV from '@img/CV.png';
 
 const Competences = () => {
 
     return (
 
-<div className="Competences">
+<div className="Competences container-fluid py-5">
     <h1 className="title text-center fs-1 py-4">Mes compétences</h1>
 
     {/* Partie About full width */}
         <About />
 
     {/* Partie Skills + Soft Skills à gauche et CV à droite */}
-    <div className="d-flex flex-lg-row flex-column justify-content-lg-between align-items-lg-start mt-5">
+    <div className="container-skill row justify-content-center align-items-start mt-5 px-lg-5 g-4">
         
         {/* Partie gauche : Skills + Soft Skills */}
-        <div className="left-section w-lg-50 pe-lg-4 mb-4 mx-md-5 mx-3 mb-lg-0">
+        <div className="col-12 col-lg-7 px-lg-4">
             <Skills />
 
-            <div className='soft-skills mt-5 mb-lg-5'>
+            <div className='soft-skills mt-5'>
                 <h3 className='Subtitle text-center p-md-3 p-1'>Soft Skills</h3>
                 <div className='row justify-content-center'>
 
@@ -44,15 +44,29 @@ const Competences = () => {
             </div>
         </div>
 
-
         {/* Partie droite : CV */}
-        <div className="CV card right-section px-lg-5 mx-md-5 mx-3 mb-5 d-flex justify-content-center align-items-center text-center">
-           <img className="cv-img mb-3 pt-4" src={CV} alt="présentation du CV" />
+        <div className="col-12 col-lg-5 d-flex justify-content-center">
+        <div className="card text-center p-4 shadow-sm w-100" style={{ maxWidth: "500px" }}>
+            <img
+                src={CV}
+                alt="présentation du CV"
+                className="img-fluid rounded mb-3"
+                style={{ maxHeight: "550px", objectFit: "contain" }}
+            />
             <div className="card-body">
-                <h5 className="card-title Subtitle">Curriculum vitae</h5>
-                <p className="card-text text">Recherche de stage d'une durée de 350h pour validation d'examen en tant que Développeur Web & Mobil FullStack</p>
-                <a href="/CV-BADIN-Simon.pdf" download class="btn btn-sm btn-primary m-3 p-2">Télécharger mon CV</a>
+            <h5 className="card-title Subtitle">Curriculum Vitae</h5>
+            <p className="text text_cv">
+                <strong>Recherche de stage</strong> d'une durée de 350h pour validation d'examen en tant que Développeur Web & Mobile FullStack
+            </p>
+            <a
+                href="/CV-BADIN_Simon_DevWeb2.pdf"
+                download
+                className="btn btn-primary btn-sm"
+            >
+                Télécharger mon CV
+            </a>
             </div>
+        </div>
         </div>
 
     </div>

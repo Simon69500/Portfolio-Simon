@@ -21,7 +21,7 @@ const Home = () => {
                         {/* Partie Bouton */}
                         <div className='d-flex flex-row justify-content-md-center justify-content-evenly'>
                             <Link type="button" class="btn btn-sm btn-primary m-md-3" to="/portfolio">Voir mes projets</Link>
-                            <a href="/CV-BADIN-Simon.pdf" download class="btn btn-sm btn-primary m-md-3 ">Télécharger mon CV</a>    
+                            <a href="/CV-BADIN_Simon_DevWeb2.pdf" download class="btn btn-sm btn-primary m-md-3 ">Télécharger mon CV</a>    
                         </div>              
                     </div>
 
