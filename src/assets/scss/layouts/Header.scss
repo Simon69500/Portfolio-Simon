@@ -23,6 +23,20 @@
     .Subtitle{
       @include c.sub-title
     }
+
+    .Subtitle1{
+      @include c.sub-title;
+      color: c.$bleu-1;
+      font-size: 2rem; 
+
+      &:hover {
+        color: c.$bleu-2 ;
+      }
+
+      &:focus{
+        color: c.$vert ;
+      }
+    }
   }
 
   .btn {
