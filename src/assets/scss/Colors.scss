@@ -27,7 +27,8 @@ $dark-8:    #8F8F8F;  // Bordures et séparateurs - Gris pâle pour délimiter s
 $dark-9:    #9F9F9F;  // Couleur principale solide - Gris clair à tendance froide pour les titres et accents
 $dark-10:   #B0B0B0; // Couleur principale solide - Gris clair pour les éléments visibles mais doux
 
-$text:      #D1D1D1; // Texte accessible - Gris pâle pour les textes 
+$text:      #D1D1D1; // Texte accessible - Gris pâle pour les textes
+$text2:     #000000; // Texte accessible - Gris pâle pour les textes 
 $subTitle:  #E2E2E2; // Texte accessible - Gris clair pour les sous-titres
 $Title:     #F3F3F3; // Texte accessible - Gris très clair, presque blanc, pour les titres principaux
 
@@ -124,5 +125,10 @@ $dark: $background-header;
 
 @mixin text {
   color:$text;
+  @include f.text-paragraphe;
+};
+
+@mixin text2 {
+  color:$text2;
   @include f.text-paragraphe;
 };

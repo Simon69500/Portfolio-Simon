@@ -26,7 +26,7 @@ const Home = () => {
                     </div>
 
                     {/* Partie Présentation courte */}
-                    <div className='about my-5 d-flex flex-column justify-content-center align-items-center'>
+                    <div className='about_home my-5 d-flex flex-column justify-content-center align-items-center'>
                         <h3 className='subtitle text-center pt-4'>A propos de moi</h3>
                         <div className='card-text d-flex flex-row justify-content-around pt-3'>
                                 <img src={Icones.profil2} alt="Simon Badin" className="photo-home rounded-4 align-content-center img-fluid"/>
@@ -46,11 +46,11 @@ const Home = () => {
                         <h3 className='subtitle text-center pt-4'>Actuellement</h3>
                         <div className='card-text d-flex flex-column justify-content-center align-content-center py-2'>
                             <p className="text text-center align-content-center">
-                            Formation <strong className="textStrong">Développeur Web & Mobile Full Stack</strong> 
-                            suivie au <strong>Centre Européen de Formation</strong>, terminée et en attente de l’examen.  
+                            Formation <strong className="textStrong">Développeur Web & Mobile Full Stack </strong> 
+                            suivie au <strong className="textStrong">Centre Européen de Formation</strong>, terminée et en attente de l’examen.  
                             <br /><br />
                             Un <strong className="textStrong">stage en entreprise</strong> est prévu à partir de 
-                            <strong> octobre 2025</strong> pour une durée de <strong>350 heures</strong>, 
+                            <strong className="textStrong"> octobre 2025</strong> pour une durée de <strong className="textStrong">350 heures</strong>, 
                             pouvant être réparties en plusieurs périodes, afin de valider la formation 
                             et présenter l’examen final.
                             </p>

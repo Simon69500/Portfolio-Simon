@@ -7,17 +7,18 @@
         @include c.text;
 
         strong { 
-            color: c.$bleu-1; // mots-clés forts / titres internes
+            color: c.$vert; // mots-clés forts / titres internes
         }
 
         em { 
-            color: c.$vert; // mots soulignés pour action / réussite / concentration
+            &.text-blue { color: c.$bleu-1; }  // classe pour mots clés importants
+            &.text-green { color: c.$text2; }   // classe pour succès / motivation
         }
 
         span {
             &.text-blue { color: c.$bleu-1; }  // classe pour mots clés importants
-            &.text-green { color: c.$vert; }   // classe pour succès / motivation
-            &.text-grey { color: c.$dark-9; }  // accent neutre
+            &.text-green { color: c.$text2; }   // classe pour succès / motivation
+            &.text-grey { color: c.$text2; }  // accent neutre
         }
     }
 

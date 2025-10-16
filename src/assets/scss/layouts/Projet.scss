@@ -24,6 +24,10 @@
         width: 75%;
     }
 
+    .text2 {
+        @include c.text2;
+        width: 75%;
+    }    
     .img-carousel {
         width: 100%;
         max-height: 35rem;

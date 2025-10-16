@@ -11,9 +11,8 @@ import Artisan from '@img/Projet-img/projet2/trouve-ton-artisan.jpg';
 import Artisan1 from '@img/Projet-img/projet2/trouve-ton-artisan1.jpg';
 import Artisan3 from '@img/Projet-img/projet2/trouve-ton-artisan_burger.jpg';
 import Artisan4 from '@img/Projet-img/projet2/trouve-ton-artisan_search.jpg';
-import Artisan5 from '@img/Projet-img/projet2/trouve-ton-artisan_List.jpg';
-import Artisan6 from '@img/Projet-img/projet2/trouve-ton-artisan_Artisan.jpg';
-import Artisan7 from '@img/Projet-img/projet2/trouve-ton-artisan_category.jpg';
+import Artisan5 from '@img/Projet-img/projet2/trouve-ton-artisan_Artisan.jpg';
+import Artisan6 from '@img/Projet-img/projet2/trouve-ton-artisan_category.jpg';
 
 // Image projet PHP touche pas au klaxon
 import TPK from '@img/Projet-img/projet3/tpk-HomeVisiteur.png';
@@ -63,7 +62,6 @@ export const imgArtisan = [
     Artisan4,
     Artisan5,
     Artisan6,
-    Artisan7,
     Artisan1,
 ];
 

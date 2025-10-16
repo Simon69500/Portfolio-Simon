@@ -17,6 +17,11 @@
         @include c.text
     }
 
+    .textStrong {
+        @include c.text2;
+        color: c.$bleu-1;
+        font-weight: 600;
+    }   
 
     .presentation {
 
@@ -27,7 +32,7 @@
         width: 100%;
     }
 
-    .about {
+    .about_home {
         @include c.background-tertiary;
 
         .photo-home {
@@ -70,7 +75,7 @@
 
 @media (min-width: 481px) and (max-width: 768px) {
     .main {    
-        .about {
+        .about_home  {
             .photo-home {
                 width: 100px;
                 height: 100px;
@@ -91,7 +96,7 @@
 
 @media (max-width: 480px) {
     .main {    
-        .about {
+        .about_home  {
             .photo-home {
                 width: 80px;
                 height: 80px;

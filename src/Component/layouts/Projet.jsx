@@ -133,7 +133,7 @@ function Projet({ project }) {
             {/* Conteneur flex pour les items */}
             <div className="d-flex flex-wrap justify-content-center gap-2">
                 {projet.technologiesSec?.map((tech) => (
-                <span key={tech} className="text text-center p-2 px-3"> {tech} </span>
+                <span key={tech} className="text2 text-center p-2 px-3"><strong>{tech}</strong></span>
                 ))}
             </div>
             </div>
@@ -144,7 +144,7 @@ function Projet({ project }) {
             {/* Description du projet */}
             <div className="d-flex flex-column align-items-center my-3">
             <h3 className="Subtitle text-center ">Description du projet : </h3>
-            <p className="text text-center px-md-0 px-1">{projet.description}</p>
+            <p className="text2 text-center px-md-0 px-1 pt-2">{projet.description}</p>
             </div>
 
             <div className="border-top border-dark my-md-5 my-2"></div>
@@ -152,7 +152,7 @@ function Projet({ project }) {
             {/* Résultat du projet */}
             <div className="d-flex flex-column align-items-center my-md-5 my-3">
                 <h3 className="Subtitle text-center ">Résultat du projet : </h3>
-                <p className="text text-center px-md-0 px-1 ">{projet.resultat}</p>
+                <p className="text2 text-center px-md-0 px-1 pt-2 ">{projet.resultat}</p>
             </div>
 
             <div className="border-top border-dark my-md-5 my-2"></div>
@@ -160,7 +160,7 @@ function Projet({ project }) {
             {/* Défis rencontrés */}
             <div className="d-flex flex-column align-items-center my-md-5 my-3">
                 <h3 className="Subtitle text-center ">Défis rencontrés : </h3>
-                <p className="text text-center px-md-0 px-1 ">{projet.défis}</p>
+                <p className="text2 text-center px-md-0 px-1 pt-2 ">{projet.défis}</p>
             </div>
 
             <div className="border-top border-dark my-md-5 my-2"></div>
@@ -168,7 +168,7 @@ function Projet({ project }) {
             {/* Solutions apportées */}
             <div className="d-flex flex-column align-items-center my-md-5 my-3">
                 <h3 className="Subtitle text-center">Solutions apportées : </h3>
-                <p className="text text-center px-md-0 px-1 ">{projet.solutions}</p>
+                <p className="text2 text-center px-md-0 px-1 pt-2">{projet.solutions}</p>
             </div>
 
             {/* Lien vers GitHub */}
