@@ -9,12 +9,6 @@
 @use './layouts/Skills.scss' as *;
 @use './layouts/Carousel.scss' as *;
 
-
-// Dossier Modal
-@use './Modal/Modal.scss' as *;
-@use './Modal/PortfolioModal.scss' as *;
-@use './Modal/swiper.scss' as *;
-
 // Dossier Pages
 @use './pages/About.scss' as *;
 @use './pages/Competences.scss' as *;
