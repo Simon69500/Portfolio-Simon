@@ -17,12 +17,10 @@
         @include c.text
     }
 
-    .textStrong {
-        @include c.text2;
-        color: c.$bleu-1;
-        font-weight: 600;
-    }   
-
+    .text-strong {
+        @include c.text2
+    }
+    
     .presentation {
 
         position: relative;

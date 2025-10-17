@@ -1,5 +1,5 @@
 import '@scss/index.scss';
-
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -20,12 +20,13 @@ const Footer = () => {
         </div>
 
         <div >
-            <p className='text fs-6 text-center m-0 '> © 2024 Simon Badin. Tous droits réservés.</p>
+            <p className='text fs-6 text-center m-0 fst-italic'> © {new Date().getFullYear()} Simon Badin — Développeur Web & Mobile Fullstack. Tous droits réservés.</p>
         </div>
 
-        <div className="align-items-center">
-            <p className='text fs-6 m-0 p-2'>📧 Email : <a className='text fs-6 text-decoration-none' href="mailto:simonsola67@gmail.com"> simonsola67@gmail.com</a></p>
-            <p className='text fs-6 mb-2'>📞 Téléphone : <a className='text fs-6 text-decoration-none' href="tel:+33665679770"> 06 65 67 97 70</a></p>
+        <div className="d-flex flex-column">
+            <Link className='text fs-6 m-0 fst-italic pt-1 text-decoration-none text-center' to="/mentions">Mentions légales</Link>            
+            <p className='text fs-6 m-0 fst-italic'>📧 Email : <a className='text fs-6 text-decoration-none' href="mailto:simonsola67@gmail.com"> simonsola67@gmail.com</a></p>
+            <p className='text fs-6 mb-2 fst-italic'>📞 Téléphone : <a className='text fs-6 text-decoration-none' href="tel:+33665679770"> 06 65 67 97 70</a></p>
         </div>
 
         </div>

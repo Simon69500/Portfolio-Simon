@@ -19,9 +19,49 @@
         "solutions": "Mise en place d’une architecture MVC complète, utilisation de PDO pour les requêtes sécurisées, création de tests PHPUnit, validation statique avec PHPStan, documentation avec DocBlock et scripts SQL inclus pour la création et l’alimentation de la base MySQL.",
         "link": "https://github.com/Simon69500/Touche-pas-au-klaxon"
     },
-
     {
         "id": 2,
+        "titre": "Trouve ton artisan",
+        "slug": "artisan",
+        "technologies": ["ReactJS", "Bootstrap", "SASS", "NodeJS", "Express", "Sequelize", "MySQL", "Figma", "GitHub"],
+        "technologiesSecTitle": "Aspects techniques clés",
+        "technologiesSec": [
+            "Architecture REST avec Express et Sequelize",
+            "Frontend ReactJS responsive et modulable",
+            "Recherche et filtres dynamiques",
+            "Formulaire de contact sécurisé",
+            "Intégration des maquettes Figma"
+        ],
+        "contexte": "Création d’une plateforme web pour aider les habitants de la région Auvergne-Rhône-Alpes à trouver et contacter des artisans via un site accessible, responsive et sécurisé.",
+        "description": "Développement d’une plateforme web permettant aux habitants de la région Auvergne-Rhône-Alpes de trouver facilement un artisan et de le contacter via un formulaire. Le projet comprenait la réalisation des maquettes sur Figma, le frontend en ReactJS et une API REST sécurisée avec Node.js / Express et MySQL.",
+        "resultat": "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé (frontend sur Vercel, backend sur Render, base MySQL sur Railway).",
+        "défis": "Assurer la cohérence entre le frontend et l’API, garantir la sécurité et la performance, maintenir un design accessible et responsive, et déployer une solution hébergée fiable et maintenable.",
+        "solutions": "Mise en place d’une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration des requêtes API via Axios sécurisées, tests pour conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
+        "link": "https://github.com/Simon69500/Trouve_ton_artisan_React.JS"
+    },
+    
+    {
+    "id": 3,
+    "titre": "Au petit Village",
+    "slug": "village",
+    "technologies": ["Angular", "TypeScript", "HTML", "CSS", "GitHub"],
+    "technologiesSecTitle": "Aspects techniques clés",
+    "technologiesSec": [
+        "Composants Angular réutilisables", 
+        "Routing multi-page", "Services pour la gestion des données produits", 
+        "Pipes personnalisées pour tri et recherche", 
+        "Responsive design"
+    ],
+    "contexte": "Création d’un site e-commerce Angular pour la vente de figurines artisanales, avec catalogue interactif, tri et recherche, et respect de la charte graphique client.",
+    "description": "Création d’un site e-commerce dynamique et responsive avec Angular pour la vente de figurines artisanales inspirées d’Astérix & Obélix. Le projet met en avant un catalogue interactif avec tri et recherche, une page produit détaillée et une navigation fluide grâce au routing Angular.",
+    "resultat": "Un site fluide et esthétique, respectant la charte graphique du client, permettant aux utilisateurs de consulter, trier et rechercher des produits facilement. L’ensemble du code est organisé en composants modulaires et versionné sur GitHub.",
+    "défis": "Respecter la charte graphique imposée, intégrer les requis techniques liés à Angular (composants, routing, services et pipes), tout en assurant la cohérence visuelle et la performance du site sur tous les supports.",
+    "solutions": "Structuration du projet autour de cinq composants principaux, mise en place d’un routing paramétré, de pipes personnalisées pour le tri et la recherche, et d’un service pour centraliser les données produits. Les tests et ajustements visuels ont permis de garantir une expérience utilisateur fluide et conforme à la charte.",
+    "link": "https://github.com/Simon69500/Angular"
+    },    
+
+    {
+        "id": 4,
         "titre": "API Russell Port",
         "slug": "API_Russel",
         "technologies": ["NodeJS", "Express", "MongoDB", "GitHub"],
@@ -41,47 +81,6 @@
         "solutions": "Architecture REST avec Express et Mongoose, routes CRUD sécurisées, authentification via JWT, frontend minimal en EJS pour l’administration, documentation incluse, et hébergement de l’API en ligne avec accès sécurisé. Versionnage du projet sur GitHub.",
         "link": "https://github.com/Simon69500/Creer_une_API"
     },  
-    
-    {
-    "id": 3,
-    "titre": "Au petit Village",
-    "slug": "village",
-    "technologies": ["Angular", "TypeScript", "HTML", "CSS", "GitHub"],
-    "technologiesSecTitle": "Aspects techniques clés",
-    "technologiesSec": [
-        "Composants Angular réutilisables", 
-        "Routing multi-page", "Services pour la gestion des données produits", 
-        "Pipes personnalisées pour tri et recherche", 
-        "Responsive design"
-    ],
-    "contexte": "Création d’un site e-commerce Angular pour la vente de figurines artisanales, avec catalogue interactif, tri et recherche, et respect de la charte graphique client.",
-    "description": "Création d’un site e-commerce dynamique et responsive avec Angular pour la vente de figurines artisanales inspirées d’Astérix & Obélix. Le projet met en avant un catalogue interactif avec tri et recherche, une page produit détaillée et une navigation fluide grâce au routing Angular.",
-    "resultat": "Un site fluide et esthétique, respectant la charte graphique du client, permettant aux utilisateurs de consulter, trier et rechercher des produits facilement. L’ensemble du code est organisé en composants modulaires et versionné sur GitHub.",
-    "défis": "Respecter la charte graphique imposée, intégrer les requis techniques liés à Angular (composants, routing, services et pipes), tout en assurant la cohérence visuelle et la performance du site sur tous les supports.",
-    "solutions": "Structuration du projet autour de cinq composants principaux, mise en place d’un routing paramétré, de pipes personnalisées pour le tri et la recherche, et d’un service pour centraliser les données produits. Les tests et ajustements visuels ont permis de garantir une expérience utilisateur fluide et conforme à la charte.",
-    "link": "https://github.com/Simon69500/Touche-pas-au-klaxon"
-    },    
-
-    {
-        "id": 4,
-        "titre": "Trouve ton artisan",
-        "slug": "artisan",
-        "technologies": ["ReactJS", "Bootstrap", "SASS", "NodeJS", "Express", "Sequelize", "MySQL", "Figma", "GitHub"],
-        "technologiesSecTitle": "Aspects techniques clés",
-        "technologiesSec": [
-            "Architecture REST avec Express et Sequelize",
-            "Frontend ReactJS responsive et modulable",
-            "Recherche et filtres dynamiques",
-            "Formulaire de contact sécurisé",
-            "Intégration des maquettes Figma"
-        ],
-        "contexte": "Création d’une plateforme web pour aider les habitants de la région Auvergne-Rhône-Alpes à trouver et contacter des artisans via un site accessible, responsive et sécurisé.",
-        "description": "Développement d’une plateforme web permettant aux habitants de la région Auvergne-Rhône-Alpes de trouver facilement un artisan et de le contacter via un formulaire. Le projet comprenait la réalisation des maquettes sur Figma, le frontend en ReactJS et une API REST sécurisée avec Node.js / Express et MySQL.",
-        "resultat": "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé (frontend sur Vercel, backend sur Render, base MySQL sur Railway).",
-        "défis": "Assurer la cohérence entre le frontend et l’API, garantir la sécurité et la performance, maintenir un design accessible et responsive, et déployer une solution hébergée fiable et maintenable.",
-        "solutions": "Mise en place d’une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration des requêtes API via Axios sécurisées, tests pour conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
-        "link": "https://github.com/Simon69500/Trouve_ton_artisan_React.JS"
-    },
 
     {
         "id": 5,
@@ -101,7 +100,7 @@
         "resultat": "Un CV en ligne complet, esthétique et fonctionnel avec tous les éléments classiques d’un CV : photo de profil, informations personnelles, compétences, langues, expériences, formations et liens vers réseaux professionnels. Effets graphiques dynamiques appliqués pour un rendu interactif et attractif.",
         "défis": "Respecter scrupuleusement la maquette, utiliser Flexbox pour la mise en page, gérer les effets dynamiques au survol, maintenir un code structuré et propre, et assurer la compatibilité et le centrage sur différents écrans.",
         "solutions": "Structuration du projet avec sous-dossiers pour HTML, CSS et images, utilisation de Flexbox pour le layout, liens fonctionnels pour email, téléphone et Google Maps, mise en place d’effets graphiques au survol et versionnement sur GitHub avec workflow complet de branches et pull requests.",
-        "link": "https://github.com/Simon69500/CV_en_ligne"
+        "link": "https://github.com/Simon69500/CV-en-Ligne"
     },
 
     {
@@ -125,7 +124,7 @@
         "resultat": "Un portfolio complet et fonctionnel avec page d’accueil Hero, sections présentation et compétences, pages Services, Réalisations (minimum 6 projets), Contact et Mentions légales, modale pour profil GitHub et effets CSS dynamiques sur Cards, boutons et liens. Navigation fluide et responsive sur tous supports.",
         "défis": "Structurer le projet en composants réutilisables, gérer le routing avec React Router, intégrer les effets graphiques CSS, récupérer les données d’une API externe pour la modale, et assurer un site SEO-friendly et W3C-compliant.",
         "solutions": "Organisation du projet avec composants React modulaires, utilisation de React Router pour la navigation, intégration de Bootstrap et CSS personnalisé pour les effets dynamiques, hook useEffect pour la récupération du profil GitHub, versionnement sur GitHub avec workflow d’issues et pull requests.",
-        "link": "https://github.com/Simon69500/Portfolio_React"
+        "link": "https://github.com/Simon69500/Portfolio---ReactJS"
     }
 
 ]

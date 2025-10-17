@@ -55,8 +55,8 @@ const Competences = () => {
             />
             <div className="card-body">
             <h5 className="card-title Subtitle">Curriculum Vitae</h5>
-            <p className="text text_cv">
-                <strong>Recherche de stage</strong> d'une durée de 350h pour validation d'examen en tant que Développeur Web & Mobile FullStack
+            <p className="text text_cv fst-italic">
+                <strong className='text-strong'>Recherche de stage</strong> d'une durée de 350h pour validation d'examen en tant que Développeur Web & Mobile FullStack
             </p>
             <a
                 href={`${process.env.PUBLIC_URL}/CV-BADIN_Simon_DevWeb2.pdf`}

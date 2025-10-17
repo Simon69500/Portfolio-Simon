@@ -60,6 +60,21 @@
   }
 }
 
+@mixin text-strong($font-size-desktop: 1.1rem, $font-size-tablet: 0.9rem, $font-size-mobile: 0.8rem) {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: $font-size-desktop;
+
+    @media (max-width: 991px) {
+    font-size: $font-size-tablet;
+  }
+
+  @media (max-width: 576px) {
+    font-size: $font-size-mobile;
+  }
+}
+
 @mixin text-paragraphe-1 {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
