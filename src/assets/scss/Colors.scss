@@ -1,8 +1,5 @@
 @use "./Fonts.scss" as f;
 
-// Importation de la palette Indigo(Light) de Radix Colors
-@import "~@radix-ui/colors/indigo.css";
-
 @media (max-width: 480px) { /* Petit écran mobile (portrait) */ }
 @media (min-width: 481px) and (max-width: 768px) { /* Tablette (portrait) */ }
 @media (min-width: 769px) and (max-width: 1024px) { /* Tablette (paysage) ou petit écran de bureau */ }
@@ -137,3 +134,8 @@ $dark: $background-header;
   color:$text;
   @include f.text-strong;
 };
+
+@mixin text3 {
+  color: $text2;
+  @include f.text-paragraphe;
+}
