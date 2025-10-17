@@ -1,51 +1,55 @@
 # 🎨 Mon Portfolio - ReactJS (en cours d'actualisation)
 
 Bienvenue sur mon portfolio personnel, développé avec **ReactJS** ! 🚀  
-Ce site est une **application single-page (SPA)** où je me présente, partage mes projets et facilite le contact avec moi.  
+Découvrez mes projets, compétences et moyens de me contacter facilement.
 
 🔗 **Lien du site en ligne** : https://simon69500.github.io/Portfolio-Simon/ 
 
 ---
 
-## 🌟 Aperçu
-Nouvelle version en production (maquette)
-<img width="1046" height="606" alt="image" src="https://github.com/user-attachments/assets/792b406f-0ed6-45ef-8b59-63272e17777d" />
+## 🌟 Aperçu version 2.0
+
+### Version Desktop :
+<img width="1920" height="2362" alt="Portfolio_Home" src="https://github.com/user-attachments/assets/47765305-f01d-4624-88f2-10326ddb6277" />
+
+---
+### Version Mobile :
+<img width="420" height="1795" alt="Portfolio_Home_Mobil" src="https://github.com/user-attachments/assets/be2f2bc9-960c-47c9-8434-35084c1a40f2" />
 
 ---
 
-![portfolio](https://github.com/user-attachments/assets/3f28710c-fb5d-4a50-ac8b-581c1ec50ee2)
-
----
-
-![portfolioMobil](https://github.com/user-attachments/assets/e16b8453-a125-4921-bb34-43286dba9eb0)
-
-
----
 
 ## 🛠️ Technologies Utilisées
 
-- **ReactJS** - Framework JavaScript  
+- **ReactJS** - SPA moderne 
 - **SCSS** - Stylisation avancée  
-- **MUI** - Composants UI modernes  
-- **Radix UI** - Gestion des couleurs  
-- **GitHub Pages** - Hébergement  
+- **Bootstrap** - Composants UI responsives
+- **GitHub Pages** - Hébergement gratuit  
 
 ---
 
 ## ⚙️ Fonctionnalités
 
-✔️ **Design Responsive** - Adapté aux écrans de `480px` à `1601px+`.  
+✔️ **Design Responsive** - Adapté aux écrans de `350px` à `1601px+`.  
 ✔️ **Navigation fluide** - Menu burger sur mobile.  
-✔️ **Présentation en modal** - Mes projets sont affichés sous forme de **modals**.  
-✔️ **Formulaire interactif** -  
-  - Affichage des erreurs si les champs sont vides.  
-  - Bouton désactivé tant que les champs ne sont pas remplis correctement.  
+✔️ **Formulaire interactif** - Validation en temps réel.
 ✔️ **Sections du site** :  
-  - 🎭 **Présentation** - Qui je suis ?  
-  - 🎯 **Actuellement** - Ce que je recherche.  
-  - 💼 **Mes Projets** - (WordPress, Angular, ReactJS).  
-  - ✉️ **Me Contacter** - Formulaire de contact interactif.  
-
+  - 🏠 **Accueil**
+     - Courte présentation « À propos de moi »
+     - Actuellement : ma situation professionnelle
+     - Mes projets : aperçu via un carousel interactif
+  - 💻 **Compétences**
+      - Présentation complète « À propos de moi »
+      - Hard Skills : compétences techniques
+      - Soft Skills : qualités personnelles et professionnelles
+      - CV : visualisation et téléchargement
+  - 💼 **Portfolio**
+      - Carte de mes projets
+      - Au clic sur le bouton, ouverture d’une page détaillée pour chaque projet
+  - ✉️ **Me Contacter**
+      - Formulaire interactif pour me joindre facilement.
+  - ⚖️ **Mentions légalesr**  
+      - Accessible depuis le footer
 ---
 
 ## 🚀 Installation et Exécution
