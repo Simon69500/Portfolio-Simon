@@ -134,6 +134,6 @@ $dark: $background-header;
 };
 
 @mixin text2 {
-  color:$text2;
-  @include f.text-paragraphe;
+  color:$text;
+  @include f.text-strong;
 };

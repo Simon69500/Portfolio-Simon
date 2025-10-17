@@ -19,28 +19,26 @@
         "solutions": "Mise en place d’une architecture MVC complète, utilisation de PDO pour les requêtes sécurisées, création de tests PHPUnit, validation statique avec PHPStan, documentation avec DocBlock et scripts SQL inclus pour la création et l’alimentation de la base MySQL.",
         "link": "https://github.com/Simon69500/Touche-pas-au-klaxon"
     },
-
     {
         "id": 2,
-        "titre": "API Russell Port",
-        "slug": "API_Russel",
-        "technologies": ["NodeJS", "Express", "MongoDB", "GitHub"],
+        "titre": "Trouve ton artisan",
+        "slug": "artisan",
+        "technologies": ["ReactJS", "Bootstrap", "SASS", "NodeJS", "Express", "Sequelize", "MySQL", "Figma", "GitHub"],
         "technologiesSecTitle": "Aspects techniques clés",
         "technologiesSec": [
-            "Architecture REST sécurisée avec Express",
-            "Gestion des données avec Mongoose",
-            "Authentification JWT",
-            "Gestion des requêtes CORS et variables d'environnement avec Dotenv",
-            "CRUD complet pour catways, réservations et utilisateurs",
-            "Frontend administrateur avec EJS et vues Express"
+            "Architecture REST avec Express et Sequelize",
+            "Frontend ReactJS responsive et modulable",
+            "Recherche et filtres dynamiques",
+            "Formulaire de contact sécurisé",
+            "Intégration des maquettes Figma"
         ],
-        "contexte": "Développement d’une API et d’un frontend administrateur pour le Port de Plaisance de Russell afin de gérer les catways, réservations et utilisateurs de manière sécurisée.",
-        "description": "Création d’une API privée pour le Port de Plaisance de Russell permettant de gérer les catways, les réservations et les utilisateurs. Le projet inclut également une interface frontend simple pour l'administration et la documentation de l'API.",
-        "resultat": "API fonctionnelle avec gestion complète des catways, réservations et utilisateurs. Tableau de bord administrateur opérationnel, sécurisation via JWT, validation des données et base MongoDB. L’ensemble est versionné sur GitHub et hébergé en ligne.",
-        "défis": "Mettre en place une API REST sécurisée, gérer les relations entre catways et réservations, assurer un tableau de bord administrateur fonctionnel et documenté, et déployer l’application en ligne.",
-        "solutions": "Architecture REST avec Express et Mongoose, routes CRUD sécurisées, authentification via JWT, frontend minimal en EJS pour l’administration, documentation incluse, et hébergement de l’API en ligne avec accès sécurisé. Versionnage du projet sur GitHub.",
-        "link": "https://github.com/Simon69500/Creer_une_API"
-    },  
+        "contexte": "Création d’une plateforme web pour aider les habitants de la région Auvergne-Rhône-Alpes à trouver et contacter des artisans via un site accessible, responsive et sécurisé.",
+        "description": "Développement d’une plateforme web permettant aux habitants de la région Auvergne-Rhône-Alpes de trouver facilement un artisan et de le contacter via un formulaire. Le projet comprenait la réalisation des maquettes sur Figma, le frontend en ReactJS et une API REST sécurisée avec Node.js / Express et MySQL.",
+        "resultat": "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé (frontend sur Vercel, backend sur Render, base MySQL sur Railway).",
+        "défis": "Assurer la cohérence entre le frontend et l’API, garantir la sécurité et la performance, maintenir un design accessible et responsive, et déployer une solution hébergée fiable et maintenable.",
+        "solutions": "Mise en place d’une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration des requêtes API via Axios sécurisées, tests pour conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
+        "link": "https://github.com/Simon69500/Trouve_ton_artisan_React.JS"
+    },
     
     {
     "id": 3,
@@ -64,24 +62,25 @@
 
     {
         "id": 4,
-        "titre": "Trouve ton artisan",
-        "slug": "artisan",
-        "technologies": ["ReactJS", "Bootstrap", "SASS", "NodeJS", "Express", "Sequelize", "MySQL", "Figma", "GitHub"],
+        "titre": "API Russell Port",
+        "slug": "API_Russel",
+        "technologies": ["NodeJS", "Express", "MongoDB", "GitHub"],
         "technologiesSecTitle": "Aspects techniques clés",
         "technologiesSec": [
-            "Architecture REST avec Express et Sequelize",
-            "Frontend ReactJS responsive et modulable",
-            "Recherche et filtres dynamiques",
-            "Formulaire de contact sécurisé",
-            "Intégration des maquettes Figma"
+            "Architecture REST sécurisée avec Express",
+            "Gestion des données avec Mongoose",
+            "Authentification JWT",
+            "Gestion des requêtes CORS et variables d'environnement avec Dotenv",
+            "CRUD complet pour catways, réservations et utilisateurs",
+            "Frontend administrateur avec EJS et vues Express"
         ],
-        "contexte": "Création d’une plateforme web pour aider les habitants de la région Auvergne-Rhône-Alpes à trouver et contacter des artisans via un site accessible, responsive et sécurisé.",
-        "description": "Développement d’une plateforme web permettant aux habitants de la région Auvergne-Rhône-Alpes de trouver facilement un artisan et de le contacter via un formulaire. Le projet comprenait la réalisation des maquettes sur Figma, le frontend en ReactJS et une API REST sécurisée avec Node.js / Express et MySQL.",
-        "resultat": "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé (frontend sur Vercel, backend sur Render, base MySQL sur Railway).",
-        "défis": "Assurer la cohérence entre le frontend et l’API, garantir la sécurité et la performance, maintenir un design accessible et responsive, et déployer une solution hébergée fiable et maintenable.",
-        "solutions": "Mise en place d’une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration des requêtes API via Axios sécurisées, tests pour conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
-        "link": "https://github.com/Simon69500/Trouve_ton_artisan_React.JS"
-    },
+        "contexte": "Développement d’une API et d’un frontend administrateur pour le Port de Plaisance de Russell afin de gérer les catways, réservations et utilisateurs de manière sécurisée.",
+        "description": "Création d’une API privée pour le Port de Plaisance de Russell permettant de gérer les catways, les réservations et les utilisateurs. Le projet inclut également une interface frontend simple pour l'administration et la documentation de l'API.",
+        "resultat": "API fonctionnelle avec gestion complète des catways, réservations et utilisateurs. Tableau de bord administrateur opérationnel, sécurisation via JWT, validation des données et base MongoDB. L’ensemble est versionné sur GitHub et hébergé en ligne.",
+        "défis": "Mettre en place une API REST sécurisée, gérer les relations entre catways et réservations, assurer un tableau de bord administrateur fonctionnel et documenté, et déployer l’application en ligne.",
+        "solutions": "Architecture REST avec Express et Mongoose, routes CRUD sécurisées, authentification via JWT, frontend minimal en EJS pour l’administration, documentation incluse, et hébergement de l’API en ligne avec accès sécurisé. Versionnage du projet sur GitHub.",
+        "link": "https://github.com/Simon69500/Creer_une_API"
+    },  
 
     {
         "id": 5,

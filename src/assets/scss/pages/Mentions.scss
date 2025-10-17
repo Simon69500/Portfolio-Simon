@@ -1,0 +1,21 @@
+@use '../Colors.scss' as c;
+
+.mentions {
+    @include c.background-secondary;
+    
+    .title {
+        @include c.title
+    }
+
+    .Subtitle {
+        @include c.sub-title
+    }
+
+    .text {
+        @include c.text
+    }
+
+    .text-strong {
+        @include c.text2
+    }
+}

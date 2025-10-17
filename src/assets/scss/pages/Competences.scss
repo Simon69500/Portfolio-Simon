@@ -42,6 +42,10 @@
   .text {
     @include c.text;
   }
+
+  .text-strong {
+        @include c.text2
+  }  
 }
 
 /*  Responsive */
