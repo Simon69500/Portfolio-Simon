@@ -107,8 +107,8 @@ const Portfolio = () => {
                   </div>
             </div>
 
-             {/* Bouton lien Github */}         
-              <Link to={`/projet/${projet.id}`} className="btn btn-primary mt-auto mb-3">Voir le projet</Link>
+             {/* Bouton Voir le projet -> page projet */}         
+              <Link to={`/projet/${projet.id}`} id={`btn-project-${projet.id}`} className="btn btn-primary mt-auto mb-3">Voir le projet</Link>
           </div>
         </div>
         )

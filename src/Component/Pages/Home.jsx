@@ -20,8 +20,8 @@ const Home = () => {
 
                         {/* Partie Bouton */}
                         <div className='d-flex flex-row justify-content-md-center justify-content-evenly'>
-                            <Link type="button" class="btn btn-sm btn-primary m-md-3" to="/portfolio">Voir mes projets</Link>
-                            <a href={`${process.env.PUBLIC_URL}/CV-BADIN_Simon_DevWeb2.pdf`}  download class="btn btn-sm btn-primary m-md-3 ">Télécharger mon CV</a>    
+                            <Link type="button" id='btn-projects' class="btn btn-sm btn-primary m-md-3" to="/portfolio">Voir mes projets</Link>
+                            <a href={`${process.env.PUBLIC_URL}/CV-BADIN_Simon_DevWeb2.pdf`} download id='btn-cv' className="btn btn-sm btn-primary m-md-3 ">Télécharger mon CV</a>    
                         </div>              
                     </div>
 
@@ -35,7 +35,7 @@ const Home = () => {
                                 Passionné par l’informatique et les nouvelles technologies depuis toujours, j’ai récemment achevé une reconversion pour exercer ce métier qui me motive chaque jour.
                                 </p>
                         </div>
-                            <Link className='btn btn-sm btn-primary mb-3' to="/competences">
+                            <Link id='btn-more' className='btn btn-sm btn-primary mb-3' to="/competences">
                             En savoir plus
                             </Link>
                     </div>
