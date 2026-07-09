@@ -21,16 +21,16 @@ export default {
 
         // Les Couleurs d'Accent (boutons & Elements clés)
         accent: {
-          primary: '#7c3aed', 
-          secondary: '#10b981', 
-          link: '#6366F1', 
+          primary: '#7c3aed', // Violet en mode clair, Vert en mode sombre
+          secondary: '#10b981', // Vert en mode clair, Violet en mode sombre
+          link: '#6366F1',  // Bleu pour les liens
         }
       },
 
       backgroundImage: {
         // Les Dégradés de Fond Généraux (Haut gauche vers Bas droit)
-        'bg-light-gradient': 'linear-gradient(to bottom right, #FFFFFF, #E0F2FE)', 
-        'bg-dark-gradient': 'linear-gradient(to bottom right, #0B0F19, #1A102F)',  
+        'bg-light': 'linear-gradient(to bottom right, #FFFFFF, #E0F2FE)', 
+        'bg-dark': 'linear-gradient(to bottom right, #0B0F19, #1A102F)',  
 
         // Les Dégradés de tes Cartes Bento (Haut gauche vers Bas droit)
         'bento-light': 'linear-gradient(to bottom right, #FFFFFF, #F1F5F9)',       
