@@ -4,7 +4,7 @@ import { Icones } from "../../data/Icones";
 
 /**
  * 
- * Carte Bento Grid #1 : Présentation de Simon BADIN
+ * Carte Bento Grid A : Présentation de Simon BADIN
  */
 
 const Presentation = () => {
