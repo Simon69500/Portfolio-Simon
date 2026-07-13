@@ -4,7 +4,7 @@ import { techData } from '../../data/techData';
 
 /**
  * 
- * Carte Bento Grid B : Présentation de Simon BADIN
+ * Carte Bento Grid B : Présentation des technologies sous forme de logo + nom 
  */
 
 const StackCard = () => {
