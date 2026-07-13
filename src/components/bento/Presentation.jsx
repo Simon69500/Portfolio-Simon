@@ -2,6 +2,10 @@ import React from 'react';
 import Button from '../ui/Button';
 import { Icones } from "../../data/Icones";
 
+/**
+ * 
+ * Carte Bento Grid #1 : Présentation de Simon BADIN
+ */
 
 const Presentation = () => {
   return (
@@ -33,21 +37,20 @@ const Presentation = () => {
             Ancien Chasseur Alpin et chef d'équipe dans le BTP, je convertis ma rigueur, ma résilience et ma gestion du stress en lignes de code performantes et structurées.
           </p>
         </div>
-      
-        {/* Zone d'Actions : Les Boutons */}
-        <div className="mt-8 flex flex-col sm:flex-row gap-4">
-
-          <button href="#contact" variant="primary">
-            Me Contacter
-          </button>
-
-          <button href="/CV-Badin_Simon_DevWeb2.pdf" variant="secondary" rel="noopener noreferrer" target="_blank">
-            Télécharger mon CV
-          </button>
-
-        </div>
       </div>       
 
+      {/* Zone d'Actions : Les Boutons */}
+      <div className="mt-8 flex flex-col sm:flex-row gap-4">
+
+        <Button href="#contact" variant="primary">
+          Me Contacter
+        </Button>
+
+        <Button href="/CV-Badin_Simon_DevWeb2.pdf" variant="secondary" rel="noopener noreferrer" target="_blank">
+          Télécharger mon CV
+        </Button>
+
+      </div>
     </article>
   );
 };
