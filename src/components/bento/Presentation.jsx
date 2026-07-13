@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '../ui/Button';
-import { Icones } from "../../data/Icones";
 
 /**
  * 
@@ -23,7 +22,7 @@ const Presentation = () => {
         {/*Emplacement Photo de Profil */}
         <div className="w-24 h-24 rounded-full shrink-0 overflow-hidden">
           <img
-          src={Icones.profil2}
+          src=""
           alt="Portrait de Simon"  
           className="w-full h-full object-cover"
           loading="lazy"

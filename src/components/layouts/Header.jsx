@@ -1,8 +1,5 @@
-import '@scss/index.scss';
-import { Icones } from "../../data/Icones";
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import * as bootstrap from 'bootstrap';
 
 
 const Header = () => {

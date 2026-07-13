@@ -11,7 +11,6 @@
 
     <meta charset="utf-8" />
     <!-- Utilisation correcte du chemin relatif avec %PUBLIC_URL% pour React -->
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
 
@@ -25,12 +24,6 @@
     <meta property="og:url" content="https://simon69500.github.io/Portfolio-Simon/">
     <meta property="og:image" content="https://simon69500.github.io/Portfolio-Simon/preview.png">
 
-    <!-- Ajout du cache-buster sur la feuille de style -->
-    <link href="%PUBLIC_URL%/static/css/main.css?v=1.1" rel="stylesheet" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-
-
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -40,5 +33,9 @@
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <!-- C'est ici que le lien est crucial pour Vite -->
+    <script type="module" src="/src/main.jsx"></script>
+
   </body>
 </html>

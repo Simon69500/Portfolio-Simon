@@ -94,5 +94,7 @@ const ProjetStar = ({project}) => {
       </div>
 
     </article>
-  )
-}
+  );
+};
+
+export default ProjetStar;
