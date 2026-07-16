@@ -4,6 +4,8 @@ import React, {useState} from 'react';
 import Presentation from '../bento/Presentation';
 import StackCard from '../bento/StackCard';
 import ProjetStar from '../bento/ProjetStar';
+import Parcours from '../bento/Parcours';
+
 
 // Import de la source de vérité des données
 import { portfolioData } from '../../data/projects/portfolioData';
@@ -55,12 +57,27 @@ const Home = () => {
                     />
                 </div>  
 
+                {/* Tuile C : Parcours Pro */}
+                <div
+                    className={`
+                        col-span-1 md:col-span-4 order-3 md:order-4
+                        transition-opacity duration-500
+                        ${expansionProjetId !== null && expansionProjetId !== 'stack' ? 'opacity-0 pointer-events-none' : 'opacity-100'}
+                    `}
+                >
+                    <Parcours
+                        projectId="stack"
+                        expansionProjetId={expansionProjetId}
+                        setExpansionProjetId={setExpansionProjetId}
+                    />
+                </div>  
+
                 {/* Tuile D : Projet Phare (Estimmo) */}
                 {/* Sécurité : on ne rend la tuile que si featuredProject existe */}
                 {featuredProject && (
                     <div
                         className={`
-                            col-span-1 md:col-span-8 order-3 md:order-3
+                            col-span-1 md:col-span-8 order-3 md:order-4
                             transition-opacity duration-500
                             ${expansionProjetId !== null && expansionProjetId !== featuredProject.id ? 'opacity-0 pointer-events-none' : 'opacity-100'}
                         `}
@@ -70,8 +87,9 @@ const Home = () => {
                             expansionProjetId={expansionProjetId}
                             setExpansionProjetId={setExpansionProjetId}
                         />
-                    </div>
+                    </div> 
                 )}
+
 
             </main>        
         </>
