@@ -4,6 +4,11 @@ import { softSkillsData } from '../../data/profileData';
 // Import asynchrone du graphique pour optimiser le bundle Vite.js
 const RadarChart = lazy(() => import('../ui/RadarChartComponent'));
 
+/**
+ * 
+ * Carte Bento Grid E : Présentation des Soft Skill
+ */
+
 const SoftSkills = () => {
   return (
     <section 
