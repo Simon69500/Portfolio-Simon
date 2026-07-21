@@ -1,10 +1,14 @@
 import React, {useState} from 'react';
 
 // Import des composants
+import Header from '../layouts/Header';
 import Presentation from '../bento/Presentation';
 import StackCard from '../bento/StackCard';
 import ProjetStar from '../bento/ProjetStar';
 import Parcours from '../bento/Parcours';
+import MosaicContainer from '../bento/MosaicContainer';
+import Footer from '../layouts/Footer';
+
 
 
 // Import de la source de vérité des données
@@ -20,11 +24,18 @@ const Home = () => {
     // 1. Filtrage dynamique : On extrait LE projet phare (Estimmo)
     const featuredProject = portfolioData.find(project => project.isFeatured === true);
 
-    // 2. Filtrage dynamique : On prépare le tableau des projets secondaires pour les futures mosaïques
-    // const secondaryProjects = portfolioData.filter(project => project.isFeatured === false);
+    // 2. Filtrage dynamique : On exclut le projet phare ET le template vide (id: 6)
+    const secondaryProjects = portfolioData.filter(project => project.isFeatured === false && project.id !== 6);
+    
+    // 3. Découpage pour les deux tuiles de mosaïque[cite: 2, 5]
+    const projectsF = secondaryProjects.slice(0, 2); // Projets 2 et 3
+    const projectsG = secondaryProjects.slice(2, 4); // Projet 4
 
     return (
         <>
+            {/* Header */}
+            <Header/>
+
             {/* Grille Bento : 1 col Mobile / 12 cols Desktop avec Gaps */}
             <main className='grid grid-cols-1 md:grid-cols-12 gap-4 p-4 relative min-h-screen'>
                 
@@ -90,7 +101,33 @@ const Home = () => {
                     <SoftSkills/>
                 </div>  
 
-            </main>        
+                {/* Tuile F : Mosaïque Projets 1  */}
+                {projectsF.length > 0 && (
+                    <div className={`col-span-1 md:col-span-7 order-7 transition-opacity duration-500 ${expansionProjetId !== null ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                        <MosaicContainer 
+                        projects={projectsF} 
+                        expansionProjetId={expansionProjetId}
+                        setExpansionProjetId={setExpansionProjetId}                        
+                        />
+                    </div>
+                )}
+
+                {/* Tuile G : Mosaïque Projets 2  */}
+                {projectsG.length > 0 && (
+                    <div className={`col-span-1 md:col-span-6 order-8 transition-opacity duration-500 ${expansionProjetId !== null ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                        <MosaicContainer 
+                        projects={projectsG} 
+                        expansionProjetId={expansionProjetId}
+                        setExpansionProjetId={setExpansionProjetId}                           
+                        />
+                    </div>
+                )}             
+
+
+            </main>    
+            
+            {/* Tuile G : Mosaïque Projets 2  */}
+            <Footer/>                
         </>
     );
 };
