@@ -37,7 +37,7 @@ const StackCard = () => {
             <div className="flex flex-wrap gap-3">
               {techList.map((tech) => (
                 <TechBadge
-                  key={tech.id} // Utilisation de l'ID unique au lieu de l'index (meilleure perf React)
+                  key={tech.id}
                   name={tech.name}
                   logoUrl={tech.logoUrl}
                   iconBehavior={tech.iconBehavior}

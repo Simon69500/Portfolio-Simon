@@ -1,6 +1,11 @@
 import React from 'react';
 import { timeLineData } from '../../data/profileData';
 
+/**
+ * 
+ * Carte Bento Grid C : Présentation de Simon BADIN
+ */
+
 const Parcours = () => {
 
   // On inverse le tableau pour avoir le poste le plus récent en haut 

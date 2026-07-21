@@ -19,7 +19,7 @@ export const portfolioData = [
         ],
 
         // Stack Technique simplifiée pour les badges (Tuiles D)
-        technologies: [ "ReactJS", "Symfony", "PostgreSQL", "PostGIS"],
+        technologies: [ "React", "Symfony", "PostgreSQL", "PostGIS"],
 
         // Zone conceptuelle pour l'état "Expanded" (section 2.4)
         details: {
@@ -43,7 +43,7 @@ export const portfolioData = [
         slug: "trouve-ton-artisan",
 
         // Médias
-        coverImage: "/images/projects/trouve-ton-artisan.webp",
+        coverImage: "/images/projects/trouve-ton-artisan/screen1.webp",
         gallery: [
             "/images/projects/trouve-ton-artisan/screen1.webp",
             "/images/projects/trouve-ton-artisan/screen2.webp",
@@ -53,7 +53,7 @@ export const portfolioData = [
         ],
 
         // Stack Technique simplifiée pour les badges (Tuiles D)
-        technologies: ["ReactJS", "NodeJS", ""],
+        technologies: ["React", "Node.js", ""],
 
         // Zone conceptuelle pour l'état "Expanded"
         details: {
@@ -75,7 +75,7 @@ export const portfolioData = [
     titre: "Touche Pas Au Klaxon",
     slug: "touche-pas-au-klaxon",
     
-    coverImage: "/images/projects/tpk/cover.webp",
+    coverImage: "/images/projects/touche-pas-klaxon/screen1.webp",
     gallery: [
       "/images/projects/touche-pas-klaxon/screen1.webp",
       "/images/projects/touche-pas-klaxon/screen2.webp",
@@ -87,7 +87,7 @@ export const portfolioData = [
       "/images/projects/touche-pas-klaxon/screen8.webp"
     ],
     
-    technologies: ["PHP", "MySQL", "Bootstrap"],
+    technologies: ["PHP", "MySQL"],
     
     details: {
       contexte: "Application web de gestion et création de trajets.",
@@ -133,6 +133,34 @@ export const portfolioData = [
   },
 
   //Projet 5 : 
+  {
+    id: 5,
+    isFeatured: false,
+    titre: "Au Petit Village",
+    slug: "au_petit_village",
+    
+    coverImage: "/images/projects/Au-petit-village/screen1.webp",
+    gallery: [
+      "/images/projects/Au-petit-village/screen1.webp",
+      "/images/projects/Au-petit-village/screen2.webp",
+      "/images/projects/Au-petit-village/screen3.webp",
+    ],
+    
+    technologies: ["Angular", "TypeScript"],
+    
+    details: {
+      contexte: "Création d’un site e-commerce Angular pour la vente de figurines artisanales, avec catalogue interactif, tri et recherche, et respect de la charte graphique client.",
+      aspectsTechniques: "",
+      defis: "Respecter la charte graphique imposée, intégrer les requis techniques liés à Angular (composants, routing, services et pipes), tout en assurant la cohérence visuelle et la performance du site sur tous les supports.",
+      solutions: "Structuration du projet autour de cinq composants principaux, mise en place d’un routing paramétré, de pipes personnalisées pour le tri et la recherche, et d’un service pour centraliser les données produits. Les tests et ajustements visuels ont permis de garantir une expérience utilisateur fluide et conforme à la charte.",
+      resultats: "Un site fluide et esthétique, respectant la charte graphique du client, permettant aux utilisateurs de consulter, trier et rechercher des produits facilement. L’ensemble du code est organisé en composants modulaires et versionné sur GitHub."
+    },
+    
+    githubUrl: "https://github.com/Simon69500/Angular",
+    liveUrl: ""
+  },
+
+    //Projet 6 : 
   {
     id: 5,
     isFeatured: false,
