@@ -10,7 +10,7 @@ const Presentation = () => {
   return (
 
     <article
-      className="order-1 md:col-span-8 bg-bento-light 
+      className=" h-full bg-bento-light 
       dark:bg-bento-dark rounded-2xl p-6 shadow-sm flex flex-col justify-between 
       transition-transform duration-300 hover:scale-[1.02] hover:border hover:border-accent-primary "
       aria-labelledby="presentation-title"

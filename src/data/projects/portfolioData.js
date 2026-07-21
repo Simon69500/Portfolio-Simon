@@ -8,7 +8,7 @@ export const portfolioData = [
         slug: "estimmo-savoies",
 
         // Médias ( CaC Réf: Section 6.1 - Assets en WebP dans le dossier Public)
-        coverImage: "/images/projects/estimmo/screen1.webp",
+        coverImage: "/images/projects/estimmo/cover.webp",
         gallery: [ 
             "/images/projects/estimmo/screen1.webp",
             "/images/projects/estimmo/screen2.webp",
