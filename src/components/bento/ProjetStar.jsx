@@ -21,15 +21,21 @@ const ProjetStar = ({ project, expansionProjetId, setExpansionProjetId }) => {
     setExpansionProjetId
   );
 
-  const getTechDetails = (techName) => {
-    const found = techData.find(t => t.name.toLowerCase() === techName.toLowerCase());
+const getTechDetails = (techName) => {
+    // 1. On extrait les tableaux de chaque catégorie et on les fusionne en un seul tableau plat
+    const allTechs = Object.values(techData).flat();
+    
+    // 2. On applique le .find() sur ce nouveau tableau unifié
+    const found = allTechs.find(t => t.name.toLowerCase() === techName.toLowerCase());
+    
+    // 3. On retourne l'URL du logo si trouvé, sinon null
     return found ? found.logoUrl : null;
   };
 
   const isExpanded = status === 'EXPANDED';
 
   // Classes de base pour la tuile de la grille Bento[cite: 2]
-  const baseClasses = "group flex flex-col overflow-hidden rounded-3xl border border-gray-100 dark:border-gray-800 bg-bento-light dark:bg-bento-dark shadow-sm";
+  const baseClasses = "group flex flex-col overflow-hidden rounded-3xl border border-gray-100 dark:border-gray-800 bg-bento-light dark:bg-bento-dark shadow-sm ";
   const hoverClasses = !isExpanded ? "hover:border-accent-primary dark:hover:border-accent-primary md:cursor-pointer cursor-default relative w-full h-full" : "";
 
   return (
