@@ -9,6 +9,7 @@ import Parcours from '../bento/Parcours';
 
 // Import de la source de vérité des données
 import { portfolioData } from '../../data/projects/portfolioData';
+import SoftSkills from '../bento/SoftSkills';
 
 
 const Home = () => {
@@ -35,11 +36,7 @@ const Home = () => {
                         ${expansionProjetId !== null && expansionProjetId !== 'presentation' ? 'opacity-0 pointer-events-none' : 'opacity-100'}
                     `}
                 >
-                    <Presentation
-                        projectId="presentation" 
-                        expansionProjetId={expansionProjetId}
-                        setExpansionProjetId={setExpansionProjetId}
-                    />
+                    <Presentation/>
                 </div>  
 
                 {/* Tuile B : Stack Technique */}
@@ -50,11 +47,7 @@ const Home = () => {
                         ${expansionProjetId !== null && expansionProjetId !== 'stack' ? 'opacity-0 pointer-events-none' : 'opacity-100'}
                     `}
                 >
-                    <StackCard
-                        projectId="stack"
-                        expansionProjetId={expansionProjetId}
-                        setExpansionProjetId={setExpansionProjetId}
-                    />
+                    <StackCard/>
                 </div>  
 
                 {/* Tuile C : Parcours Pro */}
@@ -65,11 +58,7 @@ const Home = () => {
                         ${expansionProjetId !== null && expansionProjetId !== 'stack' ? 'opacity-0 pointer-events-none' : 'opacity-100'}
                     `}
                 >
-                    <Parcours
-                        projectId="stack"
-                        expansionProjetId={expansionProjetId}
-                        setExpansionProjetId={setExpansionProjetId}
-                    />
+                    <Parcours/>
                 </div>  
 
                 {/* Tuile D : Projet Phare (Estimmo) */}
@@ -90,6 +79,16 @@ const Home = () => {
                     </div> 
                 )}
 
+                {/* Tuile E : Soft Skill */}
+                <div
+                    className={`
+                        col-span-1 md:col-span-5 order-6 md:order-5
+                        transition-opacity duration-500
+                        ${expansionProjetId !== null && expansionProjetId !== 'stack' ? 'opacity-0 pointer-events-none' : 'opacity-100'}
+                    `}
+                >
+                    <SoftSkills/>
+                </div>  
 
             </main>        
         </>

@@ -9,7 +9,7 @@ const Parcours = () => {
   return (
     <section
       aria-labelledby='timeline-heading'
-      className='col-span-1 md:col-span-4 order-4 p-6 rounded-3xl bg-bento-light dark:bg-bento-dark shadow-sm transition-all duration-300 hover:scale-[1.02] border border-transparent hover:border-accent-primary'
+      className='h-full p-6 rounded-3xl bg-bento-light dark:bg-bento-dark shadow-sm transition-all duration-300 hover:scale-[1.02] border border-transparent hover:border-accent-primary'
     >
       <h2 id='timeline-heading' className='text-xl font-bold text-typography-light dark:text-typography-dark mb-6'>
         Mon Parcours

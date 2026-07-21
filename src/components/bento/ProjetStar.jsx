@@ -1,4 +1,5 @@
 import React, {useRef} from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import TechBadge from '../ui/TechBadge';
 import Button from '../ui/Button';
 import { techData } from '../../data/techData';
@@ -7,75 +8,45 @@ import ProjetDetails from './ProjetDetails';
 
 
 /**
- * 
- * Carte Bento Grid C : Présentation de mon projet phare qui est Estimmo-savoies
+ * Carte Bento Grid C : Présentation du projet phare Estimmo-savoies
+ * Conforme Section 2.4 du Cahier des Charges (Card Expansion)[cite: 2]
  */
+const ProjetStar = ({ project, expansionProjetId, setExpansionProjetId }) => {
 
-const ProjetStar = ({project, expansionProjetId, setExpansionProjetId}) => {
-
-  // 1. Création de la référence pour capturer les dimension du DOM
   const cardRef = useRef(null);
 
-  // 2. Inialisation du Hook Personnalisé (FSM)
-  const {status, coords, expand, collapse} = useCardExpansion(
+  const { status, expand, collapse } = useCardExpansion(
     project.id,
     expansionProjetId,
-    setExpansionProjetId,
-    cardRef
+    setExpansionProjetId
   );
 
-  //Fonction utilitaire pour récuperer le logo depuis techData
   const getTechDetails = (techName) => {
     const found = techData.find(t => t.name.toLowerCase() === techName.toLowerCase());
     return found ? found.logoUrl : null;
   };
 
-  // 3. Calcul Dynamique des styles inline (Transition spatiale)
-  // En mode CALLAPSED, on laisse le parent gérer les dimensions
-  // En TRANSITIONING / REVERTING, on applique les coordonnées initales capturées
-  // En EXPANDED, on force le plein écran
-  const dynamicStyles = status === 'TRANSITIONING' || status === 'REVERTING'
-  ? {
-    position: 'fixed',
-    top: coords?.top,
-    left: coords?.left,
-    width: coords?.width,
-    height: coords?.height,
-    zIndex: 50
-  }
-  : status === 'EXPANDED'
-  ? {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100vw',
-    height: '100vh',
-    zIndex: 50,
-    borderRadius: 0
-  }
-  : {}; // COLLAPSED: aucun style inline, Tailwind gére tout
+  const isExpanded = status === 'EXPANDED';
 
-  // 4. Calcul dynamique des classes Tailwind
-  const baseClasses = "group flex flex-col md:flex-row overflow-hidden rounded-3xl border border-gray-100 dark:border-gray-800 bg-bento-light dark:bg-bento-dark transition-all duration-500 ease-in-out";
-  const hoverClasses = status === 'COLLAPSED' ? "hover:border-accent-primary dark:hover:border-accent-primary md:cursor-pointer cursor-default relative w-full h-full" : "";
-
+  // Classes de base pour la tuile de la grille Bento[cite: 2]
+  const baseClasses = "group flex flex-col overflow-hidden rounded-3xl border border-gray-100 dark:border-gray-800 bg-bento-light dark:bg-bento-dark shadow-sm";
+  const hoverClasses = !isExpanded ? "hover:border-accent-primary dark:hover:border-accent-primary md:cursor-pointer cursor-default relative w-full h-full" : "";
 
   return (
-    <article
+    <motion.article
       ref={cardRef}
-      style={dynamicStyles}
-      className={`${baseClasses} ${hoverClasses}`}
+      layoutId={project.id}
+      transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+      className={`${baseClasses} ${hoverClasses} ${
+        isExpanded ? 'fixed inset-0 z-50 rounded-none m-0 w-screen h-screen overflow-y-auto' : ''
+      }`}
       onClick={() => {
-      // [CaC Section 2.4] : Déclenchement sur toute la carte uniquement sur Desktop au repos
-      if (window.innerWidth >= 768 && status === 'COLLAPSED') expand(); 
+        // [CaC Section 2.4] : Déclenchement sur toute la carte uniquement sur Desktop au repos[cite: 2]
+        if (window.innerWidth >= 768 && !isExpanded) expand(); 
       }}
     >
-      {/* 
-        [CaC Section 2.4] : Démontage du résumé visuel si on est en plein écran 
-        Nous montrons le résumé pour COLLAPSED, TRANSITIONING et REVERTING
-      */}
-      {status !== 'EXPANDED' ? (
-        <>
+      {!isExpanded ? (
+        <div className="flex flex-col h-full w-full">
           {/* ZONE TEXTUELLE */}
           <div className='flex-1 p-6 md:p-8 flex flex-col justify-between z-10'>
             <div>
@@ -83,14 +54,14 @@ const ProjetStar = ({project, expansionProjetId, setExpansionProjetId}) => {
                 {project.titre}
               </h2>
               <p className='text-typography-light dark:text-typography-dark-muted mb-6 line-clamp-3'>
-                {project.description}
+                {project.details.contexte}
               </p>
             </div>
 
             {/* Badges Techniques */}
             <div className='flex flex-wrap gap-2 mb-6 md:mb-0'>
               {project.technologies.map((tech, index) => {
-                const logo = getTechDetails(tech)
+                const logo = getTechDetails(tech);
                 return logo ? (
                   <TechBadge key={index} name={tech} logoUrl={logo} />
                 ) : (
@@ -101,14 +72,14 @@ const ProjetStar = ({project, expansionProjetId, setExpansionProjetId}) => {
               })}
             </div>
 
-            {/* [CaC Section 2.4 - Sécurité UX] : Bouton dédié pour Mobile */}
+            {/* [CaC Section 2.4 - Sécurité UX] : Bouton dédié pour Mobile[cite: 2] */}
             <Button
               onClick={(e) => {
                 e.stopPropagation();
-                if (status === 'COLLAPSED') expand();
+                if (!isExpanded) expand();
               }}
               variant='primary'
-              className='w-full gap-2'
+              className='w-full gap-2 md:hidden mt-4'
               aria-label={`Voir les détails du projet ${project.titre}`}
             >
               Voir le projet
@@ -119,24 +90,21 @@ const ProjetStar = ({project, expansionProjetId, setExpansionProjetId}) => {
           </div>
 
           {/* ZONE MÉDIA */}
-          <div className="w-full md:w-5/12 h-48 md:h-auto relative overflow-hidden bg-gray-100 dark:bg-gray-900 border-t md:border-t-0 md:border-l border-gray-200 dark:border-gray-800">
+          <div className="w-full h-48 md:h-64 relative flex justify-center items-center overflow-hidden shrink-0 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
             <img 
               src={project.coverImage} 
               alt={`Aperçu de l'interface de ${project.titre}`} 
               loading="lazy"
-              className="w-full h-full object-cover object-left-top transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-contain object-center p-4"
             />
           </div>
-        </>
-      ): (
-        /* 
-          [CaC Section 2.4] : Montage de la structure complète en mode EXPANDED 
-          Nous passons la fonction collapse en prop pour le bouton de fermeture
-        */
-       <ProjetDetails project={project} onClose={collapse} />
+        </div>
+      ) : (
+        <div className="h-full w-full flex flex-col bg-bento-light dark:bg-bento-dark">
+          <ProjetDetails project={project} onClose={collapse} />
+        </div>
       )}
-
-    </article>
+    </motion.article>
   );
 };
 

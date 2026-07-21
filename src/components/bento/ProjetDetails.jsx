@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../ui/Button';
 
 /**
@@ -6,6 +6,21 @@ import Button from '../ui/Button';
  * [CaC Section 2.4 - Démontage du résumé pour monter la structure complète]
  */
 const ProjetDetails = ({ project, onClose }) => {
+
+    // 1. Etat local pour piloter l'animation d'entrée (fade-in Up)
+    const [isMounted, setIsMounted] = useState(false);
+
+    // 2. Déclenchement de l'animation au montage du composant
+    useEffect(() => {
+        const frame1 = requestAnimationFrame(() => {
+            const frame2 = requestAnimationFrame(() => {
+                setIsMounted(true);
+            });
+            return () => cancelAnimationFrame(frame2);
+        });
+        return () => cancelAnimationFrame(frame1);
+    }, []);
+
     return (
         <div className="w-full h-full bg-bento-light dark:bg-bento-dark overflow-y-auto relative flex flex-col cursor-auto">
             
@@ -28,7 +43,9 @@ const ProjetDetails = ({ project, onClose }) => {
             </div>
 
             {/* Conteneur du contenu détaillé */}
-            <div className="p-6 md:p-12 max-w-5xl mx-auto w-full flex-1 flex flex-col gap-12">
+            <div className={`p-6 md:p-12 max-w-5xl mx-auto w-full flex-1 flex flex-col gap-12 transition-all duration-700 ease-out transform ${
+                    isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+            }`}>
                 
                 {/* En-tête du projet */}
                 <header>
