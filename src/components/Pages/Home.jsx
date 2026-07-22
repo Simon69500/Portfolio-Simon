@@ -7,6 +7,7 @@ import StackCard from '../bento/StackCard';
 import ProjetStar from '../bento/ProjetStar';
 import Parcours from '../bento/Parcours';
 import MosaicContainer from '../bento/MosaicContainer';
+import Contact from '../bento/Contact';
 import Footer from '../layouts/Footer';
 
 
@@ -121,12 +122,21 @@ const Home = () => {
                         setExpansionProjetId={setExpansionProjetId}                           
                         />
                     </div>
-                )}             
+                )}     
 
-
+            {/* Tuile H : Formulaire  */}
+                <div
+                    className={`
+                        col-span-1 md:col-span-6 order-1 md:order-8
+                        transition-opacity duration-500
+                        ${expansionProjetId !== null && expansionProjetId !== 'stack' ? 'opacity-0 pointer-events-none' : 'opacity-100'}
+                    `}
+                >
+                    <Contact/>
+                </div> 
             </main>    
             
-            {/* Tuile H : Mosaïque Projets 2  */}
+            {/* Tuile I : Footer  */}
             <Footer/>                
         </>
     );

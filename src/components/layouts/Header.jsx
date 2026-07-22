@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
 import Button from '../ui/Button';
 
 const Header = () => {
