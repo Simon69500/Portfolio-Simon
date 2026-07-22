@@ -1,4 +1,4 @@
-# 🎨 Mon Portfolio - ReactJS (en cours d'actualisation)
+# 🎨 Mon Portfolio v2 - ReactJS (en cours d'actualisation Version 3)
 
 Bienvenue sur mon portfolio personnel, développé avec **ReactJS** ! 🚀  
 Découvrez mes projets, compétences et moyens de me contacter facilement.
