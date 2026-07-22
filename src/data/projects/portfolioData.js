@@ -30,8 +30,8 @@ export const portfolioData = [
             resultats: "MVP fonctionnel validé et évolutif pour la Haute-Savoie."
         },
 
-        githubURL: "",
-        liveURL: "https://estimmo-savoies.fr/",
+        githubUrl: "",
+        liveUrl: "https://estimmo-savoies.fr/",
 
     },
 
@@ -57,15 +57,15 @@ export const portfolioData = [
 
         // Zone conceptuelle pour l'état "Expanded"
         details: {
-            contexte: "Annuaire interactif de mise en relation entre particulier et artisans locaux.",
-            aspectsTechniques: "",
-            defis: "",
-            solutions: "",
-            resultats: ""
+            contexte: "Devoir CEF - Création d’une plateforme web pour aider les habitants de la région Auvergne-Rhône-Alpes à trouver et contacter des artisans via un site accessible, responsive et sécurisé.",
+            aspectsTechniques: "Mise en place d'une architecture REST sécurisée avec Express et Sequelize, développement du front-end en ReactJS et intégration des requêtes API via Axios.",
+            defis: "Assurer la cohérence entre le frontend et l’API, garantir la sécurité et la performance, maintenir un design accessible et responsive, et déployer une solution hébergée fiable et maintenable.",
+            solutions: "Mise en place d’une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration des requêtes API via Axios sécurisées, tests pour conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
+            resultats: "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé."
         },
 
-        githubUrl: "https://github.com/ton-profil/trouve-ton-artisan",
-        liveUrl: ""
+        githubUrl: "https://github.com/Simon69500/Trouve_ton_artisan_React.JS",
+        liveUrl: "https://trouve-ton-artisan.vercel.app/"
     },
 
     // Projet 3 : Touche pas au klaxon, il présenté dans la partie Mosaïque (Tuile F ou G)
@@ -90,14 +90,14 @@ export const portfolioData = [
     technologies: ["PHP", "MySQL"],
     
     details: {
-      contexte: "Application web de gestion et création de trajets.",
+      contexte: "Devoir CEF - Application web de gestion et création de trajets.",
       aspectsTechniques: "Backend robuste en PHP natif avec base de données relationnelle MySQL.",
       defis: "Sécurisation des données utilisateurs et gestion des droits d'accès (CRUD).",
       solutions: "Implémentation d'un système de session sécurisé et requêtes SQL préparées.",
       resultats: "Plateforme fonctionnelle avec espace d'administration complet."
     },
     
-    githubUrl: "https://github.com/ton-profil/touche-pas-au-klaxon",
+    githubUrl: "https://github.com/Simon69500/Touche-pas-au-klaxon",
     liveUrl: ""
   },
 
@@ -121,14 +121,14 @@ export const portfolioData = [
     technologies: ["Node.js", "Express", "MongoDB"],
     
     details: {
-      contexte: "",
-      aspectsTechniques: "",
-      defis: "",
-      solutions: "",
-      resultats: ""
+      contexte: "Devoir CEF - Développement d’une API et d’un frontend administrateur pour le Port de Plaisance de Russell afin de gérer les catways, réservations et utilisateurs de manière sécurisée.",
+      aspectsTechniques: "Architecture REST avec Express et Mongoose, authentification par JWT et documentation technique des endpoints.",
+      defis: "Mettre en place une API REST sécurisée, gérer les relations entre catways et réservations, assurer un tableau de bord administrateur fonctionnel et documenté, et déployer l’application en ligne.",
+      solutions: "Architecture REST avec Express et Mongoose, routes CRUD sécurisées, authentification via JWT, frontend minimal en EJS pour l’administration, documentation incluse, et hébergement de l’API en ligne avec accès sécurisé. Versionnage du projet sur GitHub.",
+      resultats: "API fonctionnelle avec gestion complète des catways, réservations et utilisateurs. Tableau de bord administrateur opérationnel, sécurisation via JWT, validation des données et base MongoDB. L’ensemble est versionné sur GitHub."
     },
     
-    githubUrl: "",
+    githubUrl: "https://github.com/Simon69500/Creer_une_API",
     liveUrl: ""
   },
 
@@ -149,8 +149,8 @@ export const portfolioData = [
     technologies: ["Angular", "TypeScript"],
     
     details: {
-      contexte: "Création d’un site e-commerce Angular pour la vente de figurines artisanales, avec catalogue interactif, tri et recherche, et respect de la charte graphique client.",
-      aspectsTechniques: "",
+      contexte: "Devoir CEF - Création d’un site e-commerce Angular pour la vente de figurines artisanales, avec catalogue interactif, tri et recherche, et respect de la charte graphique client.",
+      aspectsTechniques: "Structuration autour de composants modulaires, routing paramétré, pipes personnalisées et services de centralisation des données.",
       defis: "Respecter la charte graphique imposée, intégrer les requis techniques liés à Angular (composants, routing, services et pipes), tout en assurant la cohérence visuelle et la performance du site sur tous les supports.",
       solutions: "Structuration du projet autour de cinq composants principaux, mise en place d’un routing paramétré, de pipes personnalisées pour le tri et la recherche, et d’un service pour centraliser les données produits. Les tests et ajustements visuels ont permis de garantir une expérience utilisateur fluide et conforme à la charte.",
       resultats: "Un site fluide et esthétique, respectant la charte graphique du client, permettant aux utilisateurs de consulter, trier et rechercher des produits facilement. L’ensemble du code est organisé en composants modulaires et versionné sur GitHub."
