@@ -14,7 +14,7 @@ const Header = () => {
     <header className="sticky top-4 z-50 flex flex-row items-center justify-between px-6 py-4 mb-8 bg-bento-light dark:bg-bento-dark backdrop-blur-md rounded-xl shadow-sm border border-gray-200/50 dark:border-gray-700/50">
       
       {/* Logo / Nom de l'auteur (fixé à gauche) */}
-      <p className="text-3xl font-bold text-typography-dark dark:text-typography-dark">
+      <p className="text-3xl font-bold text-typography-light dark:text-typography-dark">
         Simon Badin
       </p>
       
