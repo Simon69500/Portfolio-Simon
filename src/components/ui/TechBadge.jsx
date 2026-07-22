@@ -32,7 +32,7 @@ const TechBadge = ({ name, logoUrl, iconBehavior = "colored" }) => {
                 Gestion du thème : Utilisation stricte de tes variables Tailwind 
                 définies dans tailwind.config.js
             */}    
-            <span className="text-sm font-medium text-typography-light dark:text-typography-dark-DEFAULT">
+            <span className="text-sm font-medium text-typography-light dark:text-typography-dark">
                 {name}
             </span>        
 

@@ -106,8 +106,7 @@ const Home = () => {
 
                 {/* Tuile F : Mosaïque Projets 1  */}
                 {projectsF.length > 0 && (
-                    <div className={`col-span-1 md:col-span-7 order-6 transition-opacity duration-500 ${expansionProjetId !== null ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-                        <MosaicContainer 
+                    <div className={`col-span-1 md:col-span-7 order-6 transition-opacity duration-500 ${expansionProjetId !== null && !projectsF.some(p => p.id === expansionProjetId) ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>                        <MosaicContainer 
                         projects={projectsF} 
                         expansionProjetId={expansionProjetId}
                         setExpansionProjetId={setExpansionProjetId}                        
@@ -117,7 +116,7 @@ const Home = () => {
 
                 {/* Tuile G : Mosaïque Projets 2  */}
                 {projectsG.length > 0 && (
-                    <div className={`col-span-1 md:col-span-6 order-7 transition-opacity duration-500 ${expansionProjetId !== null ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                    <div className={`col-span-1 md:col-span-6 order-7 transition-opacity duration-500 ${expansionProjetId !== null && !projectsG.some(p => p.id === expansionProjetId) ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                         <MosaicContainer 
                         projects={projectsG} 
                         expansionProjetId={expansionProjetId}
@@ -132,7 +131,7 @@ const Home = () => {
                     className={`
                         col-span-1 md:col-span-6 order-8 md:order-8
                         transition-opacity duration-500
-                        ${expansionProjetId !== null && expansionProjetId !== 'stack' ? 'opacity-0 pointer-events-none' : 'opacity-100'}
+                         ${expansionProjetId !== null && expansionProjetId !== 'stack' ? 'opacity-0 pointer-events-none' : 'opacity-100'}
                     `}
                 >
                     <Contact/>

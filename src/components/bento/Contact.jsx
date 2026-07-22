@@ -24,14 +24,14 @@ const Contact = () => {
 
     // Rendu du formulaire (États "Idle", "Loading", "Error")
     return (
-        <article className="p-8 rounded-3xl bg-bento-light dark:bg-bento-dark shadow-sm">
+        <article className="p-8 rounded-3xl bg-bento-light dark:bg-bento-dark shadow-sm transition-transform duration-300 hover:scale-[1.02] hover:border hover:border-accent-primary ">
             
             <header className="mb-6">
-                <h2 className="text-2xl font-bold text-typography-light dark:text-typography-dark-DEFAULT">
+                <h2 className="text-2xl font-bold text-typography-light dark:text-typography-dark">
                     Discutons de votre prochain projet !
                 </h2>
-                <p className="text-sm mt-1 text-typography-light/80 dark:text-typography-dark-muted">
-                    Remplissez ce formulaire ou téléchargez mon CV pour en savoir plus.
+                <p className="text-sm mt-1 text-typography-light/80 dark:text-typography-dark">
+                    Remplissez le formulaire.
                 </p>
             </header>
 

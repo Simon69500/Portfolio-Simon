@@ -55,7 +55,7 @@ const ProjetStar = ({ project, expansionProjetId, setExpansionProjetId }) => {
           {/* ZONE TEXTUELLE */}
           <div className='flex-1 p-6 md:p-8 flex flex-col justify-between z-10'>
             <div>
-              <h2 className='text-2xl md:text-3xl font-bold text-typography-light dark:text-typography-dark-muted mb-6 line-clamp-3'>
+              <h2 className='text-2xl md:text-3xl font-bold text-typography-light dark:text-typography-dark mb-6 line-clamp-3'>
                 {project.titre}
               </h2>
               <p className='text-typography-light dark:text-typography-dark-muted mb-6 line-clamp-3'>
@@ -75,7 +75,7 @@ const ProjetStar = ({ project, expansionProjetId, setExpansionProjetId }) => {
                     iconBehavior={details.iconBehavior} 
                   />
                 ) : (
-                  <span key={index} className='px-3 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-typography-light dark:text-typography-dark-DEFAULT'>
+                  <span key={index} className='px-3 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-typography-light dark:text-typography-dark'>
                     {tech}
                   </span>
                 );
@@ -105,7 +105,7 @@ const ProjetStar = ({ project, expansionProjetId, setExpansionProjetId }) => {
               src={project.coverImage} 
               alt={`Aperçu de l'interface de ${project.titre}`} 
               loading="lazy"
-              className="w-full h-full object-contain object-center p-4"
+              className="w-full h-full object-cover object-center p-4"
             />
           </div>
         </div>

@@ -22,7 +22,6 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col justify-center">
-            <a className='text-center mb-1' to="/mentions">Mentions légales</a>            
             <p className='text-center mb-1'>📧 Email : <a className='text fs-6 text-decoration-none' href="mailto:simonsola67@gmail.com"> simonsola67@gmail.com</a></p>
             <p className='text-center mb-1'>📞 Téléphone : <a className='text fs-6 text-decoration-none' href="tel:+33665679770"> 06 65 67 97 70</a></p>
         </div>

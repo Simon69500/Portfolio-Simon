@@ -14,7 +14,7 @@ const StackCard = () => {
       {/* 
         Accessibilité (WCAG) : Balise sémantique h2 pour hiérarchiser la tuile.
       */}
-      <h2 className="text-xl font-bold text-typography-light dark:text-typography-dark-DEFAULT">
+      <h2 className="text-xl font-bold text-typography-light dark:text-typography-dark">
         Stack Technique
       </h2>
 
