@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../ui/Button';
+import ProjectCarousel from '../ui/ProjectCarousel';
 
 /**
  * Composant de détail affiché lorsque la tuile projet est en état EXPANDED.
@@ -49,7 +50,7 @@ const ProjetDetails = ({ project, onClose }) => {
                 
                 {/* En-tête du projet */}
                 <header>
-                    <h2 className="text-3xl md:text-5xl font-bold text-typography-light dark:text-typography-dark-DEFAULT mb-4">
+                    <h2 className="text-3xl md:text-5xl font-bold text-typography-light dark:text-typography-dark mb-4">
                         {project.titre}
                     </h2>
                     <p className="text-lg text-typography-light dark:text-typography-dark-muted">
@@ -57,21 +58,19 @@ const ProjetDetails = ({ project, onClose }) => {
                     </p>
                 </header>
 
-                {/* [CaC Section 2.4] Zone Médias : Placeholder pour le futur Carrousel */}
-                <section className="w-full h-64 md:h-96 bg-gray-200 dark:bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-300 dark:border-gray-700">
-                    <span className="text-typography-light dark:text-typography-dark-muted font-medium">
-                        Intégration du Carrousel à venir...
-                    </span>
+                {/* Carrousel */}
+                <section className="w-full">
+                    <ProjectCarousel gallery={project.gallery} projectTitle={project.titre} />
                 </section>
 
                 {/* [CaC Section 2.4] Zone Conceptuelle : Placeholder pour le texte */}
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="p-6 bg-white/50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h3 className="font-bold text-xl mb-2 text-typography-light dark:text-typography-dark-DEFAULT">Défis rencontrés</h3>
+                        <h3 className="font-bold text-xl mb-2 text-typography-light dark:text-typography-dark">Défis rencontrés</h3>
                         <p className="text-typography-light dark:text-typography-dark-muted">{project.details.defis}</p>
                     </div>
                     <div className="p-6 bg-white/50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h3 className="font-bold text-xl mb-2 text-typography-light dark:text-typography-dark-DEFAULT">Solutions apportées</h3>
+                        <h3 className="font-bold text-xl mb-2 text-typography-light dark:text-typography-dark">Solutions apportées</h3>
                         <p className="text-typography-light dark:text-typography-dark-muted">{project.details.solutions}</p>
                     </div>
                 </section>

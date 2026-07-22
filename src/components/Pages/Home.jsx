@@ -7,6 +7,7 @@ import StackCard from '../bento/StackCard';
 import ProjetStar from '../bento/ProjetStar';
 import Parcours from '../bento/Parcours';
 import MosaicContainer from '../bento/MosaicContainer';
+import Contact from '../bento/Contact';
 import Footer from '../layouts/Footer';
 
 
@@ -32,7 +33,7 @@ const Home = () => {
     const projectsG = secondaryProjects.slice(2, 4); // Projet 4
 
     return (
-        <>
+        <body className='bg-bg-light dark:bg-bg-dark'>
             {/* Header */}
             <Header/>
 
@@ -63,6 +64,7 @@ const Home = () => {
 
                 {/* Tuile C : Parcours Pro */}
                 <div
+                    id="parcours"
                     className={`
                         col-span-1 md:col-span-4 order-3 md:order-4
                         transition-opacity duration-500
@@ -76,6 +78,7 @@ const Home = () => {
                 {/* Sécurité : on ne rend la tuile que si featuredProject existe */}
                 {featuredProject && (
                     <div
+                        id="projets"
                         className={`
                             col-span-1 md:col-span-8 order-4 md:order-4
                             transition-opacity duration-500
@@ -103,8 +106,7 @@ const Home = () => {
 
                 {/* Tuile F : Mosaïque Projets 1  */}
                 {projectsF.length > 0 && (
-                    <div className={`col-span-1 md:col-span-7 order-6 transition-opacity duration-500 ${expansionProjetId !== null ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-                        <MosaicContainer 
+                    <div className={`col-span-1 md:col-span-7 order-6 transition-opacity duration-500 ${expansionProjetId !== null && !projectsF.some(p => p.id === expansionProjetId) ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>                        <MosaicContainer 
                         projects={projectsF} 
                         expansionProjetId={expansionProjetId}
                         setExpansionProjetId={setExpansionProjetId}                        
@@ -114,21 +116,31 @@ const Home = () => {
 
                 {/* Tuile G : Mosaïque Projets 2  */}
                 {projectsG.length > 0 && (
-                    <div className={`col-span-1 md:col-span-6 order-7 transition-opacity duration-500 ${expansionProjetId !== null ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                    <div className={`col-span-1 md:col-span-6 order-7 transition-opacity duration-500 ${expansionProjetId !== null && !projectsG.some(p => p.id === expansionProjetId) ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                         <MosaicContainer 
                         projects={projectsG} 
                         expansionProjetId={expansionProjetId}
                         setExpansionProjetId={setExpansionProjetId}                           
                         />
                     </div>
-                )}             
+                )}     
 
-
+            {/* Tuile H : Formulaire  */}
+                <div
+                    id="contact"
+                    className={`
+                        col-span-1 md:col-span-6 order-8 md:order-8
+                        transition-opacity duration-500
+                         ${expansionProjetId !== null && expansionProjetId !== 'stack' ? 'opacity-0 pointer-events-none' : 'opacity-100'}
+                    `}
+                >
+                    <Contact/>
+                </div> 
             </main>    
             
-            {/* Tuile H : Mosaïque Projets 2  */}
+            {/* Tuile I : Footer  */}
             <Footer/>                
-        </>
+        </body>
     );
 };
 

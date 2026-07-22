@@ -34,7 +34,7 @@ const ProjetCard = ({ project, expansionProjetId, setExpansionProjetId }) => {
   return (
     <motion.article
       ref={cardRef}
-      layoutId={project.id}
+      layoutId={`project-${project.id}`}
       transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
       className={`${baseClasses} ${hoverClasses} ${
         isExpanded ? 'fixed inset-0 z-50 rounded-none m-0 w-screen h-screen overflow-y-auto' : ''
@@ -49,7 +49,7 @@ const ProjetCard = ({ project, expansionProjetId, setExpansionProjetId }) => {
           {/* ZONE TEXTUELLE */}
           <div className='flex-1 p-6 flex flex-col justify-between z-10'>
             <div>
-              <h3 className='text-xl font-bold text-typography-light dark:text-typography-dark-muted mb-4 line-clamp-2'>
+              <h3 className='text-xl font-bold text-typography-light dark:text-typography-dark mb-4 line-clamp-2'>
                 {project.titre}
               </h3>
               <p className='text-sm text-typography-light dark:text-typography-dark-muted mb-4 line-clamp-2'>
