@@ -14,7 +14,7 @@ const Header = () => {
     <header className="sticky top-4 z-50 flex flex-row items-center justify-between px-6 py-4 mb-8 bg-bento-light dark:bg-bento-dark backdrop-blur-md rounded-xl shadow-sm border border-gray-200/50 dark:border-gray-700/50">
       
       {/* Logo / Nom de l'auteur (fixé à gauche) */}
-      <p className="text-3xl font-bold text-typography-dark-DEFAULT dark:text-typography-dark">
+      <p className="text-3xl font-bold text-typography-dark dark:text-typography-dark">
         Simon Badin
       </p>
       
@@ -40,7 +40,7 @@ const Header = () => {
         {/* Bouton Menu Burger Mobile (Visible uniquement sur mobile : md:hidden) */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-typography-light dark:text-typography-dark-DEFAULT transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary"
+          className="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-typography-light dark:text-typography-dark transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary"
           aria-expanded={isMobileMenuOpen}
           aria-label="Ouvrir le menu de navigation"
         >
@@ -63,21 +63,21 @@ const Header = () => {
           <a 
             href="#projets" 
             onClick={handleAnchorClick}
-            className="px-4 py-2 font-semibold text-typography-light dark:text-typography-dark-DEFAULT hover:bg-gray-200/50 dark:hover:bg-gray-700/50 rounded-lg transition-colors"
+            className="px-4 py-2 font-semibold text-typography-light dark:text-typography-dark hover:bg-gray-200/50 dark:hover:bg-gray-700/50 rounded-lg transition-colors"
           >
             Projets
           </a>
           <a 
             href="#parcours" 
             onClick={handleAnchorClick}
-            className="px-4 py-2 font-semibold text-typography-light dark:text-typography-dark-DEFAULT hover:bg-gray-200/50 dark:hover:bg-gray-700/50 rounded-lg transition-colors"
+            className="px-4 py-2 font-semibold text-typography-light dark:text-typography-dark hover:bg-gray-200/50 dark:hover:bg-gray-700/50 rounded-lg transition-colors"
           >
             Parcours
           </a>
           <a 
             href="#contact" 
             onClick={handleAnchorClick}
-            className="px-4 py-2 font-semibold text-typography-light dark:text-typography-dark-DEFAULT hover:bg-gray-200/50 dark:hover:bg-gray-700/50 rounded-lg transition-colors"
+            className="px-4 py-2 font-semibold text-typography-light dark:text-typography-dark hover:bg-gray-200/50 dark:hover:bg-gray-700/50 rounded-lg transition-colors"
           >
             Contact
           </a>
