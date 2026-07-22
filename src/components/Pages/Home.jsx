@@ -77,7 +77,7 @@ const Home = () => {
                 {featuredProject && (
                     <div
                         className={`
-                            col-span-1 md:col-span-8 order-3 md:order-4
+                            col-span-1 md:col-span-8 order-4 md:order-4
                             transition-opacity duration-500
                             ${expansionProjetId !== null && expansionProjetId !== featuredProject.id ? 'opacity-0 pointer-events-none' : 'opacity-100'}
                         `}
@@ -93,7 +93,7 @@ const Home = () => {
                 {/* Tuile E : Soft Skill */}
                 <div
                     className={`
-                        col-span-1 md:col-span-5 order-6 md:order-5
+                        col-span-1 md:col-span-5 order-5 md:order-5
                         transition-opacity duration-500
                         ${expansionProjetId !== null && expansionProjetId !== 'stack' ? 'opacity-0 pointer-events-none' : 'opacity-100'}
                     `}
@@ -103,7 +103,7 @@ const Home = () => {
 
                 {/* Tuile F : Mosaïque Projets 1  */}
                 {projectsF.length > 0 && (
-                    <div className={`col-span-1 md:col-span-7 order-7 transition-opacity duration-500 ${expansionProjetId !== null ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                    <div className={`col-span-1 md:col-span-7 order-6 transition-opacity duration-500 ${expansionProjetId !== null ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                         <MosaicContainer 
                         projects={projectsF} 
                         expansionProjetId={expansionProjetId}
@@ -114,7 +114,7 @@ const Home = () => {
 
                 {/* Tuile G : Mosaïque Projets 2  */}
                 {projectsG.length > 0 && (
-                    <div className={`col-span-1 md:col-span-6 order-8 transition-opacity duration-500 ${expansionProjetId !== null ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                    <div className={`col-span-1 md:col-span-6 order-7 transition-opacity duration-500 ${expansionProjetId !== null ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                         <MosaicContainer 
                         projects={projectsG} 
                         expansionProjetId={expansionProjetId}
@@ -126,7 +126,7 @@ const Home = () => {
 
             </main>    
             
-            {/* Tuile G : Mosaïque Projets 2  */}
+            {/* Tuile H : Mosaïque Projets 2  */}
             <Footer/>                
         </>
     );
