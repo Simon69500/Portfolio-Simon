@@ -55,7 +55,7 @@ export const portfolioData = [
         ],
 
         // Stack Technique simplifiée pour les badges (Tuiles D)
-        technologies: ["React", "Node.js", ""],
+        technologies: ["React", "Node.js", "Express"],
 
         // Zone conceptuelle pour l'état "Expanded"
         details: {
