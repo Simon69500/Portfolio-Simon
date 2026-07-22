@@ -12,7 +12,7 @@ const Contact = () => {
     if (status === 'success') {
         return (
             <article className="p-8 rounded-3xl bg-bento-light dark:bg-bento-dark flex flex-col items-center justify-center text-center min-h-[350px] shadow-sm">
-                <h3 className="text-2xl font-bold text-typography-light dark:text-typography-dark-DEFAULT mb-4">
+                <h3 className="text-2xl font-bold text-typography-light dark:text-typography-dark mb-4">
                     Message envoyé avec succès !
                 </h3>
                 <p className="text-typography-light/80 dark:text-typography-dark-muted">
