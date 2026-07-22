@@ -1,3 +1,5 @@
+const img = (chemin) => `${import.meta.env.BASE_URL}${chemin}`;
+
 export const portfolioData = [
 
     // Projet 1 : Estimmo-Savoies, il représente le projet phare de mon portfolio.
@@ -8,14 +10,14 @@ export const portfolioData = [
         slug: "estimmo-savoies",
 
         // Médias ( CaC Réf: Section 6.1 - Assets en WebP dans le dossier Public)
-        coverImage: "/images/projects/estimmo/cover.webp",
+        coverImage: img("/images/projects/estimmo/cover.webp"),
         gallery: [ 
-            "/images/projects/estimmo/screen1.webp",
-            "/images/projects/estimmo/screen2.webp",
-            "/images/projects/estimmo/screen3.webp",
-            "/images/projects/estimmo/screen4.webp",
-            "/images/projects/estimmo/screen5.webp",
-            "/images/projects/estimmo/screen6.webp" 
+            img("/images/projects/estimmo/screen1.webp"),
+            img("/images/projects/estimmo/screen2.webp"),
+            img("/images/projects/estimmo/screen3.webp"),
+            img("/images/projects/estimmo/screen4.webp"),
+            img("/images/projects/estimmo/screen5.webp"),
+            img("/images/projects/estimmo/screen6.webp") 
         ],
 
         // Stack Technique simplifiée pour les badges (Tuiles D)
@@ -43,13 +45,13 @@ export const portfolioData = [
         slug: "trouve-ton-artisan",
 
         // Médias
-        coverImage: "/images/projects/trouve-ton-artisan/screen1.webp",
+        coverImage: img("/images/projects/trouve-ton-artisan/screen1.webp"),
         gallery: [
-            "/images/projects/trouve-ton-artisan/screen1.webp",
-            "/images/projects/trouve-ton-artisan/screen2.webp",
-            "/images/projects/trouve-ton-artisan/screen3.webp",
-            "/images/projects/trouve-ton-artisan/screen4.webp",
-            "/images/projects/trouve-ton-artisan/screen5.webp"
+            img("/images/projects/trouve-ton-artisan/screen1.webp"),
+            img("/images/projects/trouve-ton-artisan/screen2.webp"),
+            img("/images/projects/trouve-ton-artisan/screen3.webp"),
+            img("/images/projects/trouve-ton-artisan/screen4.webp"),
+            img("/images/projects/trouve-ton-artisan/screen5.webp")
         ],
 
         // Stack Technique simplifiée pour les badges (Tuiles D)
@@ -75,16 +77,16 @@ export const portfolioData = [
     titre: "Touche Pas Au Klaxon",
     slug: "touche-pas-au-klaxon",
     
-    coverImage: "/images/projects/touche-pas-klaxon/screen1.webp",
+    coverImage: img("/images/projects/touche-pas-klaxon/screen1.webp"),
     gallery: [
-      "/images/projects/touche-pas-klaxon/screen1.webp",
-      "/images/projects/touche-pas-klaxon/screen2.webp",
-      "/images/projects/touche-pas-klaxon/screen3.webp",
-      "/images/projects/touche-pas-klaxon/screen4.webp",
-      "/images/projects/touche-pas-klaxon/screen5.webp",
-      "/images/projects/touche-pas-klaxon/screen6.webp",
-      "/images/projects/touche-pas-klaxon/screen7.webp",
-      "/images/projects/touche-pas-klaxon/screen8.webp"
+      img("/images/projects/touche-pas-klaxon/screen1.webp"),
+      img("/images/projects/touche-pas-klaxon/screen2.webp"),
+      img("/images/projects/touche-pas-klaxon/screen3.webp"),
+      img("/images/projects/touche-pas-klaxon/screen4.webp"),
+      img("/images/projects/touche-pas-klaxon/screen5.webp"),
+      img("/images/projects/touche-pas-klaxon/screen6.webp"),
+      img("/images/projects/touche-pas-klaxon/screen7.webp"),
+      img("/images/projects/touche-pas-klaxon/screen8.webp")
     ],
     
     technologies: ["PHP", "MySQL"],
@@ -108,14 +110,14 @@ export const portfolioData = [
     titre: "API Russel Port",
     slug: "api-russel-port",
     
-    coverImage: "/images/projects/api_russel/screen1.webp",
+    coverImage: img("/images/projects/api_russel/screen1.webp"),
     gallery: [
-      "/images/projects/api_russel/screen1.webp",
-      "/images/projects/api_russel/screen2.webp",
-      "/images/projects/api_russel/screen3.webp",
-      "/images/projects/api_russel/screen4.webp",
-      "/images/projects/api_russel/screen5.webp",
-      "/images/projects/api_russel/screen6.webp"
+      img("/images/projects/api_russel/screen1.webp"),
+      img("/images/projects/api_russel/screen2.webp"),
+      img("/images/projects/api_russel/screen3.webp"),
+      img("/images/projects/api_russel/screen4.webp"),
+      img("/images/projects/api_russel/screen5.webp"),
+      img("/images/projects/api_russel/screen6.webp")
     ],
     
     technologies: ["Node.js", "Express", "MongoDB"],
@@ -139,11 +141,11 @@ export const portfolioData = [
     titre: "Au Petit Village",
     slug: "au_petit_village",
     
-    coverImage: "/images/projects/Au-petit-village/screen1.webp",
+    coverImage: img("/images/projects/Au-petit-village/screen1.webp"),
     gallery: [
-      "/images/projects/Au-petit-village/screen1.webp",
-      "/images/projects/Au-petit-village/screen2.webp",
-      "/images/projects/Au-petit-village/screen3.webp",
+      img("/images/projects/Au-petit-village/screen1.webp"),
+      img("/images/projects/Au-petit-village/screen2.webp"),
+      img("/images/projects/Au-petit-village/screen3.webp"),
     ],
     
     technologies: ["Angular", "TypeScript"],
@@ -167,9 +169,9 @@ export const portfolioData = [
     titre: "",
     slug: "",
     
-    coverImage: "/images/projects/",
+    coverImage: img("/images/projects/"),
     gallery: [
-      "/images/projects/",
+      img("/images/projects/"),
     ],
     
     technologies: [""],

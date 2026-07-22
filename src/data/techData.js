@@ -1,3 +1,5 @@
+const img = (chemin) => `${import.meta.env.BASE_URL}${chemin}`;
+
 export const techData = {
 
     // --- FRONTEND ---
@@ -6,7 +8,7 @@ export const techData = {
             id: "javascript",
             name: "JavaScript",
             category:"Frontend",
-            logoUrl: "/images/tech/javascript.svg",
+            logoUrl: img("/images/tech/javascript.svg"),
             iconBehavior: "white"
         },
 
@@ -14,7 +16,7 @@ export const techData = {
             id: "typescript",
             name: "TypeScript",
             category:"Frontend",
-            logoUrl: "/images/tech/typescript.svg",
+            logoUrl: img("/images/tech/typescript.svg"),
             iconBehavior: "white"
         },
 
@@ -22,7 +24,7 @@ export const techData = {
             id: "React",
             name: "React",
             category:"Frontend",
-            logoUrl: "/images/tech/react.svg",
+            logoUrl: img("/images/tech/react.svg"),
             iconBehavior: "white"
         },
 
@@ -30,7 +32,7 @@ export const techData = {
             id: "angular",
             name: "Angular",
             category:"Frontend",
-            logoUrl: "/images/tech/angular.svg",
+            logoUrl: img("/images/tech/angular.svg"),
             iconBehavior: "white"
         },
 
@@ -38,7 +40,7 @@ export const techData = {
             id: "tailwind",
             name: "Tailwind CSS",
             category:"Frontend",
-            logoUrl: "/images/tech/tailwind.svg",
+            logoUrl: img("/images/tech/tailwind.svg"),
             iconBehavior: "black"
         },
     ],
@@ -50,7 +52,7 @@ export const techData = {
             id: "nodejs",
             name: "Node.js",
             category:"Backend",
-            logoUrl: "/images/tech/node.svg",
+            logoUrl: img("/images/tech/node.svg"),
             iconBehavior: "white"
         },
 
@@ -58,7 +60,7 @@ export const techData = {
             id: "express",
             name: "Express",
             category:"Backend",
-            logoUrl: "/images/tech/express.svg",
+            logoUrl: img("/images/tech/express.svg"),
             iconBehavior: "white"
         },
         
@@ -66,7 +68,7 @@ export const techData = {
             id: "php",
             name: "PHP",
             category:"Backend",
-            logoUrl: "/images/tech/php.svg",
+            logoUrl: img("/images/tech/php.svg"),
             iconBehavior: "colored"
         },
 
@@ -74,7 +76,7 @@ export const techData = {
             id: "symfony",
             name: "Symfony",
             category:"Backend",
-            logoUrl: "/images/tech/symfony.svg",
+            logoUrl: img("/images/tech/symfony.svg"),
             iconBehavior: "black"
         },
 
@@ -82,7 +84,7 @@ export const techData = {
             id: "mongodb",
             name: "MongoDB",
             category:"Backend",
-            logoUrl: "/images/tech/mongodb.svg",
+            logoUrl: img("/images/tech/mongodb.svg"),
             iconBehavior: "colored"
         },
 
@@ -90,7 +92,7 @@ export const techData = {
             id: "mysql",
             name: "MySQL",
             category:"Backend",
-            logoUrl: "/images/tech/mysql.svg",
+            logoUrl: img("/images/tech/mysql.svg"),
             iconBehavior: "black"
         },
 
@@ -98,7 +100,7 @@ export const techData = {
             id: "postgresql",
             name: "PostgreSQL",
             category:"Backend",
-            logoUrl: "/images/tech/postgresql.svg",
+            logoUrl: img("/images/tech/postgresql.svg"),
             iconBehavior: "white"
         },
 
@@ -106,7 +108,7 @@ export const techData = {
             id: "postgis",
             name: "PostGIS",
             category:"Backend",
-            logoUrl: "/images/tech/postgis.svg",
+            logoUrl: img("/images/tech/postgis.svg"),
             iconBehavior: "colored"
         },
     ],
@@ -118,7 +120,7 @@ export const techData = {
             id: "github",
             name: "GitHub",
             category:"Outils & Ops",
-            logoUrl: "/images/tech/github.svg",
+            logoUrl: img("/images/tech/github.svg"),
             iconBehavior: "white"
         },
 
@@ -126,7 +128,7 @@ export const techData = {
             id: "figma",
             name: "Figma",
             category:"Outils & Ops",
-            logoUrl: "/images/tech/figma.svg",
+            logoUrl: img("/images/tech/figma.svg"),
             iconBehavior: "white"
         },
 
@@ -134,7 +136,7 @@ export const techData = {
             id: "ovh",
             name: "OVH Cloud",
             category:"Outils & Ops",
-            logoUrl: "/images/tech/ovh.svg",
+            logoUrl: img("/images/tech/ovh.svg"),
             iconBehavior: "black"
         },
 
@@ -142,7 +144,7 @@ export const techData = {
             id: "ia",
             name: "IA & Prompting",
             category:"Outils & Ops",
-            logoUrl: "/images/tech/ia.svg",
+            logoUrl: img("/images/tech/ia.svg"),
             iconBehavior: "black"
         }
     ]

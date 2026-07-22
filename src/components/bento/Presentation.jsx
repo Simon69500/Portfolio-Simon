@@ -7,6 +7,9 @@ import Button from '../ui/Button';
  */
 
 const Presentation = () => {
+
+  const img = (chemin) => `${import.meta.env.BASE_URL}${chemin}`;
+
   return (
 
     <article
@@ -22,7 +25,7 @@ const Presentation = () => {
         {/*Emplacement Photo de Profil */}
         <div className="w-24 h-24 rounded-full shrink-0 overflow-hidden">
           <img
-          src="/images/Profil2.png"
+          src={img("images/Profil2.png")}
           alt="Portrait de Simon"  
           className="w-full h-full object-cover"
           loading="lazy"
