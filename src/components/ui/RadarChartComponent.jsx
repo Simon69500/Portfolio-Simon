@@ -6,7 +6,7 @@ import { softSkillsData } from "../../data/profileData";
 const RadarChartComponent = () => {
     return (
 
-        <div className="w-full h-[250px]">
+        <div className="w-full h-[220px] sm:h-[250px]">
             <ResponsiveContainer width="100%" height="100%" aria-hidden="true">
 
                 <RadarChart cx="50%" cy="50%" outerRadius="70%" data={softSkillsData}>
