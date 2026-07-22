@@ -21,7 +21,7 @@ export const portfolioData = [
         ],
 
         // Stack Technique simplifiée pour les badges (Tuiles D)
-        technologies: [ "React", "Symfony", "PostgreSQL", "PostGIS"],
+        technologies: [ "React", "Symfony", "PostgreSQL", "PostGIS", "OVH Cloud"],
 
         // Zone conceptuelle pour l'état "Expanded" (section 2.4)
         details: {
