@@ -33,7 +33,7 @@ const Home = () => {
     const projectsG = secondaryProjects.slice(2, 4); // Projet 4
 
     return (
-        <>
+        <body className='bg-bg-light dark:bg-bg-dark'>
             {/* Header */}
             <Header/>
 
@@ -64,6 +64,7 @@ const Home = () => {
 
                 {/* Tuile C : Parcours Pro */}
                 <div
+                    id="parcours"
                     className={`
                         col-span-1 md:col-span-4 order-3 md:order-4
                         transition-opacity duration-500
@@ -77,6 +78,7 @@ const Home = () => {
                 {/* Sécurité : on ne rend la tuile que si featuredProject existe */}
                 {featuredProject && (
                     <div
+                        id="projets"
                         className={`
                             col-span-1 md:col-span-8 order-4 md:order-4
                             transition-opacity duration-500
@@ -126,8 +128,9 @@ const Home = () => {
 
             {/* Tuile H : Formulaire  */}
                 <div
+                    id="contact"
                     className={`
-                        col-span-1 md:col-span-6 order-1 md:order-8
+                        col-span-1 md:col-span-6 order-8 md:order-8
                         transition-opacity duration-500
                         ${expansionProjetId !== null && expansionProjetId !== 'stack' ? 'opacity-0 pointer-events-none' : 'opacity-100'}
                     `}
@@ -138,7 +141,7 @@ const Home = () => {
             
             {/* Tuile I : Footer  */}
             <Footer/>                
-        </>
+        </body>
     );
 };
 
