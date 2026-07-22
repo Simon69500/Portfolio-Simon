@@ -9,7 +9,7 @@ import { techData } from '../../data/techData';
 const StackCard = () => {
   return (
     <article
-      className="h-full flex flex-col gap-6 p-6 rounded-3xl border border-gray-100 dark:border-gray-800 bg-bento-light dark:bg-bento-dark md:col-span-4 order-2 transition-all duration-300 hover:scale-105 hover:border-accent-primary dark:hover:border-accent-primary"
+      className="h-full flex flex-col gap-6 p-6 rounded-3xl border border-gray-100 dark:border-gray-800 bg-bento-light dark:bg-bento-dark md:col-span-4 order-2 transition-all duration-300 hover:scale-[1.02] hover:border-accent-primary dark:hover:border-accent-primary"
     >
       {/* 
         Accessibilité (WCAG) : Balise sémantique h2 pour hiérarchiser la tuile.
