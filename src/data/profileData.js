@@ -13,7 +13,7 @@ export const timeLineData = [
 export const softSkillsData = [
     {subject: 'Rigueur', score: 80,fullMark: 100},
     {subject: 'Adaptabilité', score: 70,fullMark: 100},
-    {subject: 'Gestion du stress', score: 90,fullMark: 100},
+    {subject: 'Résilience', score: 90,fullMark: 100},
     {subject: 'Leadership', score: 60,fullMark: 100},
     {subject: 'Curiosité', score: 70,fullMark: 100},
     {subject: 'Passion', score: 100,fullMark: 100}
