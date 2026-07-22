@@ -15,7 +15,7 @@ const TextareaField = ({
         <div className="flex flex-col gap-1 w-full mb-4">
             <label 
                 htmlFor={id} 
-                className="text-sm font-medium text-typography-light dark:text-typography-dark-DEFAULT"
+                className="text-sm font-medium text-typography-light dark:text-typography-dark-muted"
             >
                 {label}
             </label>
@@ -31,7 +31,7 @@ const TextareaField = ({
                 aria-invalid={error ? "true" : "false"}
                 className={`
                     w-full px-4 py-2 rounded-lg border bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm
-                    text-typography-light dark:text-typography-dark-DEFAULT
+                    text-typography-light dark:text-typography-dark
                     focus:outline-none focus:ring-2 transition-all duration-200 resize-y
                     disabled:opacity-50 disabled:cursor-not-allowed
                     ${error 
