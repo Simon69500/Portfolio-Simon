@@ -6,7 +6,7 @@ export const timeLineData = [
     {id: 3, title: "Plombier", date: "2013 - 2015"},
     {id: 4, title: "Mexique", date: "2016 - 2019"},
     {id: 5, title: "Plombier", date: "2019 - 2024"},
-    {id: 6, title: "Formation Dev Full-Stack", date: "2025 - 2026"},
+    {id: 6, title: "Stage Dev Full-Stack", date: " oct 2025 - mars 2026"},
     {id: 7, title: "Dev Full-Stack", date: "2026 - "}    
 ];
 
