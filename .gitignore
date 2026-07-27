@@ -25,3 +25,6 @@ yarn-error.log*
 
 #Vite 
 dist/
+
+# Obsolète - ancien fichier de données, conservé en local pour référence
+/src/data/projects/projects.json
