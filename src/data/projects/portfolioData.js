@@ -6,6 +6,7 @@ export const portfolioData = [
     {
         id: 1,
         isFeatured: true,  // Détermine que ce projet ira dans la Tuile D (8 colonnes)
+        type: "professionnel",
         titre: "Estimmo-Savoies",
         slug: "estimmo-savoies",
 
@@ -41,6 +42,7 @@ export const portfolioData = [
     {
         id: 2,
         isFeatured: false, 
+        type: "formation",        
         titre: "Trouve Ton Artisan",
         slug: "trouve-ton-artisan",
 
@@ -59,10 +61,10 @@ export const portfolioData = [
 
         // Zone conceptuelle pour l'état "Expanded"
         details: {
-            contexte: "Devoir CEF - Création d’une plateforme web pour aider les habitants de la région Auvergne-Rhône-Alpes à trouver et contacter des artisans via un site accessible, responsive et sécurisé.",
-            aspectsTechniques: "Mise en place d'une architecture REST sécurisée avec Express et Sequelize, développement du front-end en ReactJS et intégration des requêtes API via Axios.",
-            defis: "Assurer la cohérence entre le frontend et l’API, garantir la sécurité et la performance, maintenir un design accessible et responsive, et déployer une solution hébergée fiable et maintenable.",
-            solutions: "Mise en place d’une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration des requêtes API via Axios sécurisées, tests pour conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
+            contexte: "La région Auvergne-Rhône-Alpes ne disposait d'aucune plateforme pour mettre en relation ses habitants avec les artisans locaux. Objectif : permettre à tout particulier de trouver facilement un artisan par catégorie et de le contacter via un formulaire, sur un site accessible (WCAG 2.1) et pensé mobile first.",
+            aspectsTechniques: "Développement du frontend avec ReactJS, Bootstrap et Sass, associé à une API REST sécurisée construite avec Express et Sequelize pour l'accès à la base de données MySQL.",
+            defis: "Concevoir une interface accessible à tous les publics (jeunes, personnes âgées, personnes en situation de handicap) tout en respectant une contrainte mobile first, et sécuriser l'accès à l'API afin qu'elle ne soit interrogeable que par le frontend de l'application.",
+            solutions: "Mise en place d'une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration de requêtes API sécurisées via Axios, tests de conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
             resultats: "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé."
         },
 
@@ -74,6 +76,7 @@ export const portfolioData = [
     {
     id: 3,
     isFeatured: false,
+    type: "formation",    
     titre: "Touche Pas Au Klaxon",
     slug: "touche-pas-au-klaxon",
     
@@ -107,6 +110,7 @@ export const portfolioData = [
   {
     id: 4,
     isFeatured: false,
+    type: "formation",
     titre: "API Russel Port",
     slug: "api-russel-port",
     
@@ -138,6 +142,7 @@ export const portfolioData = [
   {
     id: 5,
     isFeatured: false,
+    type: "formation",
     titre: "Au Petit Village",
     slug: "au_petit_village",
     
@@ -161,30 +166,4 @@ export const portfolioData = [
     githubUrl: "https://github.com/Simon69500/Angular",
     liveUrl: ""
   },
-
-    //Projet 6 : 
-  {
-    id: 6,
-    isFeatured: false,
-    titre: "",
-    slug: "",
-    
-    coverImage: img("/images/projects/"),
-    gallery: [
-      img("/images/projects/"),
-    ],
-    
-    technologies: [""],
-    
-    details: {
-      contexte: "",
-      aspectsTechniques: "",
-      defis: "",
-      solutions: "",
-      resultats: ""
-    },
-    
-    githubUrl: "",
-    liveUrl: ""
-  }
 ]
