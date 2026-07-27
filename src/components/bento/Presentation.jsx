@@ -48,7 +48,7 @@ const Presentation = () => {
           Me Contacter
         </Button>
 
-        <Button href="/CV Badin Simon 2026.pdf" download="CV Badin Simon 2026.pdf.pdf" variant="secondary" rel="noopener noreferrer" target="_blank">
+        <Button href="/CV_Badin_Simon_2026.pdf" download="CV_Badin_Simon_2026.pdf" variant="secondary" rel="noopener noreferrer" target="_blank">
           Télécharger mon CV
         </Button>
 
