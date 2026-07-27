@@ -69,7 +69,7 @@ export const portfolioData = [
         },
 
         githubUrl: "https://github.com/Simon69500/Trouve_ton_artisan_React.JS",
-        liveUrl: "https://trouve-ton-artisan.vercel.app/"
+        liveUrl: "https://trouve-ton-artisan-react-js.vercel.app/"
     },
 
     // Projet 3 : Touche pas au klaxon, il présenté dans la partie Mosaïque (Tuile F ou G)
@@ -103,7 +103,7 @@ export const portfolioData = [
     },
     
     githubUrl: "https://github.com/Simon69500/Touche-pas-au-klaxon",
-    liveUrl: ""
+    liveUrl: "https://touche-pas-au-klaxon-production.up.railway.app/"
   },
 
   //Projet 4 : 
@@ -135,7 +135,7 @@ export const portfolioData = [
     },
 
     githubUrl: "https://github.com/Simon69500/Creer_une_API",
-    liveUrl: ""
+    liveUrl: "https://api-port-de-plaisance-russel.onrender.com/"
   },
 
   //Projet 5 : 
