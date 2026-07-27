@@ -6,6 +6,7 @@ export const portfolioData = [
     {
         id: 1,
         isFeatured: true,  // Détermine que ce projet ira dans la Tuile D (8 colonnes)
+        type: "professionnel",
         titre: "Estimmo-Savoies",
         slug: "estimmo-savoies",
 
@@ -24,12 +25,12 @@ export const portfolioData = [
         technologies: [ "React", "Symfony", "PostgreSQL", "PostGIS", "OVH Cloud"],
 
         // Zone conceptuelle pour l'état "Expanded" (section 2.4)
-        details: {
-            contexte: "Application d'estimation immoblière croisant les données DVF et INSEE IRIS pour la région Savoie.",
-            aspectsTechniques: " Utilisation de PostGIS pour la gestion des requêtes spatiales et de React-Hook-Form pour le front.",
-            defis: "Croisement performant de gros volumes de données géolocalisées en temps réel.",
-            solutions: "Mise en place d'index spatiaux sur PostgreSQL et optimisation des requêtes avec Doctrine ORM.",
-            resultats: "MVP fonctionnel validé et évolutif pour la Haute-Savoie."
+       details: {
+          contexte: "Un agent immobilier indépendant en Savoie constatait que les outils d'estimation nationaux (type SeLoger) lissaient trop les données pour être pertinents sur un marché local aux fortes disparités. Objectif : concevoir et livrer de bout en bout un outil d'estimation sur-mesure basé sur des règles métier locales, permettant de générer des leads qualifiés en échange d'une estimation précise du bien.",
+          aspectsTechniques: "Frontend en React 19 (Vite) avec React Hook Form et Yup pour la validation des formulaires, Axios pour la communication API, Bootstrap et Sass pour l'intégration mobile-first. Backend en API REST Symfony 7.3 avec Doctrine ORM, base de données PostgreSQL couplée à l'extension spatiale PostGIS pour l'ingénierie géospatiale. Authentification JWT via cookies HttpOnly, déploiement conteneurisé (Docker) sur VPS OVH avec reverse proxy Nginx et certificat SSL/TLS.",
+          defis: "Piloter le projet sur l'ensemble de son cycle de vie : cadrage du besoin et rédaction du cahier des charges avec le client, conception de la charte graphique et maquettage Figma mobile-first, pilotage en méthodologie Agile (sprints, démonstrations régulières), développement technique, puis mise en production et maintenance continue. Un défi technique majeur consistait à croiser en temps réel des données géospatiales complexes (transactions DVF et découpages IRIS de l'INSEE) sans latence perceptible, tout en respectant des contraintes fortes de RGPD, d'accessibilité (WCAG 2.1 AA) et de sécurité (prévention des failles IDOR).",
+          solutions: "Mise en place d'un index spatial GIST sur PostgreSQL et de requêtes natives PostGIS (ST_Intersects) via Doctrine DBAL pour la détection des quartiers, associées à des tables analytiques pré-calculées garantissant des temps de réponse instantanés. Sécurisation de l'API via le pattern DTO/Mapper, contrôle systématique de propriété des ressources, et couverture par tests unitaires (PHPUnit) du moteur de calcul métier. Le projet a été mené en autonomie complète, du premier échange client à la mise en production, avec un pilotage Agile assurant des livraisons itératives et une adaptation continue aux retours terrain.",
+          resultats: "Application déployée en production sur un nom de domaine dédié (estimmo-savoies.fr), validée par une phase de tests utilisateurs (UAT) auprès d'agents immobiliers et d'utilisateurs finaux. Sécurisation continue via audits de dépendances (composer audit, npm audit) ayant permis d'identifier et corriger plusieurs vulnérabilités. Le site est aujourd'hui maintenu activement, avec une feuille de route V2 déjà définie, notamment pour étendre l'algorithme au marché de la Haute-Savoie."
         },
 
         githubUrl: "",
@@ -41,6 +42,7 @@ export const portfolioData = [
     {
         id: 2,
         isFeatured: false, 
+        type: "formation",        
         titre: "Trouve Ton Artisan",
         slug: "trouve-ton-artisan",
 
@@ -59,10 +61,10 @@ export const portfolioData = [
 
         // Zone conceptuelle pour l'état "Expanded"
         details: {
-            contexte: "Devoir CEF - Création d’une plateforme web pour aider les habitants de la région Auvergne-Rhône-Alpes à trouver et contacter des artisans via un site accessible, responsive et sécurisé.",
-            aspectsTechniques: "Mise en place d'une architecture REST sécurisée avec Express et Sequelize, développement du front-end en ReactJS et intégration des requêtes API via Axios.",
-            defis: "Assurer la cohérence entre le frontend et l’API, garantir la sécurité et la performance, maintenir un design accessible et responsive, et déployer une solution hébergée fiable et maintenable.",
-            solutions: "Mise en place d’une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration des requêtes API via Axios sécurisées, tests pour conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
+            contexte: "La région Auvergne-Rhône-Alpes ne disposait d'aucune plateforme pour mettre en relation ses habitants avec les artisans locaux. Objectif : permettre à tout particulier de trouver facilement un artisan par catégorie et de le contacter via un formulaire, sur un site accessible (WCAG 2.1) et pensé mobile first.",
+            aspectsTechniques: "Développement du frontend avec ReactJS, Bootstrap et Sass, associé à une API REST sécurisée construite avec Express et Sequelize pour l'accès à la base de données MySQL.",
+            defis: "Concevoir une interface accessible à tous les publics (jeunes, personnes âgées, personnes en situation de handicap) tout en respectant une contrainte mobile first, et sécuriser l'accès à l'API afin qu'elle ne soit interrogeable que par le frontend de l'application.",
+            solutions: "Mise en place d'une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration de requêtes API sécurisées via Axios, tests de conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
             resultats: "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé."
         },
 
@@ -74,6 +76,7 @@ export const portfolioData = [
     {
     id: 3,
     isFeatured: false,
+    type: "formation",    
     titre: "Touche Pas Au Klaxon",
     slug: "touche-pas-au-klaxon",
     
@@ -92,11 +95,11 @@ export const portfolioData = [
     technologies: ["PHP", "MySQL"],
     
     details: {
-      contexte: "Devoir CEF - Application web de gestion et création de trajets.",
-      aspectsTechniques: "Backend robuste en PHP natif avec base de données relationnelle MySQL.",
-      defis: "Sécurisation des données utilisateurs et gestion des droits d'accès (CRUD).",
-      solutions: "Implémentation d'un système de session sécurisé et requêtes SQL préparées.",
-      resultats: "Plateforme fonctionnelle avec espace d'administration complet."
+        contexte: "Dans une grande entreprise multi-sites, de nombreux trajets inter-sites étaient réalisés en doublon avec un faible taux d'occupation des véhicules. Objectif : développer une application intranet permettant de diffuser les trajets planifiés au sein de l'entreprise pour favoriser le covoiturage entre collaborateurs.",
+        aspectsTechniques: "Backend en PHP natif structuré selon une architecture MVC, connecté à une base de données MySQL, avec un frontend construit sur Bootstrap et Sass.",
+        defis: "Distinguer les droits d'accès selon trois profils (visiteur, employé connecté, administrateur), sécuriser l'authentification et les données utilisateurs, et garantir la cohérence des trajets saisis (agences de départ/arrivée distinctes, chronologie des dates).",
+        solutions: "Mise en place d'un système de session sécurisé, de requêtes SQL préparées pour prévenir les injections, et de contrôles de cohérence métier sur la création des trajets.",
+        resultats: "Plateforme fonctionnelle avec trois niveaux d'accès (visiteur, utilisateur connecté, administrateur), gestion complète des trajets et des agences, et espace d'administration pour la supervision des données."
     },
     
     githubUrl: "https://github.com/Simon69500/Touche-pas-au-klaxon",
@@ -107,6 +110,7 @@ export const portfolioData = [
   {
     id: 4,
     isFeatured: false,
+    type: "formation",
     titre: "API Russel Port",
     slug: "api-russel-port",
     
@@ -123,13 +127,13 @@ export const portfolioData = [
     technologies: ["Node.js", "Express", "MongoDB"],
     
     details: {
-      contexte: "Devoir CEF - Développement d’une API et d’un frontend administrateur pour le Port de Plaisance de Russell afin de gérer les catways, réservations et utilisateurs de manière sécurisée.",
+      contexte: "La capitainerie du port de plaisance de Russell ne disposait d'aucune solution pour digitaliser la gestion de ses réservations de catways. Objectif : concevoir une API privée sécurisée, accompagnée d'un frontend permettant la gestion complète (CRUD) des catways, réservations et utilisateurs.",
       aspectsTechniques: "Architecture REST avec Express et Mongoose, authentification par JWT et documentation technique des endpoints.",
-      defis: "Mettre en place une API REST sécurisée, gérer les relations entre catways et réservations, assurer un tableau de bord administrateur fonctionnel et documenté, et déployer l’application en ligne.",
-      solutions: "Architecture REST avec Express et Mongoose, routes CRUD sécurisées, authentification via JWT, frontend minimal en EJS pour l’administration, documentation incluse, et hébergement de l’API en ligne avec accès sécurisé. Versionnage du projet sur GitHub.",
-      resultats: "API fonctionnelle avec gestion complète des catways, réservations et utilisateurs. Tableau de bord administrateur opérationnel, sécurisation via JWT, validation des données et base MongoDB. L’ensemble est versionné sur GitHub."
+      defis: "Concevoir des routes REST respectant les conventions du protocole (verbes HTTP, sous-ressources pour les réservations rattachées à un catway) sur trois entités liées, sécuriser l'accès à une API destinée à rester privée, et garantir la cohérence des données entre catways et réservations.",
+      solutions: "Architecture REST avec Express et Mongoose, routes CRUD sécurisées, authentification via JWT, frontend minimal en EJS pour l'administration, documentation incluse, et hébergement de l'API en ligne avec accès sécurisé. Versionnage du projet sur GitHub.",
+      resultats: "API fonctionnelle avec gestion complète des catways, réservations et utilisateurs. Tableau de bord administrateur opérationnel, sécurisation via JWT, validation des données et base MongoDB. L'ensemble est versionné sur GitHub."
     },
-    
+
     githubUrl: "https://github.com/Simon69500/Creer_une_API",
     liveUrl: ""
   },
@@ -138,6 +142,7 @@ export const portfolioData = [
   {
     id: 5,
     isFeatured: false,
+    type: "formation",
     titre: "Au Petit Village",
     slug: "au_petit_village",
     
@@ -151,40 +156,14 @@ export const portfolioData = [
     technologies: ["Angular", "TypeScript"],
     
     details: {
-      contexte: "Devoir CEF - Création d’un site e-commerce Angular pour la vente de figurines artisanales, avec catalogue interactif, tri et recherche, et respect de la charte graphique client.",
-      aspectsTechniques: "Structuration autour de composants modulaires, routing paramétré, pipes personnalisées et services de centralisation des données.",
-      defis: "Respecter la charte graphique imposée, intégrer les requis techniques liés à Angular (composants, routing, services et pipes), tout en assurant la cohérence visuelle et la performance du site sur tous les supports.",
-      solutions: "Structuration du projet autour de cinq composants principaux, mise en place d’un routing paramétré, de pipes personnalisées pour le tri et la recherche, et d’un service pour centraliser les données produits. Les tests et ajustements visuels ont permis de garantir une expérience utilisateur fluide et conforme à la charte.",
-      resultats: "Un site fluide et esthétique, respectant la charte graphique du client, permettant aux utilisateurs de consulter, trier et rechercher des produits facilement. L’ensemble du code est organisé en composants modulaires et versionné sur GitHub."
+        contexte: "L'entreprise \"Au petit village\", qui confectionne des figurines artisanales inspirées d'Astérix & Obélix, ne disposait d'aucune vitrine en ligne. Objectif : concevoir avec Angular un site responsive respectant sa charte graphique, permettant de consulter le catalogue de produits, de trier/rechercher parmi les figurines, et de contacter l'entreprise.",
+        aspectsTechniques: "Structuration autour de composants modulaires, routing paramétré, pipes personnalisées et services de centralisation des données.",
+        defis: "Respecter une charte graphique stricte (typographies et palette imposées) tout en couvrant les exigences techniques du framework Angular (routing, services, pipes, composants), et garantir une expérience cohérente et performante sur l'ensemble des supports.",
+        solutions: "Structuration du projet autour de cinq composants principaux, mise en place d'un routing paramétré, de pipes personnalisées pour le tri et la recherche, et d'un service pour centraliser les données produits. Les tests et ajustements visuels ont permis de garantir une expérience utilisateur fluide et conforme à la charte.",
+        resultats: "Un site fluide et esthétique, respectant la charte graphique du client, permettant aux utilisateurs de consulter, trier et rechercher des produits facilement. L'ensemble du code est organisé en composants modulaires et versionné sur GitHub."
     },
     
     githubUrl: "https://github.com/Simon69500/Angular",
     liveUrl: ""
   },
-
-    //Projet 6 : 
-  {
-    id: 6,
-    isFeatured: false,
-    titre: "",
-    slug: "",
-    
-    coverImage: img("/images/projects/"),
-    gallery: [
-      img("/images/projects/"),
-    ],
-    
-    technologies: [""],
-    
-    details: {
-      contexte: "",
-      aspectsTechniques: "",
-      defis: "",
-      solutions: "",
-      resultats: ""
-    },
-    
-    githubUrl: "",
-    liveUrl: ""
-  }
 ]

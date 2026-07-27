@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../ui/Button';
 import ProjectCarousel from '../ui/ProjectCarousel';
+import ProjectTypeBadge from '../ui/ProjectTypeBadge';
 
 /**
  * Composant de détail affiché lorsque la tuile projet est en état EXPANDED.
@@ -50,6 +51,10 @@ const ProjetDetails = ({ project, onClose }) => {
                 
                 {/* En-tête du projet */}
                 <header>
+                    {/* Badge complet (icône + libellé) affiché uniquement en vue détail */}
+                    <div className="mb-4">
+                        <ProjectTypeBadge type={project.type} variant="full" />
+                    </div>                    
                     <h2 className="text-3xl md:text-5xl font-bold text-typography-light dark:text-typography-dark mb-4">
                         {project.titre}
                     </h2>

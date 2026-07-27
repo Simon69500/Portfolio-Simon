@@ -5,6 +5,8 @@ import Button from './Button';
 import { techData } from '../../data/techData';
 import { useCardExpansion } from '../../hook/useCardExpansion';
 import ProjetDetails from '../bento/ProjetDetails';
+import ProjectTypeBadge from '../ui/ProjectTypeBadge';
+
 
 /**
  * Carte Projet pour les Mosaïques (Tuiles F & G)
@@ -49,6 +51,10 @@ const ProjetCard = ({ project, expansionProjetId, setExpansionProjetId }) => {
           {/* ZONE TEXTUELLE */}
           <div className='flex-1 p-6 flex flex-col justify-between z-10'>
             <div>
+              {/* Badge de type de projet (formation / personnel / professionnel), affiché avant le titre pour donner le contexte en premier */}
+              <div className='mb-3'>
+                  <ProjectTypeBadge type={project.type} variant="compact" />
+              </div>              
               <h3 className='text-xl font-bold text-typography-light dark:text-typography-dark mb-4 line-clamp-2'>
                 {project.titre}
               </h3>
