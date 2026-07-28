@@ -141,11 +141,44 @@ export const techData = {
         },
 
         {
+            id: "docker",
+            name: "Docker",
+            category:"Outils & Ops",
+            logoUrl: img("/images/tech/docker.svg"),
+            iconBehavior: "black"
+        },
+
+        {
+            id: "vercel",
+            name: "Vercel",
+            category:"Outils & Ops",
+            logoUrl: img("/images/tech/vercel.svg"),
+            iconBehavior: "black"
+        },        
+
+        {
+            id: "railway",
+            name: "Railway",
+            category:"Outils & Ops",
+            logoUrl: img("/images/tech/railway.svg"),
+            iconBehavior: "black"
+        },  
+        
+        {
+            id: "render",
+            name: "Render",
+            category:"Outils & Ops",
+            logoUrl: img("/images/tech/render.svg"),
+            iconBehavior: "black"
+        }, 
+
+        {
             id: "ia",
             name: "IA & Prompting",
             category:"Outils & Ops",
             logoUrl: img("/images/tech/ia.svg"),
             iconBehavior: "black"
         }
+
     ]
 }
