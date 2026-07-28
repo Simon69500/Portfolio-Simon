@@ -164,6 +164,6 @@ export const portfolioData = [
     },
     
     githubUrl: "https://github.com/Simon69500/Angular",
-    liveUrl: ""
+    liveUrl: "https://aupetitvillage-zeta.vercel.app/"
   },
 ]
