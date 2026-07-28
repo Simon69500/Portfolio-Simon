@@ -22,7 +22,7 @@ export const portfolioData = [
         ],
 
         // Stack Technique simplifiée pour les badges (Tuiles D)
-        technologies: [ "React", "Symfony", "PostgreSQL", "PostGIS", "OVH Cloud"],
+        technologies: [ "React", "Symfony", "PostgreSQL", "PostGIS", "OVH Cloud", "Docker"],
 
         // Zone conceptuelle pour l'état "Expanded" (section 2.4)
        details: {
@@ -57,7 +57,7 @@ export const portfolioData = [
         ],
 
         // Stack Technique simplifiée pour les badges (Tuiles D)
-        technologies: ["React", "Node.js", "Express", "MySQL"],
+        technologies: ["React", "Node.js", "Express", "MySQL", "Railway", "Vercel"],
 
         // Zone conceptuelle pour l'état "Expanded"
         details: {
@@ -92,7 +92,7 @@ export const portfolioData = [
       img("/images/projects/touche-pas-klaxon/screen8.webp")
     ],
     
-    technologies: ["PHP", "MySQL"],
+    technologies: ["PHP", "MySQL","Railway"],
     
     details: {
         contexte: "Dans une grande entreprise multi-sites, de nombreux trajets inter-sites étaient réalisés en doublon avec un faible taux d'occupation des véhicules. Objectif : développer une application intranet permettant de diffuser les trajets planifiés au sein de l'entreprise pour favoriser le covoiturage entre collaborateurs.",
@@ -124,7 +124,7 @@ export const portfolioData = [
       img("/images/projects/api_russel/screen6.webp")
     ],
     
-    technologies: ["Node.js", "Express", "MongoDB"],
+    technologies: ["Node.js", "Express", "MongoDB","Render"],
     
     details: {
       contexte: "La capitainerie du port de plaisance de Russell ne disposait d'aucune solution pour digitaliser la gestion de ses réservations de catways. Objectif : concevoir une API privée sécurisée, accompagnée d'un frontend permettant la gestion complète (CRUD) des catways, réservations et utilisateurs.",
@@ -153,7 +153,7 @@ export const portfolioData = [
       img("/images/projects/Au-petit-village/screen3.webp"),
     ],
     
-    technologies: ["Angular", "TypeScript"],
+    technologies: ["Angular", "TypeScript", "Vercel"],
     
     details: {
         contexte: "L'entreprise \"Au petit village\", qui confectionne des figurines artisanales inspirées d'Astérix & Obélix, ne disposait d'aucune vitrine en ligne. Objectif : concevoir avec Angular un site responsive respectant sa charte graphique, permettant de consulter le catalogue de produits, de trier/rechercher parmi les figurines, et de contacter l'entreprise.",
