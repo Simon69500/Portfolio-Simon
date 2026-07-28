@@ -153,7 +153,7 @@ export const techData = {
             name: "Vercel",
             category:"Outils & Ops",
             logoUrl: img("/images/tech/vercel.svg"),
-            iconBehavior: "black"
+            iconBehavior: "white"
         },        
 
         {
