@@ -47,6 +47,24 @@ export const portfolioData = [
                     value: 105,
                     sublabel: "adopté au quotidien par mon client et son réseau professionnel"
                 }
+          ],
+          role: [
+            { 
+                title: "Pilotage de projet & relation client", 
+                description: "Cadrage du besoin avec le client et rédaction du cahier des charges, pilotage en méthodologie Agile (sprints de deux semaines, démonstrations régulières) et arbitrage du backlog entre valeur métier et faisabilité technique. Rôle tenu en autonomie complète, du premier échange client à la mise en production."
+            },
+            { 
+                title: "Conception technique & architecture", 
+                description: "Conception de l'architecture Frontend/Backend (React, API REST Symfony) et des choix de sécurité associés (authentification JWT en cookie httpOnly, protection CSRF, prévention des failles IDOR, pattern DTO/Mapper). Choix assumé de faire évoluer l'architecture de données vers PostgreSQL/PostGIS pour permettre des calculs géospatiaux fiables."
+            },
+            { 
+                title: "Data engineering & algorithme métier", 
+                description: "Sélection, nettoyage et croisement de sources de données publiques (transactions DVF, découpage IRIS de l'INSEE) via un script Python, pour alimenter un moteur de calcul statistique et géospatial sur-mesure. Mise en place de tables analytiques pré-calculées garantissant des temps de réponse instantanés."
+            },
+            { 
+                title: "Qualité & mise en production", 
+                description: "Sécurisation du moteur de calcul par une suite de tests unitaires (PHPUnit), gestion versionnée des évolutions de la base de données (Doctrine Migrations), déploiement conteneurisé (Docker) sur une infrastructure française (OVH Cloud)."
+            }
           ],          
         },
 
