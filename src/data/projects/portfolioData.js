@@ -27,8 +27,8 @@ export const portfolioData = [
         // Zone conceptuelle pour l'état "Expanded" (section 2.4)
        details: {
           demoMedia: {
-            src: "/videos/projects/estimmo/demo.mp4",
-            poster: "/images/projects/estimmo/cover.webp"
+              src: img("/videos/projects/estimmo/demo.mp4"),
+              poster: img("/images/projects/estimmo/cover.webp")
           },
           contexte: "Un agent immobilier indépendant en Savoie constatait que les outils d'estimation nationaux (type SeLoger) lissaient trop les données pour être pertinents sur un marché local aux fortes disparités. Objectif : concevoir et livrer de bout en bout un outil d'estimation sur-mesure basé sur des règles métier locales, permettant de générer des leads qualifiés en échange d'une estimation précise du bien.",         
           aspectsTechniques: {
