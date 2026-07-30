@@ -1,31 +1,38 @@
 import React from "react";
 
 /**
- * Affiche le déroulé technique du projet (aspects techniques, défis, solutions, résultats).
- * Contenu repris à l'identique de l'ancien ProjetDetails pour garder la parité fonctionnelle ;
- * la mise en forme visuelle (grille -> narratif hiérarchisé) pourra être retravaillée dans un
- * second temps, une fois toute l'architecture validée et testée.
+ * Affiche le déroulé technique du projet (aspects techniques, défis, solutions, résultats)
+ * en sections pleine largeur (intro + liste à puces), plutôt qu'en grille de cards fermées,
+ * pour rester cohérent avec la lecture de StarRole et éviter l'effet "pavé compressé".
  */
 
 const StarNarrative = ({ details}) => {
+
+    // Regroupement des 4 catégories en tableau pour factoriser le rendu via .map(),
+    // plutôt que de répéter 4 fois un bloc JSX quasi identique.
+    const sections = [
+        {title: "Aspects Techniques", content: details.aspectsTechniques },
+        {title: "Défis rencontrés", content: details.defis },
+        {title: "Solutions apportées", content: details.solutions },
+        {title: "Résultats", content: details.resultats }
+    ]    
     return (
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-6 bg-white/50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
-                <h3 className="font-bold text-xl mb-2 text-typography-light dark:text-typography-dark">Aspects Techniques</h3>
-                <p className="text-typography-light dark:text-typography-dark-muted">{details.aspectsTechniques}</p>
-            </div>
-            <div className="p-6 bg-white/50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
-                <h3 className="font-bold text-xl mb-2 text-typography-light dark:text-typography-dark">Défis rencontrés</h3>
-                <p className="text-typography-light dark:text-typography-dark-muted">{details.defis}</p>
-            </div>
-            <div className="p-6 bg-white/50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
-                <h3 className="font-bold text-xl mb-2 text-typography-light dark:text-typography-dark">Solutions apportées</h3>
-                <p className="text-typography-light dark:text-typography-dark-muted">{details.solutions}</p>
-            </div>
-            <div className="p-6 bg-white/50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
-                <h3 className="font-bold text-xl mb-2 text-typography-light dark:text-typography-dark">Résultats</h3>
-                <p className="text-typography-light dark:text-typography-dark-muted">{details.resultats}</p>
-            </div>
+        <section className="w-full flex flex-col gap-10">
+            {sections.map((section, index) => (
+                <div key={index}>
+                    <h3 className="font-bold text-xl mb-2 text-typography-light dark:text-typography-dark">
+                        {section.title}
+                    </h3>
+                    <p className="text-typography-light dark:text-typography-dark-muted mb-3">
+                        {section.content.intro}
+                    </p>
+                    <ul className="list-disc list-inside space-y-1.5 text-typography-light dark:text-typography-dark-muted">
+                        {section.content.points.map((point, pointIndex) => (
+                            <li key={pointIndex}> {point} </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
         </section>        
     );
 };
