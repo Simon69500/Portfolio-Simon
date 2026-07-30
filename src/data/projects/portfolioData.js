@@ -26,6 +26,10 @@ export const portfolioData = [
 
         // Zone conceptuelle pour l'état "Expanded" (section 2.4)
        details: {
+          demoMedia: {
+            src: "/videos/projects/estimmo/demo.mp4",
+            poster: "/images/projects/estimmo/cover.webp"
+          },         
           contexte: "Un agent immobilier indépendant en Savoie constatait que les outils d'estimation nationaux (type SeLoger) lissaient trop les données pour être pertinents sur un marché local aux fortes disparités. Objectif : concevoir et livrer de bout en bout un outil d'estimation sur-mesure basé sur des règles métier locales, permettant de générer des leads qualifiés en échange d'une estimation précise du bien.",
           aspectsTechniques: "Frontend en React 19 (Vite) avec React Hook Form et Yup pour la validation des formulaires, Axios pour la communication API, Bootstrap et Sass pour l'intégration mobile-first. Backend en API REST Symfony 7.3 avec Doctrine ORM, base de données PostgreSQL couplée à l'extension spatiale PostGIS pour l'ingénierie géospatiale. Authentification JWT via cookies HttpOnly, déploiement conteneurisé (Docker) sur VPS OVH avec reverse proxy Nginx et certificat SSL/TLS.",
           defis: "Piloter le projet sur l'ensemble de son cycle de vie : cadrage du besoin et rédaction du cahier des charges avec le client, conception de la charte graphique et maquettage Figma mobile-first, pilotage en méthodologie Agile (sprints, démonstrations régulières), développement technique, puis mise en production et maintenance continue. Un défi technique majeur consistait à croiser en temps réel des données géospatiales complexes (transactions DVF et découpages IRIS de l'INSEE) sans latence perceptible, tout en respectant des contraintes fortes de RGPD, d'accessibilité (WCAG 2.1 AA) et de sécurité (prévention des failles IDOR).",
@@ -65,7 +69,7 @@ export const portfolioData = [
                 title: "Qualité & mise en production", 
                 description: "Sécurisation du moteur de calcul par une suite de tests unitaires (PHPUnit), gestion versionnée des évolutions de la base de données (Doctrine Migrations), déploiement conteneurisé (Docker) sur une infrastructure française (OVH Cloud)."
             }
-          ],          
+          ],         
         },
 
         githubUrl: "",
