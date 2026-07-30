@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
 import { motion } from 'motion/react';
-import TechBadge from '../ui/TechBadge';
-import Button from '../ui/Button';
 import { techData } from '../../data/techData';
 import { useCardExpansion } from '../../hook/useCardExpansion';
-import ProjetDetails from './ProjetDetails';
+
+import TechBadge from '../ui/TechBadge';
+import Button from '../ui/Button';
+import ProjetDetailsStar from './ProjetDetailsStar';
 import ProjectTypeBadge from '../ui/ProjectTypeBadge';
 
 /**
@@ -116,7 +117,7 @@ const ProjetStar = ({ project, expansionProjetId, setExpansionProjetId }) => {
         </div>
       ) : (
         <div className="h-full w-full flex flex-col bg-bento-light dark:bg-bento-dark">
-          <ProjetDetails project={project} onClose={collapse} />
+          <ProjetDetailsStar project={project} onClose={collapse} />
         </div>
       )}
     </motion.article>

@@ -26,11 +26,50 @@ export const portfolioData = [
 
         // Zone conceptuelle pour l'état "Expanded" (section 2.4)
        details: {
+          demoMedia: {
+            src: "/videos/projects/estimmo/demo.mp4",
+            poster: "/images/projects/estimmo/cover.webp"
+          },         
           contexte: "Un agent immobilier indépendant en Savoie constatait que les outils d'estimation nationaux (type SeLoger) lissaient trop les données pour être pertinents sur un marché local aux fortes disparités. Objectif : concevoir et livrer de bout en bout un outil d'estimation sur-mesure basé sur des règles métier locales, permettant de générer des leads qualifiés en échange d'une estimation précise du bien.",
           aspectsTechniques: "Frontend en React 19 (Vite) avec React Hook Form et Yup pour la validation des formulaires, Axios pour la communication API, Bootstrap et Sass pour l'intégration mobile-first. Backend en API REST Symfony 7.3 avec Doctrine ORM, base de données PostgreSQL couplée à l'extension spatiale PostGIS pour l'ingénierie géospatiale. Authentification JWT via cookies HttpOnly, déploiement conteneurisé (Docker) sur VPS OVH avec reverse proxy Nginx et certificat SSL/TLS.",
           defis: "Piloter le projet sur l'ensemble de son cycle de vie : cadrage du besoin et rédaction du cahier des charges avec le client, conception de la charte graphique et maquettage Figma mobile-first, pilotage en méthodologie Agile (sprints, démonstrations régulières), développement technique, puis mise en production et maintenance continue. Un défi technique majeur consistait à croiser en temps réel des données géospatiales complexes (transactions DVF et découpages IRIS de l'INSEE) sans latence perceptible, tout en respectant des contraintes fortes de RGPD, d'accessibilité (WCAG 2.1 AA) et de sécurité (prévention des failles IDOR).",
           solutions: "Mise en place d'un index spatial GIST sur PostgreSQL et de requêtes natives PostGIS (ST_Intersects) via Doctrine DBAL pour la détection des quartiers, associées à des tables analytiques pré-calculées garantissant des temps de réponse instantanés. Sécurisation de l'API via le pattern DTO/Mapper, contrôle systématique de propriété des ressources, et couverture par tests unitaires (PHPUnit) du moteur de calcul métier. Le projet a été mené en autonomie complète, du premier échange client à la mise en production, avec un pilotage Agile assurant des livraisons itératives et une adaptation continue aux retours terrain.",
-          resultats: "Application déployée en production sur un nom de domaine dédié (estimmo-savoies.fr), validée par une phase de tests utilisateurs (UAT) auprès d'agents immobiliers et d'utilisateurs finaux. Sécurisation continue via audits de dépendances (composer audit, npm audit) ayant permis d'identifier et corriger plusieurs vulnérabilités. Le site est aujourd'hui maintenu activement, avec une feuille de route V2 déjà définie, notamment pour étendre l'algorithme au marché de la Haute-Savoie."
+          resultats: "Application déployée en production sur un nom de domaine dédié (estimmo-savoies.fr), validée par une phase de tests utilisateurs (UAT) auprès d'agents immobiliers et d'utilisateurs finaux. Sécurisation continue via audits de dépendances (composer audit, npm audit) ayant permis d'identifier et corriger plusieurs vulnérabilités. Le site est aujourd'hui maintenu activement, avec une feuille de route V2 déjà définie, notamment pour étendre l'algorithme au marché de la Haute-Savoie.",
+          metrics: [  // Données utilisation réels du projet (28/07/2026)
+                { 
+                    label: "Estimations réalisées", 
+                    value: 240,
+                    sublabel: "depuis la mise en production"
+                },
+                { 
+                    label: "Prospects externes uniques", 
+                    value: 96,
+                    sublabel: "particuliers ayant généré un lead qualifié pour mon client"
+                },
+                { 
+                    label: "Professionnels utilisateurs réguliers", 
+                    value: 105,
+                    sublabel: "adopté au quotidien par mon client et son réseau professionnel"
+                }
+          ],
+          role: [
+            { 
+                title: "Pilotage de projet & relation client", 
+                description: "Cadrage du besoin avec le client et rédaction du cahier des charges, pilotage en méthodologie Agile (sprints de deux semaines, démonstrations régulières) et arbitrage du backlog entre valeur métier et faisabilité technique. Rôle tenu en autonomie complète, du premier échange client à la mise en production."
+            },
+            { 
+                title: "Conception technique & architecture", 
+                description: "Conception de l'architecture Frontend/Backend (React, API REST Symfony) et des choix de sécurité associés (authentification JWT en cookie httpOnly, protection CSRF, prévention des failles IDOR, pattern DTO/Mapper). Choix assumé de faire évoluer l'architecture de données vers PostgreSQL/PostGIS pour permettre des calculs géospatiaux fiables."
+            },
+            { 
+                title: "Data engineering & algorithme métier", 
+                description: "Sélection, nettoyage et croisement de sources de données publiques (transactions DVF, découpage IRIS de l'INSEE) via un script Python, pour alimenter un moteur de calcul statistique et géospatial sur-mesure. Mise en place de tables analytiques pré-calculées garantissant des temps de réponse instantanés."
+            },
+            { 
+                title: "Qualité & mise en production", 
+                description: "Sécurisation du moteur de calcul par une suite de tests unitaires (PHPUnit), gestion versionnée des évolutions de la base de données (Doctrine Migrations), déploiement conteneurisé (Docker) sur une infrastructure française (OVH Cloud)."
+            }
+          ],         
         },
 
         githubUrl: "",
@@ -66,7 +105,7 @@ export const portfolioData = [
             defis: "Concevoir une interface accessible à tous les publics (jeunes, personnes âgées, personnes en situation de handicap) tout en respectant une contrainte mobile first, et sécuriser l'accès à l'API afin qu'elle ne soit interrogeable que par le frontend de l'application.",
             solutions: "Mise en place d'une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration de requêtes API sécurisées via Axios, tests de conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
             resultats: "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé."
-        },
+          },
 
         githubUrl: "https://github.com/Simon69500/Trouve_ton_artisan_React.JS",
         liveUrl: "https://trouve-ton-artisan-react-js.vercel.app/"
