@@ -65,8 +65,25 @@ export const portfolioData = [
             aspectsTechniques: "Développement du frontend avec ReactJS, Bootstrap et Sass, associé à une API REST sécurisée construite avec Express et Sequelize pour l'accès à la base de données MySQL.",
             defis: "Concevoir une interface accessible à tous les publics (jeunes, personnes âgées, personnes en situation de handicap) tout en respectant une contrainte mobile first, et sécuriser l'accès à l'API afin qu'elle ne soit interrogeable que par le frontend de l'application.",
             solutions: "Mise en place d'une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration de requêtes API sécurisées via Axios, tests de conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
-            resultats: "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé."
-        },
+            resultats: "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé.",
+            metrics: [                     // Données utilisation réels du projet
+                { 
+                    label: "Estimations réalisées", 
+                    value: 240,
+                    sublabel: "depuis la mise en production"
+                },
+                { 
+                    label: "Prospects externes uniques", 
+                    value: 96,
+                    sublabel: "particuliers ayant généré un lead qualifié pour mon client"
+                },
+                { 
+                    label: "Professionnels utilisateurs réguliers", 
+                    value: 105,
+                    sublabel: "adopté au quotidien par mon client et son réseau professionnel"
+                }
+            ],
+          },
 
         githubUrl: "https://github.com/Simon69500/Trouve_ton_artisan_React.JS",
         liveUrl: "https://trouve-ton-artisan-react-js.vercel.app/"
