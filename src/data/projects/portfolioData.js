@@ -29,12 +29,43 @@ export const portfolioData = [
           demoMedia: {
             src: "/videos/projects/estimmo/demo.mp4",
             poster: "/images/projects/estimmo/cover.webp"
-          },         
-          contexte: "Un agent immobilier indépendant en Savoie constatait que les outils d'estimation nationaux (type SeLoger) lissaient trop les données pour être pertinents sur un marché local aux fortes disparités. Objectif : concevoir et livrer de bout en bout un outil d'estimation sur-mesure basé sur des règles métier locales, permettant de générer des leads qualifiés en échange d'une estimation précise du bien.",
-          aspectsTechniques: "Frontend en React 19 (Vite) avec React Hook Form et Yup pour la validation des formulaires, Axios pour la communication API, Bootstrap et Sass pour l'intégration mobile-first. Backend en API REST Symfony 7.3 avec Doctrine ORM, base de données PostgreSQL couplée à l'extension spatiale PostGIS pour l'ingénierie géospatiale. Authentification JWT via cookies HttpOnly, déploiement conteneurisé (Docker) sur VPS OVH avec reverse proxy Nginx et certificat SSL/TLS.",
-          defis: "Piloter le projet sur l'ensemble de son cycle de vie : cadrage du besoin et rédaction du cahier des charges avec le client, conception de la charte graphique et maquettage Figma mobile-first, pilotage en méthodologie Agile (sprints, démonstrations régulières), développement technique, puis mise en production et maintenance continue. Un défi technique majeur consistait à croiser en temps réel des données géospatiales complexes (transactions DVF et découpages IRIS de l'INSEE) sans latence perceptible, tout en respectant des contraintes fortes de RGPD, d'accessibilité (WCAG 2.1 AA) et de sécurité (prévention des failles IDOR).",
-          solutions: "Mise en place d'un index spatial GIST sur PostgreSQL et de requêtes natives PostGIS (ST_Intersects) via Doctrine DBAL pour la détection des quartiers, associées à des tables analytiques pré-calculées garantissant des temps de réponse instantanés. Sécurisation de l'API via le pattern DTO/Mapper, contrôle systématique de propriété des ressources, et couverture par tests unitaires (PHPUnit) du moteur de calcul métier. Le projet a été mené en autonomie complète, du premier échange client à la mise en production, avec un pilotage Agile assurant des livraisons itératives et une adaptation continue aux retours terrain.",
-          resultats: "Application déployée en production sur un nom de domaine dédié (estimmo-savoies.fr), validée par une phase de tests utilisateurs (UAT) auprès d'agents immobiliers et d'utilisateurs finaux. Sécurisation continue via audits de dépendances (composer audit, npm audit) ayant permis d'identifier et corriger plusieurs vulnérabilités. Le site est aujourd'hui maintenu activement, avec une feuille de route V2 déjà définie, notamment pour étendre l'algorithme au marché de la Haute-Savoie.",
+          },
+          contexte: "Un agent immobilier indépendant en Savoie constatait que les outils d'estimation nationaux (type SeLoger) lissaient trop les données pour être pertinents sur un marché local aux fortes disparités. Objectif : concevoir et livrer de bout en bout un outil d'estimation sur-mesure basé sur des règles métier locales, permettant de générer des leads qualifiés en échange d'une estimation précise du bien.",         
+          aspectsTechniques: {
+            intro: "Une stack complète, du frontend mobile-first jusqu'au déploiement en production.",
+            points: [
+                "Frontend : React (Vite), React Hook Form + Yup pour la validation, Axios pour les appels API, Bootstrap/Sass pour l'intégration mobile-first",
+                "Backend : API REST Symfony avec Doctrine ORM, PostgreSQL couplé à PostGIS pour l'ingénierie géospatiale",
+                "Sécurité & déploiement : authentification JWT en cookies HttpOnly, conteneurisation Docker sur VPS OVH avec Nginx et certificat SSL/TLS"
+            ]
+          },
+          defis: {
+              intro: "Piloter un projet de bout en bout tout en résolvant des contraintes techniques et légales fortes.",
+              points: [
+                  "Cycle de vie complet : cadrage du besoin, maquettage Figma mobile-first, pilotage Agile (sprints, démos régulières), développement, mise en production et maintenance",
+                  "Croisement de données géospatiales complexes (DVF, IRIS INSEE) sans latence perceptible",
+                  "Conformité RGPD et accessibilité (WCAG 2.1 AA)",
+                  "Prévention des failles de sécurité (IDOR)"
+              ]
+          },
+          solutions: {
+              intro: "Des choix techniques concrets pour répondre à ces défis.",
+              points: [
+                  "Index spatial GIST + requêtes PostGIS natives (ST_Intersects) via Doctrine DBAL pour la détection instantanée des quartiers",
+                  "Tables analytiques pré-calculées garantissant des temps de réponse instantanés",
+                  "Sécurisation de l'API via le pattern DTO/Mapper et contrôle systématique de propriété des ressources",
+                  "Couverture du moteur de calcul par des tests unitaires (PHPUnit)"
+              ]
+          },
+          resultats: {
+              intro: "Un produit livré, validé sur le terrain, et maintenu dans la durée.",
+              points: [
+                  "Déployé en production sur un nom de domaine dédié (estimmo-savoies.fr)",
+                  "Validé par une phase de tests utilisateurs (UAT) avec agents immobiliers et particuliers",
+                  "Sécurisation continue via audits de dépendances (composer audit, npm audit)",
+                  "Feuille de route V2 déjà définie : refactoring et amélioration UX/UI, avant l'extension de l'algorithme au marché de la Haute-Savoie"
+              ]
+          },
           metrics: [  // Données utilisation réels du projet (28/07/2026)
                 { 
                     label: "Estimations réalisées", 
