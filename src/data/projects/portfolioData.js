@@ -66,7 +66,7 @@ export const portfolioData = [
             defis: "Concevoir une interface accessible à tous les publics (jeunes, personnes âgées, personnes en situation de handicap) tout en respectant une contrainte mobile first, et sécuriser l'accès à l'API afin qu'elle ne soit interrogeable que par le frontend de l'application.",
             solutions: "Mise en place d'une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration de requêtes API sécurisées via Axios, tests de conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
             resultats: "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé.",
-            metrics: [                     // Données utilisation réels du projet
+            metrics: [  // Données utilisation réels du projet
                 { 
                     label: "Estimations réalisées", 
                     value: 240,
