@@ -111,7 +111,7 @@ const ProjetStar = ({ project, expansionProjetId, setExpansionProjetId }) => {
               src={project.coverImage} 
               alt={`Aperçu de l'interface de ${project.titre}`} 
               loading="lazy"
-              className="w-full h-full object-cover object-center p-4"
+              className="w-full h-full object-contain object-center p-4"
             />
           </div>
         </div>
