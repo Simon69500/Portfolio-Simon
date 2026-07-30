@@ -30,7 +30,24 @@ export const portfolioData = [
           aspectsTechniques: "Frontend en React 19 (Vite) avec React Hook Form et Yup pour la validation des formulaires, Axios pour la communication API, Bootstrap et Sass pour l'intégration mobile-first. Backend en API REST Symfony 7.3 avec Doctrine ORM, base de données PostgreSQL couplée à l'extension spatiale PostGIS pour l'ingénierie géospatiale. Authentification JWT via cookies HttpOnly, déploiement conteneurisé (Docker) sur VPS OVH avec reverse proxy Nginx et certificat SSL/TLS.",
           defis: "Piloter le projet sur l'ensemble de son cycle de vie : cadrage du besoin et rédaction du cahier des charges avec le client, conception de la charte graphique et maquettage Figma mobile-first, pilotage en méthodologie Agile (sprints, démonstrations régulières), développement technique, puis mise en production et maintenance continue. Un défi technique majeur consistait à croiser en temps réel des données géospatiales complexes (transactions DVF et découpages IRIS de l'INSEE) sans latence perceptible, tout en respectant des contraintes fortes de RGPD, d'accessibilité (WCAG 2.1 AA) et de sécurité (prévention des failles IDOR).",
           solutions: "Mise en place d'un index spatial GIST sur PostgreSQL et de requêtes natives PostGIS (ST_Intersects) via Doctrine DBAL pour la détection des quartiers, associées à des tables analytiques pré-calculées garantissant des temps de réponse instantanés. Sécurisation de l'API via le pattern DTO/Mapper, contrôle systématique de propriété des ressources, et couverture par tests unitaires (PHPUnit) du moteur de calcul métier. Le projet a été mené en autonomie complète, du premier échange client à la mise en production, avec un pilotage Agile assurant des livraisons itératives et une adaptation continue aux retours terrain.",
-          resultats: "Application déployée en production sur un nom de domaine dédié (estimmo-savoies.fr), validée par une phase de tests utilisateurs (UAT) auprès d'agents immobiliers et d'utilisateurs finaux. Sécurisation continue via audits de dépendances (composer audit, npm audit) ayant permis d'identifier et corriger plusieurs vulnérabilités. Le site est aujourd'hui maintenu activement, avec une feuille de route V2 déjà définie, notamment pour étendre l'algorithme au marché de la Haute-Savoie."
+          resultats: "Application déployée en production sur un nom de domaine dédié (estimmo-savoies.fr), validée par une phase de tests utilisateurs (UAT) auprès d'agents immobiliers et d'utilisateurs finaux. Sécurisation continue via audits de dépendances (composer audit, npm audit) ayant permis d'identifier et corriger plusieurs vulnérabilités. Le site est aujourd'hui maintenu activement, avec une feuille de route V2 déjà définie, notamment pour étendre l'algorithme au marché de la Haute-Savoie.",
+          metrics: [  // Données utilisation réels du projet (28/07/2026)
+                { 
+                    label: "Estimations réalisées", 
+                    value: 240,
+                    sublabel: "depuis la mise en production"
+                },
+                { 
+                    label: "Prospects externes uniques", 
+                    value: 96,
+                    sublabel: "particuliers ayant généré un lead qualifié pour mon client"
+                },
+                { 
+                    label: "Professionnels utilisateurs réguliers", 
+                    value: 105,
+                    sublabel: "adopté au quotidien par mon client et son réseau professionnel"
+                }
+          ],          
         },
 
         githubUrl: "",
@@ -65,24 +82,7 @@ export const portfolioData = [
             aspectsTechniques: "Développement du frontend avec ReactJS, Bootstrap et Sass, associé à une API REST sécurisée construite avec Express et Sequelize pour l'accès à la base de données MySQL.",
             defis: "Concevoir une interface accessible à tous les publics (jeunes, personnes âgées, personnes en situation de handicap) tout en respectant une contrainte mobile first, et sécuriser l'accès à l'API afin qu'elle ne soit interrogeable que par le frontend de l'application.",
             solutions: "Mise en place d'une architecture REST sécurisée avec Express et Sequelize, développement du frontend avec ReactJS et Bootstrap/Sass, intégration de requêtes API sécurisées via Axios, tests de conformité W3C et accessibilité, versionnage sur GitHub et déploiement en ligne du front et du back.",
-            resultats: "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé.",
-            metrics: [  // Données utilisation réels du projet (28/07/2026)
-                { 
-                    label: "Estimations réalisées", 
-                    value: 240,
-                    sublabel: "depuis la mise en production"
-                },
-                { 
-                    label: "Prospects externes uniques", 
-                    value: 96,
-                    sublabel: "particuliers ayant généré un lead qualifié pour mon client"
-                },
-                { 
-                    label: "Professionnels utilisateurs réguliers", 
-                    value: 105,
-                    sublabel: "adopté au quotidien par mon client et son réseau professionnel"
-                }
-            ],
+            resultats: "Application fonctionnelle et accessible, avec recherche dynamique, fiches détaillées des artisans, formulaire de contact opérationnel, page 404 personnalisée et design validé. Le site est responsive, conforme aux standards WCAG 2.1, et entièrement hébergé."
           },
 
         githubUrl: "https://github.com/Simon69500/Trouve_ton_artisan_React.JS",
