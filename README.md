@@ -64,7 +64,6 @@ La V2 était une application multi-pages en SCSS/Bootstrap (Create React App). L
 - **Formulaire de contact fonctionnel**, avec validation en temps réel (prénom/nom ≥ 2 caractères, email au bon format, message ≥ 15 caractères), gestion des états `idle` / `loading` / `success` / `error`, envoi via Formspree
 - **Téléchargement direct du CV** au format PDF
 - **Responsive design**, du mobile au grand écran
-- **Page Mentions légales** dédiée, accessible depuis le footer
 
 ## 🛠️ Stack technique
 
