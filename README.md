@@ -50,7 +50,7 @@ La V2 était une application multi-pages en SCSS/Bootstrap (Create React App). L
 | Thème | Non disponible | **Mode clair/sombre**, détection système + préférence mémorisée |
 | Fiches projets | Page dédiée par projet | **Cartes extensibles** in-page, avec vue enrichie pour le projet phare |
 | Compétences | Liste statique | **Radar chart interactif** (soft skills) + badges technologiques catégorisés |
-| Contact | Formulaire (implémentation non précisée) | Formulaire avec **validation temps réel** + envoi via **Formspree** |
+| Contact | Formulaire | Formulaire avec **validation temps réel** + envoi via **Formspree** |
 | Animations | — | **Motion** (Framer Motion) |
 
 ## ⚙️ Fonctionnalités
@@ -75,7 +75,6 @@ La V2 était une application multi-pages en SCSS/Bootstrap (Create React App). L
 | Styles | Tailwind CSS |
 | Animations | Motion (Framer Motion) |
 | Graphiques | Recharts (radar chart des soft skills) |
-| Routing | React Router DOM (installé, navigation actuelle par ancres) |
 | Formulaire de contact | Formspree |
 | Hébergement | GitHub Pages (via `gh-pages`) |
 
