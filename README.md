@@ -34,7 +34,7 @@ Portfolio personnel présentant mon parcours, mes compétences techniques et mes
 
 ### Mobile — clair / sombre
 
-<img width="440" height="1500" alt="Aperçu mobile clair" src="./screenshots/mobile-light.png" /> <img width="200" height="600" alt="Aperçu mobile sombre" src="./screenshots/mobile-dark.png" />
+<img width="330" height="1400" alt="Aperçu mobile clair" src="./screenshots/mobile-light.png" /> <img width="330" height="1400" alt="Aperçu mobile sombre" src="./screenshots/mobile-dark.png" />
 
 ---
 
