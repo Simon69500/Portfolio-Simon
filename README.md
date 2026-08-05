@@ -162,13 +162,6 @@ Le site est hébergé sur GitHub Pages. Pour publier une nouvelle version :
 npm run deploy
 ```
 
-## ⚠️ Points d'attention
-
-Repérés en lisant le code, à corriger dans une prochaine itération :
-
-- **Lien du CV probablement cassé** : le bouton "Télécharger mon CV" (`Presentation.jsx`) pointe vers `/CV_Badin_Simon_2026.pdf`, mais le fichier réel dans `public/` s'appelle `CV_BADIN_Simon_2026.pdf` (casse différente). GitHub Pages étant sensible à la casse, ce lien renvoie probablement une 404 sur le site en ligne.
-- **`react-router-dom` installé mais non utilisé pour le routing** : `App.jsx` affiche directement `Home` sans route définie ; la page `Mentions.jsx` n'est donc, en l'état, pas accessible via une URL dédiée.
-
 ## 📞 Me contacter
 
 📧 [simonsola67@gmail.com](mailto:simonsola67@gmail.com)
