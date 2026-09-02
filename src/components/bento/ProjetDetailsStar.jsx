@@ -16,7 +16,7 @@ import StarNarrative from './star/StarNarrative';
  *
  * @param {Object} props
  * @param {import('../../data/projects/portfolioData').Project} props.project
- * @param {() => void} props.onClose
+ * @param {Function} props.onClose
  */
 const ProjetDetailsStar = ({ project, onClose}) => {
 

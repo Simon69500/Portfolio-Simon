@@ -23,8 +23,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-#Vite 
+#Vite
 dist/
+
+# Site HTML généré par `npm run docs` (jsdoc) - régénérable, pas du code source
+docs/api/
 
 # Obsolète - ancien fichier de données, conservé en local pour référence
 /src/data/projects/projects.json

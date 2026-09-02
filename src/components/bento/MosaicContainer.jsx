@@ -9,7 +9,7 @@ import ProjetCard from "../ui/ProjetCard";
  * @param {Object} props
  * @param {import('../../data/projects/portfolioData').Project[]} props.projects
  * @param {number|string|null} props.expansionProjetId
- * @param {(id: number|string|null) => void} props.setExpansionProjetId
+ * @param {Function} props.setExpansionProjetId
  */
 const MosaicContainer = ({ projects, expansionProjetId, setExpansionProjetId }) => {
     return (

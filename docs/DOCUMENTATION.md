@@ -17,7 +17,8 @@
 6. [Formulaire de contact](#6-formulaire-de-contact)
 7. [Build, environnement et déploiement](#7-build-environnement-et-déploiement)
 8. [Conventions du projet](#8-conventions-du-projet)
-9. [Points d'attention connus](#9-points-dattention-connus)
+9. [Documentation du code (JSDoc)](#9-documentation-du-code-jsdoc)
+10. [Points d'attention connus](#10-points-dattention-connus)
 
 ---
 
@@ -109,7 +110,7 @@ Le projet phare et les projets secondaires ont chacun leur **couple carte + dét
 Les deux couples partagent la même mécanique (`useCardExpansion`, `motion.article` avec
 `layoutId={`project-${project.id}`}` pour l'animation de transition partagée via Motion/Framer
 Motion), mais le code n'est **pas factorisé** entre les deux — c'est un doublon assumé plutôt
-qu'une abstraction commune. Voir [section 9](#9-points-dattention-connus) pour la nuance.
+qu'une abstraction commune. Voir [section 10](#10-points-dattention-connus) pour la nuance.
 
 ## 3. Modèle de données
 
@@ -168,7 +169,7 @@ Ancienne version des données projets (avant la migration vers `portfolioData.js
 **importé nulle part dans le code** (vérifié par recherche globale) et il est explicitement
 exclu du dépôt Git via `.gitignore` (`# Obsolète - ancien fichier de données, conservé en local
 pour référence`). Il existe uniquement en local sur cette machine, pas sur GitHub. Voir
-[section 9](#9-points-dattention-connus).
+[section 10](#10-points-dattention-connus).
 
 ## 4. Guides pratiques
 
@@ -186,7 +187,7 @@ pour référence`). Il existe uniquement en local sur cette machine, pas sur Git
    ⚠️ Le filtre exclut en dur `project.id !== 6` — c'est un résidu lié à l'ancien template vide de
    `projects.json` qui portait cet id. Si un jour un projet légitime prend l'`id: 6` dans
    `portfolioData.js`, il sera silencieusement exclu de l'affichage. Voir
-   [section 9](#9-points-dattention-connus).
+   [section 10](#10-points-dattention-connus).
 4. `Home.jsx` répartit ensuite les projets secondaires entre les tuiles F et G par simple
    découpage de tableau : `secondaryProjects.slice(0, 2)` pour F, `.slice(2, 4)` pour G. Au-delà
    de 4 projets secondaires, les suivants ne s'afficheront **nulle part** tant que le découpage
@@ -282,7 +283,48 @@ branche `gh-pages`, jamais sur `main`.
   (Tuile A, B, C… jusqu'à I) qui ne correspond à aucune variable dans le code — c'est une
   convention purement documentaire pour se répérer dans `Home.jsx`.
 
-## 9. Points d'attention connus
+## 9. Documentation du code (JSDoc)
+
+Les hooks, les fichiers `data/` et les composants sont commentés en JSDoc (`@param`, `@returns`,
+`@typedef`) avec des explications pédagogiques sur la syntaxe/les concepts non triviaux (voir la
+convention de commentaires en [section 8](#8-conventions-du-projet)). Deux façons de la consulter :
+
+### Dans l'éditeur (VS Code), sans rien installer
+
+VS Code lit le JSDoc directement grâce à son service de langage JS intégré (celui de
+TypeScript, actif aussi sur du `.jsx` sans configuration particulière) : survoler un nom de
+fonction, de hook ou de prop affiche sa description et son type dans une infobulle, et
+l'autocomplétion (`Ctrl+Espace`) montre les `@param` documentés.
+
+### Site HTML navigable, via `npm run docs`
+
+```bash
+npm run docs
+```
+
+Génère un site de documentation statique dans `docs/api/` (ouvrir `docs/api/index.html` dans un
+navigateur) à partir de [jsdoc](https://github.com/jsdoc/jsdoc) + du template
+[better-docs](https://github.com/SoftwareBrothers/better-docs) (`jsdoc.config.json` à la racine).
+`docs/api/` est un dossier **généré**, exclu de Git (`.gitignore`) comme `dist/` — à régénérer
+après chaque changement de commentaires, jamais à éditer à la main.
+
+Deux points techniques rencontrés en mettant ça en place, utiles à savoir si `npm run docs`
+se remet à échouer un jour :
+
+- **`better-docs` déclare une dépendance sur React 17**, alors que le projet est en React 18 —
+  d'où l'installation avec `--legacy-peer-deps`. Sans conséquence : better-docs ne fait
+  qu'analyser le code source en texte/AST, il n'exécute jamais réellement nos composants React.
+- **Le parseur de types de jsdoc (Catharsis) ne comprend pas la syntaxe `import('chemin').Type`**
+  (une convention TypeScript, pourtant celle que VS Code sait résoudre pour ses infobulles — voir
+  ci-dessus). Le code source la conserve donc volontairement dans les `@param`/`@typedef`, mais un
+  plugin jsdoc local (`jsdoc-plugins/strip-import-types.cjs`, déclaré dans `jsdoc.config.json`) la
+  retire automatiquement avant que jsdoc n'analyse les commentaires, en ne gardant que le nom du
+  type (ex: `import('../../data/projects/portfolioData').Project` devient `Project`, que jsdoc
+  résout ensuite lui-même en lien cliquable vers le `@typedef` correspondant). Ce plugin doit
+  rester en `.cjs` (pas `.js`) car `package.json` déclare `"type": "module"` — jsdoc charge ses
+  plugins avec `require()`, incompatible avec un `.js` traité comme module ES.
+
+## 10. Points d'attention connus
 
 Cette section liste des éléments réels du code actuel qui méritent une vigilance ou un nettoyage
 futur — pas des bugs bloquants, mais des points qu'il vaut mieux connaître avant d'y toucher à
