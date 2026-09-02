@@ -1,0 +1,24 @@
+{
+    "tags": {
+        "allowUnknownTags": ["component", "category"]
+    },
+    "source": {
+        "include": ["src/hook", "src/data", "src/components"],
+        "includePattern": ".+\\.(js|jsx)$",
+        "excludePattern": "(node_modules/|\\.test\\.js$)"
+    },
+    "plugins": [
+        "./jsdoc-plugins/strip-import-types.cjs"
+    ],
+    "opts": {
+        "destination": "docs/api/",
+        "recurse": true,
+        "template": "node_modules/better-docs"
+    },
+    "templates": {
+        "search": true,
+        "better-docs": {
+            "name": "Portfolio Simon Badin — Doc technique"
+        }
+    }
+}

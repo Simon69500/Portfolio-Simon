@@ -12,7 +12,7 @@ import ProjectTypeBadge from '../ui/ProjectTypeBadge';
  *
  * @param {Object} props
  * @param {import('../../data/projects/portfolioData').Project} props.project
- * @param {() => void} props.onClose
+ * @param {Function} props.onClose
  */
 const ProjetDetails = ({ project, onClose }) => {
 

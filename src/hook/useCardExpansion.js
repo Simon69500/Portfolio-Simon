@@ -12,13 +12,13 @@ import { useState, useEffect, useCallback } from "react";
  * @param {number|string} projetId - identifiant de la carte qui utilise ce hook.
  * @param {number|string|null} expansionProjetId - id de la carte actuellement ouverte
  *   sur toute la page (ou null si aucune carte n'est ouverte). Vient de Home.jsx.
- * @param {(id: number|string|null) => void} setExpansionProjetId - setter du state global,
+ * @param {Function} setExpansionProjetId - setter du state global (id: number|string|null) => void,
  *   également fourni par Home.jsx.
  * @returns {{
  *   status: 'EXPANDED' | 'COLLAPSED',
  *   isActive: boolean,
- *   expand: () => void,
- *   collapse: () => void
+ *   expand: Function,
+ *   collapse: Function
  * }}
  */
 export const useCardExpansion = (projetId, expansionProjetId, setExpansionProjetId) => {

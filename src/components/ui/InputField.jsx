@@ -17,7 +17,7 @@ import React from "react";
  * @param {string} props.name
  * @param {string} [props.type]
  * @param {string} props.value
- * @param {(e: Event) => void} props.onChange
+ * @param {Function} props.onChange
  * @param {string} [props.error]
  * @param {boolean} [props.disabled]
  * @param {string} [props.placeholder]

@@ -12,8 +12,8 @@ import { useState } from "react"
  *   formData: { firstName: string, lastName: string, email: string, message: string },
  *   status: 'idle' | 'loading' | 'success' | 'error',
  *   errors: Object<string, string>,
- *   handleChange: (e: Event) => void,
- *   handleSubmit: (e: Event) => Promise<void>
+ *   handleChange: Function,
+ *   handleSubmit: Function
  * }}
  */
 export const useContactForm = () => {

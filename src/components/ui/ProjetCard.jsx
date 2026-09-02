@@ -21,7 +21,7 @@ import ProjectTypeBadge from '../ui/ProjectTypeBadge';
  * @param {import('../../data/projects/portfolioData').Project} props.project
  * @param {number|string|null} props.expansionProjetId - id de la carte actuellement
  *   ouverte sur toute la page (state possédé par Home.jsx).
- * @param {(id: number|string|null) => void} props.setExpansionProjetId
+ * @param {Function} props.setExpansionProjetId
  */
 const ProjetCard = ({ project, expansionProjetId, setExpansionProjetId }) => {
   const cardRef = useRef(null);

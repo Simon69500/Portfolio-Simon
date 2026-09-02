@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
  * Gère le thème clair/sombre du site : détection de la préférence initiale,
  * synchronisation avec le DOM et persistance du choix de l'utilisateur.
  *
- * @returns {{ theme: 'light' | 'dark', toggleTheme: () => void }}
+ * @returns {{ theme: 'light' | 'dark', toggleTheme: Function }}
  *   `theme` est la valeur actuellement active, `toggleTheme` bascule entre les deux.
  */
 export const useTheme = () => {
