@@ -20,7 +20,7 @@ Portfolio personnel présentant mon parcours, mes compétences techniques et mes
 - [Variables d'environnement](#-variables-denvironnement)
 - [Scripts disponibles](#-scripts-disponibles)
 - [Déploiement](#-déploiement)
-- [Points d'attention](#️-points-dattention)
+- [Documentation technique](#-documentation-technique)
 - [Me contacter](#-me-contacter)
 
 ---
@@ -95,6 +95,10 @@ Cette séparation données/logique/affichage permet de mettre à jour le contenu
 
 ```
 Portfolio-Simon/
+├── docs/
+│   ├── DOCUMENTATION.md           # Doc technique de maintenance (architecture, data, guides)
+│   └── api/                        # Site JSDoc généré par `npm run docs` (non versionné)
+├── jsdoc-plugins/                  # Plugin jsdoc local requis par jsdoc.config.json
 ├── public/
 │   ├── CV_BADIN_Simon_2026.pdf   # CV téléchargeable depuis le site
 │   └── images/, videos/           # Assets des projets
@@ -151,6 +155,7 @@ Sans cette variable, le site fonctionne normalement mais l'envoi du formulaire d
 | `npm run preview` | Prévisualise le build de production en local |
 | `npm run lint` | Vérifie le code avec ESLint |
 | `npm run deploy` | Build puis publie `dist/` sur la branche `gh-pages` |
+| `npm run docs` | Génère un site de documentation technique (JSDoc) dans `docs/api/` |
 
 ## 🌍 Déploiement
 
@@ -159,6 +164,16 @@ Le site est hébergé sur GitHub Pages. Pour publier une nouvelle version :
 ```bash
 npm run deploy
 ```
+
+## 📚 Documentation technique
+
+Ce README est pensé comme une vitrine. Pour comprendre le projet en profondeur (architecture,
+modèle de données, guides pratiques pour l'étendre, points d'attention connus), voir
+[docs/DOCUMENTATION.md](./docs/DOCUMENTATION.md).
+
+Le code est aussi commenté en JSDoc (hooks, composants, données) : lisible directement dans
+l'éditeur (VS Code affiche les infobulles automatiquement), ou sous forme de site HTML navigable
+via `npm run docs` (généré dans `docs/api/`, non versionné).
 
 ## 📞 Me contacter
 
