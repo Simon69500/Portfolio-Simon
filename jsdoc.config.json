@@ -8,11 +8,13 @@
         "excludePattern": "(node_modules/|\\.test\\.js$)"
     },
     "plugins": [
+        "plugins/markdown",
         "./jsdoc-plugins/strip-import-types.cjs"
     ],
     "opts": {
         "destination": "docs/api/",
         "recurse": true,
+        "readme": "docs/jsdoc-home.md",
         "template": "node_modules/better-docs"
     },
     "templates": {
