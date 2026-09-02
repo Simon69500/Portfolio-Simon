@@ -1,4 +1,8 @@
-# 🎨 Portfolio de Simon Badin — V3 (React / Vite)
+<div align="center">
+
+# 🎨 Portfolio de Simon Badin — V3
+
+### Développeur Web & Mobile Full-Stack
 
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat&logo=vite&logoColor=white)
@@ -6,7 +10,11 @@
 
 Portfolio personnel présentant mon parcours, mes compétences techniques et mes projets, avec formulaire de contact fonctionnel et téléchargement direct du CV.
 
-🔗 **Lien du site en ligne :** [simon69500.github.io/Portfolio-Simon](https://simon69500.github.io/Portfolio-Simon/)
+**[🔗 Voir le site en ligne](https://simon69500.github.io/Portfolio-Simon/)**
+
+</div>
+
+<br>
 
 ## Sommaire
 
@@ -20,29 +28,34 @@ Portfolio personnel présentant mon parcours, mes compétences techniques et mes
 - [Variables d'environnement](#-variables-denvironnement)
 - [Scripts disponibles](#-scripts-disponibles)
 - [Déploiement](#-déploiement)
-- [Points d'attention](#️-points-dattention)
+- [Documentation technique](#-documentation-technique)
 - [Me contacter](#-me-contacter)
 
----
+<br>
 
 ## 🌟 Aperçu
 
-### Desktop — clair / sombre
+<div align="center">
 
-<img width="1666" height="1084" alt="Aperçu desktop clair" src="./screenshots/desktop-light.png" />
-<img width="1666" height="1084" alt="Aperçu desktop sombre" src="./screenshots/desktop-dark.png" />
+**Desktop — clair / sombre**
 
-### Mobile — clair / sombre
+<img width="1666" height="1084" alt="Aperçu desktop clair" src="./screenshots/desktop-light.png" width="49%" />
+<img width="1666" height="1084" alt="Aperçu desktop sombre" src="./screenshots/desktop-dark.png" width="49%" />
 
-<img width="330" height="1400" alt="Aperçu mobile clair" src="./screenshots/mobile-light.png" /> <img width="330" height="1400" alt="Aperçu mobile sombre" src="./screenshots/mobile-dark.png" />
+**Mobile — clair / sombre**
 
----
+<img width="330" height="1400" alt="Aperçu mobile clair" src="./screenshots/mobile-light.png" width="24%" />
+<img width="330" height="1400" alt="Aperçu mobile sombre" src="./screenshots/mobile-dark.png" width="24%" />
+
+</div>
+
+<br>
 
 ## 🆕 Nouveautés de la V3 (vs V2)
 
 La V2 était une application multi-pages en SCSS/Bootstrap (Create React App). La V3 est une **refonte complète** :
 
-| | V2 | V3 |
+| Aspect | V2 | V3 |
 |---|---|---|
 | Build tool | Create React App | **Vite** |
 | Styles | SCSS + Bootstrap | **Tailwind CSS** |
@@ -52,6 +65,8 @@ La V2 était une application multi-pages en SCSS/Bootstrap (Create React App). L
 | Compétences | Liste statique | **Radar chart interactif** (soft skills) + badges technologiques catégorisés |
 | Contact | Formulaire | Formulaire avec **validation temps réel** + envoi via **Formspree** |
 | Animations | — | **Motion** (Framer Motion) |
+
+<br>
 
 ## ⚙️ Fonctionnalités
 
@@ -65,6 +80,8 @@ La V2 était une application multi-pages en SCSS/Bootstrap (Create React App). L
 - **Téléchargement direct du CV** au format PDF
 - **Responsive design**, du mobile au grand écran
 
+<br>
+
 ## 🛠️ Stack technique
 
 | Domaine | Choix technique |
@@ -76,6 +93,8 @@ La V2 était une application multi-pages en SCSS/Bootstrap (Create React App). L
 | Graphiques | Recharts (radar chart des soft skills) |
 | Formulaire de contact | Formspree |
 | Hébergement | GitHub Pages (via `gh-pages`) |
+
+<br>
 
 ## 🧩 Architecture des composants
 
@@ -91,10 +110,16 @@ Le projet suit une organisation par rôle plutôt que par page, cohérente avec 
 
 Cette séparation données/logique/affichage permet de mettre à jour le contenu (un nouveau projet, une compétence) sans toucher aux composants.
 
+<br>
+
 ## 📁 Structure du projet
 
 ```
 Portfolio-Simon/
+├── docs/
+│   ├── DOCUMENTATION.md           # Doc technique de maintenance (architecture, data, guides)
+│   └── api/                        # Site JSDoc généré par `npm run docs` (non versionné)
+├── jsdoc-plugins/                  # Plugin jsdoc local requis par jsdoc.config.json
 ├── public/
 │   ├── CV_BADIN_Simon_2026.pdf   # CV téléchargeable depuis le site
 │   └── images/, videos/           # Assets des projets
@@ -116,6 +141,8 @@ Portfolio-Simon/
 │   └── App.jsx
 ```
 
+<br>
+
 ## 🚀 Installation et exécution
 
 ```bash
@@ -132,6 +159,8 @@ npm install
 npm run dev
 ```
 
+<br>
+
 ## 🔧 Variables d'environnement
 
 Le formulaire de contact envoie les messages via Formspree. Créer un fichier `.env.local` à la racine :
@@ -142,6 +171,8 @@ VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/ton_id_formspree
 
 Sans cette variable, le site fonctionne normalement mais l'envoi du formulaire de contact échouera.
 
+<br>
+
 ## 📜 Scripts disponibles
 
 | Commande | Description |
@@ -151,6 +182,9 @@ Sans cette variable, le site fonctionne normalement mais l'envoi du formulaire d
 | `npm run preview` | Prévisualise le build de production en local |
 | `npm run lint` | Vérifie le code avec ESLint |
 | `npm run deploy` | Build puis publie `dist/` sur la branche `gh-pages` |
+| `npm run docs` | Génère un site de documentation technique (JSDoc) dans `docs/api/` |
+
+<br>
 
 ## 🌍 Déploiement
 
@@ -160,7 +194,21 @@ Le site est hébergé sur GitHub Pages. Pour publier une nouvelle version :
 npm run deploy
 ```
 
+<br>
+
+## 📚 Documentation technique
+
+Ce README est pensé comme une vitrine. Pour comprendre le projet en profondeur (architecture, modèle de données, guides pratiques pour l'étendre, points d'attention connus), voir **[docs/DOCUMENTATION.md](./docs/DOCUMENTATION.md)**.
+
+Le code est aussi commenté en JSDoc (hooks, composants, données) : lisible directement dans l'éditeur (VS Code affiche les infobulles automatiquement), ou sous forme de site HTML navigable via `npm run docs` (généré dans `docs/api/`, non versionné).
+
+<br>
+
 ## 📞 Me contacter
 
-📧 [simonsola67@gmail.com](mailto:simonsola67@gmail.com)
-🔗 [LinkedIn](https://www.linkedin.com/in/simon-badin-939594279/)
+<div align="center">
+
+[![Gmail](https://img.shields.io/badge/simonsola67%40gmail.com-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:simonsola67@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/Simon_Badin-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/simon-badin-939594279/)
+
+</div>
