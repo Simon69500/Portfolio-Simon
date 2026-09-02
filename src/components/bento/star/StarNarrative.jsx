@@ -4,6 +4,9 @@ import React from "react";
  * Affiche le déroulé technique du projet (aspects techniques, défis, solutions, résultats)
  * en sections pleine largeur (intro + liste à puces), plutôt qu'en grille de cards fermées,
  * pour rester cohérent avec la lecture de StarRole et éviter l'effet "pavé compressé".
+ *
+ * @param {Object} props
+ * @param {import('../../../data/projects/portfolioData').FeaturedProjectDetails} props.details
  */
 
 const StarNarrative = ({ details}) => {

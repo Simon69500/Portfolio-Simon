@@ -13,11 +13,16 @@ import StarNarrative from './star/StarNarrative';
  * hiérarchisée en "étude de cas" : démo -> métriques -> rôle -> narratif -> galerie.
  * Il ne contient aucune logique d'affichage détaillée : chaque section vit dans son
  * propre sous-composant sous ./star/, et ne reçoit que la donnée dont elle a besoin.
+ *
+ * @param {Object} props
+ * @param {import('../../data/projects/portfolioData').Project} props.project
+ * @param {() => void} props.onClose
  */
-
 const ProjetDetailsStar = ({ project, onClose}) => {
 
-    // Etat local pour piloter l'animation d'entrée (identique à ProjetDetails, on ne change pas ce qui marche)
+    // Etat local pour piloter l'animation d'entrée (identique à ProjetDetails.jsx, qui
+    // documente en détail la raison du double requestAnimationFrame ci-dessous — on ne
+    // change pas ce qui marche)
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {

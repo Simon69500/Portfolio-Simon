@@ -2,31 +2,33 @@ import React from 'react';
 import Button from '../ui/Button';
 
 /**
- * 
  * Carte Bento Grid A : Présentation de Simon BADIN
  */
 
 const Presentation = () => {
 
+  // Helper redéfini localement ici (identique à celui de techData.js/portfolioData.js,
+  // voir techData.js pour l'explication complète de BASE_URL) plutôt qu'importé d'un
+  // module partagé — un doublon mineur, sans risque tant que la logique ne change pas.
   const img = (chemin) => `${import.meta.env.BASE_URL}${chemin}`;
 
   return (
 
     <article
-      className=" h-full bg-bento-light 
-      dark:bg-bento-dark rounded-2xl p-6 shadow-sm flex flex-col justify-center 
+      className=" h-full bg-bento-light
+      dark:bg-bento-dark rounded-2xl p-6 shadow-sm flex flex-col justify-center
       transition-transform duration-300 hover:scale-[1.02] hover:border hover:border-accent-primary "
       aria-labelledby="presentation-title"
     >
 
       {/* Zone En-Tête : Titre et Bio */}
       <div className="flex flex-col md:flex-row gap-6 items-start">
-        
+
         {/*Emplacement Photo de Profil */}
         <div className="w-24 h-24 rounded-full shrink-0 overflow-hidden">
           <img
           src={img("images/Profil2.png")}
-          alt="Portrait de Simon"  
+          alt="Portrait de Simon"
           className="w-full h-full object-cover"
           loading="lazy"
           />
@@ -39,7 +41,7 @@ const Presentation = () => {
             Ancien Chasseur Alpin et chef d'équipe BTP reconverti Développeur Web & Mobile Full-Stack (RNCP 5). Je combine résilience, rigueur et leadership pour concevoir des applications robustes de A à Z (comme Estimmo-Savoies.fr). Actuellement en recherche d'un poste en CDI (région lyonnaise ou full télétravail/mobilité), prêt à m'investir dans une équipe technique exigeante.
           </p>
         </div>
-      </div>       
+      </div>
 
       {/* Zone d'Actions : Les Boutons */}
       <div className="mt-8 pt-8 flex flex-col justify-center sm:flex-row gap-4">
@@ -48,6 +50,10 @@ const Presentation = () => {
           Me Contacter
         </Button>
 
+        {/* L'attribut `download` force le navigateur à télécharger le fichier ciblé par
+            `href` plutôt que de l'ouvrir/l'afficher (un PDF s'ouvrirait sinon dans un nouvel
+            onglet du navigateur). La valeur donnée ("CV_BADIN_Simon_2026.pdf") est le nom de
+            fichier proposé à l'utilisateur, indépendant du nom réel du fichier sur le serveur. */}
         <Button href="/CV_BADIN_Simon_2026.pdf" download="CV_BADIN_Simon_2026.pdf" variant="secondary" rel="noopener noreferrer" target="_blank">
           Télécharger mon CV
         </Button>

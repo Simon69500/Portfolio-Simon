@@ -1,9 +1,20 @@
-
+/**
+ * Pied de page : liens GitHub/LinkedIn, mention légale et coordonnées de contact.
+ *
+ * ATTENTION : plusieurs classes utilisées ci-dessous (`fs-6`, `fst-italic`,
+ * `text-decoration-none`, `text`) sont des classes BOOTSTRAP, pas Tailwind — un résidu de la
+ * V2 du portfolio (en Bootstrap/SCSS, voir le tableau comparatif du README). Bootstrap n'est
+ * pas installé dans ce projet (seul `tailwindcss` est en dépendance, voir package.json) :
+ * ces classes n'ont donc AUCUN EFFET, le texte concerné s'affiche avec les styles par défaut
+ * du navigateur plutôt que le rendu (italique, taille, sans soulignement) visiblement
+ * recherché ici. Le même problème existe dans Mentions.jsx. À corriger en équivalents
+ * Tailwind (`italic`, `text-sm`, `no-underline`) le jour où ce fichier est retouché.
+ */
 const Footer = () => {
 
     return (
         <div className='flex flex-col justify-center mt-4 bg-bento-light dark:bg-bento-dark text-typography-light dark:text-typography-dark '>
-        
+
         <div className='flex flex-row justify-center pb-2'>
             <a className='p-2 mt-1' href="https://github.com/Simon69500" target="_blank" rel="noopener noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
@@ -14,7 +25,7 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
                     <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
                 </svg>
-            </a>                            
+            </a>
         </div>
 
         <div >

@@ -6,6 +6,13 @@ import ProjectTypeBadge from '../ui/ProjectTypeBadge';
 /**
  * Composant de détail affiché lorsque la tuile projet est en état EXPANDED.
  * [CaC Section 2.4 - Démontage du résumé pour monter la structure complète]
+ *
+ * Patron générique repris à l'identique (structure, animation de montage) par
+ * ProjetDetailsStar.jsx pour le projet phare — voir ce fichier pour ce qui diffère.
+ *
+ * @param {Object} props
+ * @param {import('../../data/projects/portfolioData').Project} props.project
+ * @param {() => void} props.onClose
  */
 const ProjetDetails = ({ project, onClose }) => {
 
@@ -13,6 +20,18 @@ const ProjetDetails = ({ project, onClose }) => {
     const [isMounted, setIsMounted] = useState(false);
 
     // 2. Déclenchement de l'animation au montage du composant
+    //
+    // Pourquoi DEUX requestAnimationFrame imbriqués et pas un simple setIsMounted(true) ?
+    // Le contenu est rendu une première fois avec isMounted=false, donc avec les classes
+    // "opacity-0 translate-y-12" (voir plus bas). Si on passait isMounted à true tout de
+    // suite après le montage, React risquerait de fusionner les deux rendus (l'état initial
+    // caché et l'état final visible) en une seule mise à jour du DOM — le navigateur ne
+    // verrait alors jamais l'état de départ, et la transition CSS n'aurait rien à animer
+    // (elle "saute" directement à l'arrivée). requestAnimationFrame(callback) exécute
+    // `callback` juste avant le prochain rafraîchissement d'écran : en attendre DEUX
+    // d'affilée garantit que le navigateur a bien peint l'état initial (opacité 0) au moins
+    // une fois avant qu'on ne bascule vers l'état final — la transition a alors un vrai
+    // point de départ à animer.
     useEffect(() => {
         const frame1 = requestAnimationFrame(() => {
             const frame2 = requestAnimationFrame(() => {
@@ -25,18 +44,18 @@ const ProjetDetails = ({ project, onClose }) => {
 
     return (
         <div className="w-full h-full bg-bento-light dark:bg-bento-dark overflow-y-auto relative flex flex-col cursor-auto">
-            
-            {/* 
-                [CaC Section 2.4] Contrôle de Navigation : Bouton de fermeture persistant 
+
+            {/*
+                [CaC Section 2.4] Contrôle de Navigation : Bouton de fermeture persistant
                 Utilisation de sticky pour qu'il reste visible lors du scroll
             */}
             <div className="sticky top-0 z-50 flex justify-end p-4 bg-gradient-to-b from-white/90 to-white/0 dark:from-gray-900/90 dark:to-gray-900/0 backdrop-blur-sm pointer-events-none">
-                <Button 
-                    variant="secondary" 
-                    onClick={(e) => { 
-                        e.stopPropagation(); 
-                        onClose(); 
-                    }} 
+                <Button
+                    variant="secondary"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        onClose();
+                    }}
                     className="pointer-events-auto"
                     aria-label={`Fermer les détails du projet ${project.titre}`}
                 >
@@ -48,13 +67,13 @@ const ProjetDetails = ({ project, onClose }) => {
             <div className={`p-6 md:p-12 max-w-5xl mx-auto w-full flex-1 flex flex-col gap-12 transition-all duration-700 ease-out transform ${
                     isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}>
-                
+
                 {/* En-tête du projet */}
                 <header>
                     {/* Badge complet (icône + libellé) affiché uniquement en vue détail */}
                     <div className="mb-4">
                         <ProjectTypeBadge type={project.type} variant="full" />
-                    </div>                    
+                    </div>
                     <h2 className="text-3xl md:text-5xl font-bold text-typography-light dark:text-typography-dark mb-4">
                         {project.titre}
                     </h2>
@@ -68,12 +87,15 @@ const ProjetDetails = ({ project, onClose }) => {
                     <ProjectCarousel gallery={project.gallery} projectTitle={project.titre} />
                 </section>
 
-                {/* [CaC Section 2.4] Zone Conceptuelle : Placeholder pour le texte */}
+                {/* Les 4 sections narratives sont ici en chaînes de texte simples (project.details.*
+                    est un StandardProjectDetails, voir portfolioData.js) — c'est ce qui distingue
+                    ce composant de StarNarrative.jsx, qui consomme la forme enrichie
+                    { intro, points } réservée au projet phare. */}
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="p-6 bg-white/50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
                         <h3 className="font-bold text-xl mb-2 text-typography-light dark:text-typography-dark">Aspects Techniques</h3>
                         <p className="text-typography-light dark:text-typography-dark-muted">{project.details. aspectsTechniques}</p>
-                    </div>                    
+                    </div>
                     <div className="p-6 bg-white/50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
                         <h3 className="font-bold text-xl mb-2 text-typography-light dark:text-typography-dark">Défis rencontrés</h3>
                         <p className="text-typography-light dark:text-typography-dark-muted">{project.details.defis}</p>
@@ -81,11 +103,11 @@ const ProjetDetails = ({ project, onClose }) => {
                     <div className="p-6 bg-white/50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
                         <h3 className="font-bold text-xl mb-2 text-typography-light dark:text-typography-dark">Solutions apportées</h3>
                         <p className="text-typography-light dark:text-typography-dark-muted">{project.details.solutions}</p>
-                    </div>                    
+                    </div>
                     <div className="p-6 bg-white/50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700">
                         <h3 className="font-bold text-xl mb-2 text-typography-light dark:text-typography-dark">Résultats</h3>
                         <p className="text-typography-light dark:text-typography-dark-muted">{project.details.resultats}</p>
-                    </div>                                        
+                    </div>
                 </section>
 
                 {/* [CaC Section 2.4] Zone Actions : Placeholder pour les liens */}
@@ -101,7 +123,7 @@ const ProjetDetails = ({ project, onClose }) => {
                         </Button>
                     )}
                 </section>
-                
+
             </div>
         </div>
     );

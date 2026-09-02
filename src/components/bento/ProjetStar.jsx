@@ -9,8 +9,14 @@ import ProjetDetailsStar from './ProjetDetailsStar';
 import ProjectTypeBadge from '../ui/ProjectTypeBadge';
 
 /**
- * Carte Bento Grid C : Présentation du projet phare Estimmo-savoies
+ * Carte Bento Grid D : Présentation du projet phare Estimmo-Savoies
  * Conforme Section 2.4 du Cahier des Charges (Card Expansion)[cite: 2]
+ *
+ * Équivalent de ProjetCard.jsx (voir ce fichier pour le détail commenté de la mécanique
+ * partagée : useCardExpansion, transition Motion via layoutId, distinction clic
+ * desktop/bouton mobile) mais dédié au seul projet phare, avec une mise en page plus
+ * large (padding, tailles de texte) et une vue détail enrichie (ProjetDetailsStar au lieu
+ * de ProjetDetails).
  */
 const ProjetStar = ({ project, expansionProjetId, setExpansionProjetId }) => {
 
@@ -25,10 +31,10 @@ const ProjetStar = ({ project, expansionProjetId, setExpansionProjetId }) => {
   const getTechDetails = (techName) => {
     // 1. On extrait les tableaux de chaque catégorie de techData et on les fusionne
     const allTechs = Object.values(techData).flat();
-    
+
     // 2. On cherche l'objet technique correspondant
     const found = allTechs.find(t => t.name.toLowerCase() === techName.toLowerCase());
-    
+
     // 3. On retourne l'objet complet (logoUrl et iconBehavior) si trouvé, sinon null
     return found ? { logoUrl: found.logoUrl, iconBehavior: found.iconBehavior } : null;
   };
@@ -49,7 +55,7 @@ const ProjetStar = ({ project, expansionProjetId, setExpansionProjetId }) => {
       }`}
       onClick={() => {
         // [CaC Section 2.4] : Déclenchement sur toute la carte uniquement sur Desktop au repos[cite: 2]
-        if (window.innerWidth >= 768 && !isExpanded) expand(); 
+        if (window.innerWidth >= 768 && !isExpanded) expand();
       }}
     >
       {!isExpanded ? (
@@ -74,11 +80,11 @@ const ProjetStar = ({ project, expansionProjetId, setExpansionProjetId }) => {
               {project.technologies.filter(tech => tech.trim() !== "").map((tech, index) => {
                 const details = getTechDetails(tech);
                 return details ? (
-                  <TechBadge 
-                    key={index} 
-                    name={tech} 
-                    logoUrl={details.logoUrl} 
-                    iconBehavior={details.iconBehavior} 
+                  <TechBadge
+                    key={index}
+                    name={tech}
+                    logoUrl={details.logoUrl}
+                    iconBehavior={details.iconBehavior}
                   />
                 ) : (
                   <span key={index} className='px-3 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-typography-light dark:text-typography-dark'>
@@ -107,9 +113,9 @@ const ProjetStar = ({ project, expansionProjetId, setExpansionProjetId }) => {
 
           {/* ZONE MÉDIA */}
           <div className="w-full h-48 md:h-64 relative flex justify-center items-center overflow-hidden shrink-0 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-            <img 
-              src={project.coverImage} 
-              alt={`Aperçu de l'interface de ${project.titre}`} 
+            <img
+              src={project.coverImage}
+              alt={`Aperçu de l'interface de ${project.titre}`}
               loading="lazy"
               className="w-full h-full object-contain object-center p-4"
             />

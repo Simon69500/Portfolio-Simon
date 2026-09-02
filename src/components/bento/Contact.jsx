@@ -4,6 +4,11 @@ import InputField from '../ui/InputField';
 import TextareaField from '../ui/TextareaField';
 import Button from '../ui/Button';
 
+/**
+ * Carte Bento Grid H : formulaire de contact.
+ * Ne contient aucune logique métier — voir useContactForm.js pour la validation, la FSM
+ * de statut et l'envoi. Ce composant se contente d'afficher l'état courant du hook.
+ */
 const Contact = () => {
     // Récupération de toute la logique métier depuis notre hook personnalisé
     const { formData, status, errors, handleChange, handleSubmit } = useContactForm();

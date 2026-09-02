@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import ThemeToggle from '../ui/ThemeToggle';
 
+/**
+ * Header sticky : nom, navigation par ancres (#projets, #parcours, #contact), bascule de
+ * thème et menu burger mobile. Purement présentationnel — aucune donnée externe, tout
+ * l'état (menu ouvert/fermé) est local à ce composant.
+ */
 const Header = () => {
   // État local pour gérer l'ouverture/fermeture du menu burger mobile (Respect des normes WCAG/RGAA)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,7 +42,10 @@ const Header = () => {
       {/* Intégration du vrai commutateur de thème (Section 4.1 du CdC) */}
         <ThemeToggle />
 
-        {/* Bouton Menu Burger Mobile (Visible uniquement sur mobile : md:hidden) */}
+        {/* Bouton Menu Burger Mobile (Visible uniquement sur mobile : md:hidden).
+            aria-expanded informe les lecteurs d'écran de l'état ouvert/fermé de ce bouton
+            "disclosure" (qui révèle un panneau caché) — sans ça, l'état visuel (icône
+            croix/burger) n'est perceptible que pour les utilisateurs voyants. */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-typography-light dark:text-typography-dark transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary"

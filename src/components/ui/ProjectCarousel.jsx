@@ -1,19 +1,35 @@
 import React, { useState } from "react";
 
+/**
+ * Carrousel d'images de la galerie d'un projet (vue détail), navigable par flèches ou
+ * pastilles (dots). État interne local (`currentIndex`) : contrairement aux champs du
+ * formulaire, la position dans le carrousel n'a de sens que pour cet affichage précis,
+ * personne d'autre n'a besoin de la connaître — pas de raison de la faire remonter plus haut.
+ *
+ * @param {Object} props
+ * @param {string[]} props.gallery
+ * @param {string} props.projectTitle
+ */
 const ProjectCarousel = ({ gallery, projectTitle}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Si la galerie est vide ou absente, on n'affiche rien ou un fallback
+    // Garde de sécurité en tout début de composant ("early return") : si la donnée
+    // attendue est absente, on affiche un état de repli et on s'arrête là, plutôt que de
+    // laisser le reste du composant s'exécuter et planter sur gallery[currentIndex] (accès
+    // à un index d'un tableau vide, qui renverrait `undefined` et casserait le <img src>).
     if (!gallery || gallery.length === 0 ) {
         return (
         <div className="w-full h-64 md:h-96 bg-gray-200 dark:bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-300 dark:border-gray-700">
             <span className="text-typography-light dark:text-typography-dark-muted font-medium">
             Aucun média disponible pour ce projet
             </span>
-        </div>            
+        </div>
         );
     }
 
+    // Navigation circulaire : au premier élément (index 0), "précédent" reboucle sur le
+    // dernier (gallery.length - 1) plutôt que de bloquer ou de sortir du tableau ; même
+    // logique en miroir pour "suivant" au dernier élément.
     const prevSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? gallery.length - 1 : prevIndex -1))
     };
@@ -24,7 +40,7 @@ const ProjectCarousel = ({ gallery, projectTitle}) => {
 
     return (
         <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 shadow-md group">
-        
+
         {/* Image active du carrousel */}
         <img
             src={gallery[currentIndex]}
@@ -33,7 +49,10 @@ const ProjectCarousel = ({ gallery, projectTitle}) => {
             className="w-full h-full object-contain object-center transition-all duration-500 ease-in-out"
         />
 
-        {/* Boutons de navigation (Précédent / Suivant) - Apparaissent au survol (group-hover) */}
+        {/* Boutons de navigation (Précédent / Suivant) - Apparaissent au survol (group-hover).
+            <>...</> est un Fragment React : un conteneur "invisible" qui permet de regrouper
+            plusieurs éléments JSX (ici les 2 boutons) sous une seule branche du `&&`
+            conditionnel, sans ajouter de <div> superflu au DOM final. */}
         {gallery.length > 1 && (
             <>
             <button
