@@ -21,7 +21,14 @@ const StackCard = () => {
       {/* Conteneur principal des différentes catégories */}
       <div className="flex flex-col gap-5 mt-auto">
         
-        {/* Parcours dynamique des clés de ton objet techData */}
+        {/* Parcours dynamique des clés de ton objet techData.
+            Object.entries(obj) transforme un objet en tableau de paires [clé, valeur]
+            (ex: { Frontend: [...] } devient [['Frontend', [...]]]). .map() reçoit donc à
+            chaque itération un tableau à 2 éléments, qu'on déstructure directement dans les
+            paramètres de la fonction fléchée : ([categoryName, techList]) => équivaut à
+            écrire (paire) => { const categoryName = paire[0]; const techList = paire[1]; }
+            en plus court. C'est ce qui permet de générer une section par catégorie sans
+            connaître à l'avance la liste des catégories (Frontend, Backend, ...). */}
         {Object.entries(techData).map(([categoryName, techList]) => (
           
           <section key={categoryName} className="flex flex-col gap-3">

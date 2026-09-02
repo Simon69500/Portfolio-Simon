@@ -17,6 +17,12 @@ import { portfolioData } from '../../data/projects/portfolioData';
 import SoftSkills from '../bento/SoftSkills';
 
 
+/**
+ * Page unique de l'application (la "Home" EST le site, il n'y a pas d'autre route montée).
+ * Compose toutes les tuiles Bento et possède le state d'expansion partagé entre elles —
+ * voir useCardExpansion.js pour la logique de dérivation utilisée par chaque carte, et
+ * DOCUMENTATION.md section 2 pour la vue d'ensemble du mécanisme.
+ */
 const Home = () => {
 
     // État global : null (aucun projet ouvert) ou l'ID du projet ouvert
@@ -26,13 +32,27 @@ const Home = () => {
     const featuredProject = portfolioData.find(project => project.isFeatured === true);
 
     // 2. Filtrage dynamique : On exclut le projet phare ET le template vide (id: 6)
+    // Ce `project.id !== 6` est un résidu de l'ancien projects.json (obsolète, voir ce
+    // fichier) où l'entrée 6 était un template vide à exclure. portfolioData.js actuel n'a
+    // que 5 projets, donc cette condition est inoffensive aujourd'hui — mais un futur
+    // projet avec id: 6 dans portfolioData.js disparaîtrait silencieusement de l'affichage.
     const secondaryProjects = portfolioData.filter(project => project.isFeatured === false && project.id !== 6);
-    
+
     // 3. Découpage pour les deux tuiles de mosaïque[cite: 2, 5]
+    // Répartition par simple tranche de tableau plutôt que par un critère métier : au-delà
+    // de 4 projets secondaires, les suivants ne sont affichés nulle part tant que ce
+    // découpage n'est pas ajusté à la main (voir DOCUMENTATION.md, guide "Ajouter un
+    // nouveau projet secondaire").
     const projectsF = secondaryProjects.slice(0, 2); // Projets 2 et 3
     const projectsG = secondaryProjects.slice(2, 4); // Projet 4
 
     return (
+        // ATTENTION : <body> est utilisé ici comme simple conteneur racine du JSX, mais
+        // c'est une vraie balise HTML sémantique, déjà fournie une fois par index.html.
+        // React va donc générer un second <body> imbriqué dans le DOM final (du HTML
+        // invalide, toléré par les navigateurs mais trompeur en DevTools). Un <div> ferait
+        // exactement le même travail visuel sans ce problème — voir DOCUMENTATION.md,
+        // section "Points d'attention connus", pour le détail.
         <body className='bg-bg-light dark:bg-bg-dark'>
             {/* Header */}
             <Header/>
@@ -40,7 +60,19 @@ const Home = () => {
             {/* Grille Bento : 1 col Mobile / 12 cols Desktop avec Gaps */}
             <main className='grid grid-cols-1 md:grid-cols-12 gap-4 p-4 relative min-h-screen'>
                 
-                {/* Tuile A : Présentation */}
+                {/* Tuile A : Présentation.
+                    Chaque tuile ci-dessous s'estompe (opacity-0) dès qu'UNE carte projet est
+                    ouverte ailleurs sur la page (expansionProjetId non null), pour focaliser
+                    l'attention sur la carte en plein écran — SAUF si son propre "id" de
+                    comparaison correspond à expansionProjetId. Presentation, StackCard,
+                    Parcours et Contact ne sont pourtant jamais elles-mêmes "ouvertes"
+                    (elles n'utilisent pas useCardExpansion) : leurs chaînes de comparaison
+                    ('presentation', 'stack', 'stack' encore pour Parcours, 'stack' encore
+                    pour Contact) ne correspondent jamais à une valeur réelle de
+                    expansionProjetId, qui ne contient que null ou un id numérique de projet.
+                    Ces comparaisons sont donc sans effet pratique aujourd'hui — un résidu de
+                    copier-coller entre tuiles plutôt qu'un vrai bug, mais à ne pas prendre
+                    pour une logique volontaire si tu la retouches. */}
                 <div
                     className={`
                         col-span-1 md:col-span-8 order-1 md:order-1
@@ -49,7 +81,7 @@ const Home = () => {
                     `}
                 >
                     <Presentation/>
-                </div>  
+                </div>
 
                 {/* Tuile B : Stack Technique */}
                 <div

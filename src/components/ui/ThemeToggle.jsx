@@ -1,6 +1,10 @@
 import React from 'react';
 import { useTheme } from '../../hook/useTheme';
 
+/**
+ * Bouton de bascule clair/sombre affiché dans le Header. Toute la logique (détection,
+ * persistance) vit dans useTheme.js — ce composant ne fait qu'appeler toggleTheme() au clic.
+ */
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
 

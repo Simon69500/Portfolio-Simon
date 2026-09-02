@@ -6,6 +6,9 @@ import React from 'react';
  * (plutôt que des chiffres juxtaposés), pour éviter toute ambiguïté
  * entre "volume global" et "répartition par origine" (ce sont deux
  * axes de lecture différents, pas une simple addition de métriques).
+ *
+ * @param {Object} props
+ * @param {{total: import('../../../data/projects/portfolioData').ProjectMetric, origine: import('../../../data/projects/portfolioData').ProjectMetric[]}} props.metrics
  */
 const StarMetrics = ({ metrics }) => {
     const { total, origine } = metrics;

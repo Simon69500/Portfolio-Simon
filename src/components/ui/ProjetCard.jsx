@@ -11,6 +11,17 @@ import ProjectTypeBadge from '../ui/ProjectTypeBadge';
 /**
  * Carte Projet pour les Mosaïques (Tuiles F & G)
  * Conforme Section 2.4 du Cahier des Charges (Card Expansion)[cite: 2]
+ *
+ * C'est le patron générique du couple "carte résumé + vue détaillée" : la même mécanique
+ * (useCardExpansion, transition animée, bouton mobile dédié) est reprise à l'identique
+ * par ProjetStar.jsx pour le projet phare — les explications ci-dessous ne sont donc PAS
+ * répétées là-bas, seules les différences y sont commentées.
+ *
+ * @param {Object} props
+ * @param {import('../../data/projects/portfolioData').Project} props.project
+ * @param {number|string|null} props.expansionProjetId - id de la carte actuellement
+ *   ouverte sur toute la page (state possédé par Home.jsx).
+ * @param {(id: number|string|null) => void} props.setExpansionProjetId
  */
 const ProjetCard = ({ project, expansionProjetId, setExpansionProjetId }) => {
   const cardRef = useRef(null);
@@ -34,6 +45,14 @@ const ProjetCard = ({ project, expansionProjetId, setExpansionProjetId }) => {
   const hoverClasses = !isExpanded ? "hover:border-accent-primary dark:hover:border-accent-primary md:cursor-pointer cursor-default relative w-full h-full" : "";
 
   return (
+    // motion.article (fourni par la librairie Motion, ex-Framer Motion) se comporte comme
+    // un <article> HTML classique, mais Motion peut en plus animer ses propriétés CSS.
+    // La prop `layoutId` est ce qui rend possible la "shared element transition" : quand
+    // deux éléments Motion présents à des moments différents partagent le même layoutId
+    // (ici `project-${project.id}`, identique entre l'état résumé et l'état EXPANDED géré
+    // juste en dessous), Motion anime automatiquement la transition de position/taille
+    // entre les deux plutôt que de faire un simple cut — c'est ce qui donne l'impression
+    // que la carte "s'étire" en plein écran au lieu de disparaître/réapparaître.
     <motion.article
       ref={cardRef}
       layoutId={`project-${project.id}`}
@@ -43,7 +62,11 @@ const ProjetCard = ({ project, expansionProjetId, setExpansionProjetId }) => {
       }`}
       onClick={() => {
         // [CaC Section 2.4] : Déclenchement sur toute la carte uniquement sur Desktop au repos[cite: 2]
-        if (window.innerWidth >= 768 && !isExpanded) expand(); 
+        // window.innerWidth >= 768 correspond au breakpoint `md` de Tailwind : sur mobile,
+        // cliquer n'importe où sur la carte ne fait rien (pour éviter les ouvertures
+        // accidentelles au scroll tactile) — seul le bouton "Voir le projet" dédié plus bas
+        // (visible uniquement en `md:hidden`) déclenche l'ouverture sur petit écran.
+        if (window.innerWidth >= 768 && !isExpanded) expand();
       }}
     >
       {!isExpanded ? (
@@ -54,7 +77,7 @@ const ProjetCard = ({ project, expansionProjetId, setExpansionProjetId }) => {
               {/* Badge de type de projet (formation / personnel / professionnel), affiché avant le titre pour donner le contexte en premier */}
               <div className='mb-3'>
                   <ProjectTypeBadge type={project.type} variant="compact" />
-              </div>              
+              </div>
               <h3 className='text-xl font-bold text-typography-light dark:text-typography-dark mb-4 line-clamp-2'>
                 {project.titre}
               </h3>
@@ -68,11 +91,11 @@ const ProjetCard = ({ project, expansionProjetId, setExpansionProjetId }) => {
               {project.technologies.filter(tech => tech.trim() !== "").map((techName, index) => {
                 const techInfo = getTechDetails(techName);
                 return techInfo ? (
-                  <TechBadge 
-                    key={index} 
-                    name={techInfo.name} 
-                    logoUrl={techInfo.logoUrl} 
-                    iconBehavior={techInfo.iconBehavior} 
+                  <TechBadge
+                    key={index}
+                    name={techInfo.name}
+                    logoUrl={techInfo.logoUrl}
+                    iconBehavior={techInfo.iconBehavior}
                   />
                 ) : (
                   <span key={index} className='px-3 py-1 text-xs font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-typography-light dark:text-typography-dark-DEFAULT'>
@@ -85,6 +108,11 @@ const ProjetCard = ({ project, expansionProjetId, setExpansionProjetId }) => {
             {/* [CaC Section 2.4 - Sécurité UX] : Bouton dédié pour Mobile[cite: 2] */}
             <Button
               onClick={(e) => {
+                // stopPropagation() empêche le clic de "remonter" jusqu'au onClick de la
+                // carte elle-même (posé sur motion.article ci-dessus) : sans ça, cliquer
+                // ce bouton déclencherait DEUX ouvertures en cascade (une par ce handler,
+                // une par celui de la carte), redondant mais surtout risqué si expand()
+                // n'est pas idempotent.
                 e.stopPropagation();
                 if (!isExpanded) expand();
               }}
@@ -101,9 +129,9 @@ const ProjetCard = ({ project, expansionProjetId, setExpansionProjetId }) => {
 
           {/* ZONE MÉDIA */}
           <div className="w-full h-40 relative flex justify-center items-center overflow-hidden shrink-0 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-            <img 
-              src={project.coverImage} 
-              alt={`Aperçu de l'interface de ${project.titre}`} 
+            <img
+              src={project.coverImage}
+              alt={`Aperçu de l'interface de ${project.titre}`}
               loading="lazy"
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />

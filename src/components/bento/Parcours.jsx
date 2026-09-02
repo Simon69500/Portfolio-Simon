@@ -8,7 +8,14 @@ import { timeLineData } from '../../data/profileData';
 
 const Parcours = () => {
 
-  // On inverse le tableau pour avoir le poste le plus récent en haut 
+  // On inverse le tableau pour avoir le poste le plus récent en haut
+  // [...timeLineData] recopie d'abord le tableau (opérateur spread) AVANT d'appeler
+  // .reverse() dessus : .reverse() ne renvoie pas un nouveau tableau, il inverse le
+  // tableau EN PLACE (il le mute) et renvoie une référence vers ce même tableau. Sans la
+  // copie, on inverserait directement `timeLineData` exporté par profileData.js — un
+  // module partagé, importé une seule fois par toute l'application (les imports ES sont
+  // mis en cache) : le muter ici l'inverserait pour de bon, y compris pour tout autre
+  // composant qui l'importerait ailleurs.
   const ascendingParcours = [...timeLineData].reverse();
 
   return (

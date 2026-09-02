@@ -1,5 +1,27 @@
 import React from "react";
 
+/**
+ * Champ texte générique du formulaire de contact (composant "contrôlé").
+ *
+ * "Contrôlé" veut dire que ce composant n'a AUCUN état à lui : sa valeur affichée
+ * (`value`) et sa façon de changer (`onChange`) viennent entièrement de l'extérieur
+ * (ici, de useContactForm.js via Contact.jsx). React impose ainsi une source de vérité
+ * unique pour les données du formulaire — sans ça, l'input aurait sa propre valeur interne
+ * gérée par le navigateur, potentiellement désynchronisée de `formData` dans le hook.
+ * C'est ce même patron (value + onChange fournis en props) qui est repris à l'identique
+ * par TextareaField.jsx.
+ *
+ * @param {Object} props
+ * @param {string} props.label
+ * @param {string} props.id
+ * @param {string} props.name
+ * @param {string} [props.type]
+ * @param {string} props.value
+ * @param {(e: Event) => void} props.onChange
+ * @param {string} [props.error]
+ * @param {boolean} [props.disabled]
+ * @param {string} [props.placeholder]
+ */
 const InputField = ({
   label,
   id,
@@ -38,11 +60,11 @@ const InputField = ({
           disabled:opacity-50 disabled:cursor-not-allowed
           ${error
             ? 'border-red-500 focus:ring-red-500' //État d'erreur visuel
-            : 'border-gray-300 dark:border-gray-600 focus:ring-accent-secondary dark:focus:ring-accent-primary' //État normal avec tes couleurs d'accent 
+            : 'border-gray-300 dark:border-gray-600 focus:ring-accent-secondary dark:focus:ring-accent-primary' //État normal avec tes couleurs d'accent
           }
         `}
       />
-      
+
       {/* Feedback Visuel : Affichage dynamique de l'erreur */}
       {error && (
         <span className="text-xs text-red-500 font-medium mt-1">

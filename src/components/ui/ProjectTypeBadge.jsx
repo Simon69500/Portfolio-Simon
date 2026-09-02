@@ -5,6 +5,10 @@ import { projectTypeData } from "../../data/projects/projectTypeData";
  * Badge signalant la nature d'un projet (formation / personnel / professionnel).
  * variant="compact" -> icône/logo seul (overlay sur les cards de la Home)
  * variant="full"     -> icône/logo + libellé texte (vue détail du projet)
+ *
+ * @param {Object} props
+ * @param {'professionnel'|'formation'|'personnel'} props.type - clé de projectTypeData.js.
+ * @param {'compact'|'full'} [props.variant]
  */
 const ProjectTypeBadge = ({ type, variant = "compact" }) => {
     const data = projectTypeData[type];

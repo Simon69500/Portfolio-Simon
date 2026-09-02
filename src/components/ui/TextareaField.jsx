@@ -1,5 +1,20 @@
 import React from "react";
 
+/**
+ * Équivalent de InputField.jsx pour un champ multi-lignes (message du formulaire de
+ * contact) — même patron de composant contrôlé, voir InputField.jsx pour le détail.
+ *
+ * @param {Object} props
+ * @param {string} props.label
+ * @param {string} props.id
+ * @param {string} props.name
+ * @param {string} props.value
+ * @param {(e: Event) => void} props.onChange
+ * @param {string} [props.error]
+ * @param {boolean} [props.disabled]
+ * @param {string} [props.placeholder]
+ * @param {number} [props.rows]
+ */
 const TextareaField = ({
     label,
     id,
