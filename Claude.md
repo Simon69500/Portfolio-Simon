@@ -62,6 +62,19 @@ chaque solution proposée, pas juste obtenir un résultat qui fonctionne.
 - Signale quand une branche est prête à être fusionnée dans `main` via Pull Request,
   ne merge jamais directement toi-même sans validation explicite.
 
+## Documentation du projet
+Le projet a trois niveaux de documentation, chacun avec un public différent :
+- `README.md` — vitrine pensée pour un visiteur/recruteur qui découvre le repo.
+- `docs/DOCUMENTATION.md` — doc de maintenance ("futur toi") : architecture, modèle de
+  données, guides pratiques, conventions, points d'attention connus.
+- `docs/api/` (généré) — doc technique JSDoc du code (`src/hook`, `src/data`,
+  `src/components`), régénérée avec `npm run docs` (config dans `jsdoc.config.json`,
+  page d'accueil dans `docs/jsdoc-home.md`). Ne pas éditer `docs/api/` à la main,
+  c'est un dossier généré.
+
+Avant de documenter un comportement dans `docs/DOCUMENTATION.md`, vérifier qu'il n'est
+pas déjà couvert ailleurs pour éviter les doublons qui divergent avec le temps.
+
 ## Conventions du projet
 - Langue des commentaires et de la doc : français
 - Nommage des variables/fonctions : anglais (convention dev standard), commentaires en français
