@@ -54,7 +54,7 @@ const Presentation = () => {
             `href` plutôt que de l'ouvrir/l'afficher (un PDF s'ouvrirait sinon dans un nouvel
             onglet du navigateur). La valeur donnée ("CV_BADIN_Simon_2026.pdf") est le nom de
             fichier proposé à l'utilisateur, indépendant du nom réel du fichier sur le serveur. */}
-        <Button href="/CV_BADIN_Simon_2026.pdf" download="CV_BADIN_Simon_2026.pdf" variant="secondary" rel="noopener noreferrer" target="_blank">
+        <Button href={img("CV_BADIN_Simon_2026.pdf")} download="CV_BADIN_Simon_2026.pdf" variant="secondary" rel="noopener noreferrer" target="_blank">
           Télécharger mon CV
         </Button>
 
